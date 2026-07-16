@@ -1,0 +1,5 @@
+node_modules/
+studio/projets/**/renders/
+studio/projets/**/.media/
+*.log
+.DS_Store
