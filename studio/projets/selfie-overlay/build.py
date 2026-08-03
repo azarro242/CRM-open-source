@@ -4,7 +4,10 @@ Usage : python3 build.py [transparent|vert]   (défaut : transparent)"""
 import json, re, html, sys
 
 BASE = "/home/user/CRM-open-source/studio/projets/selfie-overlay"
-FOND = "#00ff00" if (len(sys.argv) > 1 and sys.argv[1] == "vert") else "transparent"
+VERT = len(sys.argv) > 1 and sys.argv[1] == "vert"
+FOND = "#00ff00" if VERT else "transparent"
+# fin du degrade de separation : opaque en chroma (pas de pixels semi-verts), fondu en alpha
+FADE_FIN = "1" if VERT else "0"
 
 words = json.load(open(f"{BASE}/transcript.json"))
 
@@ -62,6 +65,7 @@ for n, c in enumerate(chunks):
 template = open(f"{BASE}/template.tpl").read()
 out = (template
        .replace("{{FOND}}", FOND)
+       .replace("{{FADE_FIN}}", FADE_FIN)
        .replace("{{CAPTIONS_HTML}}", "\n".join(cap_html))
        .replace("{{CAPTIONS_TWEENS}}", "\n      ".join(cap_tw)))
 open(f"{BASE}/index.html", "w").write(out)

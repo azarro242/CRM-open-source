@@ -3,96 +3,97 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=1080, height=1920" />
-    <title>Overlay selfie 9:16 — L'IA pour les fauchés</title>
+    <title>Bandeau motion design 9:16 — L'IA pour les personnes fauchées</title>
     <link href="assets/fonts/fonts.css" rel="stylesheet" />
     <script src="vendor/gsap.min.js"></script>
     <style>
       :root {
         --bleu: #007aff;
-        --bleu-clair: #339dff;
-        --encre: #111113;
-        --encre-2: #2e2e32;
-        --papier: #ffffff;
-        --bord: #e4e4e6;
+        --bleu-clair: #4aa8ff;
+        --bleu-pale: #a7d1ff;
         --ambre: #fcbb00;
         --ambre-clair: #ffd236;
-        --rouge: #e0483e;
-        --gris: #828289;
+        --rouge: #ff4d3d;
+        --rouge-pale: #ff9d94;
+        --papier: #ffffff;
+        --ardoise: #1b1b20;
+        --ardoise-2: #2a2a33;
+        --gris: #9a9aa6;
       }
       body { margin: 0; background: {{FOND}}; font-family: "Inter", sans-serif; }
       #root { position: relative; width: 1080px; height: 1920px; overflow: hidden; }
       #fond { position: absolute; inset: 0; background: {{FOND}}; }
 
+      /* ===== BANDEAU NOIR + séparation courbée en dégradé ===== */
+      #bandeau { position: absolute; top: 0; left: 0; width: 1080px; height: 470px; background: #000; }
+      #courbe { position: absolute; top: 470px; left: 0; width: 1080px; height: 230px; }
+
       .masque { opacity: 0; visibility: hidden; }
 
-      /* ===== ZONE HAUTE : animations au-dessus de la tête (100 → 600 px) ===== */
-      .zone-haute { position: absolute; top: 100px; left: 0; width: 1080px; height: 500px; }
+      /* ===== SCÈNE D'ANIMATION (dans le bandeau) ===== */
+      .scene { position: absolute; top: 62px; left: 0; width: 1080px; height: 396px; }
       .centre { position: absolute; inset: 0; display: flex; flex-direction: column;
-        align-items: center; justify-content: center; gap: 22px; }
+        align-items: center; justify-content: center; gap: 18px; }
+      .rangee { display: flex; gap: 16px; justify-content: center; align-items: center; }
 
-      .carte {
-        background: var(--papier); border: 4px solid var(--bord); border-radius: 30px;
-        padding: 30px 44px; color: var(--encre); display: flex; align-items: center; gap: 26px;
-      }
-      .carte .titre { font-weight: 900; font-size: 62px; letter-spacing: -1.5px; line-height: 1.05; }
-      .carte .sous { font-weight: 700; font-size: 32px; color: var(--gris); margin-top: 6px; }
-      .col { flex-direction: column; gap: 8px; text-align: center; }
+      .kicker { font-weight: 900; font-size: 30px; letter-spacing: 7px; color: var(--gris); }
+      .kicker.b { color: var(--bleu-clair); }
+      .kicker.r { color: var(--rouge-pale); }
+      .kicker.a { color: var(--ambre); }
 
-      .bleu { background: linear-gradient(180deg, #3ba0ff 0%, #007aff 55%, #0070ea 100%);
-        border-color: #0070ea; color: #fff; }
-      .bleu .titre, .bleu .sous { color: #fff; }
-      .ambre { background: linear-gradient(180deg, var(--ambre-clair), var(--ambre));
-        border-color: #e0a800; color: var(--encre); }
-      .rouge { background: var(--rouge); border-color: #b8352c; color: #fff; }
-      .rouge .titre { color: #fff; }
-      .noir { background: var(--encre); border-color: #000; color: #fff; }
-      .noir .titre { color: #fff; }
-      .noir .sous { color: #b9b9c2; }
+      .titre { font-weight: 900; font-size: 74px; line-height: 1.02; letter-spacing: -2px;
+        color: #fff; text-align: center; }
+      .titre.md { font-size: 60px; }
+      .titre.sm { font-size: 48px; }
+      .titre .b { color: var(--bleu-clair); }
+      .titre .a { color: var(--ambre-clair); }
+      .titre .r { color: var(--rouge-pale); }
 
-      .chip { font-weight: 900; font-size: 38px; padding: 16px 34px; border-radius: 999px;
-        background: var(--papier); border: 4px solid var(--bord); color: var(--encre);
-        display: inline-flex; align-items: center; gap: 14px; }
-      .chip.bleu { border-color: #0070ea; }
-      .chip.ambre { border-color: #e0a800; }
-      .chip.rouge { border-color: #b8352c; }
-      .rangee { display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; }
+      .pave { background: var(--ardoise); border: 4px solid var(--ardoise-2); border-radius: 26px;
+        padding: 22px 38px; display: flex; align-items: center; gap: 24px; }
+      .pave.b { border-color: var(--bleu); }
+      .pave.r { border-color: var(--rouge); background: #2a1210; }
+      .pave.a { border-color: var(--ambre); background: #2a2110; }
 
-      /* S1 titre */
-      #s1-titre .titre { font-size: 72px; }
-      #s1-partie { font-weight: 900; font-size: 42px; letter-spacing: 6px; }
+      .chip { font-weight: 900; font-size: 34px; padding: 14px 30px; border-radius: 999px;
+        display: inline-flex; align-items: center; gap: 12px;
+        background: var(--ardoise); border: 4px solid var(--ardoise-2); color: #fff; }
+      .chip.b { border-color: var(--bleu); color: var(--bleu-clair); }
+      .chip.r { border-color: var(--rouge); color: var(--rouge-pale); }
+      .chip.a { background: var(--ambre); border-color: var(--ambre-clair); color: #111; }
+      .chip.plein-b { background: var(--bleu); border-color: var(--bleu-clair); color: #fff; }
+      .chip.plein-r { background: var(--rouge); border-color: #ff8f84; color: #fff; }
 
-      /* S2 Claude gratuit */
-      #s2-prix { position: relative; }
-      #s2-barre { position: absolute; left: 12px; right: 12px; top: 50%; height: 8px;
+      .barre-nulle { position: relative; }
+      .barre-nulle .trait { position: absolute; left: 10px; right: 10px; top: 50%; height: 7px;
         background: var(--rouge); border-radius: 4px; transform: scaleX(0); transform-origin: left center; }
 
-      /* S4 Gemma */
-      #s4-marque .titre { font-size: 96px; letter-spacing: -3px; }
-      #s4-google { font-weight: 800; font-size: 34px; letter-spacing: 3px; }
+      /* modèles de langage (B8) */
+      .mini { width: 108px; height: 108px; border-radius: 24px; background: var(--ardoise);
+        border: 4px solid var(--ardoise-2); display: grid; place-items: center;
+        font-weight: 900; font-size: 30px; color: var(--bleu-pale); }
 
-      /* S6 commente */
-      #s6-cta .titre { font-size: 88px; }
-      #s6-mot { background: var(--ambre); border-radius: 18px; padding: 6px 22px; color: var(--encre); }
+      /* ordinateur local (B9) */
+      #b9-pc { position: relative; }
+      #b9-badge { position: absolute; left: 50%; top: 32px; transform: translateX(-50%);
+        font-weight: 900; font-size: 26px; color: var(--bleu-clair); }
 
-      /* S7 communauté */
-      #s7-avatars { display: flex; }
-      #s7-avatars .av { width: 96px; height: 96px; border-radius: 50%; margin: 0 -12px;
-        border: 5px solid var(--papier); display: grid; place-items: center;
-        font-weight: 900; font-size: 38px; color: #fff; }
+      /* avatars communauté */
+      .avatars { display: flex; }
+      .avatars .av { width: 88px; height: 88px; border-radius: 50%; margin: 0 -10px;
+        border: 5px solid #000; display: grid; place-items: center;
+        font-weight: 900; font-size: 34px; color: #fff; }
 
-      /* S8 abonne-toi */
-      #s8-cta .titre { font-size: 92px; }
-
-      /* ===== SOUS-TITRES : bas de cadre, au-dessus des UI plateformes ===== */
+      /* ===== SOUS-TITRES (sur votre image, bas de cadre) ===== */
       #captions { position: absolute; top: 0; left: 0; width: 1080px; height: 1920px; }
-      .cap { position: absolute; left: 50px; right: 50px; top: 1420px; text-align: center;
+      .cap { position: absolute; left: 46px; right: 46px; top: 1430px; text-align: center;
         opacity: 0; visibility: hidden; }
-      .cap .pill { display: inline-block; background: var(--encre); color: #fff;
-        font-weight: 900; font-size: 56px; line-height: 1.26; padding: 20px 38px;
-        border-radius: 24px; border: 4px solid #000; }
+      .cap .pill { display: inline-block; background: #000; color: #fff;
+        font-weight: 900; font-size: 54px; line-height: 1.24; padding: 18px 34px;
+        border-radius: 22px; }
       .cap .kb { color: var(--bleu-clair); }
       .cap .ka { color: var(--ambre-clair); }
-      .cap .kr { color: #ff8a80; }
+      .cap .kr { color: var(--rouge-pale); }
     </style>
   </head>
   <body>
@@ -100,223 +101,379 @@
 
       <div id="fond" class="clip" data-start="0" data-duration="54.3" data-track-index="0"></div>
 
-      <div id="graphiques" class="clip zone-haute" data-start="0" data-duration="54.3" data-track-index="1">
+      <!-- ===== bandeau + séparation courbée ===== -->
+      <div id="bande-wrap" class="clip" data-start="0" data-duration="54.3" data-track-index="1">
+        <div id="bandeau"></div>
+        <svg id="courbe" viewBox="0 0 1080 230" preserveAspectRatio="none">
+          <defs>
+            <linearGradient id="fadeNoir" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#000" stop-opacity="1" />
+              <stop offset="52%" stop-color="#000" stop-opacity="1" />
+              <stop offset="100%" stop-color="#000" stop-opacity="{{FADE_FIN}}" />
+            </linearGradient>
+            <linearGradient id="traitAccent" x1="0" y1="0" x2="1" y2="0">
+              <stop offset="0%" stop-color="#007aff" />
+              <stop offset="52%" stop-color="#4aa8ff" />
+              <stop offset="100%" stop-color="#fcbb00" />
+            </linearGradient>
+          </defs>
+          <path d="M0,0 H1080 V70 C 810,214 270,214 0,70 Z" fill="url(#fadeNoir)" />
+          <path id="trait-courbe" d="M0,70 C 270,214 810,214 1080,70" fill="none"
+                stroke="url(#traitAccent)" stroke-width="7" stroke-linecap="round" />
+        </svg>
+      </div>
 
-        <!-- S1 · titre 0.35 → 4.35 -->
+      <!-- ===== ANIMATIONS ===== -->
+      <div id="scenes" class="clip scene" data-start="0" data-duration="54.3" data-track-index="2">
+
+        <!-- B1 · titre 0.3 → 4.3 -->
         <div class="centre">
-          <div id="s1-titre" class="carte col noir masque">
-            <div class="titre">L'IA pour les<br />personnes fauchées</div>
-          </div>
-          <div id="s1-partie" class="chip ambre masque">PARTIE 1</div>
+          <div id="b1-kick" class="kicker a masque">PARTIE 1</div>
+          <div id="b1-titre" class="titre masque">L'IA pour les<br />personnes <span class="a">fauchées</span></div>
+          <div id="b1-poche" class="chip masque">👛 budget : 0 €</div>
         </div>
 
-        <!-- S2 · Claude gratuit 4.6 → 8.05 -->
-        <div class="centre" id="s2-wrap">
-          <div id="s2-claude" class="carte col masque">
-            <div class="titre">Claude</div>
-            <div class="sous">accès sans payer</div>
-          </div>
-          <div class="rangee">
-            <div id="s2-gratuit" class="chip ambre masque">100% GRATUIT</div>
-            <div id="s2-prix" class="chip masque">ABONNEMENT<div id="s2-barre"></div></div>
-          </div>
-        </div>
-
-        <!-- S3 · le piège 8.3 → 16.35 -->
-        <div class="centre" id="s3-wrap">
-          <div id="s3-alerte" class="carte rouge masque">
-            <svg width="76" height="76" viewBox="0 0 48 48" fill="none">
-              <path d="M24 6 L44 40 H4 Z" stroke="#fff" stroke-width="4" stroke-linejoin="round" />
-              <path d="M24 19 v9" stroke="#fff" stroke-width="4" stroke-linecap="round" />
-              <circle cx="24" cy="34" r="2.6" fill="#fff" />
-            </svg>
-            <div class="titre">Attention</div>
-          </div>
-          <div id="s3-faux" class="chip rouge masque" style="background:var(--rouge);color:#fff">Modèles déguisés en Claude</div>
-          <div id="s3-data" class="chip noir masque" style="background:var(--encre);color:#fff;border-color:#000">⚠ tes données</div>
-        </div>
-
-        <!-- S4 · la solution 17.2 → 28.3 -->
-        <div class="centre" id="s4-wrap">
-          <div id="s4-marque" class="carte col bleu masque">
-            <div class="titre">Gemma 4</div>
-          </div>
-          <div id="s4-google" class="chip masque">un outil de Google</div>
-          <div class="rangee">
-            <div id="s4-c1" class="chip bleu masque" style="background:#fff;color:var(--encre)">💻 100% en local</div>
-            <div id="s4-c2" class="chip bleu masque" style="background:#fff;color:var(--encre)">🔒 sécurisé</div>
-            <div id="s4-c3" class="chip ambre masque">∞ sans limite</div>
-          </div>
-        </div>
-
-        <!-- S5 · le guide 28.6 → 35.9 -->
-        <div class="centre" id="s5-wrap">
-          <div id="s5-guide" class="carte col masque">
-            <div class="titre">Le guide</div>
-            <div class="sous">installation pas à pas</div>
-          </div>
-          <div id="s5-gratuit" class="chip ambre masque">COMPLÈTEMENT GRATUIT</div>
-          <div id="s5-etapes" class="rangee masque">
-            <div class="chip bleu" style="background:#fff;color:var(--encre)">1</div>
-            <div class="chip bleu" style="background:#fff;color:var(--encre)">2</div>
-            <div class="chip bleu" style="background:#fff;color:var(--encre)">3</div>
-            <div class="chip bleu">étape par étape</div>
-          </div>
-        </div>
-
-        <!-- S6 · commente IA 36.05 → 38.5 -->
+        <!-- B2 · Claude gratuit 4.5 → 8.1 -->
         <div class="centre">
-          <div id="s6-cta" class="carte col noir masque">
-            <div class="titre">Commente <span id="s6-mot">IA</span></div>
-            <div class="sous">en dessous de cette vidéo</div>
+          <div id="b2-kick" class="kicker b masque">CE QUE TU VAS OBTENIR</div>
+          <div id="b2-titre" class="titre masque"><span class="b">Claude</span> gratuitement</div>
+          <div class="rangee">
+            <div id="b2-zero" class="chip a masque">0 € / mois</div>
+            <div id="b2-abo" class="chip plein-r barre-nulle masque">ABONNEMENT<div class="trait"></div></div>
           </div>
-          <svg id="s6-fleche" class="masque" width="80" height="80" viewBox="0 0 48 48" fill="none">
+        </div>
+
+        <!-- B3 · le problème 8.3 → 12.4 -->
+        <div class="centre">
+          <div id="b3-kick" class="kicker r masque">⚠ ATTENTION</div>
+          <div id="b3-titre" class="titre md masque">La plupart des astuces<br />sur internet sont <span class="r">des pièges</span></div>
+        </div>
+
+        <!-- B4 · faux Claude 12.5 → 15.4 -->
+        <div class="centre">
+          <div id="b4-titre" class="titre md masque">Des modèles <span class="r">chinois</span></div>
+          <div class="rangee">
+            <div id="b4-masque" class="chip plein-r masque">🎭 déguisés en « Claude »</div>
+          </div>
+          <div id="b4-vrai" class="chip r masque">≠ le vrai Claude</div>
+        </div>
+
+        <!-- B5 · données 15.5 → 16.9 -->
+        <div class="centre">
+          <div id="b5-titre" class="titre masque">Tes <span class="r">données</span> partent</div>
+          <div id="b5-flux" class="rangee masque">
+            <div class="chip">💻 toi</div>
+            <svg width="90" height="40" viewBox="0 0 45 20" fill="none"><path d="M2 10 h34 m-7 -7 l7 7 -7 7" stroke="#ff4d3d" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <div class="chip plein-r">serveur inconnu</div>
+          </div>
+        </div>
+
+        <!-- B6 · la solution 17.2 → 20.5 -->
+        <div class="centre">
+          <div id="b6-kick" class="kicker b masque">LA VRAIE SOLUTION</div>
+          <div id="b6-titre" class="titre masque">Gemma 4</div>
+          <div id="b6-google" class="chip b masque">un outil de Google</div>
+        </div>
+
+        <!-- B7 · plusieurs modèles 20.6 → 23.1 -->
+        <div class="centre">
+          <div id="b7-kick" class="kicker masque">CE QU'IL CONTIENT</div>
+          <div id="b7-titre" class="titre sm masque">Plusieurs modèles de langage</div>
+          <div id="b7-minis" class="rangee masque">
+            <div class="mini">IA<br />1</div>
+            <div class="mini">IA<br />2</div>
+            <div class="mini">IA<br />3</div>
+            <div class="mini">IA<br />4</div>
+          </div>
+        </div>
+
+        <!-- B8 · 100% local 23.2 → 25.3 -->
+        <div class="centre">
+          <div id="b8-titre" class="titre masque"><span class="b">100%</span> en local</div>
+          <div id="b8-explique" class="rangee masque">
+            <div class="chip b">💻 sur ton ordinateur</div>
+            <div class="chip plein-r">☁ sans le cloud</div>
+          </div>
+        </div>
+
+        <!-- B9 · sécurisé 25.4 → 26.4 -->
+        <div class="centre">
+          <div id="b9-titre" class="titre masque">🔒 <span class="b">Sécurisé</span></div>
+          <div id="b9-sous" class="chip masque">tes données restent chez toi</div>
+        </div>
+
+        <!-- B10 · sans limite 26.5 → 28.3 -->
+        <div class="centre">
+          <div id="b10-titre" class="titre masque"><span class="a">Sans limite</span></div>
+          <div id="b10-inf" class="chip a masque">∞ utilisation illimitée</div>
+        </div>
+
+        <!-- B11 · le guide 28.5 → 31.4 -->
+        <div class="centre">
+          <div id="b11-kick" class="kicker a masque">J'AI CRÉÉ POUR TOI</div>
+          <div id="b11-titre" class="titre masque">Le guide complet</div>
+          <div id="b11-gratuit" class="chip a masque">100% GRATUIT</div>
+        </div>
+
+        <!-- B12 · étapes 31.5 → 35.9 -->
+        <div class="centre">
+          <div id="b12-titre" class="titre sm masque">Installation étape par étape</div>
+          <div class="rangee">
+            <div id="b12-e1" class="chip plein-b masque">1 · télécharger</div>
+            <div id="b12-e2" class="chip plein-b masque">2 · installer</div>
+            <div id="b12-e3" class="chip plein-b masque">3 · utiliser</div>
+          </div>
+          <div id="b12-pc" class="chip masque">💻 sur ton ordinateur</div>
+        </div>
+
+        <!-- B13 · commente IA 36.0 → 38.4 -->
+        <div class="centre">
+          <div id="b13-titre" class="titre masque">Commente <span class="a">« IA »</span></div>
+          <div id="b13-sous" class="chip masque">💬 en dessous de cette vidéo</div>
+          <svg id="b13-fleche" class="masque" width="64" height="64" viewBox="0 0 48 48" fill="none">
             <path d="M24 8 v30 m-11 -11 l11 11 11 -11" stroke="#fcbb00" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" />
           </svg>
         </div>
 
-        <!-- S7 · communauté 38.7 → 48.2 -->
-        <div class="centre" id="s7-wrap">
-          <div id="s7-lien" class="carte bleu masque">
-            <svg width="66" height="66" viewBox="0 0 48 48" fill="none">
-              <path d="M20 28 a8 8 0 0 0 11 0 l7 -7 a8 8 0 0 0 -11 -11 l-3 3" stroke="#fff" stroke-width="4" stroke-linecap="round" />
-              <path d="M28 20 a8 8 0 0 0 -11 0 l-7 7 a8 8 0 0 0 11 11 l3 -3" stroke="#fff" stroke-width="4" stroke-linecap="round" />
-            </svg>
-            <div class="titre">le lien</div>
-          </div>
-          <div id="s7-avatars" class="masque">
-            <div class="av" style="background:#007aff">A</div>
-            <div class="av" style="background:#fcbb00;color:#111113">K</div>
-            <div class="av" style="background:#e0483e">S</div>
-            <div class="av" style="background:#0066d6">M</div>
-            <div class="av" style="background:#111113">+</div>
-          </div>
-          <div id="s7-membres" class="chip noir masque" style="background:var(--encre);color:#fff;border-color:#000">des centaines de membres</div>
-          <div id="s7-ressource" class="chip ambre masque">ressource gratuite</div>
+        <!-- B14 · le lien 38.6 → 41.9 -->
+        <div class="centre">
+          <div id="b14-kick" class="kicker b masque">ENSUITE</div>
+          <div id="b14-titre" class="titre md masque">Je t'envoie le <span class="b">lien</span></div>
+          <div id="b14-sous" class="chip b masque">🔗 accès à la communauté</div>
         </div>
 
-        <!-- S8 · abonne-toi 49.9 → 54.2 -->
+        <!-- B15 · communauté 42.0 → 45.5 -->
         <div class="centre">
-          <div id="s8-cta" class="carte col ambre masque">
-            <div class="titre">ABONNE-TOI</div>
+          <div id="b15-avatars" class="avatars masque">
+            <div class="av" style="background:#007aff">A</div>
+            <div class="av" style="background:#fcbb00;color:#111">K</div>
+            <div class="av" style="background:#ff4d3d">S</div>
+            <div class="av" style="background:#0066d6">M</div>
+            <div class="av" style="background:#2a2a33">+</div>
           </div>
-          <svg id="s8-cloche" class="masque" width="92" height="92" viewBox="0 0 48 48" fill="none">
+          <div id="b15-titre" class="titre md masque">Des <span class="b">centaines</span> de membres</div>
+          <div id="b15-sous" class="chip masque">une communauté autour de l'IA</div>
+        </div>
+
+        <!-- B16 · ressource gratuite 45.6 → 48.2 -->
+        <div class="centre">
+          <div id="b16-titre" class="titre md masque">Tu récupères la ressource</div>
+          <div id="b16-chip" class="chip a masque">🔓 et tu l'utilises gratuitement</div>
+        </div>
+
+        <!-- B17 · première fois 48.3 → 49.7 -->
+        <div class="centre">
+          <div id="b17-titre" class="titre md masque">👋 Première fois ici ?</div>
+        </div>
+
+        <!-- B18 · abonne-toi 49.9 → 54.2 -->
+        <div class="centre">
+          <div id="b18-titre" class="titre masque"><span class="a">ABONNE-TOI</span></div>
+          <svg id="b18-cloche" class="masque" width="84" height="84" viewBox="0 0 48 48" fill="none">
             <path d="M24 6 a12 12 0 0 1 12 12 v8 l5 8 H7 l5 -8 v-8 A12 12 0 0 1 24 6 Z" stroke="#fcbb00" stroke-width="5" stroke-linejoin="round" />
             <path d="M19 40 a5 5 0 0 0 10 0" stroke="#fcbb00" stroke-width="5" />
           </svg>
+          <div id="b18-sous" class="chip masque">d'autres vidéos comme celle-ci</div>
         </div>
       </div>
 
-      <div id="captions" class="clip" data-start="0" data-duration="54.3" data-track-index="2">
+      <div id="captions" class="clip" data-start="0" data-duration="54.3" data-track-index="3">
 {{CAPTIONS_HTML}}
       </div>
 
-      <!-- ===== EFFETS SONORES UNIQUEMENT (la voix reste sur votre vidéo d'origine) ===== -->
-      <audio id="wh-1" src="assets/sfx/whoosh-short.mp3" data-start="0.25" data-duration="0.57" data-track-index="11" data-volume="0.5"></audio>
-      <audio id="wh-2" src="assets/sfx/whoosh-short.mp3" data-start="4.45" data-duration="0.57" data-track-index="11" data-volume="0.5"></audio>
-      <audio id="wh-3" src="assets/sfx/whoosh-short.mp3" data-start="8.18" data-duration="0.57" data-track-index="11" data-volume="0.5"></audio>
-      <audio id="wh-4" src="assets/sfx/whoosh-short.mp3" data-start="17.10" data-duration="0.57" data-track-index="11" data-volume="0.5"></audio>
-      <audio id="wh-5" src="assets/sfx/whoosh-short.mp3" data-start="28.45" data-duration="0.57" data-track-index="11" data-volume="0.5"></audio>
-      <audio id="wh-6" src="assets/sfx/whoosh-short.mp3" data-start="35.92" data-duration="0.57" data-track-index="11" data-volume="0.5"></audio>
-      <audio id="wh-7" src="assets/sfx/whoosh-short.mp3" data-start="38.58" data-duration="0.57" data-track-index="11" data-volume="0.5"></audio>
-      <audio id="wh-8" src="assets/sfx/whoosh-short.mp3" data-start="49.78" data-duration="0.57" data-track-index="11" data-volume="0.5"></audio>
+      <!-- ===== EFFETS SONORES (voix absente : elle reste sur votre vidéo) ===== -->
+      <audio id="t01" src="assets/sfx/whoosh-short.mp3" data-start="0.20" data-duration="0.57" data-track-index="11" data-volume="0.5"></audio>
+      <audio id="t02" src="assets/sfx/whoosh-short.mp3" data-start="4.42" data-duration="0.57" data-track-index="11" data-volume="0.5"></audio>
+      <audio id="t03" src="assets/sfx/whoosh-short.mp3" data-start="8.20" data-duration="0.57" data-track-index="11" data-volume="0.5"></audio>
+      <audio id="t04" src="assets/sfx/whoosh-short.mp3" data-start="12.42" data-duration="0.57" data-track-index="11" data-volume="0.5"></audio>
+      <audio id="t05" src="assets/sfx/whoosh-short.mp3" data-start="15.42" data-duration="0.57" data-track-index="11" data-volume="0.5"></audio>
+      <audio id="t06" src="assets/sfx/whoosh-short.mp3" data-start="17.10" data-duration="0.57" data-track-index="11" data-volume="0.5"></audio>
+      <audio id="t07" src="assets/sfx/whoosh-short.mp3" data-start="20.52" data-duration="0.57" data-track-index="11" data-volume="0.5"></audio>
+      <audio id="t08" src="assets/sfx/whoosh-short.mp3" data-start="23.14" data-duration="0.57" data-track-index="11" data-volume="0.5"></audio>
+      <audio id="t09" src="assets/sfx/whoosh-short.mp3" data-start="25.32" data-duration="0.57" data-track-index="11" data-volume="0.5"></audio>
+      <audio id="t10" src="assets/sfx/whoosh-short.mp3" data-start="26.40" data-duration="0.57" data-track-index="11" data-volume="0.5"></audio>
+      <audio id="t11" src="assets/sfx/whoosh-short.mp3" data-start="28.44" data-duration="0.57" data-track-index="11" data-volume="0.5"></audio>
+      <audio id="t12" src="assets/sfx/whoosh-short.mp3" data-start="31.42" data-duration="0.57" data-track-index="11" data-volume="0.5"></audio>
+      <audio id="t13" src="assets/sfx/whoosh-short.mp3" data-start="35.94" data-duration="0.57" data-track-index="11" data-volume="0.5"></audio>
+      <audio id="t14" src="assets/sfx/whoosh-short.mp3" data-start="38.52" data-duration="0.57" data-track-index="11" data-volume="0.5"></audio>
+      <audio id="t15" src="assets/sfx/whoosh-short.mp3" data-start="41.94" data-duration="0.57" data-track-index="11" data-volume="0.5"></audio>
+      <audio id="t16" src="assets/sfx/whoosh-short.mp3" data-start="45.54" data-duration="0.57" data-track-index="11" data-volume="0.5"></audio>
+      <audio id="t17" src="assets/sfx/whoosh-short.mp3" data-start="48.24" data-duration="0.57" data-track-index="11" data-volume="0.5"></audio>
+      <audio id="t18" src="assets/sfx/whoosh-short.mp3" data-start="49.80" data-duration="0.57" data-track-index="11" data-volume="0.5"></audio>
 
-      <audio id="imp-1" src="assets/sfx/impact-bass-1.mp3" data-start="17.28" data-duration="2.11" data-track-index="12" data-volume="0.55"></audio>
-      <audio id="imp-2" src="assets/sfx/impact-bass-1.mp3" data-start="36.06" data-duration="2.11" data-track-index="12" data-volume="0.55"></audio>
-      <audio id="imp-3" src="assets/sfx/impact-bass-1.mp3" data-start="49.96" data-duration="2.11" data-track-index="12" data-volume="0.55"></audio>
+      <audio id="i1" src="assets/sfx/impact-bass-1.mp3" data-start="2.15" data-duration="2.11" data-track-index="12" data-volume="0.5"></audio>
+      <audio id="i2" src="assets/sfx/impact-bass-1.mp3" data-start="17.30" data-duration="2.11" data-track-index="12" data-volume="0.55"></audio>
+      <audio id="i3" src="assets/sfx/impact-bass-1.mp3" data-start="36.04" data-duration="2.11" data-track-index="12" data-volume="0.55"></audio>
+      <audio id="i4" src="assets/sfx/impact-bass-1.mp3" data-start="49.98" data-duration="2.11" data-track-index="12" data-volume="0.55"></audio>
 
-      <audio id="err-1" src="assets/sfx/error.mp3" data-start="12.50" data-duration="1.20" data-track-index="13" data-volume="0.35"></audio>
-      <audio id="notif-1" src="assets/sfx/notification.mp3" data-start="38.70" data-duration="2.00" data-track-index="13" data-volume="0.3"></audio>
+      <audio id="e1" src="assets/sfx/error.mp3" data-start="8.32" data-duration="1.20" data-track-index="13" data-volume="0.32"></audio>
+      <audio id="e2" src="assets/sfx/error.mp3" data-start="15.52" data-duration="1.20" data-track-index="13" data-volume="0.32"></audio>
+      <audio id="e3" src="assets/sfx/notification.mp3" data-start="38.70" data-duration="2.00" data-track-index="13" data-volume="0.28"></audio>
 
-      <audio id="pop-1" src="assets/sfx/pop.mp3" data-start="3.80" data-duration="0.72" data-track-index="14" data-volume="0.5"></audio>
-      <audio id="pop-2" src="assets/sfx/pop.mp3" data-start="5.80" data-duration="0.72" data-track-index="14" data-volume="0.5"></audio>
-      <audio id="pop-3" src="assets/sfx/pop.mp3" data-start="6.98" data-duration="0.72" data-track-index="14" data-volume="0.5"></audio>
-      <audio id="pop-4" src="assets/sfx/pop.mp3" data-start="23.24" data-duration="0.72" data-track-index="14" data-volume="0.5"></audio>
-      <audio id="pop-5" src="assets/sfx/pop.mp3" data-start="25.40" data-duration="0.72" data-track-index="14" data-volume="0.5"></audio>
-      <audio id="pop-6" src="assets/sfx/pop.mp3" data-start="26.44" data-duration="0.72" data-track-index="14" data-volume="0.5"></audio>
-      <audio id="pop-7" src="assets/sfx/pop.mp3" data-start="42.06" data-duration="0.72" data-track-index="14" data-volume="0.5"></audio>
-      <audio id="pop-8" src="assets/sfx/pop.mp3" data-start="45.65" data-duration="0.72" data-track-index="14" data-volume="0.5"></audio>
+      <audio id="p1" src="assets/sfx/pop.mp3" data-start="3.78" data-duration="0.72" data-track-index="14" data-volume="0.45"></audio>
+      <audio id="p2" src="assets/sfx/pop.mp3" data-start="5.82" data-duration="0.72" data-track-index="14" data-volume="0.45"></audio>
+      <audio id="p3" src="assets/sfx/pop.mp3" data-start="6.96" data-duration="0.72" data-track-index="14" data-volume="0.45"></audio>
+      <audio id="p4" src="assets/sfx/pop.mp3" data-start="13.00" data-duration="0.72" data-track-index="14" data-volume="0.45"></audio>
+      <audio id="p5" src="assets/sfx/pop.mp3" data-start="18.70" data-duration="0.72" data-track-index="14" data-volume="0.45"></audio>
+      <audio id="p6" src="assets/sfx/pop.mp3" data-start="21.60" data-duration="0.72" data-track-index="14" data-volume="0.45"></audio>
+      <audio id="p7" src="assets/sfx/pop.mp3" data-start="24.10" data-duration="0.72" data-track-index="14" data-volume="0.45"></audio>
+      <audio id="p8" src="assets/sfx/pop.mp3" data-start="27.00" data-duration="0.72" data-track-index="14" data-volume="0.45"></audio>
+      <audio id="p9" src="assets/sfx/pop.mp3" data-start="30.05" data-duration="0.72" data-track-index="14" data-volume="0.45"></audio>
+      <audio id="p10" src="assets/sfx/pop.mp3" data-start="42.04" data-duration="0.72" data-track-index="14" data-volume="0.45"></audio>
+      <audio id="p11" src="assets/sfx/pop.mp3" data-start="45.66" data-duration="0.72" data-track-index="14" data-volume="0.45"></audio>
+      <audio id="p12" src="assets/sfx/pop.mp3" data-start="48.32" data-duration="0.72" data-track-index="14" data-volume="0.45"></audio>
 
-      <audio id="clk-1" src="assets/sfx/click-soft.mp3" data-start="31.52" data-duration="0.36" data-track-index="15" data-volume="0.5"></audio>
-      <audio id="clk-2" src="assets/sfx/click-soft.mp3" data-start="31.92" data-duration="0.36" data-track-index="15" data-volume="0.5"></audio>
-      <audio id="clk-3" src="assets/sfx/click-soft.mp3" data-start="32.32" data-duration="0.36" data-track-index="15" data-volume="0.5"></audio>
-      <audio id="spark-1" src="assets/sfx/sparkle.mp3" data-start="30.06" data-duration="1.80" data-track-index="17" data-volume="0.4"></audio>
-      <audio id="riser-1" src="assets/sfx/riser.mp3" data-start="34.40" data-duration="1.60" data-media-start="7.6" data-track-index="16" data-volume="0.3"></audio>
+      <audio id="c1" src="assets/sfx/click-soft.mp3" data-start="31.90" data-duration="0.36" data-track-index="15" data-volume="0.5"></audio>
+      <audio id="c2" src="assets/sfx/click-soft.mp3" data-start="32.60" data-duration="0.36" data-track-index="15" data-volume="0.5"></audio>
+      <audio id="c3" src="assets/sfx/click-soft.mp3" data-start="33.30" data-duration="0.36" data-track-index="15" data-volume="0.5"></audio>
+      <audio id="c4" src="assets/sfx/click-soft.mp3" data-start="43.10" data-duration="0.36" data-track-index="15" data-volume="0.5"></audio>
+
+      <audio id="r1" src="assets/sfx/riser.mp3" data-start="34.45" data-duration="1.55" data-media-start="7.6" data-track-index="16" data-volume="0.28"></audio>
+      <audio id="s1" src="assets/sfx/sparkle.mp3" data-start="29.98" data-duration="1.80" data-track-index="17" data-volume="0.38"></audio>
+      <audio id="s2" src="assets/sfx/sparkle.mp3" data-start="46.30" data-duration="1.80" data-track-index="17" data-volume="0.34"></audio>
     </div>
 
     <script>
       window.__timelines = window.__timelines || {};
       const tl = gsap.timeline({ paused: true });
 
-      /* Entrées / sorties 100% opaques : aucun fondu d'alpha
-         (indispensable pour un rendu transparent ou une incrustation propre). */
-      function popIn(sel, t, d = 0.34) {
+      /* Apparitions 100% opaques (aucun fondu d'alpha) : indispensable
+         pour un calque transparent et une incrustation propre. */
+      function popIn(sel, t, d = 0.32) {
         tl.set(sel, { autoAlpha: 1 }, t);
         tl.fromTo(sel, { scale: 0 }, { scale: 1, duration: d, ease: "back.out(2)" }, t);
       }
-      function popOut(sel, t, d = 0.2) {
+      function slideIn(sel, t, d = 0.3, dx = 90) {
+        tl.set(sel, { autoAlpha: 1 }, t);
+        tl.fromTo(sel, { x: dx, scale: 0.9 }, { x: 0, scale: 1, duration: d, ease: "power3.out" }, t);
+      }
+      function popOut(sel, t, d = 0.18) {
         tl.to(sel, { scale: 0, duration: d, ease: "power2.in" }, t);
         tl.set(sel, { autoAlpha: 0 }, t + d);
       }
+      function sortie(liste, t) { liste.forEach((s, i) => popOut(s, t + i * 0.03)); }
 
-      /* S1 */
-      popIn("#s1-titre", 0.35, 0.4);
-      popIn("#s1-partie", 3.8, 0.3);
-      popOut("#s1-titre", 4.15); popOut("#s1-partie", 4.18);
+      /* respiration permanente du trait de séparation */
+      tl.to("#trait-courbe", { attr: { "stroke-width": 10 }, duration: 2.2,
+        yoyo: true, repeat: 11, ease: "sine.inOut" }, 0);
 
-      /* S2 */
-      popIn("#s2-claude", 4.6, 0.38);
-      popIn("#s2-gratuit", 5.8, 0.32);
-      popIn("#s2-prix", 6.98, 0.32);
-      tl.fromTo("#s2-barre", { scaleX: 0 }, { scaleX: 1, duration: 0.26, ease: "power2.out" }, 7.34);
-      popOut("#s2-claude", 7.85); popOut("#s2-gratuit", 7.88); popOut("#s2-prix", 7.91);
+      /* B1 · titre */
+      popIn("#b1-kick", 0.2, 0.3);
+      popIn("#b1-titre", 0.5, 0.42);
+      tl.to("#b1-titre", { scale: 1.05, duration: 0.22, yoyo: true, repeat: 1, ease: "power2.inOut" }, 2.15);
+      popIn("#b1-poche", 3.78, 0.3);
+      sortie(["#b1-kick", "#b1-titre", "#b1-poche"], 4.12);
 
-      /* S3 */
-      popIn("#s3-alerte", 8.3, 0.36);
-      tl.to("#s3-alerte", { rotate: 3, duration: 0.09, yoyo: true, repeat: 5, ease: "sine.inOut" }, 8.7);
-      tl.set("#s3-alerte", { rotate: 0 }, 9.3);
-      popIn("#s3-faux", 12.5, 0.34);
-      popIn("#s3-data", 15.5, 0.34);
-      popOut("#s3-alerte", 16.1); popOut("#s3-faux", 16.13); popOut("#s3-data", 16.16);
+      /* B2 · Claude gratuit */
+      popIn("#b2-kick", 4.42, 0.28);
+      slideIn("#b2-titre", 4.7, 0.34);
+      popIn("#b2-zero", 5.82, 0.3);
+      popIn("#b2-abo", 6.96, 0.3);
+      tl.fromTo("#b2-abo .trait", { scaleX: 0 }, { scaleX: 1, duration: 0.24, ease: "power2.out" }, 7.3);
+      sortie(["#b2-kick", "#b2-titre", "#b2-zero", "#b2-abo"], 7.9);
 
-      /* S4 */
-      popIn("#s4-marque", 17.28, 0.42);
-      tl.to("#s4-marque", { scale: 1.05, duration: 0.5, yoyo: true, repeat: 3, ease: "sine.inOut" }, 17.8);
-      popIn("#s4-google", 18.72, 0.3);
-      popIn("#s4-c1", 23.24, 0.3);
-      popIn("#s4-c2", 25.4, 0.3);
-      popIn("#s4-c3", 26.44, 0.3);
-      popOut("#s4-marque", 28.1); popOut("#s4-google", 28.13);
-      popOut("#s4-c1", 28.16); popOut("#s4-c2", 28.19); popOut("#s4-c3", 28.22);
+      /* B3 · le problème */
+      popIn("#b3-kick", 8.2, 0.3);
+      tl.to("#b3-kick", { rotate: 3, duration: 0.08, yoyo: true, repeat: 5, ease: "sine.inOut" }, 8.6);
+      tl.set("#b3-kick", { rotate: 0 }, 9.2);
+      slideIn("#b3-titre", 8.55, 0.36);
+      sortie(["#b3-kick", "#b3-titre"], 12.2);
 
-      /* S5 */
-      popIn("#s5-guide", 28.6, 0.38);
-      popIn("#s5-gratuit", 30.06, 0.32);
-      popIn("#s5-etapes", 31.5, 0.34);
-      popOut("#s5-guide", 35.62); popOut("#s5-gratuit", 35.65); popOut("#s5-etapes", 35.68);
+      /* B4 · faux Claude */
+      popIn("#b4-titre", 12.42, 0.34);
+      popIn("#b4-masque", 13.0, 0.32);
+      popIn("#b4-vrai", 13.62, 0.3);
+      sortie(["#b4-titre", "#b4-masque", "#b4-vrai"], 15.2);
 
-      /* S6 */
-      popIn("#s6-cta", 36.06, 0.4);
-      popIn("#s6-fleche", 36.5, 0.3);
-      tl.to("#s6-fleche", { y: 16, duration: 0.42, yoyo: true, repeat: 3, ease: "sine.inOut" }, 36.9);
-      tl.set("#s6-fleche", { y: 0 }, 38.6);
-      popOut("#s6-cta", 38.3); popOut("#s6-fleche", 38.33);
+      /* B5 · données */
+      popIn("#b5-titre", 15.45, 0.32);
+      slideIn("#b5-flux", 15.75, 0.3, 70);
+      sortie(["#b5-titre", "#b5-flux"], 16.85);
 
-      /* S7 */
-      popIn("#s7-lien", 38.7, 0.36);
-      popOut("#s7-lien", 41.6);
-      popIn("#s7-avatars", 42.06, 0.36);
-      popIn("#s7-membres", 42.5, 0.32);
-      popIn("#s7-ressource", 45.65, 0.32);
-      popOut("#s7-avatars", 47.9); popOut("#s7-membres", 47.93); popOut("#s7-ressource", 47.96);
+      /* B6 · la solution */
+      popIn("#b6-kick", 17.1, 0.28);
+      popIn("#b6-titre", 17.3, 0.45);
+      tl.to("#b6-titre", { scale: 1.06, duration: 0.5, yoyo: true, repeat: 3, ease: "sine.inOut" }, 17.85);
+      popIn("#b6-google", 18.7, 0.3);
+      sortie(["#b6-kick", "#b6-titre", "#b6-google"], 20.3);
 
-      /* S8 */
-      popIn("#s8-cta", 49.96, 0.42);
-      popIn("#s8-cloche", 50.4, 0.32);
-      tl.to("#s8-cloche", { rotate: 14, duration: 0.1, yoyo: true, repeat: 7, transformOrigin: "50% 14%", ease: "sine.inOut" }, 50.8);
-      tl.set("#s8-cloche", { rotate: 0 }, 51.7);
-      tl.to("#s8-cta", { scale: 1.06, duration: 0.5, yoyo: true, repeat: 3, ease: "sine.inOut" }, 51.2);
-      popOut("#s8-cta", 53.9); popOut("#s8-cloche", 53.93);
+      /* B7 · plusieurs modèles */
+      popIn("#b7-kick", 20.52, 0.28);
+      slideIn("#b7-titre", 20.75, 0.32);
+      tl.set("#b7-minis", { autoAlpha: 1 }, 21.55);
+      tl.fromTo("#b7-minis .mini", { scale: 0 }, { scale: 1, duration: 0.3, ease: "back.out(2.2)", stagger: 0.13 }, 21.55);
+      sortie(["#b7-kick", "#b7-titre", "#b7-minis"], 22.94);
+      tl.set("#b7-minis .mini", { scale: 1 }, 23.12);
+
+      /* B8 · 100% local */
+      popIn("#b8-titre", 23.14, 0.34);
+      slideIn("#b8-explique", 24.08, 0.3, 70);
+      sortie(["#b8-titre", "#b8-explique"], 25.12);
+
+      /* B9 · sécurisé */
+      popIn("#b9-titre", 25.32, 0.32);
+      popIn("#b9-sous", 25.72, 0.28);
+      sortie(["#b9-titre", "#b9-sous"], 26.22);
+
+      /* B10 · sans limite */
+      popIn("#b10-titre", 26.4, 0.32);
+      popIn("#b10-inf", 26.98, 0.3);
+      sortie(["#b10-titre", "#b10-inf"], 28.16);
+
+      /* B11 · le guide */
+      popIn("#b11-kick", 28.44, 0.28);
+      popIn("#b11-titre", 28.7, 0.38);
+      popIn("#b11-gratuit", 30.03, 0.32);
+      tl.to("#b11-gratuit", { scale: 1.08, duration: 0.4, yoyo: true, repeat: 1, ease: "sine.inOut" }, 30.4);
+      sortie(["#b11-kick", "#b11-titre", "#b11-gratuit"], 31.2);
+
+      /* B12 · étapes */
+      slideIn("#b12-titre", 31.42, 0.32);
+      popIn("#b12-e1", 31.88, 0.28);
+      popIn("#b12-e2", 32.58, 0.28);
+      popIn("#b12-e3", 33.28, 0.28);
+      popIn("#b12-pc", 34.2, 0.3);
+      sortie(["#b12-titre", "#b12-e1", "#b12-e2", "#b12-e3", "#b12-pc"], 35.62);
+
+      /* B13 · commente IA */
+      popIn("#b13-titre", 36.04, 0.4);
+      popIn("#b13-sous", 36.5, 0.3);
+      popIn("#b13-fleche", 36.8, 0.28);
+      tl.to("#b13-fleche", { y: 14, duration: 0.4, yoyo: true, repeat: 3, ease: "sine.inOut" }, 37.1);
+      tl.set("#b13-fleche", { y: 0 }, 38.3);
+      sortie(["#b13-titre", "#b13-sous", "#b13-fleche"], 38.24);
+
+      /* B14 · le lien */
+      popIn("#b14-kick", 38.52, 0.28);
+      slideIn("#b14-titre", 38.74, 0.34);
+      popIn("#b14-sous", 39.6, 0.3);
+      sortie(["#b14-kick", "#b14-titre", "#b14-sous"], 41.72);
+
+      /* B15 · communauté */
+      tl.set("#b15-avatars", { autoAlpha: 1 }, 41.94);
+      tl.fromTo("#b15-avatars .av", { scale: 0 }, { scale: 1, duration: 0.32, ease: "back.out(2.4)", stagger: 0.1 }, 41.94);
+      popIn("#b15-titre", 42.5, 0.36);
+      popIn("#b15-sous", 43.1, 0.3);
+      sortie(["#b15-avatars", "#b15-titre", "#b15-sous"], 45.28);
+      tl.set("#b15-avatars .av", { scale: 1 }, 45.5);
+
+      /* B16 · ressource */
+      slideIn("#b16-titre", 45.54, 0.34);
+      popIn("#b16-chip", 46.3, 0.3);
+      sortie(["#b16-titre", "#b16-chip"], 48.0);
+
+      /* B17 · première fois */
+      popIn("#b17-titre", 48.24, 0.34);
+      sortie(["#b17-titre"], 49.5);
+
+      /* B18 · abonne-toi */
+      popIn("#b18-titre", 49.96, 0.42);
+      popIn("#b18-cloche", 50.4, 0.3);
+      tl.to("#b18-cloche", { rotate: 14, duration: 0.1, yoyo: true, repeat: 7, transformOrigin: "50% 14%", ease: "sine.inOut" }, 50.8);
+      tl.set("#b18-cloche", { rotate: 0 }, 51.7);
+      popIn("#b18-sous", 51.4, 0.3);
+      tl.to("#b18-titre", { scale: 1.06, duration: 0.5, yoyo: true, repeat: 2, ease: "sine.inOut" }, 51.9);
+      sortie(["#b18-titre", "#b18-cloche", "#b18-sous"], 53.9);
 
       /* ---------- sous-titres ---------- */
       {{CAPTIONS_TWEENS}}
