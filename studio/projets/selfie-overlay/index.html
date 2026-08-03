@@ -20,13 +20,15 @@
         --ardoise-2: #2a2a33;
         --gris: #9a9aa6;
       }
-      body { margin: 0; background: #00ff00; font-family: "Inter", sans-serif; }
+      body { margin: 0; background: transparent; font-family: "Inter", sans-serif; }
       #root { position: relative; width: 1080px; height: 1920px; overflow: hidden; }
-      #fond { position: absolute; inset: 0; background: #00ff00; }
+      #fond { position: absolute; inset: 0; background: transparent; }
 
       /* ===== BANDEAU NOIR + séparation courbée en dégradé ===== */
-      #bandeau { position: absolute; top: 0; left: 0; width: 1080px; height: 470px; background: #000; }
-      #courbe { position: absolute; top: 470px; left: 0; width: 1080px; height: 230px; }
+      /* bandeau : noir plein jusqu'à 470 px, puis dégradé droit vers le transparent
+         (aucune courbe, aucun trait — la vidéo apparaît en fondu dessous) */
+      #bandeau { position: absolute; top: 0; left: 0; width: 1080px; height: 730px;
+        background: linear-gradient(180deg, #000 0px, #000 470px, rgba(0, 0, 0, 0) 730px); }
 
       .masque { opacity: 0; visibility: hidden; }
 
@@ -101,26 +103,9 @@
 
       <div id="fond" class="clip" data-start="0" data-duration="54.3" data-track-index="0"></div>
 
-      <!-- ===== bandeau + séparation courbée ===== -->
+      <!-- ===== bandeau noir dégradé ===== -->
       <div id="bande-wrap" class="clip" data-start="0" data-duration="54.3" data-track-index="1">
         <div id="bandeau"></div>
-        <svg id="courbe" viewBox="0 0 1080 230" preserveAspectRatio="none">
-          <defs>
-            <linearGradient id="fadeNoir" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="0%" stop-color="#000" stop-opacity="1" />
-              <stop offset="52%" stop-color="#000" stop-opacity="1" />
-              <stop offset="100%" stop-color="#000" stop-opacity="1" />
-            </linearGradient>
-            <linearGradient id="traitAccent" x1="0" y1="0" x2="1" y2="0">
-              <stop offset="0%" stop-color="#007aff" />
-              <stop offset="52%" stop-color="#4aa8ff" />
-              <stop offset="100%" stop-color="#fcbb00" />
-            </linearGradient>
-          </defs>
-          <path d="M0,0 H1080 V70 C 810,214 270,214 0,70 Z" fill="url(#fadeNoir)" />
-          <path id="trait-courbe" d="M0,70 C 270,214 810,214 1080,70" fill="none"
-                stroke="url(#traitAccent)" stroke-width="7" stroke-linecap="round" />
-        </svg>
       </div>
 
       <!-- ===== ANIMATIONS ===== -->
@@ -403,10 +388,6 @@
         tl.set(sel, { autoAlpha: 0 }, t + d);
       }
       function sortie(liste, t) { liste.forEach((s, i) => popOut(s, t + i * 0.03)); }
-
-      /* respiration permanente du trait de séparation */
-      tl.to("#trait-courbe", { attr: { "stroke-width": 10 }, duration: 2.2,
-        yoyo: true, repeat: 11, ease: "sine.inOut" }, 0);
 
       /* B1 · titre */
       popIn("#b1-kick", 0.2, 0.3);
