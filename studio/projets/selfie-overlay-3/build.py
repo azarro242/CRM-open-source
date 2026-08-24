@@ -4,10 +4,13 @@ Usage : python3 build.py [transparent|vert]   (défaut : transparent)"""
 import json, re, html, sys
 
 BASE = "/home/user/CRM-open-source/studio/projets/selfie-overlay-3"
-VERT = len(sys.argv) > 1 and sys.argv[1] == "vert"
-FOND = "#00ff00" if VERT else "transparent"
-# fin du degrade de separation : opaque en chroma (pas de pixels semi-verts), fondu en alpha
-FADE_FIN = "1" if VERT else "0"
+MODE = sys.argv[1] if len(sys.argv) > 1 else "transparent"
+# transparent : degrade vers l'alpha (WebM)
+# noir        : meme degrade sur fond noir (MP4, a poser en mode « Ecran »)
+# vert        : coupure nette a 960 px sur fond vert (MP4, incrustation chroma)
+FOND = {"vert": "#00ff00", "noir": "#000000"}.get(MODE, "transparent")
+BANDEAU = ("height: 960px; background: #000;" if MODE == "vert" else
+           "height: 1060px; background: linear-gradient(180deg, #000 0px, #000 880px, rgba(0, 0, 0, 0) 1060px);")
 
 words = json.load(open(f"{BASE}/transcript.json"))
 
@@ -74,8 +77,8 @@ for n, c in enumerate(chunks):
 template = open(f"{BASE}/template.tpl").read()
 out = (template
        .replace("{{FOND}}", FOND)
-       .replace("{{FADE_FIN}}", FADE_FIN)
+       .replace("{{BANDEAU}}", BANDEAU)
        .replace("{{CAPTIONS_HTML}}", "\n".join(cap_html))
        .replace("{{CAPTIONS_TWEENS}}", "\n      ".join(cap_tw)))
 open(f"{BASE}/index.html", "w").write(out)
-print(f"{len(chunks)} blocs de sous-titres · fond={FOND} · index.html écrit.")
+print(f"{len(chunks)} blocs · mode={MODE} · fond={FOND} · index.html écrit.")

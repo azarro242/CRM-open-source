@@ -20,15 +20,14 @@
         --ardoise-2: #2a2a33;
         --gris: #9a9aa6;
       }
-      body { margin: 0; background: transparent; font-family: "Inter", sans-serif; }
+      body { margin: 0; background: #000000; font-family: "Inter", sans-serif; }
       #root { position: relative; width: 1080px; height: 1920px; overflow: hidden; }
-      #fond { position: absolute; inset: 0; background: transparent; }
+      #fond { position: absolute; inset: 0; background: #000000; }
 
       /* ===== BANDEAU : moitié haute exactement (split à 960 px) =====
          noir plein jusqu'à 880, dégradé droit jusqu'à 1060 → le fondu est
          centré sur la mi-hauteur, la moitié basse reste libre pour la vidéo. */
-      #bandeau { position: absolute; top: 0; left: 0; width: 1080px; height: 1060px;
-        background: linear-gradient(180deg, #000 0px, #000 880px, rgba(0, 0, 0, 0) 1060px); }
+      #bandeau { position: absolute; top: 0; left: 0; width: 1080px; height: 1060px; background: linear-gradient(180deg, #000 0px, #000 880px, rgba(0, 0, 0, 0) 1060px); }
 
       .masque { opacity: 0; visibility: hidden; }
 

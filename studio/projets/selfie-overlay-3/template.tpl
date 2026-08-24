@@ -27,8 +27,7 @@
       /* ===== BANDEAU : moitié haute exactement (split à 960 px) =====
          noir plein jusqu'à 880, dégradé droit jusqu'à 1060 → le fondu est
          centré sur la mi-hauteur, la moitié basse reste libre pour la vidéo. */
-      #bandeau { position: absolute; top: 0; left: 0; width: 1080px; height: 1060px;
-        background: linear-gradient(180deg, #000 0px, #000 880px, rgba(0, 0, 0, 0) 1060px); }
+      #bandeau { position: absolute; top: 0; left: 0; width: 1080px; {{BANDEAU}} }
 
       .masque { opacity: 0; visibility: hidden; }
 
