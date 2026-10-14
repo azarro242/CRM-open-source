@@ -4,6 +4,21 @@ Ce dépôt sert d'atelier de montage vidéo basé sur HyperFrames
 (skills versionnés dans `.agents/skills/`, exposés via `.claude/skills/`).
 Guide utilisateur : `GUIDE-MONTAGE.md`.
 
+## Studio V2 — génération actuelle (prioritaire)
+
+Toute **nouvelle** vidéo se produit dans `studio-v2/` en suivant le skill `studio-v2`
+(`.claude/skills/studio-v2/SKILL.md`). En résumé :
+
+- Trois portes d'entrée : **A** prompt / script · **B** images à animer ·
+  **C** vidéo d'exemple — toujours avec liens et ressources externes exploités.
+- Trois questions **obligatoires** avant de produire : **format / dimensions**,
+  **voix off**, **sous-titres**.
+- Qualité : appliquer intégralement `studio-v2/QUALITE.md` (acquis V1 + consignes V2).
+- Toute nouvelle consigne qualité du client s'ajoute à `QUALITE.md` dans le même tour.
+
+Le dossier `studio/` (V1) est archivé : ne le modifier que pour retoucher un projet V1
+existant à la demande du client.
+
 ## Au début de toute session impliquant de la vidéo
 
 1. Lancer `bash outils/setup.sh` (idempotent, ~1 min) : ffmpeg, whisper-cli,
