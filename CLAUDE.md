@@ -12,7 +12,8 @@ Toute **nouvelle** vidéo se produit dans `studio-v2/` en suivant le skill `stud
 - Trois portes d'entrée : **A** prompt / script · **B** images à animer ·
   **C** vidéo d'exemple — toujours avec liens et ressources externes exploités.
 - Trois questions **obligatoires** avant de produire : **format / dimensions**,
-  **voix off**, **sous-titres**.
+  **voix off** (ElevenLabs — liste des voix classées via `outils/elevenlabs.py` —
+  ou fichier audio fourni), **sous-titres**.
 - Qualité : appliquer intégralement `studio-v2/QUALITE.md` (acquis V1 + consignes V2).
 - Toute nouvelle consigne qualité du client s'ajoute à `QUALITE.md` dans le même tour.
 

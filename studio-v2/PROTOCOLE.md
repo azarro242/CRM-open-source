@@ -40,12 +40,26 @@ donnée explicitement dans la demande). Ne jamais deviner.
 Préciser aussi s'il s'agit d'une **vidéo complète** ou d'un **calque à superposer**
 sur une autre vidéo (voir § 5 pour les formats de calque).
 
-### Q2 · Voix off
+### Q2 · Voix off — deux possibilités
 
-- **Audio fourni** → je transcris et je cale tout au mot près
-- **Enregistrée plus tard par le client** → je cale sur le script/storyboard, piste sans voix
-- **Voix IA générée** → synthèse vocale française (installation à vérifier)
-- **Pas de voix** → musique et effets sonores uniquement
+1. **Générée avec ElevenLabs**
+   1. Langue de la vidéo : la déduire de la demande (français par défaut), sinon la demander.
+   2. Lancer `python3 outils/elevenlabs.py voix --langue <code>` : liste des voix de cette
+      langue, **classées de la meilleure à la moins bonne** (voix vérifiées dans la langue
+      d'abord, puis usage réel en production sur 12 mois, puis popularité).
+   3. Présenter la liste au client : nom, profil (genre, âge, accent, usage) et lien
+      « écouter » pour chaque voix. Puis lui faire choisir par `AskUserQuestion` avec les
+      4 premières en options — il peut taper le nom d'une autre voix de la liste.
+      **Le client n'a qu'à sélectionner un nom.**
+   4. Générer : `python3 outils/elevenlabs.py generer --voix <id> --texte <script>
+      --sortie <projet>/voix.mp3 --langue <code>` (modèle `eleven_v4` par défaut).
+      Le fichier `voix.transcript.json` produit à côté donne l'horodatage mot à mot :
+      les sous-titres se calent dessus sans passer par Whisper.
+2. **Fichier audio fourni** → transcription Whisper (`--model small --language <code>`)
+   et calage au mot près.
+
+Pour un cas particulier (vidéo sans voix, voix enregistrée plus tard), le client
+l'indique dans le champ « Autre » de la question.
 
 ### Q3 · Sous-titres
 

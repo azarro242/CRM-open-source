@@ -43,8 +43,17 @@ d'amélioration V2** fournis par le client. Les deux s'appliquent à chaque proj
 
 ## Partie 2 · Éléments d'amélioration V2 — fournis par le client
 
-> En attente des consignes du client. Chaque élément reçu est ajouté ici,
-> daté, avec sa règle d'application concrète.
+> Chaque élément reçu est ajouté ici, daté, avec sa règle d'application concrète.
+
+### [2026-10-14] Voix off : ElevenLabs ou fichier audio
+- Consigne du client : « deux possibilités, soit générer la voix off grâce au modèle
+  ElevenLabs […] proposer la liste des noms des voix sur la langue choisie, du meilleur
+  au moins bon, l'utilisateur n'aura qu'à sélectionner le nom de la voix — ou fournir
+  un fichier audio ».
+- Règle d'application : la question Q2 propose exactement ces deux choix. Si ElevenLabs :
+  liste classée produite par `outils/elevenlabs.py voix`, présentée avec lien d'écoute,
+  sélection du nom par le client, génération en `eleven_v4`, sous-titres calés sur
+  l'horodatage fourni par ElevenLabs. Détail : `PROTOCOLE.md` § 2, Q2.
 
 <!-- Format d'ajout :
 ### [date] Titre de l'élément

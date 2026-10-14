@@ -23,9 +23,16 @@ Sources de vérité (à lire **avant** d'agir, dans cet ordre) :
 3. **Questions d'ouverture** — poser via `AskUserQuestion`, en un seul appel, les
    questions dont la réponse n'est pas déjà explicite dans la demande :
    - Q1 Format / dimensions (et : vidéo complète ou calque à superposer)
-   - Q2 Voix off
+   - Q2 Voix off — exactement deux options : **Générée avec ElevenLabs** /
+     **Fichier audio fourni**
    - Q3 Sous-titres
    Option recommandée en premier, déduite de l'historique du client quand c'est possible.
+3 bis. **Si ElevenLabs** — langue de la vidéo (déduite, sinon demandée), puis
+   `python3 outils/elevenlabs.py voix --langue <code>`. Montrer la liste classée
+   (nom, profil, lien « écouter ») et faire choisir via `AskUserQuestion` avec les
+   4 premières voix en options. Générer avec `outils/elevenlabs.py generer` ; utiliser
+   le `*.transcript.json` produit pour les sous-titres (pas de Whisper).
+   Sans `ELEVENLABS_API_KEY`, le signaler au client avant de continuer.
 4. **Brief** — copier `studio-v2/modeles/BRIEF.md` vers `studio-v2/projets/<nom>/BRIEF.md`,
    le remplir, et le récapituler au client (dit / déduit séparés).
 5. **Production** — `hyperframes init` dans `studio-v2/projets/<nom>/`, puis composer en
