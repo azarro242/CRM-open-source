@@ -3,3 +3,5 @@ studio/projets/**/renders/
 studio/projets/**/.media/
 *.log
 .DS_Store
+__pycache__/
+*.pyc
