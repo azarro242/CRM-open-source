@@ -1,0 +1,917 @@
+[
+  {
+    "text": "L'IA",
+    "start": 0.02,
+    "end": 0.44
+  },
+  {
+    "text": "pour",
+    "start": 0.44,
+    "end": 0.88
+  },
+  {
+    "text": "les",
+    "start": 0.88,
+    "end": 1.21
+  },
+  {
+    "text": "personnes",
+    "start": 1.3,
+    "end": 2.21
+  },
+  {
+    "text": "fauchées,",
+    "start": 2.21,
+    "end": 3.36
+  },
+  {
+    "text": "partie",
+    "start": 3.36,
+    "end": 3.83
+  },
+  {
+    "text": "un.",
+    "start": 3.83,
+    "end": 4.15
+  },
+  {
+    "text": "Je",
+    "start": 4.19,
+    "end": 4.31
+  },
+  {
+    "text": "te",
+    "start": 4.33,
+    "end": 4.42
+  },
+  {
+    "text": "montre",
+    "start": 4.42,
+    "end": 4.76
+  },
+  {
+    "text": "comment",
+    "start": 4.87,
+    "end": 5.1
+  },
+  {
+    "text": "accéder",
+    "start": 5.1,
+    "end": 5.44
+  },
+  {
+    "text": "à",
+    "start": 5.44,
+    "end": 5.49
+  },
+  {
+    "text": "Claude",
+    "start": 5.49,
+    "end": 5.83
+  },
+  {
+    "text": "gratuitement",
+    "start": 5.84,
+    "end": 6.59
+  },
+  {
+    "text": "et",
+    "start": 6.79,
+    "end": 6.84
+  },
+  {
+    "text": "sans",
+    "start": 6.84,
+    "end": 7
+  },
+  {
+    "text": "abonnement.",
+    "start": 7,
+    "end": 8
+  },
+  {
+    "text": "Le",
+    "start": 8.02,
+    "end": 8.09
+  },
+  {
+    "text": "problème,",
+    "start": 8.09,
+    "end": 8.54
+  },
+  {
+    "text": "c'est",
+    "start": 8.54,
+    "end": 8.74
+  },
+  {
+    "text": "que",
+    "start": 8.75,
+    "end": 8.88
+  },
+  {
+    "text": "la",
+    "start": 8.88,
+    "end": 8.96
+  },
+  {
+    "text": "plupart",
+    "start": 8.97,
+    "end": 9.28
+  },
+  {
+    "text": "des",
+    "start": 9.28,
+    "end": 9.41
+  },
+  {
+    "text": "personnes",
+    "start": 9.41,
+    "end": 9.81
+  },
+  {
+    "text": "qui",
+    "start": 9.81,
+    "end": 9.94
+  },
+  {
+    "text": "te",
+    "start": 9.94,
+    "end": 10.02
+  },
+  {
+    "text": "parlent",
+    "start": 10.1,
+    "end": 10.34
+  },
+  {
+    "text": "de",
+    "start": 10.34,
+    "end": 10.42
+  },
+  {
+    "text": "cette",
+    "start": 10.5,
+    "end": 10.65
+  },
+  {
+    "text": "astuce",
+    "start": 10.65,
+    "end": 11
+  },
+  {
+    "text": "vont",
+    "start": 11,
+    "end": 11.28
+  },
+  {
+    "text": "te",
+    "start": 11.28,
+    "end": 11.41
+  },
+  {
+    "text": "proposer",
+    "start": 11.42,
+    "end": 12
+  },
+  {
+    "text": "des",
+    "start": 12,
+    "end": 12.1
+  },
+  {
+    "text": "modèles",
+    "start": 12.17,
+    "end": 12.56
+  },
+  {
+    "text": "chinois",
+    "start": 12.56,
+    "end": 13
+  },
+  {
+    "text": "déguisés",
+    "start": 13,
+    "end": 13.48
+  },
+  {
+    "text": "en",
+    "start": 13.48,
+    "end": 13.5
+  },
+  {
+    "text": "Claude",
+    "start": 13.59,
+    "end": 14
+  },
+  {
+    "text": "et",
+    "start": 14,
+    "end": 14.07
+  },
+  {
+    "text": "qui",
+    "start": 14.12,
+    "end": 14.26
+  },
+  {
+    "text": "font",
+    "start": 14.34,
+    "end": 14.49
+  },
+  {
+    "text": "n'importe",
+    "start": 14.49,
+    "end": 14.96
+  },
+  {
+    "text": "quoi",
+    "start": 14.99,
+    "end": 15.19
+  },
+  {
+    "text": "avec",
+    "start": 15.19,
+    "end": 15.41
+  },
+  {
+    "text": "tes",
+    "start": 15.41,
+    "end": 15.57
+  },
+  {
+    "text": "données.",
+    "start": 15.57,
+    "end": 16
+  },
+  {
+    "text": "Alors",
+    "start": 16.02,
+    "end": 16.29
+  },
+  {
+    "text": "qu'ici",
+    "start": 16.3,
+    "end": 16.66
+  },
+  {
+    "text": "je",
+    "start": 16.66,
+    "end": 16.78
+  },
+  {
+    "text": "te",
+    "start": 16.78,
+    "end": 16.9
+  },
+  {
+    "text": "parle",
+    "start": 16.9,
+    "end": 17.2
+  },
+  {
+    "text": "de",
+    "start": 17.2,
+    "end": 17.32
+  },
+  {
+    "text": "Gemma",
+    "start": 17.32,
+    "end": 17.62
+  },
+  {
+    "text": "4",
+    "start": 17.62,
+    "end": 17.8
+  },
+  {
+    "text": "qui",
+    "start": 17.8,
+    "end": 17.98
+  },
+  {
+    "text": "est",
+    "start": 18.09,
+    "end": 18.16
+  },
+  {
+    "text": "un",
+    "start": 18.16,
+    "end": 18.28
+  },
+  {
+    "text": "outil",
+    "start": 18.28,
+    "end": 18.58
+  },
+  {
+    "text": "de",
+    "start": 18.58,
+    "end": 18.68
+  },
+  {
+    "text": "Google",
+    "start": 18.73,
+    "end": 19.02
+  },
+  {
+    "text": "qui",
+    "start": 19.11,
+    "end": 19.25
+  },
+  {
+    "text": "te",
+    "start": 19.25,
+    "end": 19.37
+  },
+  {
+    "text": "permet",
+    "start": 19.37,
+    "end": 19.74
+  },
+  {
+    "text": "d'accéder",
+    "start": 19.74,
+    "end": 20.27
+  },
+  {
+    "text": "à",
+    "start": 20.3,
+    "end": 20.34
+  },
+  {
+    "text": "plusieurs",
+    "start": 20.36,
+    "end": 20.89
+  },
+  {
+    "text": "modèles",
+    "start": 20.89,
+    "end": 21.3
+  },
+  {
+    "text": "de",
+    "start": 21.31,
+    "end": 21.43
+  },
+  {
+    "text": "langage",
+    "start": 21.43,
+    "end": 22
+  },
+  {
+    "text": "intégrés",
+    "start": 22,
+    "end": 22.45
+  },
+  {
+    "text": "en",
+    "start": 22.45,
+    "end": 22.56
+  },
+  {
+    "text": "interne",
+    "start": 22.56,
+    "end": 23
+  },
+  {
+    "text": "en",
+    "start": 23,
+    "end": 23.28
+  },
+  {
+    "text": "local",
+    "start": 23.28,
+    "end": 23.59
+  },
+  {
+    "text": "sur",
+    "start": 24.09,
+    "end": 24.18
+  },
+  {
+    "text": "ton",
+    "start": 24.24,
+    "end": 24.35
+  },
+  {
+    "text": "ordinateur",
+    "start": 24.36,
+    "end": 25
+  },
+  {
+    "text": "de",
+    "start": 25,
+    "end": 25.05
+  },
+  {
+    "text": "façon",
+    "start": 25.12,
+    "end": 25.43
+  },
+  {
+    "text": "sécurisée",
+    "start": 25.43,
+    "end": 25.98
+  },
+  {
+    "text": "et",
+    "start": 26.08,
+    "end": 26.12
+  },
+  {
+    "text": "sans",
+    "start": 26.18,
+    "end": 26.48
+  },
+  {
+    "text": "limite",
+    "start": 26.48,
+    "end": 26.96
+  },
+  {
+    "text": "d'utilisation.",
+    "start": 26.96,
+    "end": 28
+  },
+  {
+    "text": "J'ai",
+    "start": 28.02,
+    "end": 28.24
+  },
+  {
+    "text": "créé",
+    "start": 28.24,
+    "end": 28.48
+  },
+  {
+    "text": "un",
+    "start": 28.48,
+    "end": 28.6
+  },
+  {
+    "text": "guide",
+    "start": 28.6,
+    "end": 28.9
+  },
+  {
+    "text": "qui",
+    "start": 28.9,
+    "end": 29.08
+  },
+  {
+    "text": "est",
+    "start": 29.08,
+    "end": 29.26
+  },
+  {
+    "text": "complètement",
+    "start": 29.26,
+    "end": 29.99
+  },
+  {
+    "text": "gratuit",
+    "start": 30.1,
+    "end": 30.41
+  },
+  {
+    "text": "qui",
+    "start": 30.41,
+    "end": 30.59
+  },
+  {
+    "text": "te",
+    "start": 30.59,
+    "end": 30.68
+  },
+  {
+    "text": "montre",
+    "start": 30.73,
+    "end": 31.02
+  },
+  {
+    "text": "étape",
+    "start": 31.11,
+    "end": 31.37
+  },
+  {
+    "text": "par",
+    "start": 31.37,
+    "end": 31.43
+  },
+  {
+    "text": "étape",
+    "start": 31.55,
+    "end": 31.84
+  },
+  {
+    "text": "comment",
+    "start": 31.86,
+    "end": 32.07
+  },
+  {
+    "text": "l'installer",
+    "start": 32.27,
+    "end": 32.93
+  },
+  {
+    "text": "sur",
+    "start": 32.93,
+    "end": 33.11
+  },
+  {
+    "text": "ton",
+    "start": 33.11,
+    "end": 33.29
+  },
+  {
+    "text": "ordinateur.",
+    "start": 33.29,
+    "end": 34
+  },
+  {
+    "text": "Si",
+    "start": 34.02,
+    "end": 34.12
+  },
+  {
+    "text": "tu",
+    "start": 34.12,
+    "end": 34.24
+  },
+  {
+    "text": "veux",
+    "start": 34.24,
+    "end": 34.49
+  },
+  {
+    "text": "y",
+    "start": 34.49,
+    "end": 34.55
+  },
+  {
+    "text": "accéder,",
+    "start": 34.55,
+    "end": 35.1
+  },
+  {
+    "text": "il",
+    "start": 35.1,
+    "end": 35.22
+  },
+  {
+    "text": "suffit",
+    "start": 35.22,
+    "end": 35.59
+  },
+  {
+    "text": "que",
+    "start": 35.59,
+    "end": 35.78
+  },
+  {
+    "text": "tu",
+    "start": 35.78,
+    "end": 35.9
+  },
+  {
+    "text": "commentes",
+    "start": 36.1,
+    "end": 36.42
+  },
+  {
+    "text": "IA",
+    "start": 36.5,
+    "end": 36.58
+  },
+  {
+    "text": "en",
+    "start": 36.58,
+    "end": 36.68
+  },
+  {
+    "text": "dessous",
+    "start": 36.73,
+    "end": 37.13
+  },
+  {
+    "text": "de",
+    "start": 37.13,
+    "end": 37.25
+  },
+  {
+    "text": "cette",
+    "start": 37.25,
+    "end": 37.56
+  },
+  {
+    "text": "vidéo.",
+    "start": 37.56,
+    "end": 38
+  },
+  {
+    "text": "Je",
+    "start": 38.02,
+    "end": 38.1
+  },
+  {
+    "text": "t'enverrai",
+    "start": 38.1,
+    "end": 38.62
+  },
+  {
+    "text": "le",
+    "start": 38.62,
+    "end": 38.72
+  },
+  {
+    "text": "lien",
+    "start": 38.72,
+    "end": 38.92
+  },
+  {
+    "text": "pour",
+    "start": 38.93,
+    "end": 39.14
+  },
+  {
+    "text": "accéder",
+    "start": 39.14,
+    "end": 39.51
+  },
+  {
+    "text": "à",
+    "start": 39.51,
+    "end": 39.56
+  },
+  {
+    "text": "la",
+    "start": 39.56,
+    "end": 39.66
+  },
+  {
+    "text": "communauté",
+    "start": 40.09,
+    "end": 40.2
+  },
+  {
+    "text": "que",
+    "start": 40.2,
+    "end": 40.36
+  },
+  {
+    "text": "j'ai",
+    "start": 40.36,
+    "end": 40.56
+  },
+  {
+    "text": "créée",
+    "start": 40.56,
+    "end": 40.8
+  },
+  {
+    "text": "qui",
+    "start": 40.83,
+    "end": 40.98
+  },
+  {
+    "text": "regroupe",
+    "start": 40.98,
+    "end": 41.39
+  },
+  {
+    "text": "maintenant",
+    "start": 41.39,
+    "end": 41.93
+  },
+  {
+    "text": "des",
+    "start": 41.93,
+    "end": 42.05
+  },
+  {
+    "text": "centaines",
+    "start": 42.1,
+    "end": 42.57
+  },
+  {
+    "text": "de",
+    "start": 42.57,
+    "end": 42.67
+  },
+  {
+    "text": "personnes",
+    "start": 42.67,
+    "end": 43.11
+  },
+  {
+    "text": "autour",
+    "start": 43.16,
+    "end": 43.48
+  },
+  {
+    "text": "de",
+    "start": 43.48,
+    "end": 43.5
+  },
+  {
+    "text": "l'IA",
+    "start": 43.59,
+    "end": 44
+  },
+  {
+    "text": "pour",
+    "start": 44,
+    "end": 44.26
+  },
+  {
+    "text": "que",
+    "start": 44.34,
+    "end": 44.47
+  },
+  {
+    "text": "tu",
+    "start": 44.47,
+    "end": 44.59
+  },
+  {
+    "text": "puisses",
+    "start": 44.73,
+    "end": 45.06
+  },
+  {
+    "text": "accéder",
+    "start": 45.06,
+    "end": 45.52
+  },
+  {
+    "text": "à",
+    "start": 45.52,
+    "end": 45.57
+  },
+  {
+    "text": "la",
+    "start": 45.57,
+    "end": 45.64
+  },
+  {
+    "text": "ressource",
+    "start": 45.69,
+    "end": 46.31
+  },
+  {
+    "text": "et",
+    "start": 46.31,
+    "end": 46.44
+  },
+  {
+    "text": "l'utiliser",
+    "start": 46.44,
+    "end": 47.05
+  },
+  {
+    "text": "gratuitement.",
+    "start": 47.12,
+    "end": 48
+  },
+  {
+    "text": "Si",
+    "start": 48.02,
+    "end": 48.1
+  },
+  {
+    "text": "c'est",
+    "start": 48.1,
+    "end": 48.35
+  },
+  {
+    "text": "la",
+    "start": 48.35,
+    "end": 48.44
+  },
+  {
+    "text": "première",
+    "start": 48.45,
+    "end": 48.86
+  },
+  {
+    "text": "fois",
+    "start": 48.86,
+    "end": 49.06
+  },
+  {
+    "text": "que",
+    "start": 49.06,
+    "end": 49.21
+  },
+  {
+    "text": "tu",
+    "start": 49.21,
+    "end": 49.31
+  },
+  {
+    "text": "me",
+    "start": 49.31,
+    "end": 49.41
+  },
+  {
+    "text": "découvres,",
+    "start": 49.41,
+    "end": 49.97
+  },
+  {
+    "text": "abonne-toi",
+    "start": 50,
+    "end": 50.42
+  },
+  {
+    "text": "parce",
+    "start": 50.5,
+    "end": 50.68
+  },
+  {
+    "text": "que",
+    "start": 50.73,
+    "end": 50.87
+  },
+  {
+    "text": "je",
+    "start": 50.87,
+    "end": 50.97
+  },
+  {
+    "text": "suis",
+    "start": 50.97,
+    "end": 51.17
+  },
+  {
+    "text": "sûr",
+    "start": 51.17,
+    "end": 51.32
+  },
+  {
+    "text": "que",
+    "start": 51.32,
+    "end": 51.41
+  },
+  {
+    "text": "ce",
+    "start": 51.55,
+    "end": 51.57
+  },
+  {
+    "text": "n'est",
+    "start": 51.57,
+    "end": 51.82
+  },
+  {
+    "text": "pas",
+    "start": 51.82,
+    "end": 51.97
+  },
+  {
+    "text": "la",
+    "start": 51.97,
+    "end": 52.05
+  },
+  {
+    "text": "seule",
+    "start": 52.07,
+    "end": 52.25
+  },
+  {
+    "text": "vidéo",
+    "start": 52.35,
+    "end": 52.57
+  },
+  {
+    "text": "de",
+    "start": 52.57,
+    "end": 52.67
+  },
+  {
+    "text": "ce",
+    "start": 52.67,
+    "end": 52.7
+  },
+  {
+    "text": "compte",
+    "start": 52.87,
+    "end": 53.08
+  },
+  {
+    "text": "que",
+    "start": 53.08,
+    "end": 53.23
+  },
+  {
+    "text": "tu",
+    "start": 53.23,
+    "end": 53.32
+  },
+  {
+    "text": "regarderas.",
+    "start": 53.32,
+    "end": 54
+  }
+]
