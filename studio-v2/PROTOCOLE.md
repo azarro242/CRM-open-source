@@ -10,11 +10,13 @@ Nouvelle génération de contenu, qualité supérieure. Ce protocole s'applique 
 Chaque projet démarre par **une** de ces trois portes. Identifier laquelle est la
 première chose à faire.
 
-| Porte | Ce que le client fournit | Ce que je produis |
-|---|---|---|
-| **A · Prompt** | Une description écrite (idée, script, storyboard) | La vidéo entièrement construite à partir du texte |
-| **B · Images** | Des images fixes (photos, captures, visuels, maquettes) | Les images animées et mises en scène |
-| **C · Vidéo d'exemple** | Une vidéo de référence | Une vidéo qui reprend son style, son rythme ou sa structure |
+| Porte | Ce que le client fournit | Ce que je produis | Cas d'usage |
+|---|---|---|---|
+| **A · Prompt** | Une description écrite (idée, script, storyboard) | La vidéo entièrement construite à partir du texte | Aucune direction artistique imposée |
+| **B · Images** | Des images fixes (photos, captures, visuels, maquettes) | Les images animées et mises en scène | Une marque à respecter |
+| **C · Vidéo d'exemple** | Une vidéo de référence | Une vidéo qui reprend son style, son rythme ou sa structure | Reprendre un style précis |
+
+Référence fondatrice de cette méthode et du style visé : `references/REF-01-maxence-tison.md`.
 
 **Dans les trois cas**, le client peut joindre des **éléments externes** : liens
 (site, réseaux), logos, chartes graphiques, musiques, captures, documents.
@@ -87,12 +89,17 @@ Seulement si l'information manque — une question à la fois, option recommand�
    Le récapituler au client en séparant *ce qu'il a dit* de *ce que j'ai déduit*.
 2. **Ressources** — rapatrier tous les éléments externes dans `sources/<nom>/`
    (télécharger les liens, extraire la charte d'un site, vectoriser les logos).
-3. **Composition** — construire avec HyperFrames (lire `.agents/skills/hyperframes/SKILL.md`).
+3. **Script** — rédiger le script selon la structure en 5 temps de `QUALITE.md` et le
+   **faire valider par le client avant toute génération** (voix comprise).
+4. **Composition** — construire avec HyperFrames (lire `.agents/skills/hyperframes/SKILL.md`).
    Appliquer **toutes** les exigences de `QUALITE.md`.
-4. **Contrôle** — `npm run check` sans erreur + instantané de **chaque** scène, inspecté
+5. **Contrôle** — `npm run check` sans erreur + instantané de **chaque** scène, inspecté
    visuellement avant le rendu final.
-5. **Rendu & livraison** — export dans `exports/`, envoyé dans la conversation,
+6. **Rendu & livraison** — export dans `exports/`, envoyé dans la conversation,
    commit sur la branche.
+7. **Retours** — le client peut donner ses retours horodatés (« à 0:10 : le bandeau de
+   droite en noir ») ; chaque retour est appliqué au timecode près, puis la vidéo est
+   rendue à nouveau.
 
 ---
 

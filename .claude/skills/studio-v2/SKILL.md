@@ -35,6 +35,8 @@ Sources de vérité (à lire **avant** d'agir, dans cet ordre) :
    Sans `ELEVENLABS_API_KEY`, le signaler au client avant de continuer.
 4. **Brief** — copier `studio-v2/modeles/BRIEF.md` vers `studio-v2/projets/<nom>/BRIEF.md`,
    le remplir, et le récapituler au client (dit / déduit séparés).
+4 bis. **Script** — structure en 5 temps (`QUALITE.md`), soumis au client et **validé avant
+   toute génération**. Style visuel par défaut : `studio-v2/references/REF-01-maxence-tison.md`.
 5. **Production** — `hyperframes init` dans `studio-v2/projets/<nom>/`, puis composer en
    appliquant **chaque** règle de `QUALITE.md`.
 6. **Contrôle** — `npm run check` sans erreur, puis un instantané par scène inspecté

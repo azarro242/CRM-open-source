@@ -55,6 +55,27 @@ d'amélioration V2** fournis par le client. Les deux s'appliquent à chaque proj
   sélection du nom par le client, génération en `eleven_v4`, sous-titres calés sur
   l'horodatage fourni par ElevenLabs. Détail : `PROTOCOLE.md` § 2, Q2.
 
+### [2026-10-16] Référence de style : vidéo de Maxence Tison
+- Consigne du client : « je voudrais que les vidéos puissent se ressembler »
+  (https://youtu.be/DBQqB8eqpFI). Analyse complète : `references/REF-01-maxence-tison.md`.
+- Règles d'application :
+  - **Direction artistique par défaut** (sauf charte du client qui l'emporte) : fonds clairs
+    crème, cartes arrondies à ombres douces, titres sans-serif très gras avec le mot clé en
+    serif italique souligné, sur-titres en petites capitales espacées, accent jaune pour
+    pastilles, surlignages et badges. Cartes sombres possibles pour les chiffres choc.
+  - **Script publicitaire en 5 temps**, 15 à 40 s : accroche (problème ou chiffre choc) →
+    révélation de la marque → une idée par phrase courte, chacune avec son animation →
+    preuve chiffrée → appel à l'action + signature. Ne pas allonger sans raison.
+  - **Synchronisation voix ↔ image au mot près** : chaque action montrée à l'écran tombe sur
+    le mot qui la nomme.
+  - **Montrer le produit en usage** (interface qui s'anime, action réelle), pas seulement
+    l'énoncer.
+  - **Interdits** : texte posé sur un autre texte, texte tronqué au bord du cadre, texte sur
+    image sans fond de lecture, sur-animation. Sobriété et lisibilité avant la quantité
+    d'effets.
+  - **Script validé** par le client avant la génération ; **retours horodatés** acceptés et
+    appliqués au timecode près.
+
 <!-- Format d'ajout :
 ### [date] Titre de l'élément
 - Consigne du client : « … »
