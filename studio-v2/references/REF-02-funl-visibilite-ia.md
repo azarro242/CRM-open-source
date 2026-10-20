@@ -110,6 +110,14 @@ Tutoiement, phrases de 5 à 12 mots, un chiffre ou une date presque à chaque ph
 - **Renvoi à la série** : *« Comment optimiser tes pages pour les IA ? On te l'a déjà expliqué. »*
 - **Fin ciblée** quand c'est pertinent : *« Si tu es dans la santé, tu y es déjà. Les autres,
   vous avez quelques mois. »*
+- **Teaser dans le verrou de rétention** : *« 4 règles, reste jusqu'au bout. La dernière,
+  presque personne ne l'applique. »*
+- **Renvoi vers la légende** du post : *« Le chemin pour corriger sur Wix, Shopify et
+  WordPress est dans la légende. »*
+- **Démenti d'une idée reçue**, sourcé : *« Et non, pas besoin de fichier spécial pour les
+  IA. Google l'écrit noir sur blanc. »*
+- **Trois appels distincts selon la vidéo** : partager (*« Envoie ça à quelqu'un qui… »*),
+  enregistrer (*« Enregistre celle-ci et réécris une page ce soir »*), s'abonner.
 
 L'appel au partage et la boucle finale sont présents dans la plupart des vidéos (v1, v2, v3,
 v5), pas dans toutes : ce sont des réflexes, pas une obligation.
