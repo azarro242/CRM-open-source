@@ -5,6 +5,9 @@ Date : <AAAA-MM-JJ>
 ## Porte d'entrée
 - [ ] A · Prompt  - [ ] B · Images  - [ ] C · Vidéo d'exemple
 
+## Type de contenu
+- [ ] Publicité de marque (REF-01)  - [ ] Reel éducatif faceless (REF-02)  - [ ] Autre :
+
 ## Les trois questions d'ouverture
 | Question | Réponse du client |
 |---|---|

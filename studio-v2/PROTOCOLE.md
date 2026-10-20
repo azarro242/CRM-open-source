@@ -18,6 +18,16 @@ première chose à faire.
 
 Référence fondatrice de cette méthode et du style visé : `references/REF-01-maxence-tison.md`.
 
+### Types de contenu de référence
+
+Le type se déduit du brief ; le demander seulement s'il reste ambigu. Il fixe la direction
+artistique, la durée et la structure d'écriture (détail dans `QUALITE.md`).
+
+| Type | Durée | Objectif | Référence |
+|---|---|---|---|
+| **Publicité de marque** | 15–40 s | Présenter et vendre un produit, une marque, un service | `references/REF-01-maxence-tison.md` |
+| **Reel éducatif faceless** | 60–115 s | Expliquer une actualité ou une méthode, gagner des abonnés | `references/REF-02-funl-visibilite-ia.md` |
+
 **Dans les trois cas**, le client peut joindre des **éléments externes** : liens
 (site, réseaux), logos, chartes graphiques, musiques, captures, documents.
 Ils sont systématiquement exploités : un lien de site → j'en extrais couleurs,

@@ -20,6 +20,9 @@ Sources de vérité (à lire **avant** d'agir, dans cet ordre) :
 1. **Environnement** — lancer `bash outils/setup.sh`.
 2. **Porte d'entrée** — identifier A (prompt), B (images) ou C (vidéo d'exemple).
    Rapatrier tous les éléments fournis dans `studio-v2/sources/<nom>/`.
+   **Type de contenu** — déduire *Publicité de marque* (REF-01) ou *Reel éducatif
+   faceless* (REF-02) ; le demander seulement s'il reste ambigu. Lire la fiche de
+   référence du type avant d'écrire le script.
 3. **Questions d'ouverture** — poser via `AskUserQuestion`, en un seul appel, les
    questions dont la réponse n'est pas déjà explicite dans la demande :
    - Q1 Format / dimensions (et : vidéo complète ou calque à superposer)

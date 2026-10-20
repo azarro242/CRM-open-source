@@ -59,10 +59,11 @@ d'amélioration V2** fournis par le client. Les deux s'appliquent à chaque proj
 - Consigne du client : « je voudrais que les vidéos puissent se ressembler »
   (https://youtu.be/DBQqB8eqpFI). Analyse complète : `references/REF-01-maxence-tison.md`.
 - Règles d'application :
-  - **Direction artistique par défaut** (sauf charte du client qui l'emporte) : fonds clairs
-    crème, cartes arrondies à ombres douces, titres sans-serif très gras avec le mot clé en
-    serif italique souligné, sur-titres en petites capitales espacées, accent jaune pour
-    pastilles, surlignages et badges. Cartes sombres possibles pour les chiffres choc.
+  - **Direction artistique du type « Publicité de marque »** (sauf charte du client qui
+    l'emporte) : fonds clairs crème, cartes arrondies à ombres douces, titres sans-serif très
+    gras avec le mot clé en serif italique souligné, sur-titres en petites capitales
+    espacées, accent jaune pour pastilles, surlignages et badges. Cartes sombres possibles
+    pour les chiffres choc.
   - **Script publicitaire en 5 temps**, 15 à 40 s : accroche (problème ou chiffre choc) →
     révélation de la marque → une idée par phrase courte, chacune avec son animation →
     preuve chiffrée → appel à l'action + signature. Ne pas allonger sans raison.
@@ -75,6 +76,26 @@ d'amélioration V2** fournis par le client. Les deux s'appliquent à chaque proj
     d'effets.
   - **Script validé** par le client avant la génération ; **retours horodatés** acceptés et
     appliqués au timecode près.
+
+### [2026-10-20] Deuxième type de contenu : reel éducatif « faceless » (FUNL)
+- Consigne du client : six reels de @agencefunl, « un autre type de contenu motion design »
+  à ajouter à la base d'apprentissage. Analyse complète : `references/REF-02-funl-visibilite-ia.md`.
+- Règles d'application **pour ce type** (9:16, 60 à 115 s) :
+  - **Système visuel** : fond gris sauge `#A8B0A0` avec trame de points et vignettage,
+    accent unique citron `#DFF25D`, cartes ardoise, titres en capitales condensées très
+    grasses. Variante possible : collage vintage sur papier texturé.
+  - **Mascotte** : grande tête en photo noir et blanc sur corps en bâton, expressive,
+    présente tout au long de la vidéo.
+  - **Sous-titres karaoké** : le mot prononcé passe en encadré citron.
+  - **Chaque chiffre affiché porte sa source** (pastille en bas de cadre) ; étiqueter
+    « CAPTURE RÉELLE », « RECONSTITUTION » ou « EXEMPLE » selon le cas.
+  - **Écriture en 9 temps** : accroche datée → retournement → verrou de rétention (« reste
+    jusqu'au bout ») → contexte sourcé → le détail que personne n'a lu → appel au partage
+    **avant** le plan → plan d'action numéroté (pas ça / plutôt ça) → promesse tenue →
+    signature + dernière phrase qui reprend l'accroche (**boucle**).
+  - **Enchaînement continu** par animation, sans coupe franche ; musique de fond permanente.
+- Règle **pour tous les types** : mixage final normalisé à **−14 LUFS** intégrés, crête
+  ≤ −1 dBTP (mesuré à l'identique sur les six vidéos de référence).
 
 <!-- Format d'ajout :
 ### [date] Titre de l'élément
