@@ -100,24 +100,42 @@ for i in range(len(src)):
         src[i] = [av, max(av + 0.1, ap)]
 
 # ---------------------------------------------------------------- placement des phrases sur la grille
-segments, fin_prec = [], -1.0
-for k, l in enumerate(lignes):
-    idx = [i for i, (kk, _) in enumerate(jetons) if kk == k]
-    s0 = max(0.0, src[idx[0]][0] - 0.05)
-    s1 = src[idx[-1]][1] + 0.12
-    if VOIX:
-        s1 = min(s1, VOIX)
-    if k in ANCRES:
-        cible = ANCRES[k] if k == 0 else temps_proche(ANCRES[k])
-        if cible < fin_prec + ECART:            # la phrase précédente déborde : temps suivant
-            cible = temps_suivant(fin_prec + ECART)
-    else:
-        cible = temps_suivant(fin_prec + ECART)
-    # la syllabe d'attaque tombe sur le temps : la voix démarre 50 ms avant
-    debut = max(0.0, cible - (src[idx[0]][0] - s0)) if k else cible
-    segments.append({"ligne": k, "src0": round(s0, 3), "src1": round(s1, 3), "debut": round(debut, 3),
+def placer(retard):
+    """Pose chaque phrase sur un temps ; la musique démarre `retard` s après la vidéo."""
+    grille = [x + retard for x in TEMPS]
+    proche = lambda x: min(grille, key=lambda g: abs(g - x))
+    suivant = lambda x: next((g for g in grille if g >= x - 1e-3), x)
+    segs, fin_prec, derive = [], -1.0, 0.0
+    for k, l in enumerate(lignes):
+        idx = [i for i, (kk, _) in enumerate(jetons) if kk == k]
+        s0 = max(0.0, src[idx[0]][0] - 0.05)
+        s1 = src[idx[-1]][1] + 0.12
+        if VOIX:
+            s1 = min(s1, VOIX)
+        if k in ANCRES:
+            vise = ANCRES[k] if k == 0 else proche(ANCRES[k] + retard)
+            cible = vise
+            if cible < fin_prec + ECART:            # la phrase précédente déborde : temps suivant
+                cible = suivant(fin_prec + ECART)
+            derive += cible - vise
+        else:
+            cible = suivant(fin_prec + ECART)
+        # la syllabe d'attaque tombe sur le temps : la voix démarre 50 ms avant
+        debut = max(0.0, cible - (src[idx[0]][0] - s0)) if k else cible
+        segs.append({"ligne": k, "src0": round(s0, 3), "src1": round(s1, 3), "debut": round(debut, 3),
                      "fin": round(debut + s1 - s0, 3), "temps": round(cible, 3)})
-    fin_prec = debut + s1 - s0
+        fin_prec = debut + s1 - s0
+    deborde = max(0.0, fin_prec - (FIN_MUSIQUE + retard) + 0.3)
+    return segs, derive + 2 * deborde + 0.05 * retard
+
+
+# la musique peut démarrer 0, 1 ou 2 temps après la voix : on garde le calage le plus juste
+essais = [(placer(n * PERIODE), n * PERIODE) for n in range(3)]
+(segments, cout), RETARD = min(essais, key=lambda e: e[0][1])
+RETARD = round(RETARD, 3)
+TEMPS = [round(x + RETARD, 3) for x in TEMPS]
+CALMES = [(a + RETARD, z + RETARD) for a, z in CALMES]
+FIN_MUSIQUE_V = FIN_MUSIQUE + RETARD
 
 temps = [None] * len(jetons)
 for i, (k, _) in enumerate(jetons):
@@ -125,7 +143,7 @@ for i, (k, _) in enumerate(jetons):
     temps[i] = [round(sg["debut"] + src[i][0] - sg["src0"], 3), round(sg["debut"] + src[i][1] - sg["src0"], 3)]
 
 fin_voix = segments[-1]["fin"]
-DUREE = round(max(fin_voix + FIN_TENUE, FIN_MUSIQUE + 0.25), 2)
+DUREE = round(max(fin_voix + FIN_TENUE, FIN_MUSIQUE_V + 0.25), 2)
 
 
 def mot(ligne, prefixe):
@@ -278,13 +296,13 @@ for a, z in zones:
                   {"t": round(max(0.0, a), 3), "db": PAROLE_DB},
                   {"t": round(z, 3), "db": PAROLE_DB}, {"t": round(z + 0.2, 3), "db": PAUSE_DB}]
 
-mix = {"duree": DUREE, "musique": {"fichier": MUSIQUE, "enveloppe": enveloppe},
+mix = {"duree": DUREE, "musique": {"fichier": MUSIQUE, "debut": RETARD, "enveloppe": enveloppe},
        "voix": None if ESTIMATION else {"fichier": "voix.mp3", "segments": segments},
        "sfx": evenements, "parole": zones}
 json.dump(mix, open(f"{ICI}/mix.json", "w"), ensure_ascii=False, indent=1)
 
 # ---------------------------------------------------------------- balises audio de l'aperçu
-audio = [f'      <audio id="musique" src="{MUSIQUE}" data-start="0" data-duration="{round(min(FIN_MUSIQUE, DUREE), 3)}" '
+audio = [f'      <audio id="musique" src="{MUSIQUE}" data-start="{RETARD}" data-duration="{round(min(FIN_MUSIQUE, DUREE - RETARD), 3)}" '
          f'data-track-index="21" data-volume="1"></audio>']
 if not ESTIMATION:
     for n, sg in enumerate(segments):
@@ -317,7 +335,8 @@ page = (page.replace("{{DUREE}}", str(DUREE)).replace("{{TICKS}}", ticks)
 assert "{{" not in page, re.findall(r"\{\{\w+\}\}", page)
 open(f"{ICI}/index.html", "w", encoding="utf-8").write(page)
 
-print(f"index.html : {DUREE} s · musique {FIN_MUSIQUE} s à {60 / PERIODE:.1f} BPM · {len(evenements)} bruitages"
+print(f"index.html : {DUREE} s · musique {FIN_MUSIQUE} s à {60 / PERIODE:.1f} BPM, départ à {RETARD} s · "
+      f"dérive des ancres {cout:.2f} s · {len(evenements)} bruitages"
       + (" · ESTIMATION (sans voix)" if ESTIMATION else " · voix"))
 for sg in segments:
     texte = " ".join(lignes[sg["ligne"]])

@@ -1,6 +1,11 @@
 # Fabrication v2 — montage piloté par la musique
 
-En attente : **la nouvelle voix Oxley** (texte dans `SCRIPT.md`). Tout le reste est prêt.
+**Livrée le 24/10/2026** : `studio-v2/exports/oddysee-meta-28-octobre-v2.mp4` — 32,1 s, 1080 × 1920, 30 i/s.
+Son : −14,2 LUFS intégrés, crête vraie −1,9 dBTP, plage 3,5 LU ; voix 9,6 dB au-dessus de la musique
+pendant la parole (min 8,8 dB) ; bruitage le plus fort 6,6 dB sous la voix. Courbe :
+`studio-v2/exports/oddysee-meta-28-octobre-v2-equilibre-sonore.png`.
+Calage : la musique démarre un temps (0,496 s) après la voix — choisi automatiquement par `build.py` —
+pour que « Faux. » tombe sur l'entrée de la batterie (3,56 s) ; ancres à 11,39 · 17,86 · 23,83 s.
 
 ## Dès réception de la voix (`voix.mp3`)
 

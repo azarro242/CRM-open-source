@@ -115,12 +115,13 @@ with tempfile.TemporaryDirectory() as tmp:
     im, _ = sonie(f"{tmp}/m0.wav")
     m *= db(CIBLE_MUSIQUE - im)
     musique = np.zeros((N, 2), dtype=np.float32)
-    musique[: min(N, len(m))] = m[:N]
+    i0 = int(round(mix["musique"].get("debut", 0.0) * SR))   # la musique peut démarrer après la voix
+    j0 = min(N, i0 + len(m))
+    musique[i0:j0] = m[: j0 - i0]
     env = mix["musique"]["enveloppe"]
     tt = np.arange(N) / SR
     g_db = np.interp(tt, [e["t"] for e in env], [e["db"] for e in env])
     musique *= (10 ** (g_db / 20)).astype(np.float32)[:, None]
-    fin_m = min(N, len(m))                       # petit fondu si la vidéo dépasse la musique
     pistes["musique"] = musique
 
     # ---------------- bruitages
