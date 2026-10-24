@@ -76,8 +76,10 @@ sur une autre vidéo (voir § 5 pour les formats de calque).
       --sortie <projet>/voix.mp3 --langue <code>` (modèle `eleven_v4` par défaut).
       Le fichier `voix.transcript.json` produit à côté donne l'horodatage mot à mot :
       les sous-titres se calent dessus sans passer par Whisper.
-2. **Fichier audio fourni** → transcription Whisper (`--model small --language <code>`)
-   et calage au mot près.
+2. **Fichier audio fourni** → `python3 outils/aligner.py <voix.mp3> <texte.txt> <voix.transcript.json>`
+   quand le texte est connu : Whisper `small` guidé par le texte + horodatage DTW, puis recalage sur
+   les silences réels (Whisper seul décale les mots de 0,3 à 0,7 s). Sans texte : transcription
+   Whisper (`--model small --language <code>`), à relire.
 
 Pour un cas particulier (vidéo sans voix, voix enregistrée plus tard), le client
 l'indique dans le champ « Autre » de la question.

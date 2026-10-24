@@ -189,8 +189,10 @@ if not (os.path.exists(musique) and os.path.exists(info) and open(info).read().s
 audio.insert(0, f'      <audio id="musique" src="assets/musique/fond.wav" data-start="0" data-duration="{DUREE}" '
                 f'data-track-index="21" data-volume="0.2"></audio>')
 if not ESTIMATION:
+    duree_voix = float(subprocess.run(["ffprobe", "-v", "error", "-show_entries", "format=duration", "-of", "csv=p=0",
+                                       f"{ICI}/voix.mp3"], capture_output=True, text=True).stdout)
     audio.insert(0, f'      <audio id="voix" src="voix.mp3" data-start="{DECALAGE}" '
-                    f'data-duration="{round(fin_voix - DECALAGE + 0.3, 3)}" data-track-index="20" data-volume="1"></audio>')
+                    f'data-duration="{round(min(duree_voix, DUREE - DECALAGE), 3)}" data-track-index="20" data-volume="1"></audio>')
 
 # ---------------------------------------------------------------- assemblage
 ticks = "".join(f'<i class="tick" style="transform: rotate({k * 30}deg)"></i>' for k in range(12))

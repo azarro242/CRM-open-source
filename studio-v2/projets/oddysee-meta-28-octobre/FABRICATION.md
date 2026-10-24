@@ -1,8 +1,21 @@
 # Fabrication — vidéo « Le 30 octobre ? Faux. »
 
-Tout est prêt sauf la voix : la mise en scène se cale automatiquement sur les mots de la voix.
+**Livrée le 24/10/2026** : `studio-v2/exports/oddysee-meta-28-octobre.mp4` (30,8 s, 1080 × 1920, −14 LUFS).
+Voix : fichier Oxley fourni par le client (généré sur elevenlabs.io, modèle v3), calé mot à mot avec
+`outils/aligner.py` (Whisper DTW + recalage sur les silences). La mise en scène se cale automatiquement
+sur les mots de la voix.
 
-## Dans la session où `ELEVENLABS_API_KEY` est disponible
+## Refaire le rendu avec un fichier voix fourni
+
+```bash
+cd studio-v2/projets/oddysee-meta-28-octobre
+python3 ../../../outils/aligner.py voix.mp3 voix.txt voix.transcript.json --langue fr
+python3 build.py && npx --yes hyperframes@0.8.193 check
+npx --yes hyperframes@0.8.193 render --fps 30 --quality looks --output renders/brut.mp4
+# puis loudnorm −14 LUFS / −1,5 dBTP vers studio-v2/exports/
+```
+
+## Variante : voix générée par l'API (session où `ELEVENLABS_API_KEY` est disponible)
 
 ```bash
 cd studio-v2/projets/oddysee-meta-28-octobre
