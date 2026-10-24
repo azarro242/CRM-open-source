@@ -6,7 +6,8 @@ Date : <AAAA-MM-JJ>
 - [ ] A · Prompt  - [ ] B · Images  - [ ] C · Vidéo d'exemple
 
 ## Type de contenu
-- [ ] Publicité de marque (REF-01)  - [ ] Reel éducatif faceless (REF-02)  - [ ] Autre :
+- [ ] Publicité de marque (REF-01)  - [ ] Reel éducatif faceless (REF-02)
+- [ ] Reel mascotte Oddysee (≈ 25 s, `marque/oddysee/`)  - [ ] Autre :
 
 ## Les trois questions d'ouverture
 | Question | Réponse du client |

@@ -97,6 +97,33 @@ d'amélioration V2** fournis par le client. Les deux s'appliquent à chaque proj
 - Règle **pour tous les types** : mixage final normalisé à **−14 LUFS** intégrés, crête
   ≤ −1 dBTP (mesuré à l'identique sur les six vidéos de référence).
 
+### [2026-10-24] Vidéos de l'agence Oddysee : mascottes, ressources, voix, durée
+- Consignes du client :
+  - « Les illustrations qui vont te servir pour la création de contenu pour les vidéos de notre
+    agence […] je vais t'en rajouter d'autres […] par groupe de cinq » — mascottes tête photo
+    N&B sur corps en bâton **violet** (femme bouclée, homme moustachu, homme gominé) + un
+    personnage collage en costume violet.
+  - « les liens dans lesquels tu trouveras les différentes ressources pour chacune des vidéos
+    en fonction du script et du sujet » — oddysee.fr (accueil, web, à propos, services).
+  - Voix off : ElevenLabs, voix **« Oxley - Evil Character »**.
+  - « la vidéo devra durer une moyenne de 25 secondes » ; s'appuyer sur les modèles fournis.
+- Règles d'application **pour toute vidéo Oddysee** (détail : `marque/oddysee/FICHE-MARQUE.md`) :
+  - Lire `marque/oddysee/FICHE-MARQUE.md` et `marque/oddysee/mascottes/INDEX.md` avant
+    d'écrire le script ; ne prendre que les faits de la fiche, chacun avec sa source.
+  - **Mascottes Oddysee** présentes tout au long de la vidéo, émotion choisie selon le temps du
+    script (table « quel moment » de l'index), changement d'expression au mot près.
+  - **Durée ≈ 25 s** (55 à 65 mots) : gabarit en 5 temps de la fiche (accroche → retournement →
+    solution Oddysee → preuve sourcée → appel à l'action + logo).
+  - **Système visuel REF-02 aux couleurs d'Oddysee** : violet `#632BC5` remplace le citron
+    comme accent unique (karaoké, chiffres) ; fond clair brume `#F7F3FF` à trame de points
+    proposé par défaut, à confirmer par le client sur la première vidéo ; police Outfit.
+  - **Voix** : Oxley, `voice_id 2gPFXx8pN3Avh27Dw5Ma`, générée en français — la question Q2
+    n'est plus posée pour Oddysee. Faire valider un premier essai (voix anglophone, accent
+    possible) avant de monter toute la vidéo.
+  - **Jamais de résultat chiffré promis** (Oddysee l'écrit elle-même : interdit par Meta) ;
+    les chiffres montrés sont ceux du site, avec pastille de source.
+  - Nouveau lot de mascottes reçu → l'ajouter à l'index dans le même tour.
+
 <!-- Format d'ajout :
 ### [date] Titre de l'élément
 - Consigne du client : « … »

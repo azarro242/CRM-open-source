@@ -16,6 +16,9 @@ Toute **nouvelle** vidéo se produit dans `studio-v2/` en suivant le skill `stud
   ou fichier audio fourni), **sous-titres**.
 - Qualité : appliquer intégralement `studio-v2/QUALITE.md` (acquis V1 + consignes V2).
 - Toute nouvelle consigne qualité du client s'ajoute à `QUALITE.md` dans le même tour.
+- Vidéos de l'agence du client (**Oddysee**) : lire `studio-v2/marque/oddysee/FICHE-MARQUE.md`
+  et `mascottes/INDEX.md` (mascottes, faits sourcés, voix Oxley, format ≈ 25 s).
+  Chaque nouveau lot de cinq mascottes s'ajoute à l'index dans le même tour.
 
 Le dossier `studio/` (V1) est archivé : ne le modifier que pour retoucher un projet V1
 existant à la demande du client.

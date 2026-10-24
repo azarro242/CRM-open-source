@@ -20,14 +20,17 @@ Sources de vérité (à lire **avant** d'agir, dans cet ordre) :
 1. **Environnement** — lancer `bash outils/setup.sh`.
 2. **Porte d'entrée** — identifier A (prompt), B (images) ou C (vidéo d'exemple).
    Rapatrier tous les éléments fournis dans `studio-v2/sources/<nom>/`.
-   **Type de contenu** — déduire *Publicité de marque* (REF-01) ou *Reel éducatif
-   faceless* (REF-02) ; le demander seulement s'il reste ambigu. Lire la fiche de
-   référence du type avant d'écrire le script.
+   **Type de contenu** — déduire *Publicité de marque* (REF-01), *Reel éducatif
+   faceless* (REF-02) ou *Reel mascotte Oddysee* (≈ 25 s) ; le demander seulement s'il
+   reste ambigu. Lire la fiche de référence du type avant d'écrire le script.
+   **Marque connue** — si la vidéo concerne une marque de `studio-v2/marque/` (Oddysee :
+   l'agence du client), lire sa `FICHE-MARQUE.md` et l'index de ses mascottes : faits
+   sourcés, couleurs, voix déjà choisie, format.
 3. **Questions d'ouverture** — poser via `AskUserQuestion`, en un seul appel, les
    questions dont la réponse n'est pas déjà explicite dans la demande :
    - Q1 Format / dimensions (et : vidéo complète ou calque à superposer)
    - Q2 Voix off — exactement deux options : **Générée avec ElevenLabs** /
-     **Fichier audio fourni**
+     **Fichier audio fourni** (déjà répondue pour Oddysee : voix Oxley)
    - Q3 Sous-titres
    Option recommandée en premier, déduite de l'historique du client quand c'est possible.
 3 bis. **Si ElevenLabs** — langue de la vidéo (déduite, sinon demandée), puis

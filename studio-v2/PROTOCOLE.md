@@ -27,6 +27,15 @@ artistique, la durée et la structure d'écriture (détail dans `QUALITE.md`).
 |---|---|---|---|
 | **Publicité de marque** | 15–40 s | Présenter et vendre un produit, une marque, un service | `references/REF-01-maxence-tison.md` |
 | **Reel éducatif faceless** | 60–115 s | Expliquer une actualité ou une méthode, gagner des abonnés | `references/REF-02-funl-visibilite-ia.md` |
+| **Reel mascotte Oddysee** | ≈ 25 s | Vidéos de l'agence du client : faire venir des clients à Oddysee | `marque/oddysee/FICHE-MARQUE.md` (REF-02 aux couleurs Oddysee + 5 temps de REF-01) |
+
+### Bibliothèques de marque
+
+Une marque récurrente a son dossier `marque/<nom>/` : fiche de marque (faits sourcés,
+couleurs, police, voix, format vidéo), logos, polices, captures, mascottes. Le lire **avant**
+d'écrire le script d'une vidéo de cette marque.
+
+- `marque/oddysee/` — agence du client : `FICHE-MARQUE.md`, `mascottes/INDEX.md`.
 
 **Dans les trois cas**, le client peut joindre des **éléments externes** : liens
 (site, réseaux), logos, chartes graphiques, musiques, captures, documents.
@@ -72,6 +81,14 @@ sur une autre vidéo (voir § 5 pour les formats de calque).
 
 Pour un cas particulier (vidéo sans voix, voix enregistrée plus tard), le client
 l'indique dans le champ « Autre » de la question.
+
+**Voix déjà choisie par marque** : pour une vidéo **Oddysee**, Q2 est répondue d'office —
+ElevenLabs, voix « Oxley - Evil Character » (`2gPFXx8pN3Avh27Dw5Ma`). Ne pas reposer la question.
+
+**Clé d'API** : la génération lit la variable `ELEVENLABS_API_KEY`. Le client l'ajoute dans les
+réglages de l'environnement cloud (menu de l'environnement dans la barre de titre de la session
+→ Modifier → *Network secrets* / *API credentials*, sinon variable d'environnement). Elle est
+prise en compte à la **session suivante**. Ne jamais la demander dans la conversation.
 
 ### Q3 · Sous-titres
 
