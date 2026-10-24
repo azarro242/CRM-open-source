@@ -142,6 +142,45 @@ d'amélioration V2** fournis par le client. Les deux s'appliquent à chaque proj
   - Livrer **2 accroches de rechange** pour un test, et la **date limite de publication**
     quand le sujet est daté.
 
+### [2026-10-24] Musique fournie : c'est elle qui donne le rythme
+- Consigne du client : « fais en sorte que cette musique en arrière-plan puisse donner le rythme à
+  notre vidéo, donc fais une réécriture complète de la vidéo sur la base de cet audio […] fais une
+  étude minutieuse et si cela implique de modifier le script, redonne-moi un nouveau script ».
+- Règles d'application :
+  - **Étudier la musique avant tout** (`ANALYSE-MUSIQUE.md`) : tempo, grille des temps, sections et
+    moments forts, passages calmes, présence de chant, volume.
+  - **Chaque phrase de la voix est posée sur un temps** ; les phrases-clés tombent sur les
+    changements de section (accroche → entrée de la batterie, appel à l'action → retour du refrain).
+    Les scènes suivent les sections ; animations au tempo (pulsations, mascottes qui dansent) ;
+    un passage calme = moment de concentration (fond assombri, pulsations coupées).
+  - Si le texte ne tient pas dans la structure de la musique, **réécrire le script** et le donner
+    au client pour une nouvelle voix — avec un tableau « v1 → v2 » qui justifie chaque coupe.
+
+### [2026-10-24] Mixage harmonisé : aucun son au-dessus des autres
+- Consigne du client : « fais en sorte que les sons soient parfaitement harmonisés pour pas qu'il y
+  ait un son qui soit supérieur à l'autre et qu'il soit désagréable à l'écoute ».
+- Règles d'application (`outils/mixage.py`, appelé après le rendu) :
+  - voix compressée et ramenée à −16 LUFS ; musique ramenée à −16 LUFS, creusée de 3 dB vers
+    2,8 kHz, puis abaissée sous la voix (−10 dB) et remontée dans les respirations (−4,5 dB) ;
+  - chaque bruitage est mesuré et ramené à la même crête de sonie, puis dosé par catégorie
+    (impact, transition, interface…), −2 dB de plus quand la voix parle ;
+  - master à −14 LUFS intégrés, crête vraie ≤ −1,5 dBTP ;
+  - **contrôle chiffré** livré avec la vidéo : courbe de sonie de chaque piste dans le temps
+    (`…-equilibre-sonore.png`) ; la voix doit dominer la musique d'au moins 8 dB pendant la parole
+    et aucun bruitage ne doit dépasser la voix.
+
+### [2026-10-24] Appel à l'action « commente » + conclusion « abonne-toi »
+- Consigne du client : « propose aux personnes de commenter le mot META pour recevoir un guide des
+  bonnes pratiques […] la conclusion doit inciter les viewers à s'abonner ».
+- Règles d'application (reels Oddysee) :
+  - **un seul appel à l'action principal** : « Commente [MOT] → ressource offerte », dit par la voix,
+    **montré à l'écran** (champ de commentaire, mot tapé, ressource reçue en message privé), placé
+    sur le moment le plus fort de la musique ; il remplace l'appel au partage ;
+  - **dernière phrase = « abonne-toi » avec une raison concrète** (« on surveille Meta pour toi »),
+    bouton « S'abonner » → « Abonné ✓ » à l'écran, puis signature (logo + badge) ;
+  - le mot-clé et la ressource sont repris dans la légende ; prévenir le client qu'il faut la
+    ressource (PDF) et l'envoi en message privé.
+
 <!-- Format d'ajout :
 ### [date] Titre de l'élément
 - Consigne du client : « … »

@@ -64,7 +64,9 @@ de REF-02) — proposée, à confirmer sur la première vidéo :
 | 2. Retournement | 3–7 s | « Mais… » : la nuance ou la bonne nouvelle | stupéfait / surprise |
 | 3. Solution Oddysee | 7–17 s | 2 ou 3 idées courtes, une animation chacune (capture réelle, carte) | sourire, désigne 22 |
 | 4. Preuve | 17–21 s | Un chiffre du site, avec sa pastille de source | fier / sourire |
-| 5. Appel à l'action + signature | 21–25 s | Audit stratégique offert / WhatsApp sous 1 h + logo | victoire, rire, salut |
+| 5. Appel à l'action + signature | 21–25 s | « Commente [MOT] » → ressource offerte, puis « abonne-toi » + raison, logo | victoire, rire, salut |
+
+Si le client fournit une musique, elle fixe la durée et le rythme (voir `QUALITE.md`, 24/10).
 
 Procédés REF-02 bienvenus s'ils tiennent dans 25 s : formule à retenir, mot détourné, humour
 discret, dernière phrase qui reprend l'accroche (boucle).
