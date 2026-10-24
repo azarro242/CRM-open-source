@@ -124,6 +124,24 @@ d'amélioration V2** fournis par le client. Les deux s'appliquent à chaque proj
     les chiffres montrés sont ceux du site, avec pastille de source.
   - Nouveau lot de mascottes reçu → l'ajouter à l'index dans le même tour.
 
+### [2026-10-24] Script repris d'une vidéo existante : plus viral, selon l'actualité
+- Consigne du client : « à partir de cette vidéo […] un script qui parle du même sujet avec
+  une meilleure fréquence de viralité en fonction de la tendance actuelle autour de Meta ».
+- Règles d'application :
+  - **Revérifier chaque fait le jour de l'écriture** (sources datées dans
+    `sources/<projet>/SOURCES.md`) : la vidéo de départ peut déjà être dépassée — c'est
+    souvent là qu'est l'angle (ex. : date du 30/10 repoussée au 20/11 la veille).
+  - **Apporter ce que la vidéo d'origine n'a pas** : mise à jour, démenti sourcé, urgence
+    datée, version plus courte. Ne jamais copier sa structure phrase à phrase.
+  - **Accroche ≤ 3 s** qui contredit ou surprend ; **une seule action** dans la vidéo, le
+    détail pas à pas va dans la **légende** (fournie avec le script).
+  - **Appel au partage ciblé** (« envoie ça à qui… ») en fin de vidéo ; mot-clé pour
+    WhatsApp / commentaires dans la légende pour générer des demandes.
+  - Rester juste envers la plateforme (Oddysee est Meta Business Partner) : citer les
+    chiffres de Meta avec leur source, proposer de tester plutôt que de diaboliser.
+  - Livrer **2 accroches de rechange** pour un test, et la **date limite de publication**
+    quand le sujet est daté.
+
 <!-- Format d'ajout :
 ### [date] Titre de l'élément
 - Consigne du client : « … »

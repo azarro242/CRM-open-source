@@ -1,0 +1,17 @@
+Le 28 octobre, Meta modifie tes pubs. Le 30, ses règles changent. Et si tu continues de diffuser, tu les acceptes.
+
+Ce qui change :
+→ Le 28 : tes pubs déjà en ligne peuvent ouvrir une fiche produit dans Instagram au lieu d’envoyer vers ton site, avec des suggestions choisies par Meta.
+→ Le 30 : nouvelles conditions publicitaires. Les outils d’IA de Meta « peuvent faire des erreurs », et c’est toi qui en assumes les risques. Et ses robots peuvent parcourir ton site.
+
+Les 3 réglages à faire avant le 28 :
+1. Refuse la navigation produit (ou coupe-la dans Advantage+ Creative › Destination) si tu veux garder les clics sur ton site.
+2. Relis les variantes que l’IA de Meta crée dans tes pubs : elles sortent sous ton nom.
+3. Bloque dans ton robots.txt les pages que tu ne veux pas faire lire à Meta.
+
+Le bon réflexe : ne décide pas à l’aveugle. Une pub avec l’option, une sans, et compare tes ventes.
+
+Envoie ça à la personne qui gère tes pubs 👇
+Abonne-toi : une vidéo par jour, de vrais conseils.
+
+#metaads #publicitefacebook #instagramads #marketingdigital #entrepreneur
