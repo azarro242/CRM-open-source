@@ -111,7 +111,7 @@ Les plus grosses audiences francophones de la niche sont des **éducateurs IA en
     - **47,7 K abonnés** — [YouTube](https://www.youtube.com/@myrilsekou/shorts).
     - « Comment créer un site web de vente en ligne en Afrique (Formation Gratuite) !! » : **240 K vues**, ≈ 2024 **[ancien]** — [YouTube](https://www.youtube.com/watch?v=OF9-MPv0qfE).
     - Shorts récents sur Andromeda (mise à jour Meta) : 1,7 à 5,7 K vues.
-21. **Marthe Carine — @marthecarine1 (YouTube)**, entrepreneuse d'origine camerounaise installée au Canada (Gatineau/Ottawa), fondatrice de Karila Cosmetics. **Pont Afrique–Québec.**
+21. **Marthe Carine — @marthecarine1 (YouTube)**, fondatrice de Karila Cosmetics. **Pont Afrique–Québec.** Ses Shorts évoquent la « cuisine camerounaise au Canada » et des événements à Gatineau/Ottawa : origine camerounaise et installation au Canada déduites de ces titres traduits automatiquement, non confirmées par une bio.
     - **328 K abonnés, 1,5 K vidéos** — [YouTube](https://www.youtube.com/@marthecarine1/shorts).
     - « 15 business rentables à lancer en Cote D'Ivoire pour les 10 prochaines années !!! » : **88 K vues** **[ancien]** — [YouTube](https://www.youtube.com/watch?v=hWT8qWbkH8E).
 22. **Cynthia Kibangou — @cynthiakibangou**, pays non vérifié. Entrepreneuse EdTech, fondatrice d'AMJA.
