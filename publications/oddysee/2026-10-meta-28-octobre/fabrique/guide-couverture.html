@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" href="commun.css" />
+<style>
+  @page { size: A4; margin: 0; }
+  html, body { width: 210mm; height: 297mm; }
+  .page { position: relative; width: 210mm; height: 297mm; overflow: hidden; }
+  .logo { position: absolute; left: 18mm; top: 18mm; height: 13mm; }
+  .tag { position: absolute; left: 18mm; top: 44mm; font-size: 11pt; }
+  h1 { position: absolute; left: 18mm; top: 58mm; width: 150mm; font-weight: 900; font-size: 46pt; line-height: 0.98;
+    text-transform: uppercase; letter-spacing: -0.5pt; }
+  h1 em { font-style: normal; color: var(--violet); }
+  .sous { position: absolute; left: 18mm; top: 128mm; width: 112mm; font-weight: 700; font-size: 14pt; line-height: 1.35;
+    color: var(--gris); }
+  .points { position: absolute; left: 18mm; top: 160mm; width: 108mm; list-style: none; }
+  .points li { position: relative; padding: 2.4mm 0 2.4mm 9mm; font-weight: 700; font-size: 12pt; }
+  .points li::before { content: ""; position: absolute; left: 0; top: 3.6mm; width: 4.5mm; height: 4.5mm; border-radius: 1.2mm;
+    background: var(--violet); }
+  .masc { position: absolute; right: 8mm; top: 120mm; width: 78mm; }
+  .bandeau { position: absolute; left: 0; right: 0; bottom: 0; height: 34mm; background: var(--encre); color: #fff;
+    display: flex; align-items: center; justify-content: space-between; padding: 0 18mm; }
+  .badge { padding: 2.5mm 6mm; border-radius: 10mm; background: var(--or); color: var(--encre); font-weight: 900;
+    font-size: 11pt; letter-spacing: 1.5pt; }
+  .site { font-weight: 800; font-size: 14pt; }
+</style>
+</head>
+<body>
+<div class="page fond">
+  <img class="logo" src="img/logo-oddysee-noir.svg" alt="Oddysee" />
+  <span class="pastille tag">Guide offert · édition du 25 octobre 2026</span>
+  <h1>Les bonnes pratiques <em>Meta Ads</em></h1>
+  <p class="sous">Navigation produit du 28&nbsp;octobre, nouvelles règles de l'IA au 20&nbsp;novembre&nbsp;: ce qu'il faut faire, sources à l'appui.</p>
+  <ul class="points">
+    <li>Couper ou garder la navigation produit</li>
+    <li>Le test A/B en 7&nbsp;jours</li>
+    <li>Reprendre la main sur l'IA de Meta</li>
+    <li>Le robots.txt et les robots de Meta</li>
+    <li>Mesurer juste et la checklist</li>
+  </ul>
+  <img class="masc" src="img/mascotte-couverture.png" alt="" />
+  <div class="bandeau"><span class="badge">META BUSINESS PARTNER</span><span class="site">oddysee.fr</span></div>
+</div>
+</body>
+</html>
