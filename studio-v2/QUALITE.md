@@ -181,6 +181,29 @@ d'amélioration V2** fournis par le client. Les deux s'appliquent à chaque proj
   - le mot-clé et la ressource sont repris dans la légende ; prévenir le client qu'il faut la
     ressource (PDF) et l'envoi en message privé.
 
+### [2026-10-25] Série de 60 vidéos : trois scripts par jour, sur la base de la vidéo Meta v2
+- Consigne du client : « on devra partir sur un rythme de trois vidéos par jour, donc trois scripts
+  par jour qui seront transformés en vidéo sur la base de la première vidéo que nous avons faite en
+  utilisant le même son en arrière-plan […] je te donne la voix off et je te rajouterai des
+  librairies d'illustrations pour enrichir la base d'animation ».
+- Règles d'application :
+  - **Source des sujets** : le plan de 60 vidéos (`reports/Plan 60 vidéos publicité IA.md`) ; chaque
+    script garde l'ID du plan.
+  - **Publication : trois vidéos par jour sur les cinq réseaux** (choix du client du 2026-10-25),
+    soit les 60 vidéos en 20 jours ; créneaux espacés et sujets d'objectifs différents chaque jour.
+  - **Livraison quotidienne : trois scripts**, chacun avec le texte à dire (`voix.txt`), la raison du
+    choix (sujet, accroche, mot-clé d'appel à l'action) et la légende. Le client génère la voix
+    (ElevenLabs, voix Oxley) et la dépose : **aucune voix provisoire**.
+  - **Gabarit commun** : le système de `studio-v2/projets/oddysee-meta-28-octobre-v2/` (gabarit,
+    `build.py`, placement sur les temps, mixage `outils/mixage.py`) et **la même musique de fond**
+    (`assets/musique/musique-client.mp3`). Chaque script est écrit pour tenir dans la structure de
+    cette musique (≈ 60–65 mots, accroche sur l'entrée de la batterie, appel à l'action sur le
+    moment fort, « abonne-toi » en conclusion).
+  - **Bibliothèques d'illustrations** fournies par le client : rangées dans
+    `studio-v2/marque/oddysee/illustrations/` avec un index (comme les mascottes) ; un fichier distinct
+    par apparition ; varier les illustrations d'une vidéo à l'autre pour que la série ne se répète pas.
+  - Un dossier par vidéo : `studio-v2/projets/oddysee-serie-60/<ID>-<sujet>/`.
+
 <!-- Format d'ajout :
 ### [date] Titre de l'élément
 - Consigne du client : « … »
