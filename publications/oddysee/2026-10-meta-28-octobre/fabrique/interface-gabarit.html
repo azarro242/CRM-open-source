@@ -1,0 +1,316 @@
+<title>Kit post Meta 28 octobre</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&display=swap">
+<style>
+  /* Bandeau de marque à trame de points, onglets collants par réseau, puis une colonne de blocs à copier dans l'ordre de publication */
+  :root {
+    --fond: #fbf9ff; --surface: #ffffff; --champ: #f6f2fd; --encre: #1d1b22; --gris: #6b6578;
+    --violet: #632bc5; --sur-violet: #ffffff; --or: #f0c860; --sur-or: #1d1b22;
+    --lilas: #ece5fa; --ligne: #e3dbf2; --point: rgba(99, 43, 197, 0.13);
+    --ok: #1b7a50; --ok-fond: #e2f3ea; --alerte: #a14d12; --alerte-fond: #fbeadc;
+    --police: "Outfit", "Segoe UI", system-ui, -apple-system, sans-serif;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --fond: #131118; --surface: #1c1824; --champ: #17141f; --encre: #f0ecf7; --gris: #a59db5;
+      --violet: #b08cff; --sur-violet: #160f22; --or: #f0c860; --sur-or: #1d1b22;
+      --lilas: #2a2238; --ligne: #302940; --point: rgba(176, 140, 255, 0.12);
+      --ok: #5ccf95; --ok-fond: #173326; --alerte: #f0a35e; --alerte-fond: #3a2616;
+      color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --fond: #131118; --surface: #1c1824; --champ: #17141f; --encre: #f0ecf7; --gris: #a59db5;
+    --violet: #b08cff; --sur-violet: #160f22; --or: #f0c860; --sur-or: #1d1b22;
+    --lilas: #2a2238; --ligne: #302940; --point: rgba(176, 140, 255, 0.12);
+    --ok: #5ccf95; --ok-fond: #173326; --alerte: #f0a35e; --alerte-fond: #3a2616;
+    color-scheme: dark;
+  }
+
+  * { box-sizing: border-box; }
+  body { background: var(--fond); color: var(--encre); font-family: var(--police); font-size: 16px; line-height: 1.5; }
+  body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 10;
+    background: var(--fond); }
+  .large { max-width: 780px; margin: 0 auto; }
+  .gouttiere { padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+
+  /* ---- bandeau */
+  .bandeau { background-color: var(--lilas);
+    background-image: radial-gradient(circle, var(--point) 1.7px, transparent 2.2px); background-size: 22px 22px;
+    border-bottom: 1px solid var(--ligne); }
+  .bandeau .gouttiere { padding-block: 28px 26px; }
+  .tete { display: grid; grid-template-columns: minmax(0, 1fr) 300px; gap: 24px; align-items: start; }
+  .marque { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; margin-bottom: 14px; }
+  .mot { font-weight: 900; font-size: 15px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--violet); }
+  .pastille { display: inline-flex; align-items: center; gap: 6px; padding: 4px 12px; border-radius: 99px;
+    background: var(--surface); border: 2px solid var(--violet); color: var(--violet);
+    font-weight: 800; font-size: 12px; letter-spacing: 0.06em; text-transform: uppercase; }
+  h1 { margin: 0 0 10px; font-weight: 900; font-size: clamp(30px, 6vw, 44px); line-height: 1.02; letter-spacing: -0.01em;
+    text-wrap: balance; }
+  h1 em { font-style: normal; color: var(--violet); }
+  .intro { margin: 0; max-width: 46ch; color: var(--gris); font-weight: 500; }
+
+  .avant { background: var(--surface); border: 1px solid var(--ligne); border-radius: 18px; padding: 14px; display: grid;
+    grid-template-columns: 74px minmax(0, 1fr); gap: 12px; }
+  .avant img { width: 74px; aspect-ratio: 9 / 16; object-fit: cover; border-radius: 10px; max-width: 100%; }
+  .avant h2 { margin: 0 0 6px; font-size: 13px; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; color: var(--gris); }
+  .avant ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 7px; }
+  .avant label { display: grid; grid-template-columns: 18px minmax(0, 1fr); gap: 7px; font-size: 13.5px; line-height: 1.3;
+    font-weight: 600; cursor: pointer; }
+  .avant input { width: 16px; height: 16px; margin: 1px 0 0; accent-color: var(--violet); }
+  .avant input:checked + span { color: var(--gris); text-decoration: line-through; }
+  .avant a { color: var(--violet); }
+
+  /* ---- onglets */
+  .onglets { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; background: var(--fond);
+    border-bottom: 1px solid var(--ligne); }
+  .onglets .gouttiere { padding-block: 10px; }
+  .liste-onglets { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 6px; }
+  .onglet { font: inherit; cursor: pointer; border: 1px solid var(--ligne); background: var(--surface); color: var(--encre);
+    border-radius: 12px; padding: 8px 6px; display: grid; gap: 1px; text-align: center; }
+  .onglet b { font-weight: 800; font-size: 15px; }
+  .onglet small { font-size: 11.5px; color: var(--gris); font-weight: 500; }
+  .onglet[aria-selected="true"] { background: var(--violet); border-color: var(--violet); color: var(--sur-violet); }
+  .onglet[aria-selected="true"] small { color: var(--sur-violet); opacity: 0.85; }
+  .onglet:focus-visible, button:focus-visible, textarea:focus-visible, input:focus-visible {
+    outline: 3px solid var(--or); outline-offset: 2px; }
+
+  /* ---- blocs */
+  main .gouttiere { padding-block: 22px 40px; }
+  .resume { margin: 0 0 16px; color: var(--gris); font-weight: 500; }
+  .resume b { color: var(--encre); }
+  .blocs { display: grid; gap: 14px; }
+  .bloc { background: var(--surface); border: 1px solid var(--ligne); border-radius: 18px; padding: 16px; display: grid; gap: 12px;
+    min-width: 0; }
+  .bloc-tete { display: grid; grid-template-columns: 34px minmax(0, 1fr) auto; gap: 12px; align-items: center; }
+  .num { width: 34px; height: 34px; border-radius: 50%; display: grid; place-items: center; font-weight: 900;
+    background: var(--lilas); color: var(--violet); font-variant-numeric: tabular-nums; }
+  .bloc.fait .num { background: var(--ok-fond); color: var(--ok); }
+  .bloc h3 { margin: 0; font-size: 18px; font-weight: 800; line-height: 1.2; }
+  .ou { margin: 2px 0 0; font-size: 13.5px; color: var(--gris); }
+  .etat { font-size: 12px; font-weight: 800; letter-spacing: 0.06em; text-transform: uppercase; color: var(--ok);
+    background: var(--ok-fond); padding: 3px 9px; border-radius: 99px; }
+
+  textarea { width: 100%; display: block; resize: vertical; min-height: 56px; overflow: hidden;
+    font: 500 15.5px/1.55 var(--police); color: var(--encre); background: var(--champ);
+    border: 1px solid var(--ligne); border-radius: 12px; padding: 12px 14px; white-space: pre-wrap; overflow-wrap: anywhere; }
+  .bloc-pied { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px; }
+  .compteurs { display: flex; flex-wrap: wrap; gap: 6px; min-width: 0; }
+  .puce { font-size: 12.5px; font-weight: 600; padding: 3px 9px; border-radius: 99px; background: var(--lilas); color: var(--encre);
+    font-variant-numeric: tabular-nums; white-space: nowrap; }
+  .puce.bon { background: var(--ok-fond); color: var(--ok); }
+  .puce.trop { background: var(--alerte-fond); color: var(--alerte); }
+  .actions { display: flex; gap: 8px; align-items: center; margin-left: auto; }
+  .copier { font: inherit; font-weight: 800; font-size: 15px; cursor: pointer; border: 0; border-radius: 12px;
+    padding: 11px 20px; min-height: 46px; background: var(--violet); color: var(--sur-violet); }
+  .copier.ok { background: var(--or); color: var(--sur-or); }
+  .retablir { font: inherit; font-size: 13.5px; font-weight: 600; cursor: pointer; border: 0; background: none;
+    color: var(--violet); text-decoration: underline; padding: 6px 4px; }
+  .note { margin: 0; font-size: 13.5px; color: var(--gris); border-top: 1px dashed var(--ligne); padding-top: 10px; }
+
+  .sous { margin: 0 0 6px; font-size: 12.5px; font-weight: 800; letter-spacing: 0.06em; text-transform: uppercase; color: var(--gris); }
+  .variantes { display: grid; gap: 8px; }
+  .variante { display: flex; align-items: center; gap: 10px; background: var(--champ); border: 1px solid var(--ligne);
+    border-radius: 12px; padding: 6px 6px 6px 14px; }
+  .variante span { flex: 1; min-width: 0; font-weight: 500; overflow-wrap: anywhere; }
+  .variante .copier { min-height: 40px; padding: 8px 14px; font-size: 14px; }
+
+  footer .gouttiere { padding-block: 0 36px; }
+  footer p { margin: 0; font-size: 13px; color: var(--gris); }
+  code { font-family: ui-monospace, "SF Mono", Menlo, monospace; font-size: 0.92em; overflow-wrap: anywhere; }
+
+  @media (max-width: 680px) {
+    .tete { grid-template-columns: minmax(0, 1fr); }
+    .bandeau .gouttiere { padding-block: 22px 20px; }
+  }
+  @media (max-width: 430px) {
+    .onglet small { display: none; }
+    .onglet b { font-size: 14px; }
+    .actions { width: 100%; }
+    .actions .copier { flex: 1; }
+  }
+  @media (prefers-reduced-motion: no-preference) {
+    .copier { transition: background-color 0.15s ease, color 0.15s ease; }
+  }
+</style>
+
+<header class="bandeau">
+  <div class="gouttiere"><div class="large tete">
+    <div>
+      <div class="marque"><span class="mot">Oddysee</span><span class="pastille">Lundi 26 octobre · vers 12&nbsp;h</span></div>
+      <h1>Publier le reel <em>Meta 28&nbsp;octobre</em></h1>
+      <p class="intro">Choisissez le réseau, puis copiez chaque bloc dans l'ordre. Vous pouvez retoucher un texte avant de le copier&nbsp;: les compteurs suivent.</p>
+    </div>
+    <aside class="avant" aria-label="Avant de publier">
+      <img src="{{COUVERTURE}}" alt="Couverture du reel : le tampon Faux sur la carte 30/10">
+      <div>
+        <h2>Avant de publier</h2>
+        <ul id="avant"></ul>
+      </div>
+    </aside>
+  </div></div>
+</header>
+
+<nav class="onglets" aria-label="Réseaux">
+  <div class="gouttiere"><div class="large liste-onglets" role="tablist" id="onglets"></div></div>
+</nav>
+
+<main>
+  <div class="gouttiere"><div class="large" id="panneaux"></div></div>
+</main>
+
+<footer>
+  <div class="gouttiere"><div class="large">
+    <p>Textes sources dans le dépôt&nbsp;: <code>publications/oddysee/2026-10-meta-28-octobre/</code> · vidéo&nbsp;: <code>studio-v2/exports/oddysee-meta-28-octobre-v2.mp4</code></p>
+  </div></div>
+</footer>
+
+<script type="application/json" id="donnees">{{DONNEES}}</script>
+<script>
+(() => {
+  const D = JSON.parse(document.getElementById("donnees").textContent);
+  const nf = new Intl.NumberFormat("fr-FR");
+  const el = (tag, attrs = {}, ...enfants) => {
+    const n = document.createElement(tag);
+    for (const [k, v] of Object.entries(attrs)) {
+      if (k === "class") n.className = v; else if (k === "text") n.textContent = v; else n.setAttribute(k, v);
+    }
+    for (const e of enfants) if (e) n.append(e);
+    return n;
+  };
+  const longueur = (t) => [...t].length;
+  const nbHashtags = (t) => (t.match(/#[\p{L}\p{N}_]+/gu) || []).length;
+  const lire = (cle) => { try { return localStorage.getItem(cle); } catch (e) { return null; } };
+  const ecrire = (cle, v) => { try { localStorage.setItem(cle, v); } catch (e) { /* stockage indisponible */ } };
+
+  // ---- avant de publier
+  const ulAvant = document.getElementById("avant");
+  D.avant.forEach((a) => {
+    const cle = "kit-meta28-avant-" + a.id;
+    const box = el("input", { type: "checkbox", id: "avant-" + a.id });
+    box.checked = lire(cle) === "1";
+    box.addEventListener("change", () => ecrire(cle, box.checked ? "1" : "0"));
+    const texte = el("span", { text: a.texte + " " });
+    if (a.lien) texte.append(el("a", { href: a.lien, target: "_blank", rel: "noopener", text: "Ouvrir" }));
+    ulAvant.append(el("li", {}, el("label", { for: "avant-" + a.id }, box, texte)));
+  });
+
+  // ---- copie dans le presse-papiers, avec repli sur la sélection
+  function signaler(bouton, carte, reussi) {
+    const avant = bouton.dataset.libelle;
+    bouton.textContent = reussi ? "Copié ✓" : "Texte sélectionné";
+    bouton.classList.toggle("ok", reussi);
+    if (reussi && carte) { carte.classList.add("fait"); carte.querySelector(".etat").hidden = false; }
+    clearTimeout(bouton._t);
+    bouton._t = setTimeout(() => { bouton.textContent = avant; bouton.classList.remove("ok"); }, 1800);
+  }
+  function selectionner(noeud) {
+    if (noeud.select) { noeud.focus(); noeud.select(); }
+    else { const r = document.createRange(); r.selectNodeContents(noeud); const s = getSelection(); s.removeAllRanges(); s.addRange(r); }
+    try { return document.execCommand("copy"); } catch (e) { return false; }
+  }
+  function copier(texte, noeud, bouton, carte) {
+    const repli = () => signaler(bouton, carte, selectionner(noeud));
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(texte).then(() => signaler(bouton, carte, true), repli);
+    } else repli();
+  }
+  const boutonCopier = (libelle) => { const b = el("button", { type: "button", class: "copier", text: libelle }); b.dataset.libelle = libelle; return b; };
+
+  // ---- compteurs d'un texte
+  function compteurs(zone, b) {
+    const t = zone.value, n = longueur(t), puces = [];
+    const puce = (txt, etat) => el("span", { class: "puce" + (etat ? " " + etat : ""), text: txt });
+    if (b.limite) puces.push(puce(`${nf.format(n)} / ${nf.format(b.limite)} car.`, n > b.limite ? "trop" : ""));
+    else if (b.conseil) puces.push(puce(`${nf.format(n)} car. · conseillé ≤ ${b.conseil}`, n > b.conseil ? "trop" : "bon"));
+    else puces.push(puce(`${nf.format(n)} car.`));
+    if (b.hashtags_max) {
+      const h = nbHashtags(t);
+      puces.push(puce(`${h} / ${b.hashtags_max} hashtags`, h > b.hashtags_max ? "trop" : "bon"));
+    }
+    if (b.premiere_ligne) {
+      const l = longueur(t.split("\n")[0]);
+      puces.push(puce(`1re ligne : ${l} car.`, l > b.premiere_ligne ? "trop" : "bon"));
+    }
+    return puces;
+  }
+  const ajuster = (zone) => { zone.style.height = "auto"; zone.style.height = zone.scrollHeight + 2 + "px"; };
+
+  // ---- onglets et panneaux
+  const onglets = document.getElementById("onglets"), panneaux = document.getElementById("panneaux");
+  const resumes = {
+    instagram: "Réponse automatique avec ManyChat : chaque commentaire <b>META</b> reçoit le lien de l'article en message privé.",
+    facebook: "Même mécanique qu'Instagram, en Messenger. Le lien est suivi « facebook » pour compter les visites.",
+    tiktok: "Pas de message privé automatique sur TikTok : le lien passe par la bio et vous répondez aux commentaires <b>META</b>.",
+    linkedin: "Post à la première personne pour le profil d'Alvarez, lien du guide en premier commentaire.",
+  };
+  D.reseaux.forEach((r) => {
+    onglets.append(el("button", { type: "button", role: "tab", class: "onglet", id: "onglet-" + r.id, "aria-controls": "panneau-" + r.id,
+      "aria-selected": "false", "data-id": r.id }, el("b", { text: r.nom }), el("small", { text: r.mode })));
+
+    const panneau = el("section", { role: "tabpanel", id: "panneau-" + r.id, "aria-labelledby": "onglet-" + r.id });
+    panneau.hidden = true;
+    const resume = el("p", { class: "resume" }); resume.innerHTML = resumes[r.id] || "";
+    const liste = el("div", { class: "blocs" });
+    r.blocs.forEach((b, i) => {
+      const etat = el("span", { class: "etat", text: "Copié" }); etat.hidden = true;
+      const carte = el("article", { class: "bloc" },
+        el("div", { class: "bloc-tete" }, el("span", { class: "num", text: String(i + 1) }),
+          el("div", {}, el("h3", { text: b.titre }), el("p", { class: "ou", text: "Où : " + b.ou })), etat));
+      if (b.texte !== undefined) {
+        const zone = el("textarea", { id: `${r.id}-${i + 1}`, spellcheck: "false", "aria-label": b.titre });
+        zone.value = b.texte;
+        const puces = el("div", { class: "compteurs" });
+        const retablir = el("button", { type: "button", class: "retablir", text: "Rétablir" }); retablir.hidden = true;
+        const bouton = boutonCopier("Copier");
+        const maj = () => { puces.replaceChildren(...compteurs(zone, b)); retablir.hidden = zone.value === b.texte; ajuster(zone); };
+        zone.addEventListener("input", maj);
+        retablir.addEventListener("click", () => { zone.value = b.texte; maj(); });
+        bouton.addEventListener("click", () => copier(zone.value, zone, bouton, carte));
+        carte.append(zone, el("div", { class: "bloc-pied" }, puces, el("div", { class: "actions" }, retablir, bouton)));
+        puces.replaceChildren(...compteurs(zone, b));
+        carte._ajuster = () => ajuster(zone);
+      }
+      if (b.variantes) {
+        const groupe = el("div", { class: "variantes" });
+        if (b.variantes_titre) groupe.append(el("p", { class: "sous", text: b.variantes_titre }));
+        b.variantes.forEach((v) => {
+          const span = el("span", { text: v }), bouton = boutonCopier("Copier");
+          bouton.addEventListener("click", () => copier(v, span, bouton, carte));
+          groupe.append(el("div", { class: "variante" }, span, bouton));
+        });
+        carte.append(groupe);
+      }
+      if (b.note) carte.append(el("p", { class: "note", text: b.note }));
+      liste.append(carte);
+    });
+    panneau.append(resume, liste);
+    panneaux.append(panneau);
+  });
+
+  function ouvrir(id, memoriser) {
+    if (!D.reseaux.some((r) => r.id === id)) id = D.reseaux[0].id;
+    onglets.querySelectorAll(".onglet").forEach((o) => o.setAttribute("aria-selected", String(o.dataset.id === id)));
+    panneaux.querySelectorAll("[role=tabpanel]").forEach((p) => {
+      p.hidden = p.id !== "panneau-" + id;
+      if (!p.hidden) p.querySelectorAll(".bloc").forEach((c) => c._ajuster && c._ajuster());
+    });
+    if (memoriser) { try { history.replaceState(null, "", "#" + id); } catch (e) { /* cadre restreint */ } ecrire("kit-meta28-onglet", id); }
+  }
+  onglets.addEventListener("click", (e) => { const o = e.target.closest(".onglet"); if (o) ouvrir(o.dataset.id, true); });
+  onglets.addEventListener("keydown", (e) => {
+    if (e.key !== "ArrowRight" && e.key !== "ArrowLeft") return;
+    const tous = [...onglets.querySelectorAll(".onglet")], i = tous.indexOf(document.activeElement);
+    if (i < 0) return;
+    const suivant = tous[(i + (e.key === "ArrowRight" ? 1 : tous.length - 1)) % tous.length];
+    suivant.focus(); ouvrir(suivant.dataset.id, true);
+  });
+  window.addEventListener("hashchange", () => ouvrir(location.hash.slice(1), false));
+  window.addEventListener("resize", () => panneaux.querySelectorAll("[role=tabpanel]:not([hidden]) .bloc").forEach((c) => c._ajuster && c._ajuster()));
+  ouvrir(location.hash.slice(1) || lire("kit-meta28-onglet") || "instagram", false);
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(() => ouvrir(
+    (onglets.querySelector('[aria-selected="true"]') || {}).dataset?.id, false));
+})();
+</script>

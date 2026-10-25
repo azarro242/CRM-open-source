@@ -12,7 +12,9 @@ Reel (commentaire « META ») ──► message privé ──► article oddysee
 
 | Fichier | À quoi il sert |
 |---|---|
+| `interface-copier-coller.html` | **Au moment de poster** : un onglet par réseau, un bouton « Copier » par bloc (`python3 fabrique/interface.py`) |
 | `1-DESCRIPTION-POST.md` | Tout le texte du post : légende, premier commentaire, réponses automatiques, texte alternatif, couverture, suivi |
+| `2-DESCRIPTIONS-RESEAUX.md` | Les versions Facebook, TikTok et LinkedIn (générées avec l'interface) |
 | `legende-instagram.txt` | La légende seule, prête à copier-coller |
 | `message-prive.txt` | Le message privé envoyé à chaque « META » (contient le lien de l'article) |
 | `couverture-reel.jpg` | Image de couverture du reel |

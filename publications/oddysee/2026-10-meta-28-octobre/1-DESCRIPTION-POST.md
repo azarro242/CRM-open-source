@@ -1,5 +1,7 @@
 # Description du post Instagram — Reel « Le 30 octobre ? Faux. » (v2)
 
+Version pour les autres réseaux (Facebook, TikTok, LinkedIn) : `2-DESCRIPTIONS-RESEAUX.md`, et tout est copiable en un clic dans `interface-copier-coller.html`.
+
 Vidéo : `studio-v2/exports/oddysee-meta-28-octobre-v2.mp4` · couverture : `couverture-reel.jpg`
 À publier **lundi 26 octobre vers 12 h** (même heure à Paris et à Casablanca depuis le passage à
 l'heure d'hiver du 25/10) — au plus tard mardi 27 : le sujet expire mercredi 28.
@@ -74,11 +76,14 @@ Le lien pointe vers l'article du blog, avec un suivi UTM
 (`utm_source=instagram`, `utm_medium=dm`, `utm_campaign=meta-28-octobre`) : chaque visite venue du Reel
 se retrouve dans les statistiques du site. **L'article doit être en ligne avant la publication du Reel.**
 
-## 5. Texte alternatif (Paramètres avancés › Accessibilité)
+## 5. Texte alternatif (Paramètres avancés › Accessibilité, si le champ apparaît)
 
 ```
-Vidéo animée aux couleurs d'Oddysee : une mascotte barre la date du 30 octobre d'un tampon « Faux », explique que la navigation produit de Meta s'active le 28 octobre, montre comment la couper dans Ads Manager, puis invite à commenter META pour recevoir un guide.
+Mascotte Oddysee qui tamponne « Faux » sur le 30 octobre : tes pubs Meta changent dès le mercredi 28.
 ```
+
+101 caractères (≤ 125 conseillés). Instagram ne propose pas toujours ce champ sur les reels : s'il
+n'apparaît pas, rien à faire, les sous-titres de la vidéo la rendent déjà accessible.
 
 ## 6. Couverture
 
