@@ -60,7 +60,7 @@
         border-radius: 44px; background: var(--encre); box-shadow: 0 34px 70px rgba(40, 10, 90, 0.35); }
       .s1-ligne { position: relative; height: 200px; }
       .s1-label { font-weight: 700; font-size: 30px; letter-spacing: 5px; color: var(--lilas); text-transform: uppercase; }
-      .s1-nombre { display: block; font-weight: 900; font-size: 168px; line-height: 1; letter-spacing: -4px;
+      .s1-nombre { display: inline-block; transform-origin: left center; font-weight: 900; font-size: 168px; line-height: 1; letter-spacing: -4px;
         font-variant-numeric: tabular-nums; }
       #s1-vues { color: var(--violet-pale); }
       #s1-zero { color: #fff; }

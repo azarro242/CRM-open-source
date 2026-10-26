@@ -2,6 +2,10 @@
 
 Gabarit : vidéo Meta v2 (même musique, même mixage). Voix Oxley fournie le 2026-10-26 (`voix.mp3`, 32,1 s).
 
+**Livrée le 26/10/2026** : `studio-v2/exports/serie-60/J01-13-vues-zero-demande.mp4` — 32,2 s, 1080 × 1920, 30 i/s.
+Son : −14,2 LUFS intégrés, crête vraie −1,8 dBTP ; voix 10,8 dB au-dessus de la musique pendant la parole
+(min 8,6 dB, musique abaissée à −11 dB sous la voix au lieu de −10 dB) ; bruitage le plus fort −18,2 LUFS.
+
 ```bash
 cd studio-v2/projets/oddysee-serie-60/J01-13-vues-zero-demande
 python3 ../../../../outils/aligner.py voix.mp3 voix.txt voix.transcript.json --langue fr

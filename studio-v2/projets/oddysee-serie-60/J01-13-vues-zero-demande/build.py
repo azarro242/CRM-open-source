@@ -312,7 +312,7 @@ for e in sorted(SFX, key=lambda e: e[0]):
                        "gain_db": round(gain_db, 2), "categorie": cat})
 
 # ---------------------------------------------------------------- musique : ducking sous la voix
-PAROLE_DB, PAUSE_DB = -10.0, -4.5           # gain musique pendant la voix / dans les respirations
+PAROLE_DB, PAUSE_DB = -11.0, -4.5           # gain musique pendant la voix / dans les respirations
 zones = []
 for sg in segments:
     a, z = sg["debut"] - 0.08, sg["fin"] + 0.05
