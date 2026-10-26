@@ -91,8 +91,14 @@ dans un nouveau message, quand je ne travaille pas, le sont).
 | 60 | `60-pochoir-homme-rire.webp` | pochoir (homme aux cheveux blancs) | Fou rire | Mains sur le ventre | ⏳ |
 | 61 | `61-pochoir-barbu-stupefait.webp` | pochoir (barbu) | Stupéfait, bouche ouverte | Mains levées ; halo violet | ⏳ |
 | 62 | `62-pochoir-chauve-surpris.webp` | pochoir (homme au crâne à moitié rasé) | Surpris (« oh ») | Bras écartés | ⏳ |
+| 63 | `63-pochoir-femme-designe.webp` | pochoir (femme aux cheveux bouclés) | Sourire complice | Main sur la hanche, **index pointé vers la droite du cadre** ; halo violet | ✅ |
+| 64 | `64-pochoir-barbu-inquiet.webp` | pochoir (barbu) | Inquiet, mal à l'aise | Mains jointes sur la poitrine ; halo violet | ✅ |
+| 65 | `65-pochoir-homme-mecontent.webp` | pochoir (homme aux cheveux blancs, corps épais) | Mécontent, renfrogné | Bras le long du corps, poings serrés | ✅ |
+| 66 | `66-pochoir-homme-accueil.webp` | pochoir (homme aux cheveux blancs, corps épais) | Grand sourire | Bras grands ouverts | ✅ |
+| 67 | `67-pochoir-homme-dubitatif.webp` | pochoir (homme aux cheveux blancs, corps épais) | Dubitatif, regard en l'air | Main au menton, bras replié | ⏳ |
 
-Planches de contrôle : `planche-lot01.png` (01–05), `planche-lot10.png` (48–52).
+Planches de contrôle : `planche-lot01.png` (01–05), `planche-lot10.png` (48–52), `planche-lot11.png` (63–66).
+65 et 66 arrivent en 1050 × 1498 : remis au format 1024 × 1536, pieds en bas.
 
 Lots 6 à 9 (27 à 47, reçus le 2026-10-26) : sur les aperçus, le **fond paraît blanc**, pas transparent. À la réception des fichiers, vérifier ; si le fond est blanc, le détourer en partant des bords (le contour noir protège le blanc du visage et des mains).
 
@@ -100,11 +106,11 @@ Lots 6 à 9 (27 à 47, reçus le 2026-10-26) : sur les aperçus, le **fond para�
 
 | Moment du script | Émotions à utiliser |
 |---|---|
-| **Accroche / problème** (le spectateur se reconnaît) | sceptique 01, colère 04, perplexe 05, triste 06, angoissé 09, fâchée 15, inquiète 16, blasé 20, dégoût 21, déçu 25, triste 28, inquiet 29, colère 37, bras croisés 40, perplexe 49, colère 52, triste 55, colère 56, implore 58 |
+| **Accroche / problème** (le spectateur se reconnaît) | sceptique 01, colère 04, perplexe 05, triste 06, angoissé 09, fâchée 15, inquiète 16, blasé 20, dégoût 21, déçu 25, triste 28, inquiet 29, colère 37, bras croisés 40, perplexe 49, colère 52, triste 55, colère 56, implore 58, inquiet 64, mécontent 65 |
 | **Retournement / révélation** (« mais… ») | stupéfait 07, surprise 11, stupéfait 24, stupéfait 36, stupéfait 61, surpris 62 |
-| **Contexte / réflexion** | pensif 08, pensive 17, pensif 27, pensif 44, pensif 54 |
-| **Solution Oddysee / preuve** | sourire 02, sourire calme 10, fier 12, **désigne 22** (montre une carte, un chiffre, une capture), **présente 33, désigne 34 et 35**, explique 39, présente 42, désigne 45, présente 50, **index levé 46 et 47** (conseil, « retiens ça ») |
-| **Résultat / appel à l'action / signature** | victoire 03, grands sourires 13 et 14, rires 18, 19 et 23 (salut = au revoir), accueil 30, victoire 31, rire 32, pouce levé 38, bras ouverts 41, victoire 43, rire 48, satisfait 51, sûr de lui 53, victoire 57, rires 59 et 60 |
+| **Contexte / réflexion** | pensif 08, pensive 17, pensif 27, pensif 44, pensif 54, dubitatif 67 |
+| **Solution Oddysee / preuve** | sourire 02, sourire calme 10, fier 12, **désigne 22** (montre une carte, un chiffre, une capture), **présente 33, désigne 34 et 35**, explique 39, présente 42, désigne 45, présente 50, désigne 63, **index levé 46 et 47** (conseil, « retiens ça ») |
+| **Résultat / appel à l'action / signature** | victoire 03, grands sourires 13 et 14, rires 18, 19 et 23 (salut = au revoir), accueil 30, victoire 31, rire 32, pouce levé 38, bras ouverts 41, victoire 43, rire 48, satisfait 51, sûr de lui 53, victoire 57, rires 59 et 60, accueil 66 |
 | **Transition / progression** (« étape suivante », « on avance ») | collage 26 qui traverse le cadre |
 
 ## Règles d'utilisation
@@ -115,7 +121,7 @@ Lots 6 à 9 (27 à 47, reçus le 2026-10-26) : sur les aperçus, le **fond para�
   (ex. 16 femme inquiète → 13 femme grand sourire).
 - **Direction du regard et du geste** : 22 désigne vers la gauche → mascotte à **droite** du
   cadre, élément désigné à **gauche** ; 33, 34 et 35 montrent vers la droite → mascotte à **gauche**,
-  élément à **droite** (de même pour 45 et 50) ; 42 présente vers la gauche → mascotte à **droite**. 26 marche vers la gauche → entre par la droite.
+  élément à **droite** (de même pour 45, 50 et 63) ; 42 présente vers la gauche → mascotte à **droite**. 26 marche vers la gauche → entre par la droite.
 - Chaque apparition utilise **sa propre copie de fichier** (règle « source d'image distincte »
   de `QUALITE.md`) : dupliquer le fichier sous un autre nom si une émotion revient.
 - La tête ne passe **jamais** sous un sous-titre ni sous un texte ; rester dans les zones de
