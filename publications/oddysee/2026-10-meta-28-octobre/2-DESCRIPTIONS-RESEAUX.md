@@ -184,17 +184,17 @@ La « navigation produit » s'active par défaut sur les publicités Facebook 
 
 Meta annonce +3 % de conversions avec cette option. C'est le résultat de son propre test.
 
-Ce que je recommande à nos clients avant mercredi :
+Ce que nous recommandons à nos clients avant mercredi :
 → décider publicité par publicité : couper, garder ou tester ;
 → tester 7 jours, une version avec et une sans, et comparer les ventes réelles ;
 → relire ce que l'IA de Meta modifie dans les créations (Advantage+). Avec les nouvelles conditions, l'annonceur en reste seul responsable.
 
-J'ai réuni le pas-à-pas, la méthode de test et la checklist dans un guide sourcé (Meta, Reuters, Adweek). Le lien est en premier commentaire.
+Nous avons réuni le pas-à-pas, la méthode de test et la checklist dans un guide sourcé (Meta, Reuters, Adweek). Le lien est en premier commentaire.
 
 #MetaAds #MarketingDigital #Publicité
 ```
 
-> Écrit à la première personne, pour le profil d'Alvarez. Le lien reste hors du post : il va en premier commentaire.
+> Publié sur la page LinkedIn Oddysee, à la voix de l'agence. Le lien reste hors du post : il va en premier commentaire.
 
 ### 2. Premier commentaire, avec le lien
 *Où : Sous le post publié › Commenter*
