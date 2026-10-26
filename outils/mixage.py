@@ -23,6 +23,8 @@ ap.add_argument("projet")
 ap.add_argument("video")
 ap.add_argument("sortie")
 ap.add_argument("--rapport")
+ap.add_argument("--limite", type=float, default=0.79,
+                help="plafond du limiteur (amplitude) ; baisser si la crête vraie dépasse −1,5 dBTP après encodage")
 a = ap.parse_args()
 P = os.path.abspath(a.projet)
 mix = json.load(open(os.path.join(P, "mix.json"), encoding="utf-8"))
@@ -141,7 +143,7 @@ with tempfile.TemporaryDirectory() as tmp:
     mesure = json.loads(err[err.rindex("{"): err.rindex("}") + 1])
     filtre = ("loudnorm=I=-14:TP=-1.5:LRA=9:measured_I={input_i}:measured_TP={input_tp}:measured_LRA={input_lra}:"
               "measured_thresh={input_thresh}:offset={target_offset}:linear=true,aresample=192000,"
-              "alimiter=limit=0.79:level=false:attack=1:release=50,aresample=48000").format(**mesure)
+              "alimiter=limit={limite}:level=false:attack=1:release=50,aresample=48000").format(**mesure, limite=a.limite)
     subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", a.video, "-i", f"{tmp}/somme.wav", "-map", "0:v", "-map", "1:a",
                     "-c:v", "copy", "-af", filtre, "-c:a", "aac", "-b:a", "192k", "-t", f"{DUREE}",
                     "-movflags", "+faststart", a.sortie], check=True)
