@@ -24,7 +24,8 @@ Nommage : `NN-personnage-emotion.webp`, NN = ordre de réception.
 ## Catalogue
 
 ✅ = fichier dans ce dossier · ⏳ = vu dans la conversation mais fichier **à renvoyer**
-(les images envoyées pendant que je travaille ne sont pas enregistrées sur le disque).
+(les images envoyées **pendant que je travaille** ne sont pas enregistrées sur le disque ; celles envoyées
+dans un nouveau message, quand je ne travaille pas, le sont).
 
 | N° | Fichier | Personnage | Émotion | Pose | Statut |
 |---|---|---|---|---|---|
@@ -75,8 +76,23 @@ Nommage : `NN-personnage-emotion.webp`, NN = ordre de réception.
 | 45 | `45-pochoir-cheveux-longs-designe.webp` | pochoir (homme aux cheveux longs) | Sérieux | Main sur la hanche, **index pointé vers la droite du cadre** | ⏳ |
 | 46 | `46-pochoir-homme-idee.webp` | pochoir (homme aux cheveux blancs) | Malicieux, « j'ai une idée » | **Index levé**, main sur la hanche | ⏳ |
 | 47 | `47-pochoir-femme-index.webp` | pochoir (femme aux cheveux bouclés) | Assurée, « attention » | **Index levé**, main sur la hanche | ⏳ |
+| 48 | `48-pochoir-femme-rire.webp` | pochoir (femme aux cheveux bouclés) | Fou rire | Mains sur le ventre | ✅ |
+| 49 | `49-pochoir-femme-perplexe.webp` | pochoir (femme aux cheveux bouclés) | Perplexe, sceptique | Haussement d'épaules, paumes ouvertes | ✅ |
+| 50 | `50-pochoir-homme-presente.webp` | pochoir (homme aux cheveux en épis) | Sourcil levé, sûr de lui | Main sur la hanche, **paume tendue vers la droite du cadre** (présente) ; léger halo violet | ✅ |
+| 51 | `51-pochoir-homme-satisfait.webp` | pochoir (homme aux cheveux en épis) | Satisfait, yeux fermés | Poings sur les hanches | ✅ |
+| 52 | `52-pochoir-barbu-colere.webp` | pochoir (barbu, tête carrée) | Colère | Poings sur les hanches | ✅ |
+| 53 | `53-pochoir-homme-bras-croises-sourire.webp` | pochoir (homme aux cheveux blancs) | Sûr de lui, sourire en coin | Bras croisés ; halo violet | ⏳ |
+| 54 | `54-pochoir-homme-pensif-b.webp` | pochoir (homme aux cheveux bruns) | Pensif, regard en l'air | Main au menton, main sur la hanche | ⏳ |
+| 55 | `55-pochoir-homme-triste.webp` | pochoir (homme au crâne à moitié rasé) | Triste, abattu | Bras ballants ; halo violet | ⏳ |
+| 56 | `56-pochoir-cheveux-longs-colere.webp` | pochoir (homme aux cheveux longs) | Colère | Poings sur les hanches ; halo violet | ⏳ |
+| 57 | `57-pochoir-homme-victoire-b.webp` | pochoir (homme aux cheveux bruns) | Fier, yeux fermés | Poings levés ; halo violet | ⏳ |
+| 58 | `58-pochoir-homme-implore.webp` | pochoir (homme aux cheveux blancs) | Inquiet, suppliant | Mains jointes ; halo violet | ⏳ |
+| 59 | `59-pochoir-cheveux-longs-rire.webp` | pochoir (homme aux cheveux longs) | Rire, ravi | Bras grands ouverts ; halo violet | ⏳ |
+| 60 | `60-pochoir-homme-rire.webp` | pochoir (homme aux cheveux blancs) | Fou rire | Mains sur le ventre | ⏳ |
+| 61 | `61-pochoir-barbu-stupefait.webp` | pochoir (barbu) | Stupéfait, bouche ouverte | Mains levées ; halo violet | ⏳ |
+| 62 | `62-pochoir-chauve-surpris.webp` | pochoir (homme au crâne à moitié rasé) | Surpris (« oh ») | Bras écartés | ⏳ |
 
-Planche de contrôle du lot 1 : `planche-lot01.png`.
+Planches de contrôle : `planche-lot01.png` (01–05), `planche-lot10.png` (48–52).
 
 Lots 6 à 9 (27 à 47, reçus le 2026-10-26) : sur les aperçus, le **fond paraît blanc**, pas transparent. À la réception des fichiers, vérifier ; si le fond est blanc, le détourer en partant des bords (le contour noir protège le blanc du visage et des mains).
 
@@ -84,11 +100,11 @@ Lots 6 à 9 (27 à 47, reçus le 2026-10-26) : sur les aperçus, le **fond para�
 
 | Moment du script | Émotions à utiliser |
 |---|---|
-| **Accroche / problème** (le spectateur se reconnaît) | sceptique 01, colère 04, perplexe 05, triste 06, angoissé 09, fâchée 15, inquiète 16, blasé 20, dégoût 21, déçu 25, triste 28, inquiet 29, colère 37, bras croisés 40 |
-| **Retournement / révélation** (« mais… ») | stupéfait 07, surprise 11, stupéfait 24, stupéfait 36 |
-| **Contexte / réflexion** | pensif 08, pensive 17, pensif 27, pensif 44 |
-| **Solution Oddysee / preuve** | sourire 02, sourire calme 10, fier 12, **désigne 22** (montre une carte, un chiffre, une capture), **présente 33, désigne 34 et 35**, explique 39, présente 42, désigne 45, **index levé 46 et 47** (conseil, « retiens ça ») |
-| **Résultat / appel à l'action / signature** | victoire 03, grands sourires 13 et 14, rires 18, 19 et 23 (salut = au revoir), accueil 30, victoire 31, rire 32, pouce levé 38, bras ouverts 41, victoire 43 |
+| **Accroche / problème** (le spectateur se reconnaît) | sceptique 01, colère 04, perplexe 05, triste 06, angoissé 09, fâchée 15, inquiète 16, blasé 20, dégoût 21, déçu 25, triste 28, inquiet 29, colère 37, bras croisés 40, perplexe 49, colère 52, triste 55, colère 56, implore 58 |
+| **Retournement / révélation** (« mais… ») | stupéfait 07, surprise 11, stupéfait 24, stupéfait 36, stupéfait 61, surpris 62 |
+| **Contexte / réflexion** | pensif 08, pensive 17, pensif 27, pensif 44, pensif 54 |
+| **Solution Oddysee / preuve** | sourire 02, sourire calme 10, fier 12, **désigne 22** (montre une carte, un chiffre, une capture), **présente 33, désigne 34 et 35**, explique 39, présente 42, désigne 45, présente 50, **index levé 46 et 47** (conseil, « retiens ça ») |
+| **Résultat / appel à l'action / signature** | victoire 03, grands sourires 13 et 14, rires 18, 19 et 23 (salut = au revoir), accueil 30, victoire 31, rire 32, pouce levé 38, bras ouverts 41, victoire 43, rire 48, satisfait 51, sûr de lui 53, victoire 57, rires 59 et 60 |
 | **Transition / progression** (« étape suivante », « on avance ») | collage 26 qui traverse le cadre |
 
 ## Règles d'utilisation
@@ -99,7 +115,7 @@ Lots 6 à 9 (27 à 47, reçus le 2026-10-26) : sur les aperçus, le **fond para�
   (ex. 16 femme inquiète → 13 femme grand sourire).
 - **Direction du regard et du geste** : 22 désigne vers la gauche → mascotte à **droite** du
   cadre, élément désigné à **gauche** ; 33, 34 et 35 montrent vers la droite → mascotte à **gauche**,
-  élément à **droite** (de même pour 45) ; 42 présente vers la gauche → mascotte à **droite**. 26 marche vers la gauche → entre par la droite.
+  élément à **droite** (de même pour 45 et 50) ; 42 présente vers la gauche → mascotte à **droite**. 26 marche vers la gauche → entre par la droite.
 - Chaque apparition utilise **sa propre copie de fichier** (règle « source d'image distincte »
   de `QUALITE.md`) : dupliquer le fichier sous un autre nom si une émotion revient.
 - La tête ne passe **jamais** sous un sous-titre ni sous un texte ; rester dans les zones de
