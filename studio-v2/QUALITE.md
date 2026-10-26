@@ -219,6 +219,26 @@ d'amélioration V2** fournis par le client. Les deux s'appliquent à chaque proj
   - Seuls les fichiers présents sur le disque sont utilisables : les images collées dans la conversation
     doivent être renvoyées en pièce jointe.
 
+### [2026-10-26] Scripts : partir de la douleur de ceux qui cherchent des clients
+- Consigne du client (vidéo 60 rejetée) : « va sur quelque chose de beaucoup plus pertinent qui s'adapte à
+  la réalité et à la problématique des personnes qui ont besoin de clients : parle de leur douleur et
+  propose la solution de croissance ».
+- Règles d'application :
+  - **accroche = une douleur concrète du spectateur**, dans ses mots (agenda vide, mois en dents de scie,
+    « avant ça vendait avec le boost », demandes jamais rappelées, pub qui coûte sans rapporter) ;
+  - **retournement = la vraie cause**, sans culpabiliser (« ce n'est pas ton talent ») ;
+  - **solution = un levier de croissance** qu'Oddysee met en place (pub ciblée, page qui rassure et
+    convertit, suivi rapide des demandes, automatisation), formulé comme un bénéfice ;
+  - pas de vidéo centrée sur Oddysee elle-même (défi interne, coulisses, badge) sauf si elle répond
+    directement à une douleur du client ; les sujets 60, N09, N10 du plan sont à reprendre sous cet angle.
+
+### [2026-10-26] Publication sur les comptes Oddysee, pas sur le profil d'Alvarez
+- Consigne du client : « les vidéos que nous sommes en train de faire sont à poster sur le profil Oddysee,
+  pas sur le profil Alvarez ».
+- Règles d'application : Instagram, Facebook, TikTok, LinkedIn (page Oddysee) et YouTube au nom d'Oddysee ;
+  textes LinkedIn à la voix de l'agence (« nous », vouvoiement), jamais à la première personne du fondateur ;
+  pas d'« insert du fondateur » sauf demande expresse.
+
 <!-- Format d'ajout :
 ### [date] Titre de l'élément
 - Consigne du client : « … »

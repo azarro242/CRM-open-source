@@ -2,6 +2,8 @@
 
 - Plan, verdicts sur les 60 idées du brief client et calendrier : `reports/Plan 60 vidéos publicité IA.md`
   (racine du dépôt). Notes de recherche sourcées : `research_notes/Plan 60 vidéos publicité IA/`.
+- Publication sur les **comptes Oddysee** (dont la page LinkedIn Oddysee), pas sur le profil d'Alvarez
+  (consigne du 2026-10-26).
 - Rythme (consigne du 2026-10-25, voir `studio-v2/QUALITE.md`) : **trois scripts par jour**, puis **trois
   publications par jour** sur les cinq réseaux, du lundi 2 au samedi 21 novembre 2026, à 9 h (prospects),
   12 h 30 (confiance) et 18 h 30 (attention).
@@ -17,7 +19,7 @@ de montage. Les scripts du jour, avec leur justification et leurs légendes, son
 
 | Jour | Date | 9 h | 12 h 30 | 18 h 30 | Scripts | Voix | Vidéos |
 |---|---|---|---|---|---|---|---|
-| J1 | lun. 2 nov. | 13 | 60 | N02 | ✓ | 13 ✓ | 13 ✓ |
+| J1 | lun. 2 nov. | 13 | N20 | N02 | ✓ | 13 ✓ | 13 ✓ |
 
 ## Mascottes utilisées (pour varier d'une vidéo à l'autre)
 

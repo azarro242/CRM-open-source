@@ -82,12 +82,12 @@ Exemple fictif. Avant de changer ta pub, regarde ta page et ton suivi.
 
 Réponse aux commentaires AUDIT (à la main) : « Merci ! Dis-nous ton activité et ta ville, on te répond 👇 ».
 
-## LinkedIn (profil d'Alvarez)
+## LinkedIn (page Oddysee)
 
 ```
 Une publicité peut faire 10 000 vues et ne rapporter aucune demande.
 
-Exemple fictif, mais je le vois souvent :
+Exemple fictif, mais très courant :
 → 10 000 vues
 → 100 clics
 → 2 formulaires remplis
@@ -99,7 +99,7 @@ Le réflexe, c'est de changer la pub. Souvent, la fuite est ailleurs :
 
 Une demande rappelée trop tard est souvent une demande perdue.
 
-Commentez AUDIT : je regarde votre parcours et je vous dis où ça bloque.
+Commentez AUDIT : nous regardons votre parcours et vous disons où ça bloque.
 
 #MetaAds #MarketingDigital #Prospection
 ```

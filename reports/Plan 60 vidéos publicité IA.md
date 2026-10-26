@@ -211,6 +211,8 @@ Quatre garde-fous valent pour tout le plan. Les pubs de tiers (Coca-Cola, McDona
 
 ## Vingt jours, trois créneaux, un équilibre quotidien
 
+*Mise à jour du 26 octobre 2026, à la demande du client : la vidéo 60 (défi interne) est remplacée par N20 « Un mois plein… puis plus rien ? », centrée sur la douleur des clients ; toutes les vidéos se publient sur les comptes Oddysee (y compris la page LinkedIn), pas sur le profil du fondateur ; les sujets centrés sur Oddysee (N09, N10, 57) seront repris sous l'angle de la douleur client.*
+
 *Mise à jour du 25 octobre 2026 : les vidéos 01 (photo → pub) et N02 (pubs ChatGPT) échangent leur place. La 01 suppose un vrai test de fabrication, à faire avant J5 ; N02 est prête à tourner dès J1.*
 
 Le client publie trois vidéos par jour sur les cinq réseaux, du lundi 2 au samedi 21 novembre 2026. Paris et Casablanca sont à la même heure depuis le 25 octobre. Les créneaux s’appuient sur les relevés de meilleurs horaires (heure locale) : Buffer 2026 situe Instagram à 9 h et 18 h en semaine, Facebook entre 8 h et 12 h en semaine, TikTok entre 18 h et 23 h, YouTube Shorts entre 16 h et 19 h le vendredi et le samedi, LinkedIn entre 15 h et 18 h du mercredi au dimanche ; Metricool place la meilleure heure Instagram à 11 h et LinkedIn entre 9 h et 12 h ([Buffer](https://buffer.com/best-time-to-post) ; [Metricool, Instagram](https://metricool.com/fr/meilleur-moment-pour-poster-instagram/) ; [Metricool, LinkedIn](https://metricool.com/fr/quand-poster-sur-linkedin/)).
@@ -219,7 +221,7 @@ D’où trois créneaux fixes. **9 h** pour la vidéo de prospects, qui vise de
 
 | Jour | Date | 9 h — prospects | 12 h 30 — confiance | 18 h 30 — attention | Ancrage du jour |
 |---|---|---|---|---|---|
-| J1 | lun. 2 nov. | 13 · Message · des vues, zéro demande | 60 · Coulisses · défi public | N02 · Actu · pubs ChatGPT au Maroc | Lancement, suite de la vidéo Meta du 26 oct. ; ouverture ChatGPT du 21 oct. |
+| J1 | lun. 2 nov. | 13 · Message · des vues, zéro demande | N20 · Message · un mois plein, puis le vide | N02 · Actu · pubs ChatGPT au Maroc | Lancement, suite de la vidéo Meta du 26 oct. ; ouverture ChatGPT du 21 oct. |
 | J2 | mar. 3 nov. | N04 · Maroc · TVA Meta | N09 · Coulisses · Meta Business Partner | 56 · Actu · Coca-Cola et l’IA | Un an après les pubs de Noël IA de Coca-Cola (3 nov. 2025) |
 | J3 | mer. 4 nov. | 21 · Message · accroches dans les avis | N01 · Actu · tes pubs sur Threads | 02 · Atelier · laquelle est IA ? | Série « Meta décide à ta place » |
 | J4 | jeu. 5 nov. | 31 · Demandes · où vont tes demandes | N03 · Actu · pub Meta + 14 % | 17 · Atelier · brief vague, pub fade | Résultats Meta du 21 oct. |
