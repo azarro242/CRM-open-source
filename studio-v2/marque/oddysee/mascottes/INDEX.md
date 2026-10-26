@@ -18,6 +18,8 @@ Nommage : `NN-personnage-emotion.webp`, NN = ordre de réception.
 | `moustache` | L'homme moustachu | Cheveux bouclés, grosse moustache |
 | `gomina` | L'homme gominé | Cheveux plaqués avec raie, rasé de près |
 | `collage` | L'homme au costume violet | Photo pleine pied, costume violet, liseré crème façon autocollant (variante « collage vintage » de REF-02) |
+| `pochoir` | Série « pochoir » (5 personnages) | Têtes **géométriques noir et blanc** façon pochoir, corps en bâton violet ; style graphique très lisible en petit (lot du 2026-10-26) |
+| `barbu` | L'homme aux cheveux longs | Cheveux longs ondulés **à reflets violets**, barbe courte ; tête **dessinée à l'encre** (style gravure), pas une photo : le plus proche de la charte (lot du 2026-10-26) |
 
 ## Catalogue
 
@@ -52,18 +54,41 @@ Nommage : `NN-personnage-emotion.webp`, NN = ordre de réception.
 | 24 | `24-gomina-stupefait.webp` | gomina | Stupéfait, bouche ouverte | Bras écartés | ⏳ |
 | 25 | `25-gomina-decu.webp` | gomina | Déçu, triste, tête penchée | Bras ballants | ⏳ |
 | 26 | `26-collage-marche.webp` | collage | Neutre, déterminé | **Marche de profil vers la gauche** | ⏳ |
+| 27 | `27-barbu-pensif.webp` | barbu | Pensif, malicieux, regard en l'air | Main au menton, autre main sur la hanche | ⏳ |
+| 28 | `28-barbu-triste.webp` | barbu | Triste, abattu | Bras ballants | ⏳ |
+| 29 | `29-barbu-inquiet.webp` | barbu | Inquiet, mal à l'aise | Mains jointes sur la poitrine | ⏳ |
+| 30 | `30-barbu-accueil.webp` | barbu | Grand sourire, accueillant | Bras grands ouverts | ⏳ |
+| 31 | `31-barbu-victoire.webp` | barbu | Fier, victorieux | Poings levés | ⏳ |
+| 32 | `32-barbu-rire.webp` | barbu | Fou rire, yeux fermés | Mains sur le ventre | ⏳ |
+| 33 | `33-barbu-presente.webp` | barbu | Sourire en coin, sourcil levé | Main sur la hanche, **paume tendue vers la droite du cadre** (présente) | ⏳ |
+| 34 | `34-barbu-designe.webp` | barbu | Sourire complice | Main sur la hanche, **index pointé vers la droite du cadre** | ⏳ |
+| 35 | `35-barbu-designe-b.webp` | barbu | Sourire complice (variante, cheveux plus sombres) | Index pointé vers la droite du cadre | ⏳ |
+| 36 | `36-barbu-stupefait.webp` | barbu | Stupéfait, bouche grande ouverte | Mains levées près du visage | ⏳ |
+| 37 | `37-barbu-colere.webp` | barbu | Colère, sourcils froncés | Poings sur les hanches | ⏳ |
+| 38 | `38-pochoir-cowboy-pouce.webp` | pochoir (cowboy au chapeau, cigare) | Sûr de lui | **Pouce levé**, main sur la hanche | ⏳ |
+| 39 | `39-pochoir-barbu-explique.webp` | pochoir (barbu aux cheveux longs) | Pédagogue | Deux paumes ouvertes, explique | ⏳ |
+| 40 | `40-pochoir-homme-bras-croises.webp` | pochoir (homme aux cheveux courts) | Sérieux, sceptique | **Bras croisés** | ⏳ |
+| 41 | `41-pochoir-femme-bras-ouverts.webp` | pochoir (femme aux cheveux bouclés blancs) | Accueillante | Bras grands ouverts | ⏳ |
+| 42 | `42-pochoir-barbu-presente.webp` | pochoir (barbu, tête carrée) | Assuré | Main sur la hanche, **bras tendu vers la gauche du cadre** (présente) | ⏳ |
+| 43 | `43-pochoir-homme-victoire.webp` | pochoir (homme aux cheveux en épis) | Content, victorieux | Poings levés | ⏳ |
+| 44 | `44-pochoir-homme-pensif.webp` | pochoir (homme aux cheveux bruns) | Pensif | Main au menton, autre main sur la hanche | ⏳ |
+| 45 | `45-pochoir-cheveux-longs-designe.webp` | pochoir (homme aux cheveux longs) | Sérieux | Main sur la hanche, **index pointé vers la droite du cadre** | ⏳ |
+| 46 | `46-pochoir-homme-idee.webp` | pochoir (homme aux cheveux blancs) | Malicieux, « j'ai une idée » | **Index levé**, main sur la hanche | ⏳ |
+| 47 | `47-pochoir-femme-index.webp` | pochoir (femme aux cheveux bouclés) | Assurée, « attention » | **Index levé**, main sur la hanche | ⏳ |
 
 Planche de contrôle du lot 1 : `planche-lot01.png`.
+
+Lots 6 à 9 (27 à 47, reçus le 2026-10-26) : sur les aperçus, le **fond paraît blanc**, pas transparent. À la réception des fichiers, vérifier ; si le fond est blanc, le détourer en partant des bords (le contour noir protège le blanc du visage et des mains).
 
 ## Quelle mascotte pour quel moment du script
 
 | Moment du script | Émotions à utiliser |
 |---|---|
-| **Accroche / problème** (le spectateur se reconnaît) | sceptique 01, colère 04, perplexe 05, triste 06, angoissé 09, fâchée 15, inquiète 16, blasé 20, dégoût 21, déçu 25 |
-| **Retournement / révélation** (« mais… ») | stupéfait 07, surprise 11, stupéfait 24 |
-| **Contexte / réflexion** | pensif 08, pensive 17 |
-| **Solution Oddysee / preuve** | sourire 02, sourire calme 10, fier 12, **désigne 22** (montre une carte, un chiffre, une capture) |
-| **Résultat / appel à l'action / signature** | victoire 03, grands sourires 13 et 14, rires 18, 19 et 23 (salut = au revoir) |
+| **Accroche / problème** (le spectateur se reconnaît) | sceptique 01, colère 04, perplexe 05, triste 06, angoissé 09, fâchée 15, inquiète 16, blasé 20, dégoût 21, déçu 25, triste 28, inquiet 29, colère 37, bras croisés 40 |
+| **Retournement / révélation** (« mais… ») | stupéfait 07, surprise 11, stupéfait 24, stupéfait 36 |
+| **Contexte / réflexion** | pensif 08, pensive 17, pensif 27, pensif 44 |
+| **Solution Oddysee / preuve** | sourire 02, sourire calme 10, fier 12, **désigne 22** (montre une carte, un chiffre, une capture), **présente 33, désigne 34 et 35**, explique 39, présente 42, désigne 45, **index levé 46 et 47** (conseil, « retiens ça ») |
+| **Résultat / appel à l'action / signature** | victoire 03, grands sourires 13 et 14, rires 18, 19 et 23 (salut = au revoir), accueil 30, victoire 31, rire 32, pouce levé 38, bras ouverts 41, victoire 43 |
 | **Transition / progression** (« étape suivante », « on avance ») | collage 26 qui traverse le cadre |
 
 ## Règles d'utilisation
@@ -73,13 +98,17 @@ Planche de contrôle du lot 1 : `planche-lot01.png`.
 - **Même personnage dans une séquence** ; deux personnages = dialogue ou avant / après
   (ex. 16 femme inquiète → 13 femme grand sourire).
 - **Direction du regard et du geste** : 22 désigne vers la gauche → mascotte à **droite** du
-  cadre, élément désigné à **gauche**. 26 marche vers la gauche → entre par la droite.
+  cadre, élément désigné à **gauche** ; 33, 34 et 35 montrent vers la droite → mascotte à **gauche**,
+  élément à **droite** (de même pour 45) ; 42 présente vers la gauche → mascotte à **droite**. 26 marche vers la gauche → entre par la droite.
 - Chaque apparition utilise **sa propre copie de fichier** (règle « source d'image distincte »
   de `QUALITE.md`) : dupliquer le fichier sous un autre nom si une émotion revient.
 - La tête ne passe **jamais** sous un sous-titre ni sous un texte ; rester dans les zones de
   sécurité 9:16 (rien d'important au-dessus de 170 px ni sous 1640 px).
 
 ## Ajouter un nouveau lot
+
+Objectif du client : une bibliothèque qui grandit en continu ; chaque lot reçu s'ajoute ici dans le même tour.
+
 
 1. Le client envoie cinq images dans un **nouveau message** (ou les dépose sur GitHub dans ce
    dossier).

@@ -17,4 +17,11 @@ de montage. Les scripts du jour, avec leur justification et leurs légendes, son
 
 | Jour | Date | 9 h | 12 h 30 | 18 h 30 | Scripts | Voix | Vidéos |
 |---|---|---|---|---|---|---|---|
-| J1 | lun. 2 nov. | 13 | 60 | N02 | ✓ | — | — |
+| J1 | lun. 2 nov. | 13 | 60 | N02 | ✓ | 13 ✓ | 13 ✓ |
+
+## Mascottes utilisées (pour varier d'une vidéo à l'autre)
+
+| Vidéo | Mascottes (n° du catalogue) |
+|---|---|
+| 13 | 05 moustache perplexe · 01 femme sceptique · 04 moustache colère · 02 femme sourire · 03 femme victoire · 02 femme sourire |
+

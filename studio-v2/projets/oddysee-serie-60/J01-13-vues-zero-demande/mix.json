@@ -1,0 +1,636 @@
+{
+ "duree": 32.16,
+ "musique": {
+  "fichier": "assets/musique/musique-client.mp3",
+  "debut": 0.496,
+  "enveloppe": [
+   {
+    "t": 0.0,
+    "db": -10.0
+   },
+   {
+    "t": 0.0,
+    "db": -10.0
+   },
+   {
+    "t": 0.02,
+    "db": -10.0
+   },
+   {
+    "t": 12.291,
+    "db": -10.0
+   },
+   {
+    "t": 12.491,
+    "db": -4.5
+   },
+   {
+    "t": 12.645,
+    "db": -4.5
+   },
+   {
+    "t": 12.765,
+    "db": -10.0
+   },
+   {
+    "t": 15.936,
+    "db": -10.0
+   },
+   {
+    "t": 16.136,
+    "db": -4.5
+   },
+   {
+    "t": 17.615,
+    "db": -4.5
+   },
+   {
+    "t": 17.735,
+    "db": -10.0
+   },
+   {
+    "t": 21.923,
+    "db": -10.0
+   },
+   {
+    "t": 22.123,
+    "db": -4.5
+   },
+   {
+    "t": 23.582,
+    "db": -4.5
+   },
+   {
+    "t": 23.702,
+    "db": -10.0
+   },
+   {
+    "t": 27.137,
+    "db": -10.0
+   },
+   {
+    "t": 27.337,
+    "db": -4.5
+   },
+   {
+    "t": 27.608,
+    "db": -4.5
+   },
+   {
+    "t": 27.728,
+    "db": -10.0
+   },
+   {
+    "t": 30.611,
+    "db": -10.0
+   },
+   {
+    "t": 30.811,
+    "db": -4.5
+   }
+  ]
+ },
+ "voix": {
+  "fichier": "voix.mp3",
+  "segments": [
+   {
+    "ligne": 0,
+    "morceau": 0,
+    "mots": [
+     0,
+     1,
+     2,
+     3,
+     4,
+     5
+    ],
+    "src0": 0.0,
+    "src1": 2.961,
+    "debut": 0.1,
+    "fin": 3.061,
+    "temps": 0.1
+   },
+   {
+    "ligne": 1,
+    "morceau": 0,
+    "mots": [
+     6,
+     7,
+     8
+    ],
+    "src0": 3.871,
+    "src1": 5.159,
+    "debut": 3.511,
+    "fin": 4.799,
+    "temps": 3.561
+   },
+   {
+    "ligne": 2,
+    "morceau": 0,
+    "mots": [
+     9,
+     10
+    ],
+    "src0": 6.462,
+    "src1": 7.816,
+    "debut": 5.345,
+    "fin": 6.699,
+    "temps": 5.395
+   },
+   {
+    "ligne": 2,
+    "morceau": 1,
+    "mots": [
+     11,
+     12,
+     13,
+     14,
+     15
+    ],
+    "src0": 8.715,
+    "src1": 10.632,
+    "debut": 6.999,
+    "fin": 8.916,
+    "temps": 5.395
+   },
+   {
+    "ligne": 3,
+    "morceau": 0,
+    "mots": [
+     16,
+     17,
+     18,
+     19,
+     20
+    ],
+    "src0": 10.996,
+    "src1": 13.875,
+    "debut": 9.362,
+    "fin": 12.241,
+    "temps": 9.412
+   },
+   {
+    "ligne": 4,
+    "morceau": 0,
+    "mots": [
+     21,
+     22,
+     23,
+     24
+    ],
+    "src0": 14.42,
+    "src1": 15.44,
+    "debut": 12.845,
+    "fin": 13.865,
+    "temps": 12.895
+   },
+   {
+    "ligne": 4,
+    "morceau": 1,
+    "mots": [
+     25,
+     26,
+     27,
+     28,
+     29
+    ],
+    "src0": 16.129,
+    "src1": 17.85,
+    "debut": 14.165,
+    "fin": 15.886,
+    "temps": 12.895
+   },
+   {
+    "ligne": 5,
+    "morceau": 0,
+    "mots": [
+     30,
+     31,
+     32,
+     33,
+     34,
+     35,
+     36,
+     37,
+     38,
+     39,
+     40
+    ],
+    "src0": 18.96,
+    "src1": 23.018,
+    "debut": 17.815,
+    "fin": 21.873,
+    "temps": 17.865
+   },
+   {
+    "ligne": 6,
+    "morceau": 0,
+    "mots": [
+     41
+    ],
+    "src0": 24.11,
+    "src1": 24.78,
+    "debut": 23.782,
+    "fin": 24.452,
+    "temps": 23.832
+   },
+   {
+    "ligne": 6,
+    "morceau": 1,
+    "mots": [
+     42
+    ],
+    "src0": 25.44,
+    "src1": 26.11,
+    "debut": 24.752,
+    "fin": 25.422,
+    "temps": 23.832
+   },
+   {
+    "ligne": 6,
+    "morceau": 2,
+    "mots": [
+     43,
+     44,
+     45,
+     46,
+     47,
+     48
+    ],
+    "src0": 26.691,
+    "src1": 28.056,
+    "debut": 25.722,
+    "fin": 27.087,
+    "temps": 23.832
+   },
+   {
+    "ligne": 7,
+    "morceau": 0,
+    "mots": [
+     49,
+     50
+    ],
+    "src0": 28.856,
+    "src1": 29.668,
+    "debut": 27.808,
+    "fin": 28.62,
+    "temps": 27.858
+   },
+   {
+    "ligne": 7,
+    "morceau": 1,
+    "mots": [
+     51,
+     52
+    ],
+    "src0": 30.21,
+    "src1": 30.94,
+    "debut": 28.92,
+    "fin": 29.65,
+    "temps": 27.858
+   },
+   {
+    "ligne": 7,
+    "morceau": 2,
+    "mots": [
+     53,
+     54,
+     55
+    ],
+    "src0": 31.52,
+    "src1": 32.131,
+    "debut": 29.95,
+    "fin": 30.561,
+    "temps": 27.858
+   }
+  ]
+ },
+ "sfx": [
+  {
+   "t": 0.15,
+   "fichier": "assets/sfx/whoosh-short.mp3",
+   "decalage": 0.0,
+   "duree": 0.575,
+   "gain_db": -9.8,
+   "categorie": "transition"
+  },
+  {
+   "t": 1.861,
+   "fichier": "assets/sfx/error.mp3",
+   "decalage": 0.0,
+   "duree": 0.9,
+   "gain_db": 3.5,
+   "categorie": "accent"
+  },
+  {
+   "t": 3.541,
+   "fichier": "assets/sfx/impact-bass-1.mp3",
+   "decalage": 0.0,
+   "duree": 2.116,
+   "gain_db": -18.0,
+   "categorie": "impact"
+  },
+  {
+   "t": 3.591,
+   "fichier": "assets/sfx/glitch-2.mp3",
+   "decalage": 0.0,
+   "duree": 0.45,
+   "gain_db": -20.6,
+   "categorie": "accent"
+  },
+  {
+   "t": 4.421,
+   "fichier": "assets/sfx/pop.mp3",
+   "decalage": 0.0,
+   "duree": 0.72,
+   "gain_db": -3.8,
+   "categorie": "ui"
+  },
+  {
+   "t": 5.175,
+   "fichier": "assets/sfx/whoosh.mp3",
+   "decalage": 0.0,
+   "duree": 0.575,
+   "gain_db": -9.8,
+   "categorie": "transition"
+  },
+  {
+   "t": 5.395,
+   "fichier": "assets/sfx/click.mp3",
+   "decalage": 0.0,
+   "duree": 0.366,
+   "gain_db": 0.8,
+   "categorie": "ui"
+  },
+  {
+   "t": 7.019,
+   "fichier": "assets/sfx/pop.mp3",
+   "decalage": 0.0,
+   "duree": 0.72,
+   "gain_db": -3.8,
+   "categorie": "ui"
+  },
+  {
+   "t": 8.247,
+   "fichier": "assets/sfx/pop.mp3",
+   "decalage": 0.0,
+   "duree": 0.72,
+   "gain_db": -3.8,
+   "categorie": "ui"
+  },
+  {
+   "t": 10.497,
+   "fichier": "assets/sfx/pop.mp3",
+   "decalage": 0.0,
+   "duree": 0.72,
+   "gain_db": -3.8,
+   "categorie": "ui"
+  },
+  {
+   "t": 11.677,
+   "fichier": "assets/sfx/click-soft.mp3",
+   "decalage": 0.0,
+   "duree": 0.366,
+   "gain_db": 0.8,
+   "categorie": "ui"
+  },
+  {
+   "t": 12.595,
+   "fichier": "assets/sfx/whoosh-cinematic.mp3",
+   "decalage": 0.0,
+   "duree": 1.2,
+   "gain_db": -15.5,
+   "categorie": "transition"
+  },
+  {
+   "t": 12.875,
+   "fichier": "assets/sfx/impact-bass-2.mp3",
+   "decalage": 0.0,
+   "duree": 1.6,
+   "gain_db": -20.3,
+   "categorie": "impact"
+  },
+  {
+   "t": 13.395,
+   "fichier": "assets/sfx/notification.mp3",
+   "decalage": 0.0,
+   "duree": 1.0,
+   "gain_db": -8.4,
+   "categorie": "accent"
+  },
+  {
+   "t": 13.406,
+   "fichier": "assets/sfx/key-press.mp3",
+   "decalage": 0.0,
+   "duree": 0.432,
+   "gain_db": 3.0,
+   "categorie": "tic"
+  },
+  {
+   "t": 13.894,
+   "fichier": "assets/sfx/key-press.mp3",
+   "decalage": 0.0,
+   "duree": 0.432,
+   "gain_db": 3.0,
+   "categorie": "tic"
+  },
+  {
+   "t": 14.405,
+   "fichier": "assets/sfx/key-press.mp3",
+   "decalage": 0.0,
+   "duree": 0.432,
+   "gain_db": 3.0,
+   "categorie": "tic"
+  },
+  {
+   "t": 14.892,
+   "fichier": "assets/sfx/key-press.mp3",
+   "decalage": 0.0,
+   "duree": 0.432,
+   "gain_db": 3.0,
+   "categorie": "tic"
+  },
+  {
+   "t": 15.086,
+   "fichier": "assets/sfx/error.mp3",
+   "decalage": 0.0,
+   "duree": 1.2,
+   "gain_db": 3.5,
+   "categorie": "accent"
+  },
+  {
+   "t": 17.565,
+   "fichier": "assets/sfx/whoosh-cinematic.mp3",
+   "decalage": 0.0,
+   "duree": 1.2,
+   "gain_db": -15.5,
+   "categorie": "transition"
+  },
+  {
+   "t": 18.785,
+   "fichier": "assets/sfx/whoosh-short.mp3",
+   "decalage": 0.0,
+   "duree": 0.575,
+   "gain_db": -9.8,
+   "categorie": "transition"
+  },
+  {
+   "t": 20.115,
+   "fichier": "assets/sfx/click.mp3",
+   "decalage": 0.0,
+   "duree": 0.366,
+   "gain_db": 0.8,
+   "categorie": "ui"
+  },
+  {
+   "t": 21.357,
+   "fichier": "assets/sfx/click.mp3",
+   "decalage": 0.0,
+   "duree": 0.366,
+   "gain_db": 0.8,
+   "categorie": "ui"
+  },
+  {
+   "t": 22.232,
+   "fichier": "assets/sfx/riser.mp3",
+   "decalage": 8.43,
+   "duree": 1.6,
+   "gain_db": -22.8,
+   "categorie": "montee"
+  },
+  {
+   "t": 23.812,
+   "fichier": "assets/sfx/impact-bass-2.mp3",
+   "decalage": 0.0,
+   "duree": 1.8,
+   "gain_db": -20.3,
+   "categorie": "impact"
+  },
+  {
+   "t": 23.832,
+   "fichier": "assets/sfx/key-press.mp3",
+   "decalage": 0.0,
+   "duree": 0.432,
+   "gain_db": 6.0,
+   "categorie": "frappe"
+  },
+  {
+   "t": 24.08,
+   "fichier": "assets/sfx/key-press.mp3",
+   "decalage": 0.0,
+   "duree": 0.432,
+   "gain_db": 6.0,
+   "categorie": "frappe"
+  },
+  {
+   "t": 24.343,
+   "fichier": "assets/sfx/key-press.mp3",
+   "decalage": 0.0,
+   "duree": 0.432,
+   "gain_db": 6.0,
+   "categorie": "frappe"
+  },
+  {
+   "t": 24.591,
+   "fichier": "assets/sfx/key-press.mp3",
+   "decalage": 0.0,
+   "duree": 0.432,
+   "gain_db": 6.0,
+   "categorie": "frappe"
+  },
+  {
+   "t": 24.854,
+   "fichier": "assets/sfx/key-press.mp3",
+   "decalage": 0.0,
+   "duree": 0.432,
+   "gain_db": 6.0,
+   "categorie": "frappe"
+  },
+  {
+   "t": 25.365,
+   "fichier": "assets/sfx/click-soft.mp3",
+   "decalage": 0.0,
+   "duree": 0.366,
+   "gain_db": 0.8,
+   "categorie": "ui"
+  },
+  {
+   "t": 25.485,
+   "fichier": "assets/sfx/pop.mp3",
+   "decalage": 0.0,
+   "duree": 0.72,
+   "gain_db": -3.8,
+   "categorie": "ui"
+  },
+  {
+   "t": 25.665,
+   "fichier": "assets/sfx/notification.mp3",
+   "decalage": 0.0,
+   "duree": 1.3,
+   "gain_db": -8.4,
+   "categorie": "accent"
+  },
+  {
+   "t": 27.638,
+   "fichier": "assets/sfx/whoosh.mp3",
+   "decalage": 0.0,
+   "duree": 0.575,
+   "gain_db": -9.8,
+   "categorie": "transition"
+  },
+  {
+   "t": 28.048,
+   "fichier": "assets/sfx/click.mp3",
+   "decalage": 0.0,
+   "duree": 0.366,
+   "gain_db": 0.8,
+   "categorie": "ui"
+  },
+  {
+   "t": 28.148,
+   "fichier": "assets/sfx/ping.mp3",
+   "decalage": 0.0,
+   "duree": 1.32,
+   "gain_db": -0.4,
+   "categorie": "accent"
+  },
+  {
+   "t": 30.611,
+   "fichier": "assets/sfx/chime.mp3",
+   "decalage": 0.0,
+   "duree": 1.549,
+   "gain_db": 0.9,
+   "categorie": "signature"
+  },
+  {
+   "t": 30.911,
+   "fichier": "assets/sfx/sparkle.mp3",
+   "decalage": 0.0,
+   "duree": 1.2,
+   "gain_db": -17.7,
+   "categorie": "accent"
+  }
+ ],
+ "parole": [
+  [
+   0.020000000000000004,
+   12.291
+  ],
+  [
+   12.765,
+   15.936
+  ],
+  [
+   17.735000000000003,
+   21.923000000000002
+  ],
+  [
+   23.702,
+   27.137
+  ],
+  [
+   27.728,
+   30.611
+  ]
+ ]
+}

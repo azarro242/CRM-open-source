@@ -204,6 +204,21 @@ d'amélioration V2** fournis par le client. Les deux s'appliquent à chaque proj
     par apparition ; varier les illustrations d'une vidéo à l'autre pour que la série ne se répète pas.
   - Un dossier par vidéo : `studio-v2/projets/oddysee-serie-60/<ID>-<sujet>/`.
 
+### [2026-10-26] Mascottes : mélanger les personnages selon le sujet
+- Consigne du client : « le but d'enrichir la librairie, c'est la mise en contexte selon le sujet : les
+  mascottes des personnages doivent être mixées, ce qui se rapproche le plus en fonction du sujet et de
+  l'objectif de la vidéo, pour ne pas avoir quelque chose de très monotone ».
+- Règles d'application (bibliothèque : `marque/oddysee/mascottes/INDEX.md`, qui s'enrichit à chaque lot) :
+  - **choisir les personnages par le sujet et l'objectif** : par exemple, un dirigeant frustré par sa pub
+    → un personnage sérieux ou en colère ; un conseil → index levé ou main qui désigne ; une preuve ou un
+    appel à l'action → victoire, pouce levé ;
+  - **mélanger** : au moins deux personnages différents par vidéo (dialogue, avant / après), et pas le même
+    duo d'une vidéo à l'autre sur une même journée ; alterner les styles (tête photo, gravure, pochoir) ;
+  - l'émotion change avec la phrase (déjà la règle « une émotion par phrase ») ;
+  - tenir un relevé des mascottes utilisées par vidéo dans `projets/oddysee-serie-60/README.md`, pour varier.
+  - Seuls les fichiers présents sur le disque sont utilisables : les images collées dans la conversation
+    doivent être renvoyées en pièce jointe.
+
 <!-- Format d'ajout :
 ### [date] Titre de l'élément
 - Consigne du client : « … »
