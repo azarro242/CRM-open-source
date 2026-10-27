@@ -239,6 +239,16 @@ d'amélioration V2** fournis par le client. Les deux s'appliquent à chaque proj
   textes LinkedIn à la voix de l'agence (« nous », vouvoiement), jamais à la première personne du fondateur ;
   pas d'« insert du fondateur » sauf demande expresse.
 
+### [2026-10-27] Quatre vidéos par jour, scripts dans l'ordre de publication
+- Consigne du client : « Je veux créer les prochains contenus de la journée, on travaillera sur quatre
+  vidéos : commence par me donner le script de la voix off de la première vidéo de la journée, qui sera
+  postée à 9 h ».
+- Règles d'application :
+  - jour 2 : **quatre vidéos** (9 h, 12 h 30, 18 h 30, et 21 h proposé pour la quatrième) ;
+  - livrer les scripts **un par un, dans l'ordre de publication**, chacun avec son créneau et le nom
+    du fichier audio attendu (le client a déjà été perdu par un ordre différent au jour 1) ;
+  - chaque script part toujours d'une douleur du spectateur (consigne du 26 octobre).
+
 <!-- Format d'ajout :
 ### [date] Titre de l'élément
 - Consigne du client : « … »
