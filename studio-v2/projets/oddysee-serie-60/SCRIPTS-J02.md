@@ -17,7 +17,7 @@ la ligne = une petite pause).
 | 9 h | N07 | Avant, tu boostais… et ça vendait ? | Prospects | AUDIT | ✓ ci-dessous |
 | 12 h 30 | N06 | Compte publicitaire désactivé du jour au lendemain | Prospects | AUDIT | ✓ ci-dessous |
 | 15 h 30 | 59 | « Combien coûte une pub Facebook ? » Mauvaise question | Prospects | AUDIT | ✓ ci-dessous |
-| 18 h 30 | 34 | « Bonjour, c'est combien ? » sur WhatsApp | Attention | AUDIT | à venir |
+| 18 h 30 | 34 | « Bonjour, c'est combien ? » sur WhatsApp | Attention | AUDIT | ✓ ci-dessous |
 
 > Changement par rapport au plan : les quatre sujets retenus partent d'une douleur de la personne qui
 > cherche des clients (consigne du 26 octobre). N07 avance du jour 12 au jour 2 ; son mot-clé passe de
@@ -233,3 +233,68 @@ te rapporte un client, en moyenne ? » *Prérequis : périmètre de l'audit offe
 **Vérifications.** Chiffres fictifs, annoncés comme tels à l'écran et dans la légende. Conversion indicative
 (500 DH ≈ 45 €) à revérifier le jour de la publication. Question source : Google Suggest et Google Trends
 (notes de recherche du 25 octobre).
+
+---
+
+## 18 h 30 · Vidéo 34 — « Bonjour, c'est combien ? »
+
+**Pourquoi ce sujet.** C'est la scène que vivent chaque jour les commerçants et prestataires au Maroc sur
+WhatsApp : un inconnu écrit « Bonjour, c'est combien ? », on envoie le prix… et la conversation s'arrête là.
+La douleur est concrète (des demandes qui ne deviennent jamais des clients) ; la solution de croissance est
+une méthode de réponse simple qu'Oddysee met en place : poser une question, présenter le prix avec ce qu'il
+comprend, relancer.
+
+**Texte à faire lire** (`J02-34-cest-combien/voix.txt`, 61 mots, fichier `34.mp3`)
+
+```
+Bonjour, c'est combien?
+Tu envoies ton prix… et plus rien.
+Un prix tout seul ne vend pas.
+Le client compare… et disparaît.
+Réponds d'abord par une question: c'est pour quel besoin, et pour quand?
+Puis donne ton prix avec ce qu'il comprend, et relance le lendemain.
+Commente Audit: on regarde tes réponses WhatsApp.
+Et abonne-toi: chaque message peut devenir un client.
+```
+
+| Moment | Phrase | À l'écran |
+|---|---|---|
+| 0 s | Bonjour, c'est combien ? | Conversation façon WhatsApp : la bulle du prospect arrive, « en train d'écrire… » ; mascotte 14 (moustache grand sourire) |
+| 3,06 s (batterie) | Tu envoies ton prix… et plus rien. | Ta bulle « 350 DH » part, deux coches « Vu »… puis rien ; mascotte 55 (pochoir triste) |
+| ~5 s | Un prix tout seul ne vend pas. | La bulle prix reste seule et se grise |
+| ~7,5 s | Le client compare… et disparaît. | Trois prix concurrents (300, 280, 320 DH, exemple fictif) ; le contact passe « hors ligne » ; mascotte 24 (gominé stupéfait) |
+| 10,89 s (partie B) | Réponds d'abord par une question : c'est pour quel besoin, et pour quand ? | Nouvelle conversation : ta réponse « Avec plaisir ! C'est pour quel besoin, et pour quand ? », puis le client répond ; mascotte 34 (barbu qui désigne) |
+| 17,37 s (calme) | Puis donne ton prix avec ce qu'il comprend, et relance le lendemain. | Bulle devis « 350 DH · ce qui est inclus » + rappel « Demain : relancer » ; mascotte 51 (pochoir satisfait) |
+| 23,34 s (batterie) | Commente Audit : on regarde tes réponses WhatsApp. | « AUDIT » tapé, carte « Audit offert · Tes réponses WhatsApp » ; mascotte 32 (barbu rire) |
+| ~27,4 s | Et abonne-toi : chaque message peut devenir un client. | Profil @oddysee_maroc, « Abonné ✓ », logo + badge ; mascotte 48 (pochoir femme rire) |
+
+Mascottes : moustache, pochoirs, gominé, barbu (gravure) et femme pochoir, aucune déjà utilisée dans la journée.
+
+**Appel à l'action.** AUDIT → message privé : « Merci ! Envoie-nous une capture de ta réponse habituelle à
+"c'est combien ?" (cache les noms et les numéros), et dis-nous ton activité : on te dit ce qu'on changerait. »
+*Prérequis : périmètre de l'audit offert (ici, la relecture des réponses WhatsApp).*
+
+**Légendes** (compte Oddysee)
+- Instagram / Facebook :
+  > « Bonjour, c'est combien ? » Tu envoies ton prix… et plus rien ? 👇
+  >
+  > Un prix tout seul ne vend pas : le client compare, puis disparaît.
+  >
+  > Ce qui marche mieux :
+  > 1. Réponds d'abord par une question : c'est pour quel besoin, et pour quand ?
+  > 2. Donne ton prix avec ce qu'il comprend.
+  > 3. Relance le lendemain si la personne ne répond pas.
+  >
+  > 💬 Commente AUDIT : on regarde tes réponses WhatsApp.
+  > 🔔 Abonne-toi : chaque message peut devenir un client.
+  >
+  > #whatsappbusiness #entrepreneur #vente #marketingdigital #trouverdesclients
+- TikTok : même texte, réponse à la main aux commentaires AUDIT.
+- LinkedIn (page Oddysee) : « "Bonjour, c'est combien ?" Beaucoup d'entreprises répondent par un prix, puis
+  n'ont plus de nouvelles. Un prix seul invite à comparer. Ce que nous recommandons : poser d'abord une question
+  (quel besoin, quel délai), présenter le prix avec ce qu'il comprend, puis relancer le lendemain. Commentez
+  AUDIT : nous relisons vos réponses WhatsApp. »
+- Titre Shorts : « "Bonjour, c'est combien ?" Ne réponds pas juste un prix »
+
+**Vérifications.** Conseils de méthode, sans chiffre réel : le prix de 350 DH et les prix concurrents sont des
+exemples fictifs, annoncés comme tels à l'écran.

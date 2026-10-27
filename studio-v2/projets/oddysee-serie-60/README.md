@@ -21,7 +21,7 @@ de montage. Les scripts du jour, avec leur justification et leurs légendes, son
 | Jour | Date | 9 h | 12 h 30 | 15 h 30 | 18 h 30 | Scripts | Voix | Vidéos |
 |---|---|---|---|---|---|---|---|---|
 | J1 | lun. 2 nov. | 13 | N20 | — | N02 | ✓ | ✓ | ✓ (3/3) |
-| J2 | mar. 3 nov. | N07 | N06 | 59 | 34 | 3/4 | 3/4 | 3/4 |
+| J2 | mar. 3 nov. | N07 | N06 | 59 | 34 | ✓ | 3/4 | 3/4 |
 
 ## Mascottes utilisées (pour varier d'une vidéo à l'autre)
 
