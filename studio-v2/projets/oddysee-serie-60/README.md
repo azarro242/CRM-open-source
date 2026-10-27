@@ -21,7 +21,7 @@ de montage. Les scripts du jour, avec leur justification et leurs légendes, son
 | Jour | Date | 9 h | 12 h 30 | 15 h 30 | 18 h 30 | Scripts | Voix | Vidéos |
 |---|---|---|---|---|---|---|---|---|
 | J1 | lun. 2 nov. | 13 | N20 | — | N02 | ✓ | ✓ | ✓ (3/3) |
-| J2 | mar. 3 nov. | N07 | N06 | 59 | 34 | ✓ | 3/4 | 3/4 |
+| J2 | mar. 3 nov. | N07 | N06 | 59 | 34 | ✓ | ✓ | ✓ (4/4) |
 
 ## Mascottes utilisées (pour varier d'une vidéo à l'autre)
 
@@ -33,3 +33,4 @@ de montage. Les scripts du jour, avec leur justification et leurs légendes, son
 | N07 | 18 moustache rire · 28 barbu triste · 39 pochoir barbu explique · 42 pochoir barbu présente · 38 pochoir cowboy pouce · 33 barbu présente · 19 femme rire salut |
 | N06 | 11 femme surprise · 64 pochoir barbu inquiet · 40 pochoir bras croisés · 22 gominé désigne · 17 femme pensive · 63 pochoir femme désigne · 12 moustache fier |
 | 59 | 08 moustache pensif · 52 pochoir barbu colère · 27 barbu pensif · 50 pochoir homme présente · 13 femme grand sourire · 45 pochoir cheveux longs désigne · 66 pochoir homme accueil |
+| 34 | 14 moustache grand sourire · 55 pochoir homme triste · 24 gominé stupéfait · 34 barbu désigne · 51 pochoir homme satisfait · 32 barbu rire · 48 pochoir femme rire |
