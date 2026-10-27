@@ -244,10 +244,17 @@ d'amélioration V2** fournis par le client. Les deux s'appliquent à chaque proj
   vidéos : commence par me donner le script de la voix off de la première vidéo de la journée, qui sera
   postée à 9 h ».
 - Règles d'application :
-  - jour 2 : **quatre vidéos** (9 h, 12 h 30, 18 h 30, et 21 h proposé pour la quatrième) ;
+  - jour 2 : **quatre vidéos**, à **9 h, 12 h 30, 15 h 30 et 18 h 30** (créneaux fixés par le client,
+    voir l'entrée suivante) ;
   - livrer les scripts **un par un, dans l'ordre de publication**, chacun avec son créneau et le nom
     du fichier audio attendu (le client a déjà été perdu par un ordre différent au jour 1) ;
   - chaque script part toujours d'une douleur du spectateur (consigne du 26 octobre).
+
+### [2026-10-27] Créneaux de publication : 9 h, 12 h 30, 15 h 30, 18 h 30
+- Consigne du client : « donne-moi le script de la vidéo de 15 h 30 ».
+- Règle d'application : avec quatre vidéos par jour, les créneaux sont 9 h, 12 h 30, **15 h 30** et 18 h 30
+  (le créneau de 21 h proposé n'est pas retenu). La troisième vidéo du jour passe à 15 h 30, la quatrième
+  à 18 h 30 ; toujours livrer les scripts dans cet ordre, avec l'heure dans le titre.
 
 <!-- Format d'ajout :
 ### [date] Titre de l'élément

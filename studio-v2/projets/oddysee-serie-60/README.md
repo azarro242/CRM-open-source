@@ -6,8 +6,8 @@
   (consigne du 2026-10-26).
 - Rythme (consigne du 2026-10-25, voir `studio-v2/QUALITE.md`) : **trois scripts par jour**, puis **trois
   publications par jour** sur les cinq réseaux, du lundi 2 au samedi 21 novembre 2026, à 9 h (prospects),
-  12 h 30 (confiance) et 18 h 30 (attention). **Jour 2 : quatre vidéos** (consigne du 2026-10-27), la
-  quatrième proposée à 21 h ; scripts livrés un par un, dans l'ordre de publication.
+  12 h 30 (confiance) et 18 h 30 (attention). **Jour 2 : quatre vidéos** (consigne du 2026-10-27), à
+  9 h, 12 h 30, 15 h 30 et 18 h 30 ; scripts livrés un par un, dans l'ordre de publication.
 - Gabarit commun : la vidéo Meta v2 (`../oddysee-meta-28-octobre-v2/`), avec la même musique et le même mixage.
   Chaque texte fait 56 à 65 mots et suit les moments forts de la musique.
 - Voix : générées par le client (ElevenLabs, Oxley), jamais de voix provisoire.
@@ -18,10 +18,10 @@
 Un dossier par vidéo, `J<jour>-<ID>-<sujet>/`, avec `voix.txt` (texte à lire), puis la voix déposée et le projet
 de montage. Les scripts du jour, avec leur justification et leurs légendes, sont dans `SCRIPTS-J<jour>.md`.
 
-| Jour | Date | 9 h | 12 h 30 | 18 h 30 | 21 h | Scripts | Voix | Vidéos |
+| Jour | Date | 9 h | 12 h 30 | 15 h 30 | 18 h 30 | Scripts | Voix | Vidéos |
 |---|---|---|---|---|---|---|---|---|
-| J1 | lun. 2 nov. | 13 | N20 | N02 | — | ✓ | ✓ | ✓ (3/3) |
-| J2 | mar. 3 nov. | N07 | N06 | 59 | 34 (proposé) | 2/4 | 2/4 | 2/4 |
+| J1 | lun. 2 nov. | 13 | N20 | — | N02 | ✓ | ✓ | ✓ (3/3) |
+| J2 | mar. 3 nov. | N07 | N06 | 59 | 34 | 3/4 | 2/4 | 2/4 |
 
 ## Mascottes utilisées (pour varier d'une vidéo à l'autre)
 
