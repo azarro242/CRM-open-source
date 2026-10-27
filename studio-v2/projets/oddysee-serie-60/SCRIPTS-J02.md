@@ -15,7 +15,7 @@ la ligne = une petite pause).
 | Créneau | ID | Sujet | Objectif | Mot-clé | Script |
 |---|---|---|---|---|---|
 | 9 h | N07 | Avant, tu boostais… et ça vendait ? | Prospects | AUDIT | ✓ ci-dessous |
-| 12 h 30 | N06 | Compte publicitaire désactivé du jour au lendemain | Prospects | AUDIT | à venir |
+| 12 h 30 | N06 | Compte publicitaire désactivé du jour au lendemain | Prospects | AUDIT | ✓ ci-dessous |
 | 18 h 30 | 59 | « Combien coûte une pub Facebook ? » Mauvaise question | Prospects | AUDIT | à venir |
 | 21 h (proposé) | 34 | « Bonjour, c'est combien ? » sur WhatsApp | Attention | AUDIT | à venir |
 
@@ -90,3 +90,77 @@ veux obtenir : des messages, des appels ou des ventes ? » *Prérequis : défini
 **Vérifications.** Le texte reste prudent (« pas forcément ») : le bouton Booster propose aussi des
 objectifs comme les messages ou les visites, mais avec moins de réglages qu'une campagne du Gestionnaire
 de publicités. Source de la citation : [New Visions, oct. 2026](https://newvisions.ma/blog/boost-ou-campagne-meta/).
+
+---
+
+## 12 h 30 · Vidéo N06 — « Compte pub désactivé… du jour au lendemain ? »
+
+**Pourquoi ce sujet.** C'est l'une des recherches les plus tapées par les annonceurs francophones
+(« compte publicitaire désactivé que faire », « compte publicitaire facebook restreint »). Le jour où le
+compte tombe, les pubs s'arrêtent et les demandes de clients aussi : la douleur est immédiate. La vidéo
+donne les bons réflexes, tirés de la page d'aide officielle de Meta, et évite l'erreur la plus courante
+(ouvrir un nouveau compte). La solution de croissance : un compte sécurisé et des pubs qui ne s'arrêtent
+pas, ce qu'Oddysee vérifie avec le client.
+
+**Texte à faire lire** (`J02-N06-compte-desactive/voix.txt`, 64 mots, fichier `N06.mp3`)
+
+```
+Compte pub désactivé… du jour au lendemain?
+Tes pubs s'arrêtent, tes clients aussi.
+D'abord, n'ouvre pas un nouveau compte:
+Meta peut y voir un contournement.
+Va dans l'Assistance Business de Meta: confirme ton identité, sécurise ton compte.
+Puis demande un examen, posément: le nombre de demandes est limité.
+Commente Audit: on regarde ton compte avec toi.
+Et abonne-toi: protège tes pubs, garde tes clients.
+```
+
+| Moment | Phrase | À l'écran |
+|---|---|---|
+| 0 s | Compte pub désactivé… du jour au lendemain ? | Téléphone : notification « Compte publicitaire désactivé » qui tombe ; mascotte 11 (femme surprise) |
+| 3,06 s (batterie) | Tes pubs s'arrêtent, tes clients aussi. | Trois campagnes passent « En pause » sur le temps ; compteur de demandes qui tombe à 0 ; mascotte 64 (pochoir barbu inquiet) |
+| ~5 s | D'abord, n'ouvre pas un nouveau compte : | Bouton « Créer un compte publicitaire » barré d'une croix ; mascotte 40 (pochoir bras croisés) |
+| ~7,5 s | Meta peut y voir un contournement. | Panneau « Contournement → nouvelle restriction » |
+| 10,89 s (partie B) | Va dans l'Assistance Business de Meta : confirme ton identité, sécurise ton compte. | Écran « Accueil Assistance Business » › « Ce que vous pouvez faire » : coches « Confirmer votre identité », « Sécuriser votre compte » (double authentification) ; mascotte 22 (gominé qui désigne) |
+| 17,37 s (calme) | Puis demande un examen, posément : le nombre de demandes est limité. | Bouton « Demander un examen » ; jauge « tentatives » qui se remplit ; mascotte 17 (femme pensive) |
+| 23,34 s (batterie) | Commente Audit : on regarde ton compte avec toi. | « AUDIT » tapé dans les commentaires, carte « Audit offert · Ton compte pub » ; mascotte 63 (pochoir femme qui désigne) |
+| ~27,4 s | Et abonne-toi : protège tes pubs, garde tes clients. | Profil @oddysee_maroc, « Abonné ✓ », logo + badge ; mascotte 12 (moustache fier) |
+
+Mascottes : femme, pochoirs, gominé et moustache, aucune déjà utilisée dans la vidéo de 9 h.
+
+**Appel à l'action.** AUDIT → message privé : « Merci ! Pour regarder ton compte : quel message affiche Meta
+(compte désactivé, restreint, paiement refusé) ? Depuis quand ? Et as-tu déjà demandé un examen ? »
+*Prérequis : définir le périmètre de l'audit offert (ici, un premier diagnostic du compte, sans promesse de
+réactivation : seule Meta décide).*
+
+**Légendes** (compte Oddysee)
+- Instagram / Facebook :
+  > Compte pub désactivé du jour au lendemain ? Pas de panique 👇
+  >
+  > Quand le compte tombe, les pubs s'arrêtent… et les demandes de clients aussi.
+  > Par où commencer :
+  > 1. N'ouvre pas un nouveau compte : Meta peut y voir un contournement.
+  > 2. Va dans l'Assistance Business de Meta, rubrique « Ce que vous pouvez faire » : confirme ton identité,
+  > sécurise ton compte (double authentification).
+  > 3. Puis demande un examen, posément : le nombre de demandes est limité, et la décision est définitive.
+  >
+  > Astuce : si Meta parle d'un paiement refusé, règle d'abord le moyen de paiement.
+  >
+  > 💬 Commente AUDIT : on regarde ton compte avec toi.
+  > 🔔 Abonne-toi : protège tes pubs, garde tes clients.
+  >
+  > #metaads #publicitefacebook #comptepublicitaire #entrepreneur #marketingdigital
+- TikTok : même texte, réponse à la main aux commentaires AUDIT.
+- LinkedIn (page Oddysee) : « Un compte publicitaire désactivé, c'est une acquisition qui s'arrête du jour au
+  lendemain. Trois réflexes, d'après les consignes de Meta : ne pas ouvrir de nouveau compte (Meta peut y voir
+  un contournement) ; passer par l'Assistance Business pour confirmer son identité et sécuriser le compte ;
+  demander un examen avec soin, car le nombre de demandes est limité et la décision est définitive.
+  Commentez AUDIT : nous regardons votre compte avec vous. »
+- Titre Shorts : « Compte pub désactivé ? Les 3 réflexes à avoir »
+
+**Vérifications.** Étapes et libellés tirés de la page d'aide Meta « Résoudre les problèmes de compte désactivé
+ou restreint » ([version française](https://fr-fr.facebook.com/business/help/422289316306981), lue le
+27/10/2026) : section « Ce que vous pouvez faire » (« Confirmer votre identité », « Sécuriser votre compte »,
+« Demander un examen ») ; « le nombre de demandes d'examen est limité, et la décision est définitive ».
+Contournement : règles publicitaires de Meta (créer un compte pour échapper à une restriction est interdit).
+Recherches : Google Suggest et Google Trends, notes de recherche du 25 octobre.
