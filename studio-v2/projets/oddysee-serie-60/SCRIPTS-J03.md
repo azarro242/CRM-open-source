@@ -15,7 +15,7 @@ la ligne = une petite pause).
 | Créneau | ID | Sujet | Douleur | Mot-clé | Script |
 |---|---|---|---|---|---|
 | 9 h | N18 | Cinquante commandes reçues… trente livrées ? | E-commerce en paiement à la livraison : les commandes non livrées | AUDIT | ✓ ci-dessous |
-| 12 h 30 | 31 | Tu paies pour recevoir des demandes. Tu sais où elles atterrissent ? | Demandes éparpillées et perdues | AUDIT | à venir |
+| 12 h 30 | 31 | Tu paies pour avoir des demandes… tu sais où elles finissent ? | Demandes éparpillées et perdues | AUDIT | ✓ ci-dessous |
 | 15 h 30 | 39 | Ta pub promet une chose, ta page en montre une autre | Des clics sans contact | AUDIT | à venir |
 | 18 h 30 | 18 | Une belle vidéo ne sauvera pas une offre que personne ne comprend | Une offre floue | AUDIT | à venir |
 
@@ -88,3 +88,71 @@ périmètre de l'audit offert (ici, le calcul du coût par commande livrée).*
 confirmation au plus tôt par appel ou WhatsApp) : [New Visions, « Vendre en paiement à la livraison (COD) au
 Maroc », 27/09/2026, mis à jour le 28/10/2026](https://newvisions.ma/blog/vendre-en-cod-au-maroc/).
 Calcul : 1 000 ÷ 50 = 20 DH ; 1 000 ÷ 30 ≈ 33 DH.
+
+---
+
+## 12 h 30 · Vidéo 31 — « Tu paies pour avoir des demandes… tu sais où elles finissent ? »
+
+**Pourquoi ce sujet.** Les demandes payées arrivent par quatre portes : messages Instagram, WhatsApp,
+Messenger, commentaires. Sans endroit unique, personne ne sait qui a répondu, et le client part chez un autre.
+C'est une douleur que vivent les prestataires de services autant que les commerçants. La solution de croissance
+est simple et c'est ce qu'Oddysee met en place : une seule liste de demandes, une personne responsable, une
+réponse rapide et une relance.
+
+**Texte à faire lire** (`J03-31-demandes-perdues/voix.txt`, 64 mots, fichier `31.mp3`)
+
+```
+Tu paies pour avoir des demandes…
+Mais tu sais où elles finissent?
+Instagram, WhatsApp, Messenger, commentaires…
+Personne ne sait qui répond… et le client part.
+Range chaque demande au même endroit, avec qui répond et quand.
+Réponds dans l'heure, puis relance: une demande payée mérite une suite.
+Commente Audit: on te montre où elles se perdent.
+Et abonne-toi: des demandes suivies, des clients gagnés.
+```
+
+| Moment | Phrase | À l'écran |
+|---|---|---|
+| 0 s | Tu paies pour avoir des demandes… | Compteur « Budget pub » qui tourne ; des notifications arrivent ; mascotte 10 (moustache sourire) |
+| 3,06 s (batterie) | Mais tu sais où elles finissent ? | Les notifications s'éparpillent dans tous les sens ; mascotte 16 (femme inquiète) |
+| ~5 s | Instagram, WhatsApp, Messenger, commentaires… | Quatre boîtes de réception qui débordent, chacune avec sa pastille rouge ; mascotte 61 (pochoir barbu stupéfait) |
+| ~7,5 s | Personne ne sait qui répond… et le client part. | Bulle « Quelqu'un a répondu ? » ; une demande glisse hors du cadre |
+| 10,89 s (partie B) | Range chaque demande au même endroit, avec qui répond et quand. | Les demandes glissent dans une seule liste : nom · canal · qui répond · quand ; mascotte 53 (pochoir bras croisés, sourire) |
+| 17,37 s (calme) | Réponds dans l'heure, puis relance : une demande payée mérite une suite. | Chrono « moins d'1 h » coché, puis « Relance demain » ; mascotte 02 (femme sourire) |
+| 23,34 s (batterie) | Commente Audit : on te montre où elles se perdent. | « AUDIT » tapé, carte « Audit offert · Où se perdent tes demandes » ; mascotte 60 (pochoir rire) |
+| ~27,4 s | Et abonne-toi : des demandes suivies, des clients gagnés. | Profil @oddysee_maroc, « Abonné ✓ », logo + badge ; mascotte 31 (barbu victoire) |
+
+Mascottes : moustache, femme, pochoirs et barbu, aucune déjà utilisée dans la vidéo de 9 h.
+
+**Appel à l'action.** AUDIT → message privé : « Merci ! Dis-nous par où arrivent tes demandes (Instagram,
+WhatsApp, Messenger, formulaire, téléphone), qui y répond, et en combien de temps en moyenne : on te montre où
+elles se perdent. » *Prérequis : périmètre de l'audit offert (ici, le parcours des demandes).*
+
+**Légendes** (compte Oddysee)
+- Instagram / Facebook :
+  > Tu paies pour avoir des demandes… tu sais où elles finissent ? 👇
+  >
+  > Instagram, WhatsApp, Messenger, commentaires : quand les demandes arrivent de partout, personne ne sait qui
+  > a répondu. Et le client part chez un autre.
+  >
+  > Ce qui marche :
+  > 1. Range chaque demande au même endroit, avec qui répond et quand.
+  > 2. Réponds dans l'heure.
+  > 3. Relance si la personne ne répond pas.
+  >
+  > Une demande payée mérite une suite.
+  >
+  > 💬 Commente AUDIT : on te montre où elles se perdent.
+  > 🔔 Abonne-toi : des demandes suivies, des clients gagnés.
+  >
+  > #entrepreneur #trouverdesclients #marketingdigital #metaads #prospection
+- TikTok : même texte, réponse à la main aux commentaires AUDIT.
+- LinkedIn (page Oddysee) : « Vous payez pour recevoir des demandes. Savez-vous où elles finissent ? Messages
+  Instagram, WhatsApp, Messenger, commentaires : sans endroit unique, personne ne sait qui a répondu. Ce que
+  nous mettons en place : une seule liste de demandes, un responsable et un délai pour chacune, une réponse dans
+  l'heure et une relance. Commentez AUDIT : nous vous montrons où se perdent vos demandes. »
+- Titre Shorts : « Tu paies pour des demandes… et tu les perds où ? »
+
+**Vérifications.** Conseils de méthode, sans chiffre : rien à sourcer. Les pastilles de messages non lus à
+l'écran sont décoratives (aucun chiffre annoncé).
