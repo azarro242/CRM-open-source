@@ -256,6 +256,14 @@ d'amélioration V2** fournis par le client. Les deux s'appliquent à chaque proj
   (le créneau de 21 h proposé n'est pas retenu). La troisième vidéo du jour passe à 15 h 30, la quatrième
   à 18 h 30 ; toujours livrer les scripts dans cet ordre, avec l'heure dans le titre.
 
+### [2026-10-28] Quatre vidéos par jour : rythme reconduit
+- Consigne du client (jour 3) : « Je veux créer les prochains contenus de la journée, on travaillera sur
+  quatre vidéos ; commence par me donner le script de la voix off de la première vidéo de la journée, qui
+  sera postée à 9 h ».
+- Règle d'application : le rythme de **quatre vidéos par jour** (9 h, 12 h 30, 15 h 30, 18 h 30) devient la
+  norme de la série, jusqu'à nouvel ordre ; sujets toujours tirés de la douleur du spectateur, variés d'un
+  jour à l'autre (e-commerce, services, demandes, offre…), et jamais deux fois le même sujet dans la série.
+
 <!-- Format d'ajout :
 ### [date] Titre de l'élément
 - Consigne du client : « … »
