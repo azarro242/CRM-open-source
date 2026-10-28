@@ -16,7 +16,7 @@ la ligne = une petite pause).
 |---|---|---|---|---|---|
 | 9 h | N18 | Cinquante commandes reçues… trente livrées ? | E-commerce en paiement à la livraison : les commandes non livrées | AUDIT | ✓ ci-dessous |
 | 12 h 30 | 31 | Tu paies pour avoir des demandes… tu sais où elles finissent ? | Demandes éparpillées et perdues | AUDIT | ✓ ci-dessous |
-| 15 h 30 | 39 | Ta pub promet une chose, ta page en montre une autre | Des clics sans contact | AUDIT | à venir |
+| 15 h 30 | 39 | Des clics… mais aucun contact ? Ta pub promet une chose, ta page en montre une autre | Des clics sans contact | AUDIT | ✓ ci-dessous |
 | 18 h 30 | 18 | Une belle vidéo ne sauvera pas une offre que personne ne comprend | Une offre floue | AUDIT | à venir |
 
 > Les sujets de 12 h 30, 15 h 30 et 18 h 30 sont proposés (plan du rapport, déjà sous l'angle de la douleur) ;
@@ -156,3 +156,67 @@ elles se perdent. » *Prérequis : périmètre de l'audit offert (ici, le parcou
 
 **Vérifications.** Conseils de méthode, sans chiffre : rien à sourcer. Les pastilles de messages non lus à
 l'écran sont décoratives (aucun chiffre annoncé).
+
+---
+
+## 15 h 30 · Vidéo 39 — « Des clics… mais aucun contact ? »
+
+**Pourquoi ce sujet.** Beaucoup d'annonceurs paient des clics qui ne donnent ni message ni appel. Souvent, la pub
+promet une offre précise, et la page d'arrivée (site, boutique, profil) montre autre chose : un accueil général,
+un menu, pas de prix. Le visiteur ne retrouve pas ce qui l'a fait cliquer, et il repart. La solution de croissance
+est concrète : une page qui répète la pub (même offre, même image, même prix) et un seul bouton d'action.
+
+**Texte à faire lire** (`J03-39-pub-page/voix.txt`, 64 mots, fichier `39.mp3`)
+
+```
+Des clics… mais aucun contact?
+Ta pub promet une chose…
+ta page en montre une autre.
+Il ne la retrouve pas… et s'en va.
+Ta page doit répéter ta pub: même offre, même image, même prix.
+Et un seul bouton, bien visible: écrire sur WhatsApp ou réserver.
+Commente Audit: on compare ta pub et ta page.
+Et abonne-toi: des clics qui deviennent des clients.
+```
+
+| Moment | Phrase | À l'écran |
+|---|---|---|
+| 0 s | Des clics… mais aucun contact ? | Compteur « Clics » qui monte, « Contacts : 0 » ; mascotte 20 (moustache blasé) |
+| 3,06 s (batterie) | Ta pub promet une chose… | Une pub : « −30 % sur le soin visage » (exemple fictif) ; mascotte 37 (barbu en colère, gravure) |
+| ~4,7 s | ta page en montre une autre. | La page s'ouvre : « Bienvenue », un menu, aucune trace de l'offre |
+| ~6,5 s | Il ne la retrouve pas… et s'en va. | Une loupe cherche l'offre, puis le visiteur sort du cadre ; mascotte 26 (collage qui s'en va) |
+| 10,89 s (partie B) | Ta page doit répéter ta pub : même offre, même image, même prix. | Pub et page côte à côte ; trois liens se cochent : offre ✓ image ✓ prix ✓ ; mascotte 47 (pochoir femme, index levé) |
+| 17,37 s (calme) | Et un seul bouton, bien visible : écrire sur WhatsApp ou réserver. | La page garde un seul grand bouton vert « Écrire sur WhatsApp » ; le reste s'efface ; mascotte 57 (pochoir victoire) |
+| 23,34 s (batterie) | Commente Audit : on compare ta pub et ta page. | « AUDIT » tapé, carte « Audit offert · Ta pub et ta page » ; mascotte 59 (pochoir rire) |
+| ~27,4 s | Et abonne-toi : des clics qui deviennent des clients. | Profil @oddysee_maroc, « Abonné ✓ », logo + badge ; mascotte 30 (barbu accueil) |
+
+Mascottes : moustache, barbu (gravure), collage, pochoirs ; aucune déjà utilisée dans la journée.
+
+**Appel à l'action.** AUDIT → message privé : « Merci ! Envoie-nous une capture de ta pub et le lien (ou une capture)
+de la page où elle mène : on compare les deux et on te dit ce qui fait fuir tes visiteurs. » *Prérequis : périmètre
+de l'audit offert (ici, la comparaison pub / page).*
+
+**Légendes** (compte Oddysee)
+- Instagram / Facebook :
+  > Des clics… mais aucun contact ? 👇
+  >
+  > Ta pub promet une chose, ta page en montre une autre. Le visiteur ne retrouve pas l'offre qui l'a fait cliquer…
+  > et il s'en va.
+  >
+  > Ce qui marche :
+  > 1. Une page qui répète ta pub : même offre, même image, même prix.
+  > 2. Un seul bouton, bien visible : écrire sur WhatsApp ou réserver.
+  >
+  > 💬 Commente AUDIT : on compare ta pub et ta page.
+  > 🔔 Abonne-toi : des clics qui deviennent des clients.
+  >
+  > #metaads #publicitefacebook #landingpage #entrepreneur #marketingdigital
+- TikTok : même texte, réponse à la main aux commentaires AUDIT.
+- LinkedIn (page Oddysee) : « Des clics, mais aucun contact : c'est souvent un écart entre la publicité et la page
+  d'arrivée. La pub promet une offre précise, la page affiche un accueil général. Ce que nous corrigeons en premier :
+  une page qui reprend la même offre, la même image et le même prix, avec un seul bouton d'action. Commentez AUDIT :
+  nous comparons votre publicité et votre page. »
+- Titre Shorts : « Des clics mais aucun contact ? Regarde ta page »
+
+**Vérifications.** Conseils de méthode, sans chiffre réel ; l'offre « −30 % sur le soin visage » est un exemple
+fictif, annoncé comme tel à l'écran.
