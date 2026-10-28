@@ -1,0 +1,78 @@
+{
+ "chime": {
+  "duree": 2.544,
+  "m_max": -23.9
+ },
+ "click-soft": {
+  "duree": 0.365688,
+  "m_max": -25.8
+ },
+ "click": {
+  "duree": 0.365688,
+  "m_max": -25.8
+ },
+ "error": {
+  "duree": 1.619594,
+  "m_max": -27.5
+ },
+ "glitch-1": {
+  "duree": 2.638344,
+  "m_max": -8.6
+ },
+ "glitch-2": {
+  "duree": 3.504,
+  "m_max": -3.4
+ },
+ "glitch-3": {
+  "duree": 3.096,
+  "m_max": -19.5
+ },
+ "impact-bass-1": {
+  "duree": 2.115906,
+  "m_max": -4.0
+ },
+ "impact-bass-2": {
+  "duree": 2.592,
+  "m_max": -1.7
+ },
+ "key-press": {
+  "duree": 0.432,
+  "m_max": -36.3
+ },
+ "notification": {
+  "duree": 2.4555,
+  "m_max": -15.6
+ },
+ "ping": {
+  "duree": 1.32,
+  "m_max": -23.6
+ },
+ "pop": {
+  "duree": 0.72,
+  "m_max": -21.2
+ },
+ "riser": {
+  "duree": 10.032,
+  "m_max": -4.2
+ },
+ "sparkle": {
+  "duree": 1.802438,
+  "m_max": -6.3
+ },
+ "typing": {
+  "duree": 1.541224,
+  "m_max": -28.3
+ },
+ "whoosh-cinematic": {
+  "duree": 5.544,
+  "m_max": -9.5
+ },
+ "whoosh-short": {
+  "duree": 0.574688,
+  "m_max": -15.2
+ },
+ "whoosh": {
+  "duree": 0.574688,
+  "m_max": -15.2
+ }
+}
