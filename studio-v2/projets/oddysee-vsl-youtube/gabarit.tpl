@@ -403,18 +403,18 @@
 
           <!-- S05 · débutant -->
           <div class="demo" id="d0">
-            <div class="win h" id="d0-w0" style="left: 470px; top: 280px"><div class="win-b"><i></i><i></i><i></i>&nbsp;Outil publicitaire</div><div class="win-c"><div class="sk" style="width: 70%"></div><div class="sk" style="width: 90%"></div><div class="sk" style="width: 55%"></div></div></div>
-            <div class="win h" id="d0-w1" style="left: 690px; top: 360px"><div class="win-b"><i></i><i></i><i></i>&nbsp;Réseaux sociaux</div><div class="win-c"><div class="sk" style="width: 60%"></div><div class="sk" style="width: 85%"></div><div class="sk" style="width: 40%"></div></div></div>
-            <div class="win h" id="d0-w2" style="left: 910px; top: 440px"><div class="win-b"><i></i><i></i><i></i>&nbsp;Tableau de suivi</div><div class="win-c"><div class="sk" style="width: 80%"></div><div class="sk" style="width: 50%"></div><div class="sk" style="width: 70%"></div></div></div>
+            <div class="win h" id="d0-w0" style="left: 470px; top: 280px"><div class="win-b"><i></i><i></i><i></i>&nbsp;Outil publicitaire</div><img src="assets/img/cap-oddcast.jpg" alt="" style="width: 540px; height: 264px; object-fit: cover; object-position: 50% 0%" /></div>
+            <div class="win h" id="d0-w1" style="left: 690px; top: 360px"><div class="win-b"><i></i><i></i><i></i>&nbsp;Réseaux sociaux</div><img src="assets/img/cap-oddcast.jpg" alt="" style="width: 540px; height: 264px; object-fit: cover; object-position: 50% 55%" /></div>
+            <div class="win h" id="d0-w2" style="left: 910px; top: 440px"><div class="win-b"><i></i><i></i><i></i>&nbsp;Tableau de suivi</div><img src="assets/img/cap-oddcast.jpg" alt="" style="width: 540px; height: 264px; object-fit: cover; object-position: 50% 100%" /></div>
             <div class="curseur h" id="d0-cur" style="left: 0; top: 0">%%CURSEUR%%</div>
           </div>
           <!-- S06 · amateur -->
           <div class="demo" id="d1">
             <div class="copie-cadre h" id="d1-cad1" style="left: 790px; top: 270px"></div>
             <div class="copie-cadre h" id="d1-cad2" style="left: 1250px; top: 270px"></div>
-            <div class="carte post h" id="d1-p0" style="left: 330px; top: 270px"><div class="post-t"><i></i>Ta publication</div><div class="post-img">%%ICO:post%%</div><div class="sk" style="width: 85%"></div><div class="sk" style="width: 60%"></div></div>
-            <div class="carte post h" id="d1-p1" style="left: 330px; top: 270px"><div class="post-t"><i></i>Ta publication</div><div class="post-img">%%ICO:post%%</div><div class="sk" style="width: 85%"></div><div class="sk" style="width: 60%"></div></div>
-            <div class="carte post h" id="d1-p2" style="left: 330px; top: 270px"><div class="post-t"><i></i>Ta publication</div><div class="post-img">%%ICO:post%%</div><div class="sk" style="width: 85%"></div><div class="sk" style="width: 60%"></div></div>
+            <div class="carte post h" id="d1-p0" style="left: 330px; top: 270px"><div class="post-t"><i></i>Vu ailleurs</div><div class="post-img" style="overflow: hidden; padding: 0"><img src="assets/img/original-vu-ailleurs.jpg" alt="" style="width: 100%; height: 100%; object-fit: cover; object-position: 50% 30%" /></div><div class="sk" style="width: 85%"></div><div class="sk" style="width: 60%"></div></div>
+            <div class="carte post h" id="d1-p1" style="left: 330px; top: 270px"><div class="post-t"><i></i>Ta publication</div><div class="post-img" style="overflow: hidden; padding: 0"><img src="assets/img/copie-oddysee.jpg" alt="" style="width: 100%; height: 100%; object-fit: cover; object-position: 50% 40%" /></div><div class="sk" style="width: 85%"></div><div class="sk" style="width: 60%"></div></div>
+            <div class="carte post h" id="d1-p2" style="left: 330px; top: 270px"><div class="post-t"><i></i>Ta publication</div><div class="post-img" style="overflow: hidden; padding: 0"><img src="assets/img/copie-oddysee.jpg" alt="" style="width: 100%; height: 100%; object-fit: cover; object-position: 50% 40%" /></div><div class="sk" style="width: 85%"></div><div class="sk" style="width: 60%"></div></div>
             <div class="chipb h" id="d1-chip" style="position: absolute; left: 700px; top: 730px">%%ICO:doc%%Copier · coller</div>
           </div>
           <!-- S07 · professionnel -->
@@ -536,8 +536,10 @@
         <div class="g" id="g-odd"><div class="decal">
           <div id="o-badge" class="h"><img src="assets/img/logo-onde.jpg" alt="Oddysee" /></div>
           <img id="o-mot" class="h" src="assets/img/logo-oddysee-blanc.svg" alt="Oddysee" />
-          <div class="por h" id="o-p1" style="left: 360px; top: 230px; width: 230px; height: 230px"><img src="assets/img/p-alvarez.webp" alt="" /></div>
-          <div class="nom h" id="o-n1" style="left: 300px; top: 485px; width: 350px"><b>Alvarez Mouko</b><span>Fondateur</span></div>
+          <div class="por h" id="o-p1" style="left: 380px; top: 130px; width: 210px; height: 210px"><img src="assets/img/p-alvarez.webp" alt="" /></div>
+          <div class="nom h" id="o-n1" style="left: 310px; top: 352px; width: 350px"><b>Alvarez Mouko</b><span>Fondateur</span></div>
+          <div class="por h" id="o-p4" style="left: 420px; top: 450px; width: 180px; height: 180px"><img src="assets/img/p-redwan.webp" alt="" /></div>
+          <div class="nom h" id="o-n4" style="left: 360px; top: 642px; width: 300px"><b>Redwan Outhouna</b><span>Créatif &amp; marketing</span></div>
           <div class="por h" id="o-p2" style="left: 1340px; top: 170px; width: 180px; height: 180px"><img src="assets/img/p-hamza.webp" alt="" /></div>
           <div class="nom h" id="o-n2" style="left: 1280px; top: 365px; width: 300px"><b>Hamza Outmassint</b><span>Développeur</span></div>
           <div class="por h" id="o-p3" style="left: 1440px; top: 450px; width: 180px; height: 180px"><img src="assets/img/p-imad.webp" alt="" /></div>
@@ -618,7 +620,7 @@
           <div class="verre sv h" id="m-s2" style="left: 600px; top: 600px"><span class="icoc">%%ICO:chat%%</span>Convaincre</div>
           <div class="verre sv h" id="m-s3" style="left: 900px; top: 600px"><span class="icoc">%%ICO:check%%</span>Convertir</div>
           <div class="chipv h" id="m-but" style="position: absolute; left: 1330px; top: 614px">%%ICO:graph%%Développer la clientèle</div>
-          <img class="hero h" id="h-m-meta" src="assets/img/biblio/meta-facebook-instagram-verre.webp" alt="" style="left: 30px; top: 120px; width: 330px" />
+          <img class="hero h" id="h-m-meta" src="assets/img/biblio/ia-meta.png" alt="Meta" style="left: 70px; top: 150px; width: 300px" />
           <img class="hero h" id="h-m-passeport" src="assets/img/biblio/vintage-10-passeport.webp" alt="" style="left: 1560px; top: 40px; width: 190px" />
         </div></div>
       </section>
@@ -651,8 +653,9 @@
             </div>
             <div id="ou-rep"><div class="sk h" style="width: 92%"></div><div class="sk h" style="width: 84%"></div><div class="sk h" style="width: 88%"></div><div class="sk h" style="width: 60%"></div></div>
           </div>
-          <img class="hero h" id="h-ou-question" src="assets/img/biblio/verre-point-interrogation.webp" alt="" style="left: 120px; top: 560px; width: 200px" />
-          <img class="hero h" id="h-ou-bulles" src="assets/img/biblio/bulles-discussion-3d.webp" alt="" style="left: 1570px; top: 520px; width: 260px" />
+          <img class="hero h" id="h-ou-chatgpt" src="assets/img/biblio/ia-chatgpt.png" alt="ChatGPT" style="left: 60px; top: 300px; width: 330px" />
+          <img class="hero h" id="h-ou-claude" src="assets/img/biblio/ia-claude.png" alt="Claude" style="left: 1540px; top: 140px; width: 280px" />
+          <img class="hero h" id="h-ou-gemini" src="assets/img/biblio/ia-gemini.png" alt="Gemini" style="left: 1560px; top: 470px; width: 280px" />
         </div></div>
       </section>
 
@@ -1020,6 +1023,7 @@
       pop("#o-p1", T(13, 2), { de: 0.6 }); inn("#o-n1", T(13, 2) + 0.15, { y: 10 });
       pop("#o-p2", T(13, 3), { de: 0.6 }); inn("#o-n2", T(13, 3) + 0.15, { y: 10 });
       pop("#o-p3", T(13, 4), { de: 0.6 }); inn("#o-n3", T(13, 4) + 0.15, { y: 10 });
+      pop("#o-p4", T(13, 5), { de: 0.6 }); inn("#o-n4", T(13, 5) + 0.15, { y: 10 });
       tl.to("#o-badge", { scale: 1.06, duration: 0.25, yoyo: true, repeat: 1 }, T(13, -1));
 
       // ---------- S14–S15 · parcours (étapes à gauche, tableau de bord à droite) ----------
@@ -1174,7 +1178,7 @@
       hero("r-badge", T(18, 4), null);
       hero("m-meta", T(19, 3), null, { r: -4 }); hero("m-passeport", T(19, 21), null);
       hero("g-coeur", T(20, 6), T(21, 0) - 0.3); hero("g-fusee", T(22, 4), null); hero("g-cible", E(22), null);
-      hero("ou-question", T(23, 2), null); hero("ou-bulles", T(23, 9), null);
+      hero("ou-chatgpt", T(23, 9) - 0.1, null, { r: -5 }); hero("ou-claude", T(23, 10) - 0.1, null, { r: 5 }); hero("ou-gemini", T(23, 12) - 0.1, null, { r: -4 });
       hero("tp-sablier", T(24, 14), null);
       hero("q-question", T(25, 17), null);
       hero("a-micro", T(26, 7), T(27, 0) - 0.4); hero("a-noeud", T(26, -1), T(27, 0) - 0.4); hero("a-loupe", T(27, 1), T(28, 0) - 0.3); hero("a-fusee", T(28, 7), null);

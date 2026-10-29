@@ -17,6 +17,7 @@ C = {  # nom: (source, cx, cy, taille) fractions de la largeur/hauteur ; taille 
  "alvarez": ("assets/img/equipe-alvarez.png", .55, .30, .62),
  "hamza":   ("assets/img/equipe-hamza.png", .50, .30, .50),
  "imad":    ("assets/img/equipe-imad.png", .50, .30, .50),
+ "redwan":  ("assets/img/equipe-redwan.png", .50, .30, .62),
 }
 for k,(f,cx,cy,s) in C.items():
     im = Image.open(f).convert("RGB"); w,h = im.size; side = s*w
