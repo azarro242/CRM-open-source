@@ -25,7 +25,7 @@ petite pause).
 |---|---|---|---|---|---|
 | 9 h | 18 | Ta vidéo est belle… mais aucune vente ? | Une offre que personne ne comprend | AUDIT | ✓ ci-dessous |
 | 12 h 30 | 33 | Une demande de devis à 22 h… et toi, tu réponds quand ? | Des devis qui partent chez le concurrent faute de réponse rapide | AUDIT | à venir |
-| 15 h 30 | N05 | Pas de carte internationale ? Ta pub ne doit pas s'arrêter pour ça | Payer sa pub Meta depuis le Maroc sans faire bloquer son compte | AUDIT | à venir |
+| 15 h 30 | N05 | Ta pub s'arrête… carte refusée ? | Payer sa pub Meta depuis le Maroc sans faire bloquer son compte | AUDIT | ✓ ci-dessous |
 | 18 h 30 | 24 | Ton concurrent promet la qualité. Toi, prouve-la | Un message qui ressemble à celui de tout le monde | AUDIT | à venir |
 
 > Le sujet 18 était proposé pour la vidéo de 18 h 30 du jour 3, qui n'a pas été produite. Il ouvre ce jour 4.
@@ -103,3 +103,88 @@ que tu vends : on te renvoie ton offre en une phrase (pour qui, quel résultat, 
 **Vérifications.**
 - Conseils de méthode, sans chiffre réel : rien à sourcer.
 - L'offre floue et l'offre claire de la partie B sont des exemples fictifs, annoncés comme tels à l'écran.
+
+---
+
+## 15 h 30 · Vidéo N05 — « Ta pub s'arrête… carte refusée ? »
+
+**Pourquoi ce sujet.** Au Maroc, le paiement de la pub est l'un des premiers blocages : carte non activée pour
+l'international, plafond atteint, paiement refusé. Et des refus répétés peuvent mener Meta à suspendre la
+diffusion, voire à restreindre le compte. La vidéo part de cette douleur, rappelle la règle de 2026 (dotation
+e-commerce des particuliers : 20 000 DH par an) et donne trois gestes qui évitent le blocage.
+
+**Texte à faire lire** (`J04-N05-paiement-carte/voix.txt`, 61 mots, fichier `N05.mp3`)
+
+```
+Ta pub s'arrête… carte refusée?
+Ce n'est pas Meta qui t'en veut.
+C'est ton paiement.
+Et des refus répétés peuvent faire bloquer ton compte.
+En perso, ta dotation e-commerce: vingt mille dirhams par an.
+Fais activer ta carte, garde la même, et monte ton budget doucement.
+Commente Audit: on vérifie ton compte pub.
+Et abonne-toi: une pub qui tourne, sans blocage.
+```
+
+| Moment | Phrase | À l'écran |
+|---|---|---|
+| 0 s | Ta pub s'arrête… carte refusée ? | Tableau de pubs : la campagne passe de « Active » à « En pause », bannière rouge « Paiement refusé » ; mascotte 15 (femme fâchée) |
+| 3,06 s (batterie) | Ce n'est pas Meta qui t'en veut. | Bulle « Meta m'en veut ? » barrée d'un trait ; mascotte 24 (gominé stupéfait) |
+| ~5 s | C'est ton paiement. | Carte bancaire, voyant rouge « International : non activé » |
+| ~7 s | Et des refus répétés peuvent faire bloquer ton compte. | Trois notifications « Paiement refusé » s'empilent, puis un cadenas « Compte restreint » ; mascotte 58 (pochoir implore) |
+| 10,89 s (partie B) | En perso, ta dotation e-commerce : vingt mille dirhams par an. | Jauge « Dotation e-commerce · particulier résident » qui se remplit jusqu'à **20 000 DH / an** ; en petit : « soit ≈ 1 667 DH par mois · depuis le 1er janvier 2026 » ; mascotte 33 (barbu présente) |
+| 17,37 s (calme) | Fais activer ta carte, garde la même, et monte ton budget doucement. | Trois coches : « Carte activée à l'international (ta banque) » · « Une seule carte, à ton nom » · « Budget par paliers » (petit escalier) ; mascotte 39 (pochoir barbu explique) |
+| 23,34 s (batterie) | Commente Audit : on vérifie ton compte pub. | « AUDIT » tapé, carte « Audit offert · Ton compte pub » ; mascotte 43 (pochoir victoire) |
+| ~27,4 s | Et abonne-toi : une pub qui tourne, sans blocage. | Profil @oddysee_maroc, « Abonné ✓ », logo + badge ; mascotte 41 (pochoir femme bras ouverts) |
+
+**Mascottes.**
+- Styles mélangés : femme en tête photo, gominé, barbu (gravure) et pochoirs.
+- Aucune mascotte déjà utilisée dans la vidéo de 9 h.
+- 15 et 58 n'ont encore jamais servi dans la série.
+
+**Appel à l'action.** AUDIT → message privé : « Merci ! Dis-nous si tu paies ta pub avec une carte perso ou
+d'entreprise, et si ton compte a déjà eu des paiements refusés ou une restriction : on vérifie ton compte pub et
+on te dit quoi corriger. Ne nous envoie jamais les numéros de ta carte. » *Prérequis : périmètre de l'audit
+offert (ici, les paramètres de paiement et l'état du compte publicitaire).*
+
+**Légendes** (compte Oddysee)
+- Instagram / Facebook :
+  > Ta pub s'arrête… carte refusée ? 👇
+  >
+  > Ce n'est pas Meta qui t'en veut : c'est ton paiement. Et des refus répétés peuvent faire bloquer ton
+  > compte pub.
+  >
+  > À savoir en 2026 : en tant que particulier résident, ta dotation e-commerce est de 20 000 DH par an
+  > (soit environ 1 667 DH par mois).
+  >
+  > Pour éviter le blocage :
+  > 1. Fais activer ta carte pour les paiements en ligne à l'international (auprès de ta banque).
+  > 2. Garde la même carte, à ton nom : ne change pas à chaque refus.
+  > 3. Monte ton budget par paliers, surtout sur un compte neuf.
+  >
+  > 💬 Commente AUDIT : on vérifie ton compte pub.
+  > 🔔 Abonne-toi : une pub qui tourne, sans blocage.
+  >
+  > #publicitefacebook #metaads #maroc #ecommercemaroc #entrepreneur
+- TikTok : même texte, réponse à la main aux commentaires AUDIT.
+- LinkedIn (page Oddysee) : « Au Maroc, une campagne s'arrête souvent pour une raison simple : le paiement.
+  Carte non activée pour l'international, plafond atteint, refus répétés : Meta peut suspendre la diffusion,
+  voire restreindre le compte. Depuis le 1er janvier 2026, la dotation e-commerce des particuliers résidents est
+  de 20 000 DH par an. Trois réflexes : une carte activée à l'international, toujours la même, et un budget qui
+  monte par paliers. Commentez AUDIT : nous vérifions votre compte publicitaire. »
+- Titre Shorts : « Pub Facebook bloquée au Maroc ? Le problème, c'est ton paiement »
+
+**Vérifications.**
+- 20 000 DH par an depuis le 1er janvier 2026, pour les particuliers résidents ; la banque active l'option sur
+  la carte. Sources :
+  - [Le360, 2 janvier 2026](https://fr.le360.ma/economie/reglementation-des-changes-dotation-pour-voyages-e-commerce-export-import-ce-qui-change-des-janvier_BPDQLTUSQFE5PNTNKVZO3UMNA4/) ;
+  - [New Visions, 27/09/2026, mis à jour le 22/10/2026](https://newvisions.ma/blog/payer-publicite-facebook-maroc/),
+    relu le 29/10/2026, qui renvoie à l'[Office des Changes](https://www.oc.gov.ma/fr/commerce-electronique-a-international).
+- Ce qui bloque un compte, d'après New Visions :
+  - des paiements refusés à répétition (Meta peut suspendre la diffusion) ;
+  - changer souvent de carte, ou utiliser la carte d'un tiers ;
+  - un gros budget d'un coup sur un compte neuf.
+- Calcul : 20 000 ÷ 12 ≈ 1 667 DH par mois.
+- Les entreprises ont leurs propres règles de dotation, d'où le « en perso » du texte. On ne promet pas
+  qu'Oddysee paie la pub à la place du client.
+
