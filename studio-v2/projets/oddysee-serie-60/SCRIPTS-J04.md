@@ -24,7 +24,7 @@ petite pause).
 | Créneau | ID | Sujet | Douleur | Mot-clé | Script |
 |---|---|---|---|---|---|
 | 9 h | 18 | Ta vidéo est belle… mais aucune vente ? | Une offre que personne ne comprend | AUDIT | ✓ ci-dessous |
-| 12 h 30 | 33 | Une demande de devis à 22 h… et toi, tu réponds quand ? | Des devis qui partent chez le concurrent faute de réponse rapide | AUDIT | à venir |
+| 12 h 30 | 33 | Une demande de devis à 22 h… | Des devis qui partent chez le concurrent faute de réponse rapide | AUDIT | ✓ ci-dessous (écrit en dernier) |
 | 15 h 30 | N05 | Ta pub s'arrête… carte refusée ? | Payer sa pub Meta depuis le Maroc sans faire bloquer son compte | AUDIT | ✓ ci-dessous |
 | 18 h 30 | 24 | Tu promets la qualité… ton concurrent aussi ? | Un message qui ressemble à celui de tout le monde, donc une guerre des prix | AUDIT | ✓ ci-dessous |
 
@@ -262,4 +262,76 @@ montrer). » *Prérequis : périmètre de l'audit offert (ici, le remplacement d
 - Les pubs, le « −10 % » et l'exemple de la cuisine sont fictifs, annoncés comme tels à l'écran.
 - Un délai annoncé dans une vraie pub doit être tenu : le rappeler en message privé si un client veut
   reprendre la formule.
+
+---
+
+## 12 h 30 · Vidéo 33 — « Une demande de devis à 22 h… »
+
+*Écrit après les vidéos de 15 h 30 et 18 h 30, pour compléter le jour 4.*
+
+**Pourquoi ce sujet.** Beaucoup de demandes de devis arrivent le soir, quand le client a enfin le temps. Si la
+réponse part le lendemain midi, un concurrent a souvent déjà répondu. La vidéo part de cette douleur et donne le
+levier de croissance : un message automatique dès le soir (accusé de réception et trois questions), puis l'IA
+prépare un brouillon de devis pendant la nuit, que le professionnel vérifie et valide au réveil. C'est
+l'automatisation qu'Oddysee met en place.
+
+**Texte à faire lire** (`J04-33-devis-22h/voix.txt`, 60 mots, fichier `33.mp3`)
+
+```
+Une demande de devis à vingt-deux heures…
+Tu réponds le lendemain midi?
+Trop tard.
+Ton concurrent a répondu avant toi.
+Le soir, un message automatique: bien reçu, trois questions, réponse demain matin.
+Pendant la nuit, l'IA prépare ton devis. Toi, tu le valides au réveil.
+Commente Audit: on accélère tes devis.
+Et abonne-toi: tes devis partent avant ceux des autres.
+```
+
+| Moment | Phrase | À l'écran |
+|---|---|---|
+| 0 s | Une demande de devis à 22 h… | Téléphone, notification WhatsApp à 22:04 : « Bonsoir, c'est pour un devis… » (exemple fictif) ; mascotte 17 (femme pensive) |
+| 3,06 s (batterie) | Tu réponds le lendemain midi ? | Horloge qui file de 22:04 à 12:00 le lendemain ; mascotte 49 (pochoir femme perplexe) |
+| ~5 s | Trop tard. | Tampon rouge « TROP TARD » ; mascotte 28 (barbu triste) |
+| ~6 s | Ton concurrent a répondu avant toi. | Fil de discussion : « Merci, j'ai déjà choisi quelqu'un. » ; étiquette « Concurrent : réponse à 22:15 » |
+| 10,89 s (partie B) | Le soir, un message automatique : bien reçu, trois questions, réponse demain matin. | Message automatique à 22:04 : « Bien reçu ✓ » · trois questions (surface ? date ? budget ?) · « Réponse demain à 9 h » ; mascotte 42 (pochoir barbu présente) |
+| 17,37 s (calme) | Pendant la nuit, l'IA prépare ton devis. Toi, tu le valides au réveil. | La lune laisse place au soleil ; un brouillon de devis « préparé par l'IA » se remplit, puis bouton « Valider ✓ » à 8:30 ; mascotte 53 (pochoir bras croisés, sourire) |
+| 23,34 s (batterie) | Commente Audit : on accélère tes devis. | « AUDIT » tapé, carte « Audit offert · Tes devis » ; mascotte 18 (moustache rire) |
+| ~27,4 s | Et abonne-toi : tes devis partent avant ceux des autres. | Profil @oddysee_maroc, « Abonné ✓ », logo + badge ; mascotte 03 (femme victoire) |
+
+**Mascottes.**
+- Styles mélangés : femme et moustache en tête photo, barbu (gravure), pochoirs.
+- Aucune mascotte déjà utilisée dans les trois autres vidéos du jour 4.
+
+**Appel à l'action.** AUDIT → message privé : « Merci ! Dis-nous par où arrivent tes demandes de devis (WhatsApp,
+Instagram, formulaire), à quelle heure le plus souvent, et en combien de temps tu réponds : on te montre comment
+répondre dès le soir et préparer tes devis plus vite. » *Prérequis : périmètre de l'audit offert (ici, le
+parcours des demandes de devis).*
+
+**Légendes** (compte Oddysee)
+- Instagram / Facebook :
+  > Une demande de devis à 22 h… et tu réponds le lendemain midi ? 👇
+  >
+  > Trop tard : ton concurrent a répondu avant toi.
+  >
+  > Ce qui marche :
+  > 1. Le soir, un message automatique : bien reçu, trois questions (surface, date, budget), réponse demain matin.
+  > 2. Pendant la nuit, l'IA prépare un brouillon de devis à partir des réponses.
+  > 3. Au réveil, tu vérifies et tu valides. Tu restes celui qui décide.
+  >
+  > 💬 Commente AUDIT : on accélère tes devis.
+  > 🔔 Abonne-toi : tes devis partent avant ceux des autres.
+  >
+  > #entrepreneur #devis #automatisation #ia #artisan
+- TikTok : même texte, réponse à la main aux commentaires AUDIT.
+- LinkedIn (page Oddysee) : « Une demande de devis arrive à 22 h. Si la réponse part le lendemain midi, un
+  concurrent a souvent déjà répondu. Ce que nous mettons en place : un message automatique dès le soir (accusé de
+  réception et trois questions utiles), un brouillon de devis préparé par l'IA pendant la nuit, puis une
+  validation par le professionnel au réveil. Commentez AUDIT : nous accélérons vos devis. »
+- Titre Shorts : « Devis demandé à 22 h : réponds avant ton concurrent »
+
+**Vérifications.**
+- Conseils de méthode, sans chiffre : rien à sourcer.
+- Les heures et les messages à l'écran sont des exemples fictifs.
+- Le devis préparé par l'IA reste un brouillon : le professionnel vérifie les prix avant de l'envoyer.
 
