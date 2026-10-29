@@ -29,6 +29,8 @@ existant à la demande du client.
 
 ## Au début de toute session impliquant de la vidéo
 
+0. Lire `studio-v2/MEMOIRE-SESSION.md` : règles convenues avec le client, recette de fabrication de la
+   série 60, état d'avancement et prochaines étapes (passation entre conversations).
 1. Lancer `bash outils/setup.sh` (idempotent, ~1 min) : ffmpeg, whisper-cli,
    navigateur de rendu, tentative de téléchargement du modèle Whisper.
 2. Lire `.agents/skills/hyperframes/SKILL.md` — point d'entrée obligatoire
