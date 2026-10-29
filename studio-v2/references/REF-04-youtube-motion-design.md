@@ -89,3 +89,23 @@ curseur, cible, point d'interrogation, globe…) sont détourés et réutilisabl
 - Mouvement permanent : l'objet héros flotte (lévitation lente), tourne de quelques degrés, reflet qui
   balaie le verre ; nouveauté visuelle toutes les 2 à 3 s.
 - Droits : les fichiers rawpixel et Pinterest sont à vérifier avant tout usage publicitaire payant.
+
+## 7. Références 3D « verre givré » (archives AF et AF2, 2026-10-29)
+
+46 compositions haut de gamme (cartes translucides en éventail, objets en verre et chrome, rubans irisés,
+cercles de verre concentriques, grappes d'icônes autour d'une main ou d'un objet, interfaces en verre
+isométriques, cartes bancaires et cadenas en verre). Planches : `marque/oddysee/bibliotheque-motion/planches/
+reference-3d-AF*.jpg`. Ce sont des **références de style** (marques et textes d'autrui) : on reprend les
+procédés, pas les images.
+
+Procédés reproduits dans HyperFrames (CSS 3D, flou d'arrière-plan, dégradés coniques, SVG) :
+- éventail de cartes translucides qui s'ouvre et se referme (profondeur, flou décroissant) ;
+- panneaux « verre givré » (`backdrop-filter: blur`, liseré clair, reflet en diagonale qui balaie) ;
+- rubans et bandes irisés qui se dessinent et traversent la scène ;
+- cercles de verre concentriques qui se superposent (transitions) ;
+- grappe d'icônes en orbite autour d'un objet héros, parallaxe lente ;
+- interfaces posées en perspective isométrique, puis redressées.
+
+Objets 3D supplémentaires : Adobe Stock via le connecteur Adobe (compte du client, licence obtenue avant
+usage, contenus « free » de préférence), détourés et teintés aux couleurs Oddysee. Pas de génération d'images
+Firefly dans cet environnement.
