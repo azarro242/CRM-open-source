@@ -19,6 +19,10 @@ Toute **nouvelle** vidéo se produit dans `studio-v2/` en suivant le skill `stud
 - Vidéos de l'agence du client (**Oddysee**) : lire `studio-v2/marque/oddysee/FICHE-MARQUE.md`
   et `mascottes/INDEX.md` (mascottes, faits sourcés, voix Oxley, format ≈ 25 s).
   Chaque nouveau lot de cinq mascottes s'ajoute à l'index dans le même tour.
+- Format **« médecin + anatomie » en darija** (clinique **Centre de réadaptation de Chine**) :
+  lire `studio-v2/references/REF-03-medecin-anatomie-darija.md` et
+  `studio-v2/marque/centre-readaptation-chine/FICHE-MARQUE.md` ; projet modèle :
+  `studio-v2/projets/centre-chine-lombalgie/` (`build.py`, `gabarit.tpl`, `mix.py`).
 
 Le dossier `studio/` (V1) est archivé : ne le modifier que pour retoucher un projet V1
 existant à la demande du client.

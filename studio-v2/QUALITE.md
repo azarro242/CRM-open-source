@@ -264,6 +264,26 @@ d'amélioration V2** fournis par le client. Les deux s'appliquent à chaque proj
   norme de la série, jusqu'à nouvel ordre ; sujets toujours tirés de la douleur du spectateur, variés d'un
   jour à l'autre (e-commerce, services, demandes, offre…), et jamais deux fois le même sujet dans la série.
 
+### [2026-10-28] Nouveau format « médecin + anatomie » en darija (à garder en mémoire)
+- Consigne du client : « je voudrais créer un nouveau format de vidéo que tu devras sauvegarder en
+  mémoire […] l'image représentant l'anatomie doit être utilisée comme sur le lien […] la description de
+  la vidéo doit être en arabe […] l'anatomie en 3D te permettra de faire pivoter chaque partie du corps
+  […] n'oublie pas d'intégrer les éléments du stop scroll ». Puis : « garder la même voix off, juste les
+  transcriptions captions qui changent en arabe darija », « Darija partout », « Les sous-titres arabes
+  doivent représenter les textes animés ».
+- Règles d'application (détail : `references/REF-03-medecin-anatomie-darija.md`) :
+  - **voix d'origine** du praticien conservée ; aucun doublage ; les **textes animés sont les sous-titres**,
+    en **darija** (écriture arabe), révélés mot à mot au rythme de la parole ;
+  - style des captures : pastilles blanches nom + icône ronde dégradée, bulles flottantes, cartes de verre
+    sombres, carte d'adresse blanche, pastilles de fin « متابعة » / « رعاية », logo de la clinique en badge ;
+  - **anatomie comme sur la page de référence** : même image, mêmes zones ; le médecin passe en vignette,
+    la planche bascule entre face / profil / dos (rotation `rotationY`), zoome sur la partie citée, trace
+    les méridiens et fait apparaître les points au moment où ils sont nommés ;
+  - **stop scroll** : entrée zoomée + flash, accroche-question sur la douleur avec pastille « ! » qui pulse,
+    barre de progression, coups de zoom aux mots forts, une nouveauté visuelle toutes les 1–2 s, bruitages ;
+  - descriptions de publication **en darija** ; message de santé prudent (« كيعاونو يخففو »), mention
+    « الطب الصيني مكمّل، وماشي بديل على الطبيب ».
+
 <!-- Format d'ajout :
 ### [date] Titre de l'élément
 - Consigne du client : « … »

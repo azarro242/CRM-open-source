@@ -21,10 +21,11 @@ Sources de vérité (à lire **avant** d'agir, dans cet ordre) :
 2. **Porte d'entrée** — identifier A (prompt), B (images) ou C (vidéo d'exemple).
    Rapatrier tous les éléments fournis dans `studio-v2/sources/<nom>/`.
    **Type de contenu** — déduire *Publicité de marque* (REF-01), *Reel éducatif
-   faceless* (REF-02) ou *Reel mascotte Oddysee* (≈ 25 s) ; le demander seulement s'il
-   reste ambigu. Lire la fiche de référence du type avant d'écrire le script.
+   faceless* (REF-02), *Reel mascotte Oddysee* (≈ 25 s) ou *Médecin + anatomie en darija*
+   (REF-03 : vidéo d'un praticien, voix d'origine, sous-titres animés en darija, planche
+   d'anatomie qui pivote) ; le demander seulement s'il reste ambigu. Lire la fiche de référence du type avant d'écrire le script.
    **Marque connue** — si la vidéo concerne une marque de `studio-v2/marque/` (Oddysee :
-   l'agence du client), lire sa `FICHE-MARQUE.md` et l'index de ses mascottes : faits
+   l'agence du client ; Centre de réadaptation de Chine : clinique cliente), lire sa `FICHE-MARQUE.md` et l'index de ses mascottes : faits
    sourcés, couleurs, voix déjà choisie, format.
 3. **Questions d'ouverture** — poser via `AskUserQuestion`, en un seul appel, les
    questions dont la réponse n'est pas déjà explicite dans la demande :
