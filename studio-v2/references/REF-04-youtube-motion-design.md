@@ -47,3 +47,9 @@ Toutes en 736 × 414, 30 i/s : elles servent de **langage visuel**, jamais de so
   3 min 30 à 4 min de voix.
 - Rendu : 1920 × 1080, 30 i/s, monté par chapitres (S01–S09, S10–S15, S16–S22, S23–S32) puis assemblés,
   pour limiter le temps de rendu et faciliter les retouches.
+
+## 4. Sous-titres (consigne du 2026-10-29)
+
+Le client fournit le script et la voix off. Les sous-titres sont **intégrés à l'animation**, sur le modèle de
+la réf. B : chaque phrase s'écrit mot à mot, calée sur la voix (horodatage Whisper), placée dans la scène à
+côté de l'objet animé, mots clés en violet, sérif italique d'accent comme « *Maximize* ROI » (réf. A).

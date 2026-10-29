@@ -299,6 +299,15 @@ d'amélioration V2** fournis par le client. Les deux s'appliquent à chaque proj
   - livrables : vidéo sous-titrée, vidéo sans sous-titres, SRT, tableau d'affectation S01–S32 avec minutage
     réel, liste des manques et des faits à valider.
 
+### [2026-10-29] Vidéo YouTube motion design : sous-titres intégrés à l'animation
+- Consigne du client : « Je donnerai le script et la voix off, les sous-titrages doivent être incorporés dans
+  l'animation comme sur l'un des modèles parmi les trois vidéos ».
+- Règle d'application : pas de bande de sous-titres classique. Le texte parlé devient de la **typographie
+  animée** comme dans la réf. B (phrase qui se construit mot à mot au rythme de la voix, glisse
+  latéralement, petit signe graphique d'accompagnement) et la fin de la réf. A (mot clé en sérif italique +
+  sans-sérif à côté de l'objet animé). Le texte est posé **dans** la composition, à côté de l'objet de la
+  scène, jamais par-dessus ; deux lignes au plus ; mots clés en violet. Le SRT reste livré pour YouTube.
+
 <!-- Format d'ajout :
 ### [date] Titre de l'élément
 - Consigne du client : « … »
