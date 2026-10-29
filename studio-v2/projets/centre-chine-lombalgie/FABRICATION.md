@@ -28,7 +28,9 @@ Format : `references/REF-03-medecin-anatomie-darija.md` · Clinique : `marque/ce
    structurels (taille du fichier, sous-compositions) et acceptés.
 5. **Rendu** — `npx hyperframes@0.8.193 render --fps 30 --quality looks --output renders/brut.mp4`.
 6. **Mixage** —
-   `python3 mix.py renders/brut.mp4 ../../exports/centre-chine/centre-chine-lombalgie.mp4 --rapport ../../exports/centre-chine/centre-chine-lombalgie-equilibre-sonore.png`.
+   `python3 mix.py renders/brut.mp4 ../../exports/centre-chine/centre-chine-lombalgie.mp4 --rapport ../../exports/centre-chine/centre-chine-lombalgie-equilibre-sonore.png --limite 0.66`.
+   Résultat : −14,4 LUFS intégrés, crête vraie −1,9 dBTP (avec `--limite 0.72`, la crête montait à −1,4 dBTP).
+   Les bruitages sont remontés de 8 dB (`--sfx 8`) : sans ce gain, ils restaient vers −35 LUFS, inaudibles sous la voix.
 
 ## Séquence anatomique
 

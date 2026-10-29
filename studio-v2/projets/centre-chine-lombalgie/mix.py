@@ -5,7 +5,8 @@
 
 Lit mix.json (écrit par build.py) :
   - voix  : piste audio de la vidéo source, passe-haut 80 Hz, compression douce, −16 LUFS ;
-  - sfx   : chaque bruitage à son gain (déjà égalisé par build.py), −2 dB pendant la parole ;
+  - sfx   : chaque bruitage à son gain (égalisé par build.py) + --sfx dB (8 par défaut : sinon
+            inaudibles sous la voix), −2 dB pendant la parole ;
   - master: −14 LUFS intégrés, crête vraie ≤ −1,5 dBTP (Instagram / TikTok).
 Pas de musique : le médecin parle presque sans pause ; elle peut s'ajouter sur demande.
 """
@@ -19,6 +20,7 @@ ap.add_argument("video")
 ap.add_argument("sortie")
 ap.add_argument("--rapport")
 ap.add_argument("--limite", type=float, default=0.72)
+ap.add_argument("--sfx", type=float, default=8.0, help="gain global des bruitages (dB) par rapport aux gains de build.py")
 a = ap.parse_args()
 mix = json.load(open(os.path.join(ICI, "mix.json"), encoding="utf-8"))
 DUREE, N, parole = mix["duree"], int(mix["duree"] * SR), mix["parole"]
@@ -73,7 +75,7 @@ with tempfile.TemporaryDirectory() as tmp:
     sfx = np.zeros((N, 2), np.float32)
     for e in mix["sfx"]:
         x = decode(os.path.join(ICI, e["fichier"]), e["decalage"], e["duree"])
-        poser(sfx, fondu(x * db(e["gain_db"]), 8), e["t"])
+        poser(sfx, fondu(x * db(e["gain_db"] + a.sfx), 8), e["t"])
     t = np.arange(N) / SR
     g = np.ones(N, np.float32)
     for a_, z in parole:

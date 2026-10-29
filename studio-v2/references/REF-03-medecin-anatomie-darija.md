@@ -160,7 +160,7 @@ client une rotation continue à 360° : il faudrait pour cela un vrai modèle 3D
 ## 6. Son
 
 - Voix d'origine du médecin à **−16 LUFS** : passe-haut à 80 Hz, compression douce.
-- Bruitages −2 dB pendant la parole.
+- Bruitages : gains égalisés par `build.py`, puis +8 dB (`--sfx`), et −2 dB pendant la parole.
 - Master à **−14 LUFS**, crête vraie ≤ −1,5 dBTP (`projets/centre-chine-lombalgie/mix.py`).
 - Pas de musique par défaut, car le praticien parle presque sans pause. Elle peut s'ajouter sur
   demande, très basse.
