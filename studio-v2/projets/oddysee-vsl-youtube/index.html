@@ -27,29 +27,45 @@
       /* ---------- fond continu ---------- */
       .fond-img { position: absolute; inset: 0; width: 1920px; height: 1080px; object-fit: cover; }
       .halo { position: absolute; border-radius: 50%; }
-      #halo-1 { left: -260px; top: -320px; width: 1100px; height: 1100px;
-        background: radial-gradient(circle, rgba(168, 119, 255, 0.42) 0%, rgba(168, 119, 255, 0) 65%); }
-      #halo-2 { left: 1080px; top: 380px; width: 1200px; height: 1200px;
-        background: radial-gradient(circle, rgba(244, 170, 255, 0.36) 0%, rgba(244, 170, 255, 0) 62%); }
-      #halo-3 { left: 600px; top: -500px; width: 900px; height: 900px;
-        background: radial-gradient(circle, rgba(255, 255, 255, 0.55) 0%, rgba(255, 255, 255, 0) 60%); }
-      #logo-n, #logo-b { position: absolute; left: 72px; top: 52px; width: 132px; height: 50px; }
-      #fond-sombre, #logo-b { opacity: 0; }
+      #halo-1 { left: -300px; top: -360px; width: 1100px; height: 1100px;
+        background: radial-gradient(circle, rgba(150, 90, 255, 0.35) 0%, rgba(150, 90, 255, 0) 65%); }
+      #halo-2 { left: 1180px; top: 420px; width: 1100px; height: 1100px;
+        background: radial-gradient(circle, rgba(120, 60, 240, 0.35) 0%, rgba(120, 60, 240, 0) 62%); }
+      #halo-3 { left: 460px; top: 120px; width: 1000px; height: 1000px;
+        background: radial-gradient(circle, rgba(255, 255, 255, 0.28) 0%, rgba(230, 215, 255, 0) 60%); }
+      #logo-b { position: absolute; left: 1720px; top: 1000px; width: 132px; height: 50px; opacity: 0.85; }
+      .decal { position: absolute; inset: 0; transform: translateY(140px) scale(0.92); transform-origin: 50% 0%; }
+      .hero { position: absolute; height: auto; filter: drop-shadow(0 26px 34px rgba(16, 0, 60, 0.45)); }
+      .orb { position: absolute; width: 104px; height: 104px; }
+      .orb img { width: 104px; height: 104px; object-fit: contain; filter: drop-shadow(0 14px 20px rgba(16, 0, 60, 0.5)); }
+      .orb b { position: absolute; right: -8px; top: -8px; min-width: 40px; height: 40px; padding: 0 9px; border-radius: 20px; background: #ff3b5c;
+        color: #fff; font-weight: 800; font-size: 22px; line-height: 40px; text-align: center; box-shadow: 0 6px 14px rgba(255, 59, 92, 0.45); }
+      .etape { width: 620px; height: 104px; padding: 0 24px; display: flex; align-items: center; gap: 18px; }
+      .etape .titre-c { font-size: 30px; } .etape .sous-c { font-size: 19px; }
+      .sitm { width: 620px; height: 132px; padding: 0 22px; display: flex; align-items: center; gap: 20px; overflow: hidden; }
+      .sitm .vig { width: 150px; height: 104px; border-radius: 14px; overflow: hidden; flex: none; position: relative; }
+      .sitm .vig img { width: 100%; height: 100%; object-fit: cover; }
+      #pv-cadre { position: absolute; left: 922px; top: 252px; width: 896px; height: 676px; border-radius: 26px;
+        background: rgba(255, 255, 255, 0.14); border: 2px solid rgba(255, 255, 255, 0.45);
+        box-shadow: 0 40px 90px rgba(10, 0, 40, 0.55), 0 0 60px rgba(168, 119, 255, 0.35); }
+      #pv-video { position: absolute; left: 930px; top: 260px; width: 880px; height: 660px; border-radius: 20px; object-fit: cover; }
+      #pv-tag { position: absolute; left: 942px; top: 940px; font-family: "Instrument Serif", serif; font-style: italic; font-size: 24px; color: rgba(255, 255, 255, 0.75); }
+      #etoile { position: absolute; left: 780px; top: 360px; width: 360px; height: 360px; overflow: visible; }
+      #etoile-flash { position: absolute; inset: 0; background: radial-gradient(circle at 50% 55%, #ffffff 0%, #e9ddff 45%, #b99bff 100%); opacity: 0; }
 
       /* ---------- sous-titres intégrés ---------- */
       #sous { position: absolute; inset: 0; }
-      .st { position: absolute; left: 160px; right: 160px; top: 872px; text-align: center; font-weight: 600;
-        font-size: 50px; line-height: 1.22; letter-spacing: -0.3px; color: var(--txt); opacity: 0; visibility: hidden;
-        text-shadow: 0 2px 18px rgba(255, 255, 255, 0.35); }
+      .st { position: absolute; left: 110px; right: 110px; top: 42px; height: 196px; display: flex; align-items: center; justify-content: center;
+        flex-wrap: wrap; align-content: center; column-gap: 0.26em; text-align: center; font-weight: 800; font-size: 78px; line-height: 1.02;
+        letter-spacing: -2.4px; color: #ffffff; opacity: 0; visibility: hidden; transform-origin: 50% 50%;
+        text-shadow: 0 4px 30px rgba(40, 0, 120, 0.55), 0 0 44px rgba(150, 100, 255, 0.45); }
       .st .w { display: inline-block; opacity: 0; }
-      .st .cle { color: var(--cle); font-weight: 700; }
-      .st .ital { color: var(--cle); font-family: "Instrument Serif", serif; font-style: italic; font-weight: 400;
-        font-size: 62px; letter-spacing: 0; }
+      .st .cle, .st .ital { color: #d8c6ff; }
 
       /* ---------- grammaire commune ---------- */
       .carte { position: absolute; background: rgba(255, 255, 255, 0.94); border-radius: 26px;
         box-shadow: 0 24px 60px rgba(45, 15, 110, 0.18), 0 2px 8px rgba(45, 15, 110, 0.08); }
-      .verre { position: absolute; background: rgba(255, 255, 255, 0.08); border: 1.5px solid rgba(255, 255, 255, 0.2);
+      .verre { position: absolute; background: rgba(22, 8, 64, 0.62); border: 1.5px solid rgba(255, 255, 255, 0.24); backdrop-filter: blur(10px);
         border-radius: 26px; color: #fff; box-shadow: 0 30px 70px rgba(0, 0, 0, 0.35); }
       .por { position: absolute; border-radius: 50%; overflow: hidden; border: 6px solid #fff;
         box-shadow: 0 18px 44px rgba(45, 15, 110, 0.25); background: #ddd; }
@@ -72,7 +88,7 @@
       .ligne-c { display: flex; align-items: center; gap: 16px; }
       .sk { height: 12px; border-radius: 6px; background: #e7e2f2; }
       .verre .sk { background: rgba(255, 255, 255, 0.18); }
-      .tag-illu { position: absolute; font-family: "Instrument Serif", serif; font-style: italic; font-size: 24px; color: var(--gris); }
+      .tag-illu { position: absolute; font-family: "Instrument Serif", serif; font-style: italic; font-size: 24px; color: rgba(255, 255, 255, 0.72); }
       .curseur { position: absolute; width: 40px; height: 48px; z-index: 50; }
       .curseur-svg { width: 40px; height: 48px; filter: drop-shadow(0 6px 10px rgba(0, 0, 0, 0.3)); }
       .ico { width: 28px; height: 28px; }
@@ -83,10 +99,10 @@
 
       /* ---------- intro ---------- */
       #i-mot { position: absolute; left: 300px; top: 150px; width: 1200px; height: 150px; font-weight: 800; font-size: 128px;
-        letter-spacing: 16px; color: var(--encre); white-space: nowrap; }
+        letter-spacing: 16px; color: #fff; white-space: nowrap; text-shadow: 0 0 40px rgba(150, 100, 255, 0.6); }
       #i-mot span { display: inline-block; }
       #i-sous { position: absolute; left: 306px; top: 300px; width: 700px; height: 50px; font-family: "Instrument Serif", serif;
-        font-style: italic; font-size: 44px; color: var(--violet); }
+        font-style: italic; font-size: 44px; color: #e2d7f7; }
 
       /* ---------- niveaux ---------- */
       #n-rang { position: absolute; left: 0; top: 0; width: 1920px; height: 1080px; transform-origin: 960px 0px; }
@@ -251,8 +267,8 @@
       /* ---------- audit ---------- */
       #a-titre { position: absolute; left: 560px; top: 250px; width: 800px; height: 300px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px; }
       #a-titre .grand { display: flex; align-items: baseline; gap: 26px; }
-      #a-titre .grand b { font-weight: 800; font-size: 128px; letter-spacing: -2px; }
-      #a-titre .grand i { font-family: "Instrument Serif", serif; font-style: italic; font-weight: 400; font-size: 140px; color: var(--violet); }
+      #a-titre .grand b { font-weight: 800; font-size: 128px; letter-spacing: -2px; color: #fff; }
+      #a-titre .grand i { font-family: "Instrument Serif", serif; font-style: italic; font-weight: 400; font-size: 140px; color: #d9c8ff; }
       #a-grille { position: absolute; left: 250px; top: 300px; width: 1420px; height: 470px; padding: 30px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 26px;
         transform-origin: 50% 0%; }
       .zone { border-radius: 20px; background: #f7f4fc; padding: 26px; display: flex; flex-direction: column; gap: 18px; }
@@ -322,18 +338,16 @@
 
       <!-- ===================== fond continu ===================== -->
       <section id="fond" class="clip" data-start="0" data-duration="203.5" data-track-index="0">
-        <img class="fond-img" id="fond-clair" src="assets/img/fond-clair.jpg" alt="" />
+        <img class="fond-img" id="fond-oddysee" src="assets/img/fond-oddysee.jpg" alt="" />
         <div class="halo" id="halo-1"></div>
         <div class="halo" id="halo-2"></div>
         <div class="halo" id="halo-3"></div>
-        <img class="fond-img" id="fond-sombre" src="assets/img/fond-sombre.jpg" alt="" />
-        <img id="logo-n" src="assets/img/logo-oddysee-noir.svg" alt="Oddysee" />
         <img id="logo-b" src="assets/img/logo-oddysee-blanc.svg" alt="Oddysee" />
       </section>
 
       <!-- ===================== S01 · accroche ===================== -->
       <section id="intro" class="clip" data-start="0.0" data-duration="5.059" data-track-index="1">
-        <div class="g" id="g-intro">
+        <div class="g" id="g-intro"><div class="decal">
           <div id="i-mot"><span>E</span><span>X</span><span>P</span><span>E</span><span>R</span><span>T</span><span>I</span><span>S</span><span>E</span></div>
           <div id="i-sous" class="h">change les résultats</div>
           <svg class="trait" viewBox="0 0 1920 1080">
@@ -342,7 +356,7 @@
               <linearGradient id="i-ga" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#a877ff" stop-opacity="0.45" /><stop offset="1" stop-color="#a877ff" stop-opacity="0" /></linearGradient>
             </defs>
             <path id="i-aire" d="M300.0,760.0 L322.0,758.9 L344.0,757.8 L366.0,756.5 L388.0,755.3 L410.0,753.9 L432.0,752.5 L454.0,751.0 L476.0,749.4 L498.0,747.7 L520.0,745.9 L542.0,744.1 L564.0,742.1 L586.0,740.0 L608.0,737.8 L630.0,735.5 L652.0,733.1 L674.0,730.5 L696.0,727.8 L718.0,725.0 L740.0,721.9 L762.0,718.8 L784.0,715.4 L806.0,711.9 L828.0,708.1 L850.0,704.2 L872.0,700.1 L894.0,695.7 L916.0,691.1 L938.0,686.2 L960.0,681.0 L982.0,675.6 L1004.0,669.9 L1026.0,663.9 L1048.0,657.5 L1070.0,650.8 L1092.0,643.7 L1114.0,636.3 L1136.0,628.4 L1158.0,620.1 L1180.0,611.3 L1202.0,602.1 L1224.0,592.4 L1246.0,582.1 L1268.0,571.2 L1290.0,559.8 L1312.0,547.8 L1334.0,535.0 L1356.0,521.6 L1378.0,507.5 L1400.0,492.5 L1422.0,476.8 L1444.0,460.2 L1466.0,442.7 L1488.0,424.2 L1510.0,404.7 L1532.0,384.1 L1554.0,362.4 L1576.0,339.6 L1598.0,315.4 L1620.0,290.0 L1620,760 L300,760 Z" fill="url(#i-ga)" opacity="0" />
-            <line x1="300" y1="762" x2="1640" y2="762" stroke="#1b1530" stroke-opacity="0.18" stroke-width="2" />
+            <line x1="300" y1="762" x2="1640" y2="762" stroke="#ffffff" stroke-opacity="0.3" stroke-width="2" />
             <path id="i-courbe" d="M300.0,760.0 L322.0,758.9 L344.0,757.8 L366.0,756.5 L388.0,755.3 L410.0,753.9 L432.0,752.5 L454.0,751.0 L476.0,749.4 L498.0,747.7 L520.0,745.9 L542.0,744.1 L564.0,742.1 L586.0,740.0 L608.0,737.8 L630.0,735.5 L652.0,733.1 L674.0,730.5 L696.0,727.8 L718.0,725.0 L740.0,721.9 L762.0,718.8 L784.0,715.4 L806.0,711.9 L828.0,708.1 L850.0,704.2 L872.0,700.1 L894.0,695.7 L916.0,691.1 L938.0,686.2 L960.0,681.0 L982.0,675.6 L1004.0,669.9 L1026.0,663.9 L1048.0,657.5 L1070.0,650.8 L1092.0,643.7 L1114.0,636.3 L1136.0,628.4 L1158.0,620.1 L1180.0,611.3 L1202.0,602.1 L1224.0,592.4 L1246.0,582.1 L1268.0,571.2 L1290.0,559.8 L1312.0,547.8 L1334.0,535.0 L1356.0,521.6 L1378.0,507.5 L1400.0,492.5 L1422.0,476.8 L1444.0,460.2 L1466.0,442.7 L1488.0,424.2 L1510.0,404.7 L1532.0,384.1 L1554.0,362.4 L1576.0,339.6 L1598.0,315.4 L1620.0,290.0" fill="none" stroke="url(#i-gc)" stroke-width="9" stroke-linecap="round" />
             <circle class="i-nd" id="i-n0" r="13" fill="#fff" stroke="#632bc5" stroke-width="5" opacity="0" />
             <circle class="i-nd" id="i-n1" r="13" fill="#fff" stroke="#632bc5" stroke-width="5" opacity="0" />
@@ -350,12 +364,14 @@
             <circle class="i-nd" id="i-n3" r="13" fill="#fff" stroke="#632bc5" stroke-width="5" opacity="0" />
             <circle id="i-tete" r="15" fill="#632bc5" stroke="#fff" stroke-width="5" opacity="0" />
           </svg>
-        </div>
+          <img class="hero h" id="h-i-etoile" src="assets/img/biblio/verre-etoile-chrome.webp" alt="" style="left: 120px; top: 560px; width: 230px" />
+          <img class="hero h" id="h-i-trophee" src="assets/img/biblio/vintage-08-trophee.webp" alt="" style="left: 1640px; top: 120px; width: 220px" />
+        </div></div>
       </section>
 
       <!-- ===================== S02–S08 · quatre niveaux ===================== -->
       <section id="niv" class="clip" data-start="4.259" data-duration="29.53" data-track-index="2">
-        <div class="g" id="g-niv">
+        <div class="g" id="g-niv"><div class="decal">
           <div id="n-rang">
             <svg class="trait" viewBox="0 0 1920 1080"><path id="n-esc" d="M390 330 L390 300 L770 300 L770 260 L1150 260 L1150 220 L1530 220 L1530 190" fill="none" stroke="#a877ff" stroke-width="4" stroke-dasharray="2 12" stroke-linecap="round" opacity="0.8" /></svg>
             <div class="carte nc h" id="n-c0" style="left: 240px; top: 330px"><div class="por"><img src="assets/img/p-debutant.webp" alt="" /></div><h3>Débutant</h3><div class="barres"><i class="on"></i><i></i><i></i><i></i></div><span class="chipn">Niveau 1</span></div>
@@ -430,12 +446,19 @@
             <div id="d3-offre" class="h"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 2 3 7 7 .6-5.3 4.6L18.4 21 12 17.3 5.6 21l1.7-6.8L2 9.6 9 9z"/></svg><b>Ton entreprise</b></div>
             <div class="chipv h" id="d3-choix" style="position: absolute; left: 860px; top: 590px"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Choisie</div>
           </div>
-        </div>
+          <img class="hero h" id="h-n-bulles" src="assets/img/biblio/bulles-discussion-3d.webp" alt="" style="left: 1640px; top: 560px; width: 230px" />
+          <img class="hero h" id="h-n-fusee" src="assets/img/biblio/verre-fusee.webp" alt="" style="left: 1660px; top: 600px; width: 230px" />
+          <img class="hero h" id="h-d0-clavier" src="assets/img/biblio/verre-touche-clavier.webp" alt="" style="left: 1560px; top: 640px; width: 230px" />
+          <img class="hero h" id="h-d1-mains" src="assets/img/biblio/vintage-04-mains-ordinateur.webp" alt="" style="left: 20px; top: 560px; width: 300px" />
+          <img class="hero h" id="h-d2-coche" src="assets/img/biblio/verre-coche-chrome.webp" alt="" style="left: 1660px; top: 640px; width: 200px" />
+          <img class="hero h" id="h-d3-cible" src="assets/img/biblio/verre-cible.webp" alt="" style="left: 30px; top: 700px; width: 230px" />
+          <img class="hero h" id="h-d3-loupe" src="assets/img/biblio/vintage-07-loupe-main.webp" alt="" style="left: 1640px; top: 180px; width: 200px" />
+        </div></div>
       </section>
 
       <!-- ===================== S09 · effets concrets ===================== -->
       <section id="effets" class="clip" data-start="32.989" data-duration="11.95" data-track-index="3">
-        <div class="g" id="g-effets">
+        <div class="g" id="g-effets"><div class="decal">
           <div class="onde h" id="e-o1" style="left: 790px; top: 230px; width: 340px; height: 340px"></div>
           <div class="onde h" id="e-o2" style="left: 790px; top: 230px; width: 340px; height: 340px"></div>
           <div class="por h" id="e-por" style="left: 810px; top: 250px; width: 300px; height: 300px"><img src="assets/img/p-dirigeant.webp" alt="" /></div>
@@ -461,12 +484,15 @@
           <div class="chipn h" id="e-t2" style="position: absolute; left: 1110px; top: 236px">Rendez-vous</div>
           <div class="chipn h" id="e-t3" style="position: absolute; left: 1570px; top: 236px">Clients</div>
           <div class="tag-illu h" id="e-illu" style="left: 1660px; top: 540px">Exemple</div>
-        </div>
+          <img class="hero h" id="h-e-pouce" src="assets/img/biblio/vintage-05-pouce-leve.webp" alt="" style="left: 90px; top: 640px; width: 220px" />
+          <img class="hero h" id="h-e-badge" src="assets/img/biblio/badge-verifie-3d.webp" alt="" style="left: 1700px; top: 560px; width: 170px" />
+          <img class="hero h" id="h-e-bulles" src="assets/img/biblio/bulles-discussion-3d.webp" alt="" style="left: 600px; top: 620px; width: 170px" />
+        </div></div>
       </section>
 
       <!-- ===================== S10–S12 · douleur ===================== -->
       <section id="douleur" class="clip" data-start="44.139" data-duration="21.195" data-track-index="4">
-        <div class="g" id="g-douleur">
+        <div class="g" id="g-douleur"><div class="decal">
           <svg class="trait" viewBox="0 0 1920 1080">
             <path id="dl-l1" d="M840 380 L700 330" stroke="rgba(255,255,255,0.35)" stroke-width="3" stroke-dasharray="3 9" fill="none" />
             <path id="dl-l2" d="M1080 340 L1180 270" stroke="rgba(255,255,255,0.35)" stroke-width="3" stroke-dasharray="3 9" fill="none" />
@@ -494,12 +520,20 @@
           <div class="por h" id="dl-por2" style="left: 260px; top: 250px; width: 220px; height: 220px"><img src="assets/img/p-dirigeant.webp" alt="" /></div>
           <div class="chipb h" id="dl-cherche" style="position: absolute; left: 210px; top: 500px"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>Chercher des clients…</div>
           <div class="chipb h" id="dl-dev" style="position: absolute; left: 190px; top: 580px"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="m7 15 4-4 3 3 5-6"/></svg>Développer l'entreprise</div>
-        </div>
+          <img class="hero h" id="h-dl-question" src="assets/img/biblio/verre-point-interrogation.webp" alt="" style="left: 1640px; top: 640px; width: 200px" />
+          <img class="hero h" id="h-dl-sablier" src="assets/img/biblio/verre-sablier.webp" alt="" style="left: 1540px; top: 600px; width: 230px" />
+          <img class="hero h" id="h-dl-loupe" src="assets/img/biblio/vintage-13-loupe-main-2.webp" alt="" style="left: 30px; top: 640px; width: 230px" />
+          <div class="orb h" id="orb0" style="left: 700px; top: 130px"><img src="assets/img/biblio/facebook-3d.webp" alt="" /><b id="orbn0" data-max="3">0</b></div>
+          <div class="orb h" id="orb1" style="left: 1100px; top: 110px"><img src="assets/img/biblio/instagram-3d.webp" alt="" /><b id="orbn1" data-max="12">0</b></div>
+          <div class="orb h" id="orb2" style="left: 610px; top: 450px"><img src="assets/img/biblio/tiktok-3d.webp" alt="" /><b id="orbn2" data-max="7">0</b></div>
+          <div class="orb h" id="orb3" style="left: 1080px; top: 560px"><img src="assets/img/biblio/linkedin-3d.webp" alt="" /><b id="orbn3" data-max="5">0</b></div>
+          <div class="orb h" id="orb4" style="left: 800px; top: 580px"><img src="assets/img/biblio/whatsapp-3d.webp" alt="" /><b id="orbn4" data-max="9">0</b></div>
+        </div></div>
       </section>
 
       <!-- ===================== S13 · Oddysee ===================== -->
       <section id="odd" class="clip" data-start="64.534" data-duration="4.09" data-track-index="5">
-        <div class="g" id="g-odd">
+        <div class="g" id="g-odd"><div class="decal">
           <div id="o-badge" class="h"><img src="assets/img/logo-onde.jpg" alt="Oddysee" /></div>
           <img id="o-mot" class="h" src="assets/img/logo-oddysee-blanc.svg" alt="Oddysee" />
           <div class="por h" id="o-p1" style="left: 360px; top: 230px; width: 230px; height: 230px"><img src="assets/img/p-alvarez.webp" alt="" /></div>
@@ -509,32 +543,37 @@
           <div class="por h" id="o-p3" style="left: 1440px; top: 450px; width: 180px; height: 180px"><img src="assets/img/p-imad.webp" alt="" /></div>
           <div class="nom h" id="o-n3" style="left: 1380px; top: 645px; width: 300px"><b>Imad El Qadi</b><span>Développeur</span></div>
           <div id="flash"></div>
-        </div>
+        </div></div>
       </section>
 
       <!-- ===================== S14–S15 · parcours ===================== -->
       <section id="parcours" class="clip" data-start="67.824" data-duration="14.138" data-track-index="6">
-        <div class="g" id="g-parcours">
-          <svg class="trait" viewBox="0 0 1920 1080"><path id="p-chemin" d="M90 430 C 180 360, 220 470, 270 430 M650 430 L 770 430 M1150 430 L 1270 430" fill="none" stroke="#632bc5" stroke-width="5" stroke-linecap="round" stroke-dasharray="4 12" /></svg>
-          <div class="carte pc h" id="p-c1" style="left: 270px; top: 250px"><div class="pc-vig"><img src="assets/img/site-hero.jpg" alt="" /></div><div class="ligne-c"><span class="icoc"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg></span><div class="titre-c">Découvrir</div></div><div class="sk" style="width: 80%"></div></div>
-          <div class="carte pc h" id="p-c2" style="left: 770px; top: 250px"><div class="pc-vig" style="padding: 22px; display: flex; flex-direction: column; gap: 14px"><div class="sk" style="width: 55%; height: 18px; background: #d9cdf3"></div><div class="sk" style="width: 90%"></div><div class="sk" style="width: 75%"></div><div class="sk" style="width: 82%"></div></div><div class="ligne-c"><span class="icoc"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M8 13h8M8 17h6"/></svg></span><div class="titre-c">Comprendre</div></div><div class="sk" style="width: 70%"></div></div>
-          <div class="carte pc h" id="p-c3" style="left: 1270px; top: 250px"><div class="pc-vig" style="padding: 22px; display: flex; flex-direction: column; gap: 12px; background: #fff; border: 2px solid #f0ebf8"><div class="champ"></div><div class="champ"></div><div class="bouton">Envoyer</div></div><div class="ligne-c"><span class="icoc"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></span><div class="titre-c">Contacter</div></div><div class="sk" style="width: 60%"></div></div>
+        <div class="g" id="g-parcours"><div class="decal">
+          <div class="carte etape h" id="p-c1" style="left: 120px; top: 150px"><span class="icoc"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg></span><div><div class="titre-c">Découvrir</div><div class="sous-c">Les bonnes personnes trouvent ton entreprise</div></div></div>
+          <div class="carte etape h" id="p-c2" style="left: 120px; top: 290px"><span class="icoc"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M8 13h8M8 17h6"/></svg></span><div><div class="titre-c">Comprendre</div><div class="sous-c">La valeur de ton offre est claire</div></div></div>
+          <div class="carte etape h" id="p-c3" style="left: 120px; top: 430px"><span class="icoc"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></span><div><div class="titre-c">Contacter</div><div class="sous-c">Elles te laissent leur demande</div></div></div>
+          <svg class="trait" viewBox="0 0 1920 1080"><path id="p-chemin" d="M90 120 L90 560" fill="none" stroke="#d9c8ff" stroke-width="5" stroke-linecap="round" stroke-dasharray="4 12" /></svg>
           <div class="por h" id="p-v1" style="left: 0; top: 0; width: 64px; height: 64px; border-width: 3px"><img src="assets/img/p-g2.webp" alt="" /></div>
           <div class="por h" id="p-v2" style="left: 0; top: 0; width: 64px; height: 64px; border-width: 3px"><img src="assets/img/p-g4.webp" alt="" /></div>
-          <div class="notif h" id="p-notif" style="left: 1330px; top: 170px"><span class="icoc"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></span><div><b>Nouvelle demande</b><span>Formulaire du site</span></div></div>
-
-          <div class="carte sit h" id="p-s1" style="left: 200px; top: 250px"><div class="sit-fond" style="background: linear-gradient(150deg, #f7f3ff, #e2d7f7)"></div><div class="por" style="left: 140px; top: 40px; width: 160px; height: 160px"><img src="assets/img/p-dirigeant.webp" alt="" /></div><div class="sit-l"><span class="icoc"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2M3 13h18"/></svg></span>Au travail</div></div>
-          <div class="carte sit h" id="p-s2" style="left: 740px; top: 250px"><div class="sit-fond" style="background: linear-gradient(150deg, #ffe9dc, #f6d3f0)"></div><div style="position: absolute; left: 170px; top: 60px; color: #d94f8a"><svg viewBox="0 0 24 24" style="width: 100px; height: 100px" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1 1.1L12 21l7.8-7.5 1-1.1a5.5 5.5 0 0 0 0-7.8z"/></svg></div><div class="sit-l"><span class="icoc"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></svg></span>Avec tes proches</div></div>
-          <div class="carte sit h" id="p-s3" style="left: 1280px; top: 250px"><img class="sit-fond" src="assets/img/ciel.jpg" alt="" style="width: 440px; height: 330px; object-fit: cover; object-position: 50% 35%" /><div class="sit-l" style="color: #fff"><span class="icoc" style="background: rgba(255,255,255,0.25); color: #fff"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg></span>Pendant que tu dors</div></div>
-          <div class="notif h" id="p-n1" style="left: 250px; top: 196px"><span class="icoc"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></span><div><b>Nouvelle demande</b></div></div>
-          <div class="notif h" id="p-n2" style="left: 790px; top: 196px"><span class="icoc"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></span><div><b>Nouvelle demande</b></div></div>
-          <div class="notif h" id="p-n3" style="left: 1330px; top: 196px"><span class="icoc"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></span><div><b>Nouvelle demande</b></div></div>
-        </div>
+          <div class="notif h" id="p-notif" style="left: 330px; top: 590px"><span class="icoc"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></span><div><b>Nouvelle demande</b><span>Formulaire du site</span></div></div>
+          <img class="hero h" id="h-route" src="assets/img/biblio/vintage-09-route.webp" alt="" style="left: -40px; top: 620px; width: 330px" /><img class="hero h" id="h-avion" src="assets/img/biblio/verre-avion-papier.webp" alt="" style="left: 620px; top: 600px; width: 190px" />
+          <div class="carte sitm h" id="p-s1" style="left: 120px; top: 150px"><div class="vig"><img src="assets/img/p-dirigeant.webp" alt="" style="object-position: 50% 20%" /></div><div class="titre-c">Même quand tu es occupé</div></div>
+          <div class="carte sitm h" id="p-s2" style="left: 120px; top: 310px"><div class="vig" style="background: linear-gradient(150deg, #ffe9dc, #f6d3f0); display: flex; align-items: center; justify-content: center"><img src="assets/img/biblio/vintage-15-coeur.webp" alt="" style="width: 74px; height: 74px; object-fit: contain" /></div><div class="titre-c">Avec tes proches</div></div>
+          <div class="carte sitm h" id="p-s3" style="left: 120px; top: 470px"><div class="vig"><img src="assets/img/ciel.jpg" alt="" style="object-position: 50% 35%" /></div><div class="titre-c">Pendant que tu dors</div></div>
+          <div class="notif h" id="p-n1" style="left: 600px; top: 160px"><span class="icoc"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></span><div><b>Nouvelle demande</b></div></div>
+          <div class="notif h" id="p-n2" style="left: 600px; top: 320px"><span class="icoc"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></span><div><b>Nouvelle demande</b></div></div>
+          <div class="notif h" id="p-n3" style="left: 600px; top: 480px"><span class="icoc"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></span><div><b>Nouvelle demande</b></div></div>
+        </div></div>
       </section>
+
+      <section id="pv" class="clip" data-start="67.824" data-duration="14.138" data-track-index="17">
+        <div class="g" id="g-pv"><div id="pv-cadre"></div><div id="pv-tag">Exemple de tableau de suivi</div></div>
+      </section>
+      <video id="pv-video" src="assets/video/tableau-de-bord.mp4" muted playsinline data-start="68.374" data-duration="13.1" data-track-index="18" data-volume="0"></video>
 
       <!-- ===================== S16–S18 · preuves ===================== -->
       <section id="preuves" class="clip" data-start="81.162" data-duration="20.549" data-track-index="7">
-        <div class="g" id="g-preuves">
+        <div class="g" id="g-preuves"><div class="decal">
           <div class="chipb h" id="r-titre" style="position: absolute; left: 790px; top: 130px"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 2 3 7 7 .6-5.3 4.6L18.4 21 12 17.3 5.6 21l1.7-6.8L2 9.6 9 9z"/></svg>Nos réalisations</div>
           <div class="carte tuile h" id="r-t0" style="left: 430px; top: 210px"><img src="assets/img/proj-montessorie-mockup.webp" alt="" /><b>Planète Montessori</b></div>
           <div class="carte tuile h" id="r-t1" style="left: 810px; top: 210px"><img src="assets/img/proj-hubwell-mockup.webp" alt="" /><b>Hubwell</b></div>
@@ -556,12 +595,16 @@
           <div class="carte ref h" id="r-l1" style="left: 590px; top: 380px"><img src="assets/img/ref-puma.svg" alt="Puma" /></div>
           <div class="carte ref h" id="r-l2" style="left: 970px; top: 380px"><img src="assets/img/ref-pmis.svg" alt="Planète Montessori" /></div>
           <div class="carte ref h" id="r-l3" style="left: 1350px; top: 380px"><img src="assets/img/ref-menaramall.svg" alt="Menara Mall" /></div>
-        </div>
+          <img class="hero h" id="h-r-globe" src="assets/img/biblio/verre-globe.webp" alt="" style="left: 1620px; top: 600px; width: 240px" />
+          <img class="hero h" id="h-r-insta" src="assets/img/biblio/instagram-3d.webp" alt="" style="left: 1700px; top: 150px; width: 120px" />
+          <img class="hero h" id="h-r-tiktok" src="assets/img/biblio/tiktok-3d.webp" alt="" style="left: 1790px; top: 250px; width: 110px" />
+          <img class="hero h" id="h-r-badge" src="assets/img/biblio/badge-verifie-3d.webp" alt="" style="left: 1640px; top: 620px; width: 180px" />
+        </div></div>
       </section>
 
       <!-- ===================== S19 · Meta ===================== -->
       <section id="meta" class="clip" data-start="100.911" data-duration="13.171" data-track-index="8">
-        <div class="g" id="g-meta">
+        <div class="g" id="g-meta"><div class="decal">
           <svg class="trait" viewBox="0 0 1920 1080">
             <path id="m-arc" d="M1250 300 C 1340 220, 1400 240, 1440 300" fill="none" stroke="#a877ff" stroke-width="4" stroke-dasharray="4 10" stroke-linecap="round" />
             <path id="m-c1" d="M560 640 C 900 640, 1100 640, 1330 640" fill="none" stroke="rgba(255,255,255,0.45)" stroke-width="3" />
@@ -575,12 +618,14 @@
           <div class="verre sv h" id="m-s2" style="left: 600px; top: 600px"><span class="icoc"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></span>Convaincre</div>
           <div class="verre sv h" id="m-s3" style="left: 900px; top: 600px"><span class="icoc"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>Convertir</div>
           <div class="chipv h" id="m-but" style="position: absolute; left: 1330px; top: 614px"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="m7 15 4-4 3 3 5-6"/></svg>Développer la clientèle</div>
-        </div>
+          <img class="hero h" id="h-m-meta" src="assets/img/biblio/meta-facebook-instagram-verre.webp" alt="" style="left: 30px; top: 120px; width: 330px" />
+          <img class="hero h" id="h-m-passeport" src="assets/img/biblio/vintage-10-passeport.webp" alt="" style="left: 1560px; top: 40px; width: 190px" />
+        </div></div>
       </section>
 
       <!-- ===================== S20–S22 · engagement ===================== -->
       <section id="engage" class="clip" data-start="113.282" data-duration="23.006" data-track-index="9">
-        <div class="g" id="g-engage">
+        <div class="g" id="g-engage"><div class="decal">
           <div class="por h" id="g-alv" style="left: 870px; top: 150px; width: 180px; height: 180px"><img src="assets/img/p-alvarez.webp" alt="" /></div>
           <div id="e-mot"><span>E</span><span>N</span><span>G</span><span>A</span><span>G</span><span>E</span><span>M</span><span>E</span><span>N</span><span>T</span></div>
           <div class="verre bloc h" id="b1" style="left: 300px; top: 260px"><div class="montant">3 000 000 DH</div><div class="lib"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="16" height="18" rx="1"/><path d="M9 7h1M14 7h1M9 11h1M14 11h1M9 15h1M14 15h1"/></svg>Investis dans ton entreprise</div></div>
@@ -590,12 +635,15 @@
           <div class="verre vc h" id="g-strat" style="left: 420px; top: 400px; width: 380px"><span class="icoc"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M8 13h8M8 17h6"/></svg></span>Budget stratégie</div>
           <div class="verre vc h" id="g-pub" style="left: 1120px; top: 400px; width: 380px"><span class="icoc"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11v2a1 1 0 0 0 1 1h3l5 4V6L7 10H4a1 1 0 0 0-1 1z"/><path d="M16 8a5 5 0 0 1 0 8"/></svg></span>Budget publicité</div>
           <div class="chipv h" id="g-but" style="position: absolute; left: 790px; top: 640px; height: 72px; font-size: 30px; border-radius: 36px"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="m7 15 4-4 3 3 5-6"/></svg>Développer la clientèle</div>
-        </div>
+          <img class="hero h" id="h-g-coeur" src="assets/img/biblio/vintage-15-coeur.webp" alt="" style="left: 1560px; top: 520px; width: 280px" />
+          <img class="hero h" id="h-g-fusee" src="assets/img/biblio/verre-fusee.webp" alt="" style="left: 150px; top: 560px; width: 230px" />
+          <img class="hero h" id="h-g-cible" src="assets/img/biblio/verre-cible.webp" alt="" style="left: 1600px; top: 600px; width: 220px" />
+        </div></div>
       </section>
 
       <!-- ===================== S23 · outils ===================== -->
       <section id="outils" class="clip" data-start="135.488" data-duration="7.948" data-track-index="10">
-        <div class="g" id="g-outils">
+        <div class="g" id="g-outils"><div class="decal">
           <div id="ou-fen" class="h">
             <div id="ou-barre"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg><span id="ou-q">Comment trouver plus de clients ?</span></div>
             <div style="position: absolute; left: 80px; top: 200px; display: flex; gap: 20px">
@@ -603,32 +651,36 @@
             </div>
             <div id="ou-rep"><div class="sk h" style="width: 92%"></div><div class="sk h" style="width: 84%"></div><div class="sk h" style="width: 88%"></div><div class="sk h" style="width: 60%"></div></div>
           </div>
-        </div>
+          <img class="hero h" id="h-ou-question" src="assets/img/biblio/verre-point-interrogation.webp" alt="" style="left: 120px; top: 560px; width: 200px" />
+          <img class="hero h" id="h-ou-bulles" src="assets/img/biblio/bulles-discussion-3d.webp" alt="" style="left: 1570px; top: 520px; width: 260px" />
+        </div></div>
       </section>
 
       <!-- ===================== S24 · temps ===================== -->
       <section id="temps" class="clip" data-start="142.636" data-duration="8.799" data-track-index="11">
-        <div class="g" id="g-temps">
+        <div class="g" id="g-temps"><div class="decal">
           <div class="carte agenda h" id="tp-a1" style="left: 300px; top: 200px"><div class="ag-t"><span class="icoc"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="17" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg></span>Ton agenda</div><div class="ag-l" id="agt0"><b>9:00</b><span><em class="occ">Équipe</em></span></div><div class="ag-l" id="agt1"><b>10:00</b><span></span></div><div class="ag-l" id="agt2"><b>11:00</b><span></span></div><div class="ag-l" id="agt3"><b>12:00</b><span><em class="occ">Client</em></span></div><div class="ag-l" id="agt4"><b>14:00</b><span></span></div><div class="ag-l" id="agt5"><b>15:00</b><span><em class="occ">Fournisseur</em></span></div></div>
           <div class="carte agenda h" id="tp-a2" style="left: 1120px; top: 200px"><div class="ag-t"><span class="icoc"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="17" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg></span>Agenda Oddysee</div><div class="ag-l" id="ago0"><b>9:00</b><span></span></div><div class="ag-l" id="ago1"><b>10:00</b><span><em class="occ">Projet</em></span></div><div class="ag-l" id="ago2"><b>11:00</b><span></span></div><div class="ag-l" id="ago3"><b>12:00</b><span></span></div><div class="ag-l" id="ago4"><b>14:00</b><span><em class="occ">Tournage</em></span></div><div class="ag-l" id="ago5"><b>15:00</b><span></span></div></div>
           <div id="tp-slot" class="h" data-layout-allow-overlap data-layout-allow-occlusion style="left: 400px; top: 444px; width: 1120px"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Séance de travail · ton entreprise</div>
           <div class="chipb h" id="tp-c1" style="position: absolute; left: 380px; top: 130px"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Ton temps</div>
           <div class="chipb h" id="tp-c2" style="position: absolute; left: 1250px; top: 130px"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Le nôtre aussi</div>
-        </div>
+          <img class="hero h" id="h-tp-sablier" src="assets/img/biblio/verre-sablier.webp" alt="" style="left: 1620px; top: 520px; width: 240px" />
+        </div></div>
       </section>
 
       <!-- ===================== S25 · question ===================== -->
       <section id="question" class="clip" data-start="150.635" data-duration="8.055" data-track-index="12">
-        <div class="g" id="g-question">
+        <div class="g" id="g-question"><div class="decal">
           <div class="por h" id="q-por" style="left: 330px; top: 300px; width: 260px; height: 260px"><img src="assets/img/p-dirigeant.webp" alt="" /></div>
           <div class="points h" id="q-pts" style="left: 560px; top: 250px"><i></i><i></i><i></i></div>
           <div id="q-bulle" class="h"><span id="q0">«&#8239;Qu’est-ce</span> <span id="q1">que</span> <span id="q2">vous</span> <span id="q3">pourriez</span> <span id="q4">faire</span> <span id="q5">pour</span> <span id="q6" class="v">mon</span> <span id="q7" class="v">entreprise&#8239;?&#8239;»</span></div>
-        </div>
+          <img class="hero h" id="h-q-question" src="assets/img/biblio/verre-point-interrogation.webp" alt="" style="left: 1660px; top: 600px; width: 200px" />
+        </div></div>
       </section>
 
       <!-- ===================== S26–S28 · audit ===================== -->
       <section id="audit" class="clip" data-start="157.89" data-duration="18.782" data-track-index="13">
-        <div class="g" id="g-audit">
+        <div class="g" id="g-audit"><div class="decal">
           <div id="a-titre" class="h"><span class="chipv" style="height: 44px; font-size: 20px"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>Regardons ensemble</span><div class="grand"><b>Audit</b><i>gratuit</i></div></div>
           <div class="carte h" id="a-grille">
             <div class="zone" id="a-z0"><h5><span class="icoc"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="m7 15 4-4 3 3 5-6"/></svg></span>Situation</h5><div class="sk" style="width: 90%"></div><div class="sk" style="width: 70%"></div><div class="sk" style="width: 80%"></div><div class="sk" style="width: 55%"></div></div>
@@ -640,12 +692,16 @@
           <div class="carte action h" id="a-x3" style="left: 300px; top: 490px"><span class="num">3</span><b>Action prioritaire</b><div class="sk"></div></div>
           <div class="notif h" id="a-msg" style="left: 1280px; top: 330px"><span class="icoc"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></span><div><b>Nouvelle demande</b><span>Prospect intéressé</span></div></div>
           <div class="notif h" id="a-rdv" style="left: 1280px; top: 450px"><span class="icoc" style="background: #1fa855"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><div><b>Rendez-vous confirmé</b><span>Nouveau client</span></div></div>
-        </div>
+          <img class="hero h" id="h-a-micro" src="assets/img/biblio/vintage-02-microscope.webp" alt="" style="left: 90px; top: 480px; width: 250px" />
+          <img class="hero h" id="h-a-noeud" src="assets/img/biblio/verre-noeud.webp" alt="" style="left: 1560px; top: 200px; width: 210px" />
+          <img class="hero h" id="h-a-loupe" src="assets/img/biblio/vintage-07-loupe-main.webp" alt="" style="left: 1660px; top: 700px; width: 220px" />
+          <img class="hero h" id="h-a-fusee" src="assets/img/biblio/verre-fusee.webp" alt="" style="left: 1570px; top: 620px; width: 220px" />
+        </div></div>
       </section>
 
       <!-- ===================== S29 · clic ===================== -->
       <section id="cta" class="clip" data-start="175.872" data-duration="5.679" data-track-index="14">
-        <div class="g" id="g-cta">
+        <div class="g" id="g-cta"><div class="decal">
           <div id="c-fen" class="h">
             <div id="c-chrome"><i></i><i></i><i></i><span>oddysee.fr/contact</span></div>
             <div id="c-entete"><img src="assets/img/logo-oddysee-noir.svg" alt="Oddysee" /><div id="c-menu"><span>Accueil</span><span>À propos</span><span>Services</span><span>Projets</span><b>Contact</b></div><div id="c-dem">Démarrer maintenant</div></div>
@@ -668,12 +724,13 @@
           <div class="chipv h" id="c-desc" style="position: absolute; left: 1380px; top: 740px"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>Lien dans la description</div>
           <div class="tag-illu h" id="c-illu" style="left: 240px; top: 812px">Illustration du parcours de réservation</div>
           <div class="curseur h" id="c-cur" style="left: 0; top: 0"><svg viewBox="0 0 28 34" class="curseur-svg"><path d="M2 2 L2 27 L8.5 21 L13 31.5 L17.5 29.5 L13 19.5 L22 19.5 Z" fill="#111" stroke="#fff" stroke-width="2.2" stroke-linejoin="round"/></svg></div>
-        </div>
+          <img class="hero h" id="h-c-main" src="assets/img/biblio/vintage-03-main-pointe.webp" alt="" style="left: -60px; top: 520px; width: 300px" />
+        </div></div>
       </section>
 
       <!-- ===================== S30–S31 · capacité ===================== -->
       <section id="capa" class="clip" data-start="180.751" data-duration="14.348" data-track-index="15">
-        <div class="g" id="g-capa">
+        <div class="g" id="g-capa"><div class="decal">
           <div id="k-cadre" class="h"></div>
           <div class="chipv h" id="k-chip" style="position: absolute; left: 610px; top: 192px"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Accompagnement limité pour préserver la qualité</div>
           <div class="verre dossier h" id="k-d0" style="left: 300px; top: 270px"><span class="icoc"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg></span><div class="titre-c">Dossier suivi</div><div class="sk" style="width: 80%"></div><div class="sk" style="width: 60%"></div><div class="prog"><i></i></div></div>
@@ -682,12 +739,14 @@
           <div class="verre dossier h" id="k-d3" style="left: 1320px; top: 270px"><span class="icoc"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg></span><div class="titre-c">Dossier suivi</div><div class="sk" style="width: 65%"></div><div class="sk" style="width: 75%"></div><div class="prog"><i></i></div></div>
           <div id="k-bouton" class="h"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="17" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>Réserve ton audit</div>
           <div class="curseur h" id="k-cur" style="left: 0; top: 0"><svg viewBox="0 0 28 34" class="curseur-svg"><path d="M2 2 L2 27 L8.5 21 L13 31.5 L17.5 29.5 L13 19.5 L22 19.5 Z" fill="#111" stroke="#fff" stroke-width="2.2" stroke-linejoin="round"/></svg></div>
-        </div>
+          <img class="hero h" id="h-k-cadenas" src="assets/img/biblio/vintage-12-cadenas.webp" alt="" style="left: 1690px; top: 520px; width: 220px" />
+          <img class="hero h" id="h-k-sablier" src="assets/img/biblio/verre-sablier.webp" alt="" style="left: 30px; top: 560px; width: 200px" />
+        </div></div>
       </section>
 
       <!-- ===================== S32 · conclusion ===================== -->
       <section id="fin" class="clip" data-start="194.299" data-duration="9.201" data-track-index="16">
-        <div class="g" id="g-fin">
+        <div class="g" id="g-fin"><div class="decal">
           <div class="verre fc h" id="f-c0" style="left: 240px; top: 330px"><div class="por"><img src="assets/img/p-debutant.webp" alt="" /></div><h3>Débutant</h3><div class="barres"><i class="on"></i><i></i><i></i><i></i></div></div>
           <div class="verre fc h" id="f-c1" style="left: 620px; top: 290px"><div class="por"><img src="assets/img/p-amateur.webp" alt="" /></div><h3>Amateur</h3><div class="barres"><i class="on"></i><i class="on"></i><i></i><i></i></div></div>
           <div class="verre fc h" id="f-c2" style="left: 1000px; top: 250px"><div class="por"><img src="assets/img/p-pro.webp" alt="" /></div><h3>Professionnel</h3><div class="barres"><i class="on"></i><i class="on"></i><i class="on"></i><i></i></div></div>
@@ -696,7 +755,31 @@
           <img id="f-mot" class="h" src="assets/img/logo-oddysee-blanc.svg" alt="Oddysee" />
           <div id="f-bouton" class="h"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="17" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>Réserve ton audit</div>
           <div id="f-site" class="h">oddysee.fr · lien dans la description</div>
-        </div>
+          <img class="hero h" id="h-f-trophee" src="assets/img/biblio/vintage-08-trophee.webp" alt="" style="left: 1500px; top: 560px; width: 220px" />
+        </div></div>
+      </section>
+
+      <section id="transition-etoile" class="clip" data-start="0" data-duration="203.5" data-track-index="19">
+        <div id="etoile-flash"></div>
+        <svg id="etoile" viewBox="10 73 362 362">
+          <defs>
+            <g id="ico-et">
+              <path d="M189.116 253.542L229.046 213.762L189.116 108.819L189.116 253.542Z" fill="#ffffff"/>
+              <path d="M189.202 253.242L189.202 253.232L229.257 213.576L334.923 253.242L189.202 253.242Z" fill="#ffffff"/>
+              <path d="M188.973 253.242L188.973 253.232L154.132 218.737L148.919 213.576L43.252 253.242L188.766 253.242L188.973 253.242Z" fill="#ffffff"/>
+              <path d="M189.467 253.014L229.407 292.794L189.467 397.736L189.467 253.014Z" fill="#ffffff"/>
+              <path fill-rule="evenodd" d="M204.586 79.6705L364.986 238.972C373.121 247.051 373.121 260.149 364.986 268.227L204.586 427.529C196.452 435.607 183.263 435.607 175.129 427.529L14.7285 268.227C6.59422 260.149 6.59421 247.051 14.7285 238.972L175.129 79.6705C183.263 71.592 196.452 71.592 204.586 79.6705ZM189.151 252.91V252.92L229.216 292.576L334.872 252.91L189.151 252.91ZM188.973 253.242V253.232L154.132 218.737L149.138 213.762L189.067 108.819L189.067 253.542L188.766 253.242H188.973ZM188.887 398.378L188.887 253.655H43.1656L148.832 293.311L188.887 398.378Z" fill="#ffffff"/>
+            </g>
+            <clipPath id="q0"><rect x="0" y="60" width="189.5" height="193.6" /></clipPath>
+            <clipPath id="q1"><rect x="189.5" y="60" width="200" height="193.6" /></clipPath>
+            <clipPath id="q2"><rect x="0" y="253.4" width="189.5" height="200" /></clipPath>
+            <clipPath id="q3"><rect x="189.5" y="253.4" width="200" height="200" /></clipPath>
+          </defs>
+          <g class="eclat" id="ec0" clip-path="url(#q0)"><use href="#ico-et" /></g>
+          <g class="eclat" id="ec1" clip-path="url(#q1)"><use href="#ico-et" /></g>
+          <g class="eclat" id="ec2" clip-path="url(#q2)"><use href="#ico-et" /></g>
+          <g class="eclat" id="ec3" clip-path="url(#q3)"><use href="#ico-et" /></g>
+        </svg>
       </section>
 
       <audio id="voix" src="voix.mp3" data-start="0" data-duration="201.25" data-track-index="30" data-volume="1"></audio>
@@ -705,119 +788,146 @@
       <section id="sous-titres" class="clip" data-start="0" data-duration="203.5" data-track-index="20">
         <div id="sous">
         <div class="st" id="st0"><span class="w " id="w0">Il</span> <span class="w " id="w1">y</span> <span class="w " id="w2">a</span> <span class="w " id="w3">un</span> <span class="w " id="w4">truc</span> <span class="w " id="w5">marrant</span> <span class="w " id="w6">dans</span> <span class="w " id="w7">le</span> <span class="w ital" id="w8">marketing :</span></div>
-        <div class="st" id="st1"><span class="w " id="w10">les</span> <span class="w " id="w11">différences</span> <span class="w " id="w12">d’expertise</span> <span class="w " id="w13">sont</span> <span class="w cle" id="w14">exponentielles.</span></div>
-        <div class="st" id="st2"><span class="w " id="w15">Tu</span> <span class="w " id="w16">as</span> <span class="w " id="w17">le</span> <span class="w cle" id="w18">débutant,</span></div>
-        <div class="st" id="st3"><span class="w cle" id="w19">l’amateur,</span> <span class="w " id="w20">le</span> <span class="w cle" id="w21">professionnel</span> <span class="w " id="w22">et</span> <span class="w cle" id="w23">l’expert.</span></div>
-        <div class="st" id="st4"><span class="w " id="w24">De</span> <span class="w " id="w25">l’extérieur,</span></div>
-        <div class="st" id="st5"><span class="w " id="w26">ils</span> <span class="w " id="w27">peuvent</span> <span class="w " id="w28">tous</span> <span class="w " id="w29">te</span> <span class="w " id="w30">promettre</span> <span class="w " id="w31">la</span> <span class="w " id="w32">même</span> <span class="w " id="w33">chose :</span></div>
-        <div class="st" id="st6"><span class="w " id="w35">«</span> <span class="w " id="w36">On</span> <span class="w " id="w37">va</span> <span class="w " id="w38">t’aider</span> <span class="w " id="w39">à</span> <span class="w " id="w40">obtenir</span> <span class="w cle" id="w41">plus</span> <span class="w " id="w42">de</span> <span class="w cle" id="w43">clients. »</span></div>
-        <div class="st" id="st7"><span class="w " id="w45">Mais</span> <span class="w " id="w46">entre</span> <span class="w " id="w47">chaque</span> <span class="w " id="w48">niveau,</span></div>
-        <div class="st" id="st8"><span class="w " id="w49">la</span> <span class="w " id="w50">différence</span> <span class="w " id="w51">dans</span> <span class="w " id="w52">les</span> <span class="w " id="w53">résultats</span></div>
-        <div class="st" id="st9"><span class="w " id="w54">peut</span> <span class="w " id="w55">être</span> <span class="w ital" id="w56">complètement</span> <span class="w ital" id="w57">folle.</span></div>
-        <div class="st" id="st10"><span class="w " id="w58">Le</span> <span class="w " id="w59">débutant</span> <span class="w cle" id="w60">découvre</span> <span class="w " id="w61">les</span> <span class="w " id="w62">outils.</span></div>
-        <div class="st" id="st11"><span class="w " id="w63">L’amateur</span> <span class="w cle" id="w64">reproduit</span> <span class="w " id="w65">ce</span> <span class="w " id="w66">qu’il</span> <span class="w " id="w67">a</span> <span class="w " id="w68">vu</span> <span class="w " id="w69">ailleurs.</span></div>
-        <div class="st" id="st12"><span class="w " id="w70">Le</span> <span class="w " id="w71">professionnel</span> <span class="w " id="w72">sait</span> <span class="w " id="w73">mettre</span> <span class="w " id="w74">des</span> <span class="w cle" id="w75">actions</span> <span class="w " id="w76">en</span> <span class="w " id="w77">place.</span></div>
-        <div class="st" id="st13"><span class="w " id="w78">L’expert</span> <span class="w " id="w79">cherche</span> <span class="w " id="w80">à</span> <span class="w " id="w81">comprendre</span> <span class="w " id="w82">ce</span> <span class="w " id="w83">qui</span> <span class="w " id="w84">va</span></div>
-        <div class="st" id="st14"><span class="w " id="w85">pousser</span> <span class="w " id="w86">tes</span> <span class="w " id="w87">futurs</span> <span class="w " id="w88">clients</span> <span class="w " id="w89">à</span> <span class="w " id="w90">te</span> <span class="w cle" id="w91">choisir,</span></div>
-        <div class="st" id="st15"><span class="w ital" id="w92">toi.</span></div>
-        <div class="st" id="st16"><span class="w " id="w93">Et</span> <span class="w " id="w94">quand</span> <span class="w " id="w95">tu</span> <span class="w " id="w96">es</span> <span class="w " id="w97">chef</span> <span class="w " id="w98">d’entreprise,</span></div>
-        <div class="st" id="st17"><span class="w " id="w99">cette</span> <span class="w " id="w100">différence,</span> <span class="w " id="w101">tu</span> <span class="w " id="w102">la</span> <span class="w cle" id="w103">ressens</span> <span class="w cle" id="w104">directement.</span></div>
-        <div class="st" id="st18"><span class="w " id="w105">Dans</span> <span class="w " id="w106">les</span> <span class="w cle" id="w107">demandes</span> <span class="w " id="w108">que</span> <span class="w " id="w109">tu</span> <span class="w " id="w110">reçois.</span></div>
-        <div class="st" id="st19"><span class="w " id="w111">Dans</span> <span class="w " id="w112">les</span> <span class="w cle" id="w113">rendez-vous</span> <span class="w " id="w114">que</span> <span class="w " id="w115">tu</span> <span class="w " id="w116">décroches.</span></div>
-        <div class="st" id="st20"><span class="w " id="w117">Et</span> <span class="w " id="w118">dans</span> <span class="w " id="w119">le</span> <span class="w cle" id="w120">chiffre</span> <span class="w cle" id="w121">d’affaires</span></div>
-        <div class="st" id="st21"><span class="w " id="w122">qui</span> <span class="w " id="w123">rentre</span> <span class="w " id="w124">à</span> <span class="w " id="w125">la</span> <span class="w " id="w126">fin</span> <span class="w " id="w127">du</span> <span class="w " id="w128">mois.</span></div>
-        <div class="st" id="st22"><span class="w " id="w129">Parce</span> <span class="w " id="w130">que</span> <span class="w " id="w131">tu</span> <span class="w " id="w132">connais</span> <span class="w " id="w133">peut-être</span></div>
-        <div class="st" id="st23"><span class="w " id="w134">déjà</span> <span class="w " id="w135">cette</span> <span class="w " id="w136">situation :</span></div>
-        <div class="st" id="st24"><span class="w " id="w138">tu</span> <span class="w " id="w139">investis,</span> <span class="w " id="w140">tu</span> <span class="w " id="w141">publies,</span></div>
-        <div class="st" id="st25"><span class="w " id="w142">tu</span> <span class="w " id="w143">paies</span> <span class="w " id="w144">quelqu’un…</span></div>
-        <div class="st" id="st26"><span class="w " id="w145">mais</span> <span class="w " id="w146">tu</span> <span class="w " id="w147">continues</span> <span class="w " id="w148">à</span> <span class="w " id="w149">te</span> <span class="w " id="w150">demander</span></div>
-        <div class="st" id="st27"><span class="w " id="w151">d’où</span> <span class="w " id="w152">viendra</span> <span class="w " id="w153">le</span> <span class="w ital" id="w154">prochain</span> <span class="w ital" id="w155">client.</span></div>
-        <div class="st" id="st28"><span class="w " id="w156">Un</span> <span class="w " id="w157">mois,</span> <span class="w " id="w158">ça</span> <span class="w " id="w159">marche.</span></div>
-        <div class="st" id="st29"><span class="w " id="w160">Le</span> <span class="w " id="w161">suivant,</span> <span class="w ital" id="w162">plus</span> <span class="w ital" id="w163">rien.</span></div>
-        <div class="st" id="st30"><span class="w " id="w164">Pendant</span> <span class="w " id="w165">ce</span> <span class="w " id="w166">temps,</span></div>
-        <div class="st" id="st31"><span class="w " id="w167">les</span> <span class="w " id="w168">charges</span> <span class="w " id="w169">continuent</span> <span class="w " id="w170">de</span> <span class="w " id="w171">tomber</span> <span class="w " id="w172">et</span> <span class="w " id="w173">toi,</span></div>
-        <div class="st" id="st32"><span class="w " id="w174">tu</span> <span class="w " id="w175">passes</span> <span class="w " id="w176">tes</span> <span class="w " id="w177">journées</span> <span class="w " id="w178">à</span> <span class="w " id="w179">chercher</span> <span class="w " id="w180">des</span> <span class="w " id="w181">clients</span></div>
-        <div class="st" id="st33"><span class="w " id="w182">au</span> <span class="w " id="w183">lieu</span> <span class="w " id="w184">de</span> <span class="w cle" id="w185">développer</span> <span class="w " id="w186">ton</span> <span class="w " id="w187">entreprise.</span></div>
-        <div class="st" id="st34"><span class="w " id="w188">Chez</span> <span class="w cle" id="w189">Oddysee,</span></div>
-        <div class="st" id="st35"><span class="w " id="w190">c’est</span> <span class="w " id="w191">précisément</span> <span class="w " id="w192">ce</span> <span class="w " id="w193">qu’on</span> <span class="w " id="w194">t’aide</span> <span class="w " id="w195">à</span> <span class="w ital" id="w196">changer.</span></div>
-        <div class="st" id="st36"><span class="w " id="w197">On</span> <span class="w " id="w198">construit</span> <span class="w " id="w199">un</span> <span class="w " id="w200">parcours</span> <span class="w " id="w201">qui</span> <span class="w " id="w202">permet</span> <span class="w " id="w203">aux</span> <span class="w " id="w204">bonnes</span></div>
-        <div class="st" id="st37"><span class="w " id="w205">personnes</span> <span class="w " id="w206">de</span> <span class="w cle" id="w207">découvrir</span> <span class="w " id="w208">ton</span> <span class="w " id="w209">entreprise,</span></div>
-        <div class="st" id="st38"><span class="w " id="w210">de</span> <span class="w cle" id="w211">comprendre</span> <span class="w " id="w212">la</span> <span class="w " id="w213">valeur</span> <span class="w " id="w214">de</span></div>
-        <div class="st" id="st39"><span class="w " id="w215">ton</span> <span class="w " id="w216">offre</span> <span class="w " id="w217">et</span> <span class="w " id="w218">de</span> <span class="w " id="w219">te</span> <span class="w cle" id="w220">contacter.</span></div>
-        <div class="st" id="st40"><span class="w " id="w221">Même</span> <span class="w " id="w222">quand</span> <span class="w " id="w223">tu</span> <span class="w " id="w224">es</span> <span class="w " id="w225">occupé.</span></div>
-        <div class="st" id="st41"><span class="w " id="w226">Même</span> <span class="w " id="w227">quand</span> <span class="w " id="w228">tu</span> <span class="w " id="w229">es</span> <span class="w " id="w230">avec</span> <span class="w " id="w231">tes</span> <span class="w " id="w232">proches.</span></div>
-        <div class="st" id="st42"><span class="w " id="w233">Et</span> <span class="w " id="w234">même</span> <span class="w " id="w235">pendant</span> <span class="w " id="w236">que</span> <span class="w " id="w237">tu</span> <span class="w ital" id="w238">dors.</span></div>
-        <div class="st" id="st43"><span class="w " id="w239">Cette</span> <span class="w " id="w240">expérience,</span></div>
-        <div class="st" id="st44"><span class="w " id="w241">nous</span> <span class="w " id="w242">l’avons</span> <span class="w " id="w243">construite</span> <span class="w " id="w244">sur</span> <span class="w " id="w245">le</span> <span class="w ital" id="w246">terrain,</span></div>
-        <div class="st" id="st45"><span class="w " id="w247">en</span> <span class="w " id="w248">travaillant</span> <span class="w " id="w249">avec</span> <span class="w " id="w250">de</span> <span class="w " id="w251">grandes</span> <span class="w " id="w252">agences</span> <span class="w " id="w253">et</span></div>
-        <div class="st" id="st46"><span class="w " id="w254">des</span> <span class="w " id="w255">influenceurs</span> <span class="w " id="w256">majeurs</span> <span class="w " id="w257">de</span> <span class="w " id="w258">la</span> <span class="w " id="w259">francophonie.</span></div>
-        <div class="st" id="st47"><span class="w " id="w260">Dans</span> <span class="w " id="w261">la</span> <span class="w " id="w262">formation,</span></div>
-        <div class="st" id="st48"><span class="w " id="w263">le</span> <span class="w " id="w264">e-commerce,</span> <span class="w " id="w265">l’immobilier,</span></div>
-        <div class="st" id="st49"><span class="w " id="w266">mais</span> <span class="w " id="w267">aussi</span> <span class="w " id="w268">auprès</span> <span class="w " id="w269">d’établissements</span> <span class="w " id="w270">hospitaliers,</span></div>
-        <div class="st" id="st50"><span class="w " id="w271">d’écoles</span> <span class="w " id="w272">et</span> <span class="w " id="w273">de</span> <span class="w " id="w274">centres</span> <span class="w " id="w275">commerciaux.</span></div>
-        <div class="st" id="st51"><span class="w " id="w276">Parmi</span> <span class="w " id="w277">nos</span> <span class="w " id="w278">références :</span></div>
-        <div class="st" id="st52"><span class="w cle" id="w280">Adidas,</span> <span class="w cle" id="w281">Puma,</span> <span class="w cle" id="w282">Montessori</span> <span class="w " id="w283">et</span> <span class="w cle" id="w284">Menara</span> <span class="w cle" id="w285">Mall.</span></div>
-        <div class="st" id="st53"><span class="w " id="w286">Nous</span> <span class="w " id="w287">sommes</span> <span class="w " id="w288">également</span> <span class="w cle" id="w289">Meta</span> <span class="w cle" id="w290">Business</span></div>
-        <div class="st" id="st54"><span class="w cle" id="w291">Partner</span> <span class="w " id="w292">depuis</span> <span class="w " id="w293">plus</span> <span class="w " id="w294">de</span> <span class="w cle" id="w295">cinq</span> <span class="w " id="w296">ans.</span></div>
-        <div class="st" id="st55"><span class="w " id="w297">Nous</span> <span class="w " id="w298">avons</span> <span class="w " id="w299">appris</span> <span class="w " id="w300">directement</span> <span class="w " id="w301">auprès</span></div>
-        <div class="st" id="st56"><span class="w " id="w302">des</span> <span class="w " id="w303">professionnels</span> <span class="w " id="w304">de</span> <span class="w cle" id="w305">Meta,</span></div>
-        <div class="st" id="st57"><span class="w " id="w306">à</span> <span class="w ital" id="w307">Dublin,</span></div>
-        <div class="st" id="st58"><span class="w " id="w308">des</span> <span class="w " id="w309">stratégies</span> <span class="w " id="w310">que</span> <span class="w " id="w311">nous</span> <span class="w " id="w312">appliquons</span> <span class="w " id="w313">pour</span> <span class="w " id="w314">aider</span></div>
-        <div class="st" id="st59"><span class="w " id="w315">les</span> <span class="w " id="w316">entreprises</span> <span class="w " id="w317">à</span> <span class="w " id="w318">développer</span> <span class="w " id="w319">leur</span> <span class="w " id="w320">clientèle.</span></div>
-        <div class="st" id="st60"><span class="w " id="w321">Mais</span> <span class="w " id="w322">cette</span> <span class="w " id="w323">démarche</span> <span class="w " id="w324">demande</span> <span class="w " id="w325">aussi</span></div>
-        <div class="st" id="st61"><span class="w " id="w326">un</span> <span class="w ital" id="w327">engagement</span> <span class="w " id="w328">de</span> <span class="w " id="w329">ta</span> <span class="w " id="w330">part.</span></div>
-        <div class="st" id="st62"><span class="w " id="w331">Tu</span> <span class="w " id="w332">peux</span> <span class="w " id="w333">investir</span> <span class="w cle" id="w334">trois</span> <span class="w cle" id="w335">millions</span></div>
-        <div class="st" id="st63"><span class="w " id="w336">de</span> <span class="w " id="w337">dirhams</span> <span class="w " id="w338">dans</span> <span class="w " id="w339">ton</span> <span class="w " id="w340">entreprise.</span></div>
-        <div class="st" id="st64"><span class="w " id="w341">Si</span> <span class="w " id="w342">tu</span> <span class="w " id="w343">n’es</span> <span class="w " id="w344">pas</span> <span class="w " id="w345">prêt</span> <span class="w " id="w346">à</span> <span class="w " id="w347">consacrer</span> <span class="w cle" id="w348">mille</span> <span class="w cle" id="w349">euros</span></div>
-        <div class="st" id="st65"><span class="w " id="w350">à</span> <span class="w " id="w351">une</span> <span class="w " id="w352">stratégie</span> <span class="w " id="w353">pour</span> <span class="w " id="w354">attirer</span> <span class="w " id="w355">des</span> <span class="w " id="w356">clients,</span></div>
-        <div class="st" id="st66"><span class="w " id="w357">il</span> <span class="w " id="w358">faut</span> <span class="w " id="w359">te</span> <span class="w " id="w360">demander</span> <span class="w " id="w361">quelle</span> <span class="w " id="w362">place</span> <span class="w " id="w363">tu</span></div>
-        <div class="st" id="st67"><span class="w " id="w364">accordes</span> <span class="w " id="w365">réellement</span> <span class="w " id="w366">à</span> <span class="w " id="w367">son</span> <span class="w " id="w368">développement.</span></div>
-        <div class="st" id="st68"><span class="w " id="w369">Notre</span> <span class="w " id="w370">accompagnement</span> <span class="w " id="w371">s’adresse</span></div>
-        <div class="st" id="st69"><span class="w " id="w372">aux</span> <span class="w " id="w373">dirigeants</span> <span class="w " id="w374">prêts</span> <span class="w " id="w375">à</span> <span class="w " id="w376">agir,</span></div>
-        <div class="st" id="st70"><span class="w " id="w377">avec</span> <span class="w " id="w378">un</span> <span class="w " id="w379">budget</span> <span class="w " id="w380">pour</span> <span class="w " id="w381">la</span> <span class="w cle" id="w382">stratégie</span></div>
-        <div class="st" id="st71"><span class="w " id="w383">et</span> <span class="w " id="w384">un</span> <span class="w " id="w385">budget</span> <span class="w " id="w386">pour</span> <span class="w " id="w387">la</span> <span class="w cle" id="w388">publicité.</span></div>
-        <div class="st" id="st72"><span class="w " id="w389">Si</span> <span class="w " id="w390">tu</span> <span class="w " id="w391">cherches</span> <span class="w " id="w392">simplement</span> <span class="w " id="w393">des</span></div>
-        <div class="st" id="st73"><span class="w " id="w394">réponses</span> <span class="w " id="w395">à</span> <span class="w " id="w396">tes</span> <span class="w " id="w397">questions,</span></div>
-        <div class="st" id="st74"><span class="w cle" id="w398">ChatGPT,</span></div>
-        <div class="st" id="st75"><span class="w cle" id="w399">Claude</span> <span class="w " id="w400">et</span> <span class="w cle" id="w401">Google</span> <span class="w " id="w402">sont</span> <span class="w " id="w403">déjà</span></div>
-        <div class="st" id="st76"><span class="w " id="w404">là</span> <span class="w " id="w405">pour</span> <span class="w " id="w406">t’aider</span> <span class="w " id="w407">à</span> <span class="w " id="w408">avancer.</span></div>
-        <div class="st" id="st77"><span class="w " id="w409">Le</span> <span class="w " id="w410">temps</span> <span class="w " id="w411">qu’on</span> <span class="w " id="w412">prend</span> <span class="w " id="w413">ensemble,</span></div>
-        <div class="st" id="st78"><span class="w " id="w414">lui,</span></div>
-        <div class="st" id="st79"><span class="w " id="w415">doit</span> <span class="w " id="w416">servir</span> <span class="w " id="w417">à</span> <span class="w " id="w418">travailler</span> <span class="w " id="w419">concrètement</span></div>
-        <div class="st" id="st80"><span class="w " id="w420">sur</span> <span class="w " id="w421">ton</span> <span class="w " id="w422">entreprise.</span></div>
-        <div class="st" id="st81"><span class="w " id="w423">Ton</span> <span class="w " id="w424">temps</span> <span class="w " id="w425">est</span> <span class="w ital" id="w426">précieux.</span></div>
-        <div class="st" id="st82"><span class="w " id="w427">Le</span> <span class="w " id="w428">nôtre</span> <span class="w ital" id="w429">aussi.</span></div>
-        <div class="st" id="st83"><span class="w " id="w430">Alors,</span> <span class="w " id="w431">si</span> <span class="w " id="w432">tu</span> <span class="w " id="w433">te</span> <span class="w " id="w434">reconnais</span> <span class="w " id="w435">dans</span> <span class="w " id="w436">cette</span> <span class="w " id="w437">démarche,</span></div>
-        <div class="st" id="st84"><span class="w " id="w438">la</span> <span class="w " id="w439">question</span> <span class="w " id="w440">que</span> <span class="w " id="w441">tu</span> <span class="w " id="w442">te</span> <span class="w " id="w443">poses</span> <span class="w " id="w444">maintenant,</span></div>
-        <div class="st" id="st85"><span class="w " id="w445">c’est :</span></div>
-        <div class="st" id="st86"><span class="w " id="w458">C’est</span> <span class="w " id="w459">justement</span> <span class="w " id="w460">ce</span> <span class="w " id="w461">qu’on</span> <span class="w " id="w462">te</span> <span class="w " id="w463">propose</span> <span class="w " id="w464">de</span></div>
-        <div class="st" id="st87"><span class="w " id="w465">regarder</span> <span class="w " id="w466">ensemble</span> <span class="w " id="w467">lors</span> <span class="w " id="w468">d’un</span> <span class="w ital" id="w469">audit</span> <span class="w ital" id="w470">gratuit.</span></div>
-        <div class="st" id="st88"><span class="w " id="w471">On</span> <span class="w " id="w472">analyse</span> <span class="w " id="w473">comment</span> <span class="w " id="w474">tu</span> <span class="w " id="w475">trouves</span></div>
-        <div class="st" id="st89"><span class="w " id="w476">tes</span> <span class="w " id="w477">clients</span> <span class="w " id="w478">aujourd’hui,</span></div>
-        <div class="st" id="st90"><span class="w " id="w479">ce</span> <span class="w " id="w480">qui</span> <span class="w cle" id="w481">bloque</span> <span class="w " id="w482">et</span> <span class="w " id="w483">les</span> <span class="w cle" id="w484">opportunités</span></div>
-        <div class="st" id="st91"><span class="w " id="w485">que</span> <span class="w " id="w486">tu</span> <span class="w " id="w487">laisses</span> <span class="w " id="w488">peut-être</span> <span class="w " id="w489">passer.</span></div>
-        <div class="st" id="st92"><span class="w " id="w490">Puis</span> <span class="w " id="w491">on</span> <span class="w " id="w492">t’explique</span> <span class="w " id="w493">concrètement</span> <span class="w " id="w494">les</span> <span class="w " id="w495">actions</span></div>
-        <div class="st" id="st93"><span class="w " id="w496">à</span> <span class="w cle" id="w497">prioriser</span> <span class="w " id="w498">pour</span> <span class="w " id="w499">obtenir</span> <span class="w " id="w500">davantage</span> <span class="w " id="w501">de</span> <span class="w " id="w502">demandes</span></div>
-        <div class="st" id="st94"><span class="w " id="w503">et</span> <span class="w " id="w504">les</span> <span class="w " id="w505">transformer</span> <span class="w " id="w506">en</span> <span class="w " id="w507">clients.</span></div>
-        <div class="st" id="st95"><span class="w " id="w508">Clique</span> <span class="w " id="w509">sur</span> <span class="w " id="w510">le</span> <span class="w " id="w511">bouton</span> <span class="w " id="w512">sous</span> <span class="w " id="w513">cette</span> <span class="w " id="w514">vidéo</span> <span class="w " id="w515">pour</span></div>
-        <div class="st" id="st96"><span class="w cle" id="w516">réserver</span> <span class="w " id="w517">ton</span> <span class="w cle" id="w518">audit</span> <span class="w " id="w519">avec</span> <span class="w " id="w520">l’équipe</span> <span class="w " id="w521">Oddysee.</span></div>
-        <div class="st" id="st97"><span class="w " id="w522">Pour</span> <span class="w " id="w523">préserver</span> <span class="w " id="w524">la</span> <span class="w " id="w525">qualité</span> <span class="w " id="w526">de</span> <span class="w " id="w527">notre</span> <span class="w " id="w528">travail</span></div>
-        <div class="st" id="st98"><span class="w " id="w529">et</span> <span class="w " id="w530">le</span> <span class="w " id="w531">suivi</span> <span class="w " id="w532">de</span> <span class="w " id="w533">chaque</span> <span class="w " id="w534">entreprise,</span></div>
-        <div class="st" id="st99"><span class="w " id="w535">nous</span> <span class="w " id="w536">limitons</span> <span class="w " id="w537">le</span> <span class="w " id="w538">nombre</span> <span class="w " id="w539">de</span> <span class="w " id="w540">professionnels</span></div>
-        <div class="st" id="st100"><span class="w " id="w541">que</span> <span class="w " id="w542">nous</span> <span class="w " id="w543">accompagnons.</span></div>
-        <div class="st" id="st101"><span class="w " id="w544">Réserve</span> <span class="w ital" id="w545">dès</span> <span class="w ital" id="w546">maintenant</span> <span class="w " id="w547">pour</span> <span class="w " id="w548">qu’on</span> <span class="w " id="w549">puisse</span></div>
-        <div class="st" id="st102"><span class="w " id="w550">étudier</span> <span class="w " id="w551">ton</span> <span class="w " id="w552">projet</span> <span class="w " id="w553">avant</span> <span class="w " id="w554">que</span> <span class="w " id="w555">notre</span> <span class="w " id="w556">capacité</span></div>
-        <div class="st" id="st103"><span class="w " id="w557">d’accompagnement</span> <span class="w " id="w558">soit</span> <span class="w " id="w559">atteinte.</span></div>
-        <div class="st" id="st104"><span class="w " id="w560">Parce</span> <span class="w " id="w561">qu’entre</span> <span class="w " id="w562">faire</span> <span class="w " id="w563">du</span> <span class="w " id="w564">marketing</span></div>
-        <div class="st" id="st105"><span class="w " id="w565">et</span> <span class="w " id="w566">savoir</span> <span class="w " id="w567">faire</span> <span class="w " id="w568">venir</span> <span class="w " id="w569">des</span> <span class="w " id="w570">clients,</span></div>
-        <div class="st" id="st106"><span class="w " id="w571">il</span> <span class="w " id="w572">peut</span> <span class="w " id="w573">y</span> <span class="w " id="w574">avoir</span> <span class="w " id="w575">toute</span> <span class="w " id="w576">une</span> <span class="w ital" id="w577">différence</span> <span class="w ital" id="w578">d’expertise.</span></div>
+        <div class="st" id="st1"><span class="w " id="w10">les</span> <span class="w " id="w11">différences</span> <span class="w " id="w12">d’expertise</span></div>
+        <div class="st" id="st2"><span class="w " id="w13">sont</span> <span class="w cle" id="w14">exponentielles.</span></div>
+        <div class="st" id="st3"><span class="w " id="w15">Tu</span> <span class="w " id="w16">as</span> <span class="w " id="w17">le</span> <span class="w cle" id="w18">débutant,</span></div>
+        <div class="st" id="st4"><span class="w cle" id="w19">l’amateur,</span></div>
+        <div class="st" id="st5"><span class="w " id="w20">le</span> <span class="w cle" id="w21">professionnel</span> <span class="w " id="w22">et</span> <span class="w cle" id="w23">l’expert.</span></div>
+        <div class="st" id="st6"><span class="w " id="w24">De</span> <span class="w " id="w25">l’extérieur,</span></div>
+        <div class="st" id="st7"><span class="w " id="w26">ils</span> <span class="w " id="w27">peuvent</span> <span class="w " id="w28">tous</span> <span class="w " id="w29">te</span> <span class="w " id="w30">promettre</span></div>
+        <div class="st" id="st8"><span class="w " id="w31">la</span> <span class="w " id="w32">même</span> <span class="w " id="w33">chose :</span></div>
+        <div class="st" id="st9"><span class="w " id="w35">«</span> <span class="w " id="w36">On</span> <span class="w " id="w37">va</span> <span class="w " id="w38">t’aider</span> <span class="w " id="w39">à</span> <span class="w " id="w40">obtenir</span></div>
+        <div class="st" id="st10"><span class="w cle" id="w41">plus</span> <span class="w " id="w42">de</span> <span class="w cle" id="w43">clients. »</span></div>
+        <div class="st" id="st11"><span class="w " id="w45">Mais</span> <span class="w " id="w46">entre</span> <span class="w " id="w47">chaque</span> <span class="w " id="w48">niveau,</span></div>
+        <div class="st" id="st12"><span class="w " id="w49">la</span> <span class="w " id="w50">différence</span> <span class="w " id="w51">dans</span> <span class="w " id="w52">les</span> <span class="w " id="w53">résultats</span></div>
+        <div class="st" id="st13"><span class="w " id="w54">peut</span> <span class="w " id="w55">être</span> <span class="w ital" id="w56">complètement</span> <span class="w ital" id="w57">folle.</span></div>
+        <div class="st" id="st14"><span class="w " id="w58">Le</span> <span class="w " id="w59">débutant</span> <span class="w cle" id="w60">découvre</span> <span class="w " id="w61">les</span> <span class="w " id="w62">outils.</span></div>
+        <div class="st" id="st15"><span class="w " id="w63">L’amateur</span> <span class="w cle" id="w64">reproduit</span> <span class="w " id="w65">ce</span></div>
+        <div class="st" id="st16"><span class="w " id="w66">qu’il</span> <span class="w " id="w67">a</span> <span class="w " id="w68">vu</span> <span class="w " id="w69">ailleurs.</span></div>
+        <div class="st" id="st17"><span class="w " id="w70">Le</span> <span class="w " id="w71">professionnel</span> <span class="w " id="w72">sait</span> <span class="w " id="w73">mettre</span></div>
+        <div class="st" id="st18"><span class="w " id="w74">des</span> <span class="w cle" id="w75">actions</span> <span class="w " id="w76">en</span> <span class="w " id="w77">place.</span></div>
+        <div class="st" id="st19"><span class="w " id="w78">L’expert</span> <span class="w " id="w79">cherche</span> <span class="w " id="w80">à</span> <span class="w " id="w81">comprendre</span></div>
+        <div class="st" id="st20"><span class="w " id="w82">ce</span> <span class="w " id="w83">qui</span> <span class="w " id="w84">va</span> <span class="w " id="w85">pousser</span> <span class="w " id="w86">tes</span> <span class="w " id="w87">futurs</span></div>
+        <div class="st" id="st21"><span class="w " id="w88">clients</span> <span class="w " id="w89">à</span> <span class="w " id="w90">te</span> <span class="w cle" id="w91">choisir,</span></div>
+        <div class="st" id="st22"><span class="w ital" id="w92">toi.</span></div>
+        <div class="st" id="st23"><span class="w " id="w93">Et</span> <span class="w " id="w94">quand</span> <span class="w " id="w95">tu</span> <span class="w " id="w96">es</span> <span class="w " id="w97">chef</span> <span class="w " id="w98">d’entreprise,</span></div>
+        <div class="st" id="st24"><span class="w " id="w99">cette</span> <span class="w " id="w100">différence,</span></div>
+        <div class="st" id="st25"><span class="w " id="w101">tu</span> <span class="w " id="w102">la</span> <span class="w cle" id="w103">ressens</span> <span class="w cle" id="w104">directement.</span></div>
+        <div class="st" id="st26"><span class="w " id="w105">Dans</span> <span class="w " id="w106">les</span> <span class="w cle" id="w107">demandes</span> <span class="w " id="w108">que</span> <span class="w " id="w109">tu</span> <span class="w " id="w110">reçois.</span></div>
+        <div class="st" id="st27"><span class="w " id="w111">Dans</span> <span class="w " id="w112">les</span> <span class="w cle" id="w113">rendez-vous</span> <span class="w " id="w114">que</span> <span class="w " id="w115">tu</span> <span class="w " id="w116">décroches.</span></div>
+        <div class="st" id="st28"><span class="w " id="w117">Et</span> <span class="w " id="w118">dans</span> <span class="w " id="w119">le</span> <span class="w cle" id="w120">chiffre</span> <span class="w cle" id="w121">d’affaires</span></div>
+        <div class="st" id="st29"><span class="w " id="w122">qui</span> <span class="w " id="w123">rentre</span> <span class="w " id="w124">à</span> <span class="w " id="w125">la</span> <span class="w " id="w126">fin</span> <span class="w " id="w127">du</span> <span class="w " id="w128">mois.</span></div>
+        <div class="st" id="st30"><span class="w " id="w129">Parce</span> <span class="w " id="w130">que</span> <span class="w " id="w131">tu</span> <span class="w " id="w132">connais</span> <span class="w " id="w133">peut-être</span></div>
+        <div class="st" id="st31"><span class="w " id="w134">déjà</span> <span class="w " id="w135">cette</span> <span class="w " id="w136">situation :</span></div>
+        <div class="st" id="st32"><span class="w " id="w138">tu</span> <span class="w " id="w139">investis,</span> <span class="w " id="w140">tu</span> <span class="w " id="w141">publies,</span></div>
+        <div class="st" id="st33"><span class="w " id="w142">tu</span> <span class="w " id="w143">paies</span> <span class="w " id="w144">quelqu’un…</span></div>
+        <div class="st" id="st34"><span class="w " id="w145">mais</span> <span class="w " id="w146">tu</span> <span class="w " id="w147">continues</span> <span class="w " id="w148">à</span> <span class="w " id="w149">te</span> <span class="w " id="w150">demander</span></div>
+        <div class="st" id="st35"><span class="w " id="w151">d’où</span> <span class="w " id="w152">viendra</span> <span class="w " id="w153">le</span> <span class="w ital" id="w154">prochain</span> <span class="w ital" id="w155">client.</span></div>
+        <div class="st" id="st36"><span class="w " id="w156">Un</span> <span class="w " id="w157">mois,</span> <span class="w " id="w158">ça</span> <span class="w " id="w159">marche.</span></div>
+        <div class="st" id="st37"><span class="w " id="w160">Le</span> <span class="w " id="w161">suivant,</span> <span class="w ital" id="w162">plus</span> <span class="w ital" id="w163">rien.</span></div>
+        <div class="st" id="st38"><span class="w " id="w164">Pendant</span> <span class="w " id="w165">ce</span> <span class="w " id="w166">temps,</span> <span class="w " id="w167">les</span> <span class="w " id="w168">charges</span> <span class="w " id="w169">continuent</span></div>
+        <div class="st" id="st39"><span class="w " id="w170">de</span> <span class="w " id="w171">tomber</span> <span class="w " id="w172">et</span> <span class="w " id="w173">toi,</span></div>
+        <div class="st" id="st40"><span class="w " id="w174">tu</span> <span class="w " id="w175">passes</span> <span class="w " id="w176">tes</span> <span class="w " id="w177">journées</span> <span class="w " id="w178">à</span> <span class="w " id="w179">chercher</span></div>
+        <div class="st" id="st41"><span class="w " id="w180">des</span> <span class="w " id="w181">clients</span> <span class="w " id="w182">au</span> <span class="w " id="w183">lieu</span> <span class="w " id="w184">de</span> <span class="w cle" id="w185">développer</span></div>
+        <div class="st" id="st42"><span class="w " id="w186">ton</span> <span class="w " id="w187">entreprise.</span></div>
+        <div class="st" id="st43"><span class="w " id="w188">Chez</span> <span class="w cle" id="w189">Oddysee,</span></div>
+        <div class="st" id="st44"><span class="w " id="w190">c’est</span> <span class="w " id="w191">précisément</span> <span class="w " id="w192">ce</span> <span class="w " id="w193">qu’on</span></div>
+        <div class="st" id="st45"><span class="w " id="w194">t’aide</span> <span class="w " id="w195">à</span> <span class="w ital" id="w196">changer.</span></div>
+        <div class="st" id="st46"><span class="w " id="w197">On</span> <span class="w " id="w198">construit</span> <span class="w " id="w199">un</span> <span class="w " id="w200">parcours</span> <span class="w " id="w201">qui</span></div>
+        <div class="st" id="st47"><span class="w " id="w202">permet</span> <span class="w " id="w203">aux</span> <span class="w " id="w204">bonnes</span> <span class="w " id="w205">personnes</span></div>
+        <div class="st" id="st48"><span class="w " id="w206">de</span> <span class="w cle" id="w207">découvrir</span> <span class="w " id="w208">ton</span> <span class="w " id="w209">entreprise,</span></div>
+        <div class="st" id="st49"><span class="w " id="w210">de</span> <span class="w cle" id="w211">comprendre</span> <span class="w " id="w212">la</span> <span class="w " id="w213">valeur</span> <span class="w " id="w214">de</span></div>
+        <div class="st" id="st50"><span class="w " id="w215">ton</span> <span class="w " id="w216">offre</span> <span class="w " id="w217">et</span> <span class="w " id="w218">de</span> <span class="w " id="w219">te</span> <span class="w cle" id="w220">contacter.</span></div>
+        <div class="st" id="st51"><span class="w " id="w221">Même</span> <span class="w " id="w222">quand</span> <span class="w " id="w223">tu</span> <span class="w " id="w224">es</span> <span class="w " id="w225">occupé.</span></div>
+        <div class="st" id="st52"><span class="w " id="w226">Même</span> <span class="w " id="w227">quand</span> <span class="w " id="w228">tu</span> <span class="w " id="w229">es</span> <span class="w " id="w230">avec</span> <span class="w " id="w231">tes</span> <span class="w " id="w232">proches.</span></div>
+        <div class="st" id="st53"><span class="w " id="w233">Et</span> <span class="w " id="w234">même</span> <span class="w " id="w235">pendant</span> <span class="w " id="w236">que</span> <span class="w " id="w237">tu</span> <span class="w ital" id="w238">dors.</span></div>
+        <div class="st" id="st54"><span class="w " id="w239">Cette</span> <span class="w " id="w240">expérience,</span></div>
+        <div class="st" id="st55"><span class="w " id="w241">nous</span> <span class="w " id="w242">l’avons</span> <span class="w " id="w243">construite</span></div>
+        <div class="st" id="st56"><span class="w " id="w244">sur</span> <span class="w " id="w245">le</span> <span class="w ital" id="w246">terrain,</span></div>
+        <div class="st" id="st57"><span class="w " id="w247">en</span> <span class="w " id="w248">travaillant</span> <span class="w " id="w249">avec</span> <span class="w " id="w250">de</span> <span class="w " id="w251">grandes</span></div>
+        <div class="st" id="st58"><span class="w " id="w252">agences</span> <span class="w " id="w253">et</span> <span class="w " id="w254">des</span> <span class="w " id="w255">influenceurs</span></div>
+        <div class="st" id="st59"><span class="w " id="w256">majeurs</span> <span class="w " id="w257">de</span> <span class="w " id="w258">la</span> <span class="w " id="w259">francophonie.</span></div>
+        <div class="st" id="st60"><span class="w " id="w260">Dans</span> <span class="w " id="w261">la</span> <span class="w " id="w262">formation,</span></div>
+        <div class="st" id="st61"><span class="w " id="w263">le</span> <span class="w " id="w264">e-commerce,</span> <span class="w " id="w265">l’immobilier,</span></div>
+        <div class="st" id="st62"><span class="w " id="w266">mais</span> <span class="w " id="w267">aussi</span> <span class="w " id="w268">auprès</span> <span class="w " id="w269">d’établissements</span></div>
+        <div class="st" id="st63"><span class="w " id="w270">hospitaliers,</span> <span class="w " id="w271">d’écoles</span> <span class="w " id="w272">et</span> <span class="w " id="w273">de</span> <span class="w " id="w274">centres</span></div>
+        <div class="st" id="st64"><span class="w " id="w275">commerciaux.</span></div>
+        <div class="st" id="st65"><span class="w " id="w276">Parmi</span> <span class="w " id="w277">nos</span> <span class="w " id="w278">références :</span></div>
+        <div class="st" id="st66"><span class="w cle" id="w280">Adidas,</span> <span class="w cle" id="w281">Puma,</span></div>
+        <div class="st" id="st67"><span class="w cle" id="w282">Montessori</span> <span class="w " id="w283">et</span> <span class="w cle" id="w284">Menara</span> <span class="w cle" id="w285">Mall.</span></div>
+        <div class="st" id="st68"><span class="w " id="w286">Nous</span> <span class="w " id="w287">sommes</span> <span class="w " id="w288">également</span></div>
+        <div class="st" id="st69"><span class="w cle" id="w289">Meta</span> <span class="w cle" id="w290">Business</span> <span class="w cle" id="w291">Partner</span></div>
+        <div class="st" id="st70"><span class="w " id="w292">depuis</span> <span class="w " id="w293">plus</span> <span class="w " id="w294">de</span> <span class="w cle" id="w295">cinq</span> <span class="w " id="w296">ans.</span></div>
+        <div class="st" id="st71"><span class="w " id="w297">Nous</span> <span class="w " id="w298">avons</span> <span class="w " id="w299">appris</span> <span class="w " id="w300">directement</span> <span class="w " id="w301">auprès</span></div>
+        <div class="st" id="st72"><span class="w " id="w302">des</span> <span class="w " id="w303">professionnels</span> <span class="w " id="w304">de</span> <span class="w cle" id="w305">Meta,</span></div>
+        <div class="st" id="st73"><span class="w " id="w306">à</span> <span class="w ital" id="w307">Dublin,</span></div>
+        <div class="st" id="st74"><span class="w " id="w308">des</span> <span class="w " id="w309">stratégies</span> <span class="w " id="w310">que</span> <span class="w " id="w311">nous</span> <span class="w " id="w312">appliquons</span></div>
+        <div class="st" id="st75"><span class="w " id="w313">pour</span> <span class="w " id="w314">aider</span> <span class="w " id="w315">les</span> <span class="w " id="w316">entreprises</span> <span class="w " id="w317">à</span></div>
+        <div class="st" id="st76"><span class="w " id="w318">développer</span> <span class="w " id="w319">leur</span> <span class="w " id="w320">clientèle.</span></div>
+        <div class="st" id="st77"><span class="w " id="w321">Mais</span> <span class="w " id="w322">cette</span> <span class="w " id="w323">démarche</span> <span class="w " id="w324">demande</span> <span class="w " id="w325">aussi</span></div>
+        <div class="st" id="st78"><span class="w " id="w326">un</span> <span class="w ital" id="w327">engagement</span> <span class="w " id="w328">de</span> <span class="w " id="w329">ta</span> <span class="w " id="w330">part.</span></div>
+        <div class="st" id="st79"><span class="w " id="w331">Tu</span> <span class="w " id="w332">peux</span> <span class="w " id="w333">investir</span> <span class="w cle" id="w334">trois</span> <span class="w cle" id="w335">millions</span></div>
+        <div class="st" id="st80"><span class="w " id="w336">de</span> <span class="w " id="w337">dirhams</span> <span class="w " id="w338">dans</span> <span class="w " id="w339">ton</span> <span class="w " id="w340">entreprise.</span></div>
+        <div class="st" id="st81"><span class="w " id="w341">Si</span> <span class="w " id="w342">tu</span> <span class="w " id="w343">n’es</span> <span class="w " id="w344">pas</span> <span class="w " id="w345">prêt</span> <span class="w " id="w346">à</span> <span class="w " id="w347">consacrer</span></div>
+        <div class="st" id="st82"><span class="w cle" id="w348">mille</span> <span class="w cle" id="w349">euros</span> <span class="w " id="w350">à</span> <span class="w " id="w351">une</span> <span class="w " id="w352">stratégie</span></div>
+        <div class="st" id="st83"><span class="w " id="w353">pour</span> <span class="w " id="w354">attirer</span> <span class="w " id="w355">des</span> <span class="w " id="w356">clients,</span></div>
+        <div class="st" id="st84"><span class="w " id="w357">il</span> <span class="w " id="w358">faut</span> <span class="w " id="w359">te</span> <span class="w " id="w360">demander</span> <span class="w " id="w361">quelle</span></div>
+        <div class="st" id="st85"><span class="w " id="w362">place</span> <span class="w " id="w363">tu</span> <span class="w " id="w364">accordes</span> <span class="w " id="w365">réellement</span></div>
+        <div class="st" id="st86"><span class="w " id="w366">à</span> <span class="w " id="w367">son</span> <span class="w " id="w368">développement.</span></div>
+        <div class="st" id="st87"><span class="w " id="w369">Notre</span> <span class="w " id="w370">accompagnement</span> <span class="w " id="w371">s’adresse</span></div>
+        <div class="st" id="st88"><span class="w " id="w372">aux</span> <span class="w " id="w373">dirigeants</span> <span class="w " id="w374">prêts</span> <span class="w " id="w375">à</span> <span class="w " id="w376">agir,</span></div>
+        <div class="st" id="st89"><span class="w " id="w377">avec</span> <span class="w " id="w378">un</span> <span class="w " id="w379">budget</span> <span class="w " id="w380">pour</span> <span class="w " id="w381">la</span> <span class="w cle" id="w382">stratégie</span></div>
+        <div class="st" id="st90"><span class="w " id="w383">et</span> <span class="w " id="w384">un</span> <span class="w " id="w385">budget</span> <span class="w " id="w386">pour</span> <span class="w " id="w387">la</span> <span class="w cle" id="w388">publicité.</span></div>
+        <div class="st" id="st91"><span class="w " id="w389">Si</span> <span class="w " id="w390">tu</span> <span class="w " id="w391">cherches</span> <span class="w " id="w392">simplement</span> <span class="w " id="w393">des</span></div>
+        <div class="st" id="st92"><span class="w " id="w394">réponses</span> <span class="w " id="w395">à</span> <span class="w " id="w396">tes</span> <span class="w " id="w397">questions,</span></div>
+        <div class="st" id="st93"><span class="w cle" id="w398">ChatGPT,</span> <span class="w cle" id="w399">Claude</span> <span class="w " id="w400">et</span> <span class="w cle" id="w401">Google</span> <span class="w " id="w402">sont</span> <span class="w " id="w403">déjà</span></div>
+        <div class="st" id="st94"><span class="w " id="w404">là</span> <span class="w " id="w405">pour</span> <span class="w " id="w406">t’aider</span> <span class="w " id="w407">à</span> <span class="w " id="w408">avancer.</span></div>
+        <div class="st" id="st95"><span class="w " id="w409">Le</span> <span class="w " id="w410">temps</span> <span class="w " id="w411">qu’on</span> <span class="w " id="w412">prend</span> <span class="w " id="w413">ensemble,</span></div>
+        <div class="st" id="st96"><span class="w " id="w414">lui,</span></div>
+        <div class="st" id="st97"><span class="w " id="w415">doit</span> <span class="w " id="w416">servir</span> <span class="w " id="w417">à</span> <span class="w " id="w418">travailler</span> <span class="w " id="w419">concrètement</span></div>
+        <div class="st" id="st98"><span class="w " id="w420">sur</span> <span class="w " id="w421">ton</span> <span class="w " id="w422">entreprise.</span></div>
+        <div class="st" id="st99"><span class="w " id="w423">Ton</span> <span class="w " id="w424">temps</span> <span class="w " id="w425">est</span> <span class="w ital" id="w426">précieux.</span></div>
+        <div class="st" id="st100"><span class="w " id="w427">Le</span> <span class="w " id="w428">nôtre</span> <span class="w ital" id="w429">aussi.</span></div>
+        <div class="st" id="st101"><span class="w " id="w430">Alors,</span> <span class="w " id="w431">si</span> <span class="w " id="w432">tu</span> <span class="w " id="w433">te</span> <span class="w " id="w434">reconnais</span></div>
+        <div class="st" id="st102"><span class="w " id="w435">dans</span> <span class="w " id="w436">cette</span> <span class="w " id="w437">démarche,</span></div>
+        <div class="st" id="st103"><span class="w " id="w438">la</span> <span class="w " id="w439">question</span> <span class="w " id="w440">que</span> <span class="w " id="w441">tu</span> <span class="w " id="w442">te</span> <span class="w " id="w443">poses</span> <span class="w " id="w444">maintenant,</span></div>
+        <div class="st" id="st104"><span class="w " id="w445">c’est :</span></div>
+        <div class="st" id="st105"><span class="w " id="w458">C’est</span> <span class="w " id="w459">justement</span> <span class="w " id="w460">ce</span> <span class="w " id="w461">qu’on</span> <span class="w " id="w462">te</span></div>
+        <div class="st" id="st106"><span class="w " id="w463">propose</span> <span class="w " id="w464">de</span> <span class="w " id="w465">regarder</span> <span class="w " id="w466">ensemble</span></div>
+        <div class="st" id="st107"><span class="w " id="w467">lors</span> <span class="w " id="w468">d’un</span> <span class="w ital" id="w469">audit</span> <span class="w ital" id="w470">gratuit.</span></div>
+        <div class="st" id="st108"><span class="w " id="w471">On</span> <span class="w " id="w472">analyse</span> <span class="w " id="w473">comment</span> <span class="w " id="w474">tu</span> <span class="w " id="w475">trouves</span></div>
+        <div class="st" id="st109"><span class="w " id="w476">tes</span> <span class="w " id="w477">clients</span> <span class="w " id="w478">aujourd’hui,</span></div>
+        <div class="st" id="st110"><span class="w " id="w479">ce</span> <span class="w " id="w480">qui</span> <span class="w cle" id="w481">bloque</span> <span class="w " id="w482">et</span> <span class="w " id="w483">les</span> <span class="w cle" id="w484">opportunités</span></div>
+        <div class="st" id="st111"><span class="w " id="w485">que</span> <span class="w " id="w486">tu</span> <span class="w " id="w487">laisses</span> <span class="w " id="w488">peut-être</span></div>
+        <div class="st" id="st112"><span class="w " id="w489">passer.</span></div>
+        <div class="st" id="st113"><span class="w " id="w490">Puis</span> <span class="w " id="w491">on</span> <span class="w " id="w492">t’explique</span> <span class="w " id="w493">concrètement</span></div>
+        <div class="st" id="st114"><span class="w " id="w494">les</span> <span class="w " id="w495">actions</span> <span class="w " id="w496">à</span> <span class="w cle" id="w497">prioriser</span> <span class="w " id="w498">pour</span></div>
+        <div class="st" id="st115"><span class="w " id="w499">obtenir</span> <span class="w " id="w500">davantage</span> <span class="w " id="w501">de</span> <span class="w " id="w502">demandes</span></div>
+        <div class="st" id="st116"><span class="w " id="w503">et</span> <span class="w " id="w504">les</span> <span class="w " id="w505">transformer</span> <span class="w " id="w506">en</span> <span class="w " id="w507">clients.</span></div>
+        <div class="st" id="st117"><span class="w " id="w508">Clique</span> <span class="w " id="w509">sur</span> <span class="w " id="w510">le</span> <span class="w " id="w511">bouton</span> <span class="w " id="w512">sous</span> <span class="w " id="w513">cette</span></div>
+        <div class="st" id="st118"><span class="w " id="w514">vidéo</span> <span class="w " id="w515">pour</span> <span class="w cle" id="w516">réserver</span> <span class="w " id="w517">ton</span> <span class="w cle" id="w518">audit</span></div>
+        <div class="st" id="st119"><span class="w " id="w519">avec</span> <span class="w " id="w520">l’équipe</span> <span class="w " id="w521">Oddysee.</span></div>
+        <div class="st" id="st120"><span class="w " id="w522">Pour</span> <span class="w " id="w523">préserver</span> <span class="w " id="w524">la</span> <span class="w " id="w525">qualité</span></div>
+        <div class="st" id="st121"><span class="w " id="w526">de</span> <span class="w " id="w527">notre</span> <span class="w " id="w528">travail</span> <span class="w " id="w529">et</span> <span class="w " id="w530">le</span> <span class="w " id="w531">suivi</span></div>
+        <div class="st" id="st122"><span class="w " id="w532">de</span> <span class="w " id="w533">chaque</span> <span class="w " id="w534">entreprise,</span></div>
+        <div class="st" id="st123"><span class="w " id="w535">nous</span> <span class="w " id="w536">limitons</span> <span class="w " id="w537">le</span> <span class="w " id="w538">nombre</span> <span class="w " id="w539">de</span> <span class="w " id="w540">professionnels</span></div>
+        <div class="st" id="st124"><span class="w " id="w541">que</span> <span class="w " id="w542">nous</span> <span class="w " id="w543">accompagnons.</span></div>
+        <div class="st" id="st125"><span class="w " id="w544">Réserve</span> <span class="w ital" id="w545">dès</span> <span class="w ital" id="w546">maintenant</span> <span class="w " id="w547">pour</span></div>
+        <div class="st" id="st126"><span class="w " id="w548">qu’on</span> <span class="w " id="w549">puisse</span> <span class="w " id="w550">étudier</span> <span class="w " id="w551">ton</span> <span class="w " id="w552">projet</span></div>
+        <div class="st" id="st127"><span class="w " id="w553">avant</span> <span class="w " id="w554">que</span> <span class="w " id="w555">notre</span> <span class="w " id="w556">capacité</span> <span class="w " id="w557">d’accompagnement</span></div>
+        <div class="st" id="st128"><span class="w " id="w558">soit</span> <span class="w " id="w559">atteinte.</span></div>
+        <div class="st" id="st129"><span class="w " id="w560">Parce</span> <span class="w " id="w561">qu’entre</span> <span class="w " id="w562">faire</span> <span class="w " id="w563">du</span></div>
+        <div class="st" id="st130"><span class="w " id="w564">marketing</span> <span class="w " id="w565">et</span> <span class="w " id="w566">savoir</span> <span class="w " id="w567">faire</span></div>
+        <div class="st" id="st131"><span class="w " id="w568">venir</span> <span class="w " id="w569">des</span> <span class="w " id="w570">clients,</span></div>
+        <div class="st" id="st132"><span class="w " id="w571">il</span> <span class="w " id="w572">peut</span> <span class="w " id="w573">y</span> <span class="w " id="w574">avoir</span> <span class="w " id="w575">toute</span> <span class="w " id="w576">une</span></div>
+        <div class="st" id="st133"><span class="w ital" id="w577">différence</span> <span class="w ital" id="w578">d’expertise.</span></div>
         </div>
       </section>
     </div>
 
     <script>
       window.__timelines = window.__timelines || {};
-      const D = {"L":[[[0.0,0.02],[0.04,0.06],[0.08,0.1],[0.12,0.14],[0.16,0.337],[0.357,0.617],[0.637,0.697],[0.717,0.957],[0.977,1.317],[1.337,1.67],[1.901,1.921],[1.941,2.237],[2.257,3.177],[3.197,3.697],[3.717,4.539]],[[4.79,4.837],[4.857,4.937],[4.957,5.117],[5.137,5.857],[5.877,6.677],[6.697,6.977],[6.997,7.95],[7.977,8.157],[8.177,9.121]],[[9.308,9.412],[9.432,10.292],[10.312,10.412],[10.432,10.632],[10.652,10.772],[10.792,10.992],[11.012,11.172],[11.192,11.332],[11.352,11.632],[11.652,11.832],[11.852,12.047],[12.21,12.232],[12.252,12.352],[12.372,12.572],[12.592,13.012],[13.032,13.252],[13.272,13.772],[13.792,13.952],[13.972,14.252],[14.272,14.654],[14.926,14.946]],[[14.966,15.132],[15.152,15.452],[15.472,15.792],[15.812,16.286],[16.628,16.772],[16.792,17.092],[17.112,17.212],[17.232,17.552],[17.572,17.992],[18.012,18.172],[18.192,18.732],[18.752,19.092],[19.112,19.63]],[[19.977,20.181],[20.201,20.721],[20.741,21.061],[21.081,21.221],[21.241,21.786]],[[22.002,22.921],[22.941,23.221],[23.241,23.321],[23.341,23.481],[23.501,23.581],[23.601,23.741],[23.761,24.395]],[[24.609,24.921],[24.941,25.334],[25.354,25.747],[25.767,26.161],[26.181,26.421],[26.441,26.581],[26.601,26.701],[26.721,27.391]],[[27.821,28.583],[28.603,28.763],[28.783,29.143],[29.163,29.423],[29.443,29.563],[29.583,29.683],[29.703,29.943],[29.963,30.263],[30.283,30.503],[30.523,30.923],[30.943,31.443],[31.463,31.583],[31.603,31.783],[31.803,32.512],[32.88,33.171]],[[33.689,33.823],[33.843,33.963],[33.983,34.063],[34.083,34.183],[34.203,34.343],[34.363,35.272],[35.528,35.843],[35.863,36.343],[36.363,36.503],[36.523,36.783],[36.803,37.623],[37.643,38.143]],[[38.377,38.477],[38.497,38.697],[38.717,38.897],[38.917,38.997],[39.017,39.177],[39.197,39.852],[40.075,40.095],[40.115,40.217],[40.237,40.537],[40.557,40.597],[40.617,40.797],[40.817,41.617],[41.637,41.757],[41.777,41.877],[41.897,42.117],[42.137,42.397],[42.417,42.937],[42.957,43.197],[43.217,43.397],[43.417,43.457],[43.477,43.677],[43.697,43.817],[43.837,44.037],[44.057,44.419]],[[44.818,44.997],[45.017,45.097],[45.117,45.297],[45.317,45.497],[45.517,45.937],[45.957,46.097],[46.117,46.337],[46.357,46.757],[46.777,47.062],[47.417,47.437],[47.457,48.157],[48.177,48.377],[48.397,48.937],[48.957,49.097],[49.117,49.357],[49.377,50.013],[50.307,50.417],[50.437,50.877],[50.897,51.097],[51.117,51.217],[51.237,51.657],[51.677,52.217],[52.237,52.457],[52.477,52.837],[52.857,53.117],[53.137,53.477],[53.497,53.895]],[[54.245,54.417],[54.437,54.617],[54.637,54.977],[54.997,55.397],[55.417,55.577],[55.597,56.274],[56.513,56.597],[56.617,56.987]],[[57.257,57.499],[57.519,57.619],[57.639,58.019],[58.039,58.219],[58.239,58.679],[58.699,58.899],[58.919,59.019],[59.039,59.779],[59.799,60.019],[60.039,60.439],[60.459,60.619],[60.639,60.799],[60.819,61.079],[61.099,61.479],[61.499,61.739],[61.759,61.939],[61.959,62.259],[62.279,62.701],[62.839,62.87],[62.999,63.119],[63.139,63.419],[63.439,63.779],[63.799,63.999],[64.019,64.814]],[[65.2,65.679],[65.699,66.099],[66.119,66.519],[66.539,66.979],[66.999,67.099],[67.119,67.219],[67.239,67.359],[67.379,67.599],[67.619,68.104]],[[68.347,68.663],[68.683,68.862],[68.882,69.123],[69.143,69.642],[69.662,69.903],[69.923,70.063],[70.083,70.263],[70.282,70.703],[70.722,70.943],[70.963,71.323],[71.343,71.503],[71.523,71.703],[71.722,72.642],[72.662,73.023],[73.043,73.343],[73.363,73.543],[73.562,73.703],[73.722,73.843],[73.863,74.142],[74.162,74.566],[74.643,74.723],[74.743,74.862],[74.882,75.142],[75.162,75.936]],[[76.378,76.483],[76.502,76.663],[76.683,76.723],[76.743,76.922],[76.942,77.59],[77.908,78.006],[78.026,78.166],[78.186,78.226],[78.246,78.366],[78.386,78.526],[78.546,78.766],[78.786,79.38],[79.744,79.926],[79.946,80.326],[80.346,80.546],[80.566,80.606],[80.626,80.806],[80.826,81.295]],[[81.862,82.126],[82.146,82.806],[82.826,82.906],[82.926,83.346],[83.366,83.626],[83.646,83.726],[83.746,84.106],[84.126,84.546],[84.709,84.866],[84.886,85.166],[85.186,85.326],[85.346,85.626],[85.646,85.886],[85.906,86.386],[86.406,86.526],[86.546,86.806],[86.826,87.386],[87.406,87.726],[87.746,87.806],[87.826,87.946],[87.966,88.777]],[[89.07,89.181],[89.201,89.521],[89.541,90.081],[90.101,90.221],[90.241,91.021],[91.041,92.061],[92.081,92.281],[92.301,92.401],[92.421,92.681],[92.701,93.441],[93.461,94.081],[94.101,94.741],[94.761,94.861],[94.881,95.121],[95.141,95.401],[95.421,96.121]],[[96.418,96.681],[96.701,96.841],[96.861,97.261],[97.281,97.681],[97.701,98.361],[98.381,99.021],[99.041,99.944],[100.034,100.514],[100.534,101.014],[101.034,101.191]],[[101.55,101.674],[101.694,101.954],[101.974,102.34],[102.36,102.727],[102.747,103.114],[103.134,103.374],[103.394,103.614],[103.634,103.714],[103.734,103.924],[103.944,104.134],[104.154,104.509],[104.709,104.914],[104.934,105.114],[105.134,105.934],[105.954,106.274],[106.294,106.494],[106.514,106.894],[106.914,107.294],[107.314,107.454],[107.474,107.974],[107.994,108.484],[108.504,108.994],[109.014,109.274],[109.294,109.694],[109.714,109.814],[109.834,110.214],[110.234,110.814],[110.834,111.114],[111.134,111.334],[111.354,111.774],[111.794,111.994],[112.014,112.274],[112.294,112.594],[112.614,112.834],[112.854,113.562]],[[113.914,114.115],[114.135,114.335],[114.355,114.855],[114.875,115.215],[115.235,115.335],[115.355,115.675],[115.695,115.895],[115.915,116.035],[116.055,116.415],[116.435,116.793]],[[117.082,117.215],[117.235,117.655],[117.675,118.035],[118.055,118.415],[118.435,118.595],[118.615,118.755],[118.775,118.995],[119.015,119.095],[119.115,119.315],[119.335,120.09],[120.315,120.375],[120.395,120.475],[120.495,120.655],[120.675,120.875],[120.895,120.975],[120.995,121.155],[121.175,121.585],[121.605,122.015],[122.035,122.275],[122.295,122.375],[122.395,122.655],[122.675,123.135],[123.155,123.295],[123.315,123.555],[123.575,123.855],[123.875,124.317],[124.505,124.668],[124.688,124.808],[124.828,125.288],[125.308,125.728],[125.748,126.188],[126.208,126.408],[126.428,126.698],[126.718,126.988],[127.008,127.408],[127.428,127.548],[127.568,127.948],[127.968,128.447]],[[128.829,129.148],[129.168,129.728],[129.748,130.108],[130.128,130.268],[130.288,130.788],[130.808,130.988],[131.008,131.228],[131.248,131.799],[131.95,132.188],[132.208,132.508],[132.528,132.748],[132.768,132.848],[132.868,133.068],[133.088,133.873],[133.934,134.034],[134.054,134.394],[134.414,134.654],[134.674,134.754],[134.774,134.934],[134.954,135.768]],[[136.123,136.234],[136.254,136.414],[136.434,136.914],[136.934,137.154],[137.174,137.314],[137.334,137.614],[137.634,137.674],[137.694,138.034],[138.054,138.597],[138.95,139.42],[139.44,140.114],[140.134,140.394],[140.414,140.914],[140.934,141.354],[141.374,141.514],[141.534,141.714],[141.734,141.834],[141.854,142.094],[142.114,142.234],[142.254,142.916]],[[143.283,143.517],[143.537,143.677],[143.697,143.877],[143.897,144.357],[144.377,144.817],[144.837,145.263],[145.637,145.737],[145.757,145.917],[145.937,146.277],[146.297,146.657],[146.677,147.257],[147.277,147.377],[147.397,147.597],[147.617,148.379],[148.864,148.884],[148.904,148.977],[148.997,149.217],[149.237,149.944],[150.191,150.211],[150.231,150.477],[150.497,150.915]],[[151.196,151.216],[151.236,151.493],[151.513,151.633],[151.653,151.773],[151.793,152.013],[152.033,152.173],[152.193,152.393],[152.413,153.033],[153.053,153.313],[153.333,153.473],[153.493,153.533],[153.553,153.633],[153.653,153.753],[153.773,154.193],[154.213,154.573],[154.593,154.846],[154.866,155.1],[155.139,155.393],[155.413,155.713],[155.733,155.813],[155.833,155.993],[156.013,156.393],[156.413,156.613],[156.633,156.753],[156.773,156.913],[156.933,157.728],[157.833,158.13],[158.15,158.17]],[[158.19,158.713],[158.733,158.913],[158.933,159.013],[159.033,159.183],[159.203,159.353],[159.373,159.533],[159.553,159.793],[159.813,160.313],[160.333,160.773],[160.793,160.933],[160.953,161.233],[161.253,161.633],[161.653,162.188]],[[162.538,162.86],[162.88,163.24],[163.26,163.46],[163.48,163.64],[163.66,163.82],[163.84,164.04],[164.06,164.32],[164.34,164.986],[165.335,165.355],[165.375,165.68],[165.7,166.1],[166.12,166.2],[166.22,166.58],[166.6,167.14],[167.16,167.26],[167.28,167.38],[167.4,167.62],[167.64,168.08],[168.1,168.492]],[[168.836,169.22],[169.24,169.32],[169.34,169.94],[169.96,170.56],[170.58,170.86],[170.88,171.02],[171.04,171.28],[171.3,172.18],[172.2,172.46],[172.48,172.96],[172.98,173.46],[173.48,173.78],[173.8,174.36],[174.405,174.505],[174.525,175.025],[175.045,175.385],[175.405,175.685],[175.705,176.152]],[[176.561,176.885],[176.905,177.005],[177.025,177.145],[177.165,177.505],[177.525,177.705],[177.725,178.065],[178.085,178.345],[178.365,178.605],[178.625,179.005],[179.025,179.225],[179.245,179.545],[179.565,179.725],[179.745,180.552],[180.572,181.031]],[[181.371,181.618],[181.638,181.918],[181.938,182.258],[182.278,182.398],[182.418,182.478],[182.498,182.978],[182.998,183.178],[183.198,183.318],[183.338,183.498],[183.518,183.758],[183.778,184.018],[184.038,184.238],[184.258,185.048],[185.203,185.498],[185.518,185.918],[185.938,186.218],[186.238,186.398],[186.418,186.738],[186.758,187.178],[187.198,187.278],[187.298,187.518],[187.538,188.249],[188.574,189.129],[189.149,189.529],[189.549,189.789],[189.809,189.909],[189.929,190.169],[190.189,190.489],[190.509,190.849],[190.869,191.229],[191.249,191.698],[191.869,192.029],[192.049,192.169],[192.189,192.549],[192.569,192.949],[192.969,193.689],[193.709,193.969],[193.989,194.579]],[[194.87,194.989],[195.009,195.409],[195.429,195.569],[195.589,195.949],[195.969,196.409],[196.429,196.689],[196.709,197.029],[197.049,197.289],[197.309,197.469],[197.489,197.769],[197.789,198.226],[198.674,198.694],[198.714,198.734],[198.754,198.947],[198.967,199.327],[199.347,199.387],[199.587,200.007],[200.027,200.187],[200.207,201.227]]],"G":{"intro":{"coupe":0.0,"theme":"clair","a":0,"b":0,"debut":0.0,"fin":5.059,"duree":5.059},"niv":{"coupe":4.659,"theme":"clair","a":1,"b":7,"debut":4.259,"fin":33.789,"duree":29.53},"effets":{"coupe":33.389,"theme":"clair","a":8,"b":9,"debut":32.989,"fin":44.939,"duree":11.95},"douleur":{"coupe":44.539,"theme":"sombre","a":10,"b":12,"debut":44.139,"fin":65.334,"duree":21.195},"odd":{"coupe":64.934,"theme":"sombre","a":13,"b":13,"debut":64.534,"fin":68.624,"duree":4.09},"parcours":{"coupe":68.224,"theme":"clair","a":14,"b":15,"debut":67.824,"fin":81.962,"duree":14.138},"preuves":{"coupe":81.562,"theme":"clair","a":16,"b":18,"debut":81.162,"fin":101.711,"duree":20.549},"meta":{"coupe":101.311,"theme":"sombre","a":19,"b":19,"debut":100.911,"fin":114.082,"duree":13.171},"engage":{"coupe":113.682,"theme":"sombre","a":20,"b":22,"debut":113.282,"fin":136.288,"duree":23.006},"outils":{"coupe":135.888,"theme":"clair","a":23,"b":23,"debut":135.488,"fin":143.436,"duree":7.948},"temps":{"coupe":143.036,"theme":"clair","a":24,"b":24,"debut":142.636,"fin":151.435,"duree":8.799},"question":{"coupe":151.035,"theme":"clair","a":25,"b":25,"debut":150.635,"fin":158.69,"duree":8.055},"audit":{"coupe":158.29,"theme":"clair","a":26,"b":28,"debut":157.89,"fin":176.672,"duree":18.782},"cta":{"coupe":176.272,"theme":"clair","a":29,"b":29,"debut":175.872,"fin":181.551,"duree":5.679},"capa":{"coupe":181.151,"theme":"sombre","a":30,"b":30,"debut":180.751,"fin":195.099,"duree":14.348},"fin":{"coupe":194.699,"theme":"sombre","a":31,"b":31,"debut":194.299,"fin":203.5,"duree":9.201}},"S":[{"d":-0.12,"f":1.781,"m":[[0,0.0],[1,0.04],[2,0.08],[3,0.12],[4,0.16],[5,0.357],[6,0.637],[7,0.717],[8,0.977]]},{"d":1.781,"f":4.67,"m":[[10,1.901],[11,1.941],[12,2.257],[13,3.197],[14,3.717]]},{"d":4.67,"f":5.757,"m":[[15,4.79],[16,4.857],[17,4.957],[18,5.137]]},{"d":5.757,"f":9.188,"m":[[19,5.877],[20,6.697],[21,6.997],[22,7.977],[23,8.177]]},{"d":9.188,"f":10.192,"m":[[24,9.308],[25,9.432]]},{"d":10.192,"f":12.09,"m":[[26,10.312],[27,10.432],[28,10.652],[29,10.792],[30,11.012],[31,11.192],[32,11.352],[33,11.652]]},{"d":12.09,"f":14.846,"m":[[35,12.21],[36,12.252],[37,12.372],[38,12.592],[39,13.032],[40,13.272],[41,13.792],[42,13.972],[43,14.272]]},{"d":14.846,"f":16.508,"m":[[45,14.966],[46,15.152],[47,15.472],[48,15.812]]},{"d":16.508,"f":17.892,"m":[[49,16.628],[50,16.792],[51,17.112],[52,17.232],[53,17.572]]},{"d":17.892,"f":19.857,"m":[[54,18.012],[55,18.192],[56,18.752],[57,19.112]]},{"d":19.857,"f":21.882,"m":[[58,19.977],[59,20.201],[60,20.741],[61,21.081],[62,21.241]]},{"d":21.882,"f":24.489,"m":[[63,22.002],[64,22.941],[65,23.241],[66,23.341],[67,23.501],[68,23.601],[69,23.761]]},{"d":24.489,"f":27.701,"m":[[70,24.609],[71,24.941],[72,25.354],[73,25.767],[74,26.181],[75,26.441],[76,26.601],[77,26.721]]},{"d":27.701,"f":29.843,"m":[[78,27.821],[79,28.603],[80,28.783],[81,29.163],[82,29.443],[83,29.583],[84,29.703]]},{"d":29.843,"f":32.76,"m":[[85,29.963],[86,30.283],[87,30.523],[88,30.943],[89,31.463],[90,31.603],[91,31.803]]},{"d":32.76,"f":33.569,"m":[[92,32.88]]},{"d":33.569,"f":35.408,"m":[[93,33.689],[94,33.843],[95,33.983],[96,34.083],[97,34.203],[98,34.363]]},{"d":35.408,"f":38.257,"m":[[99,35.528],[100,35.863],[101,36.363],[102,36.523],[103,36.803],[104,37.643]]},{"d":38.257,"f":39.955,"m":[[105,38.377],[106,38.497],[107,38.717],[108,38.917],[109,39.017],[110,39.197]]},{"d":39.955,"f":41.517,"m":[[111,40.075],[112,40.115],[113,40.237],[114,40.557],[115,40.617],[116,40.817]]},{"d":41.517,"f":42.837,"m":[[117,41.637],[118,41.777],[119,41.897],[120,42.137],[121,42.417]]},{"d":42.837,"f":44.698,"m":[[122,42.957],[123,43.217],[124,43.417],[125,43.477],[126,43.697],[127,43.837],[128,44.057]]},{"d":44.698,"f":45.837,"m":[[129,44.818],[130,45.017],[131,45.117],[132,45.317],[133,45.517]]},{"d":45.837,"f":47.297,"m":[[134,45.957],[135,46.117],[136,46.357]]},{"d":47.297,"f":48.837,"m":[[138,47.417],[139,47.457],[140,48.177],[141,48.397]]},{"d":48.837,"f":50.187,"m":[[142,48.957],[143,49.117],[144,49.377]]},{"d":50.187,"f":52.117,"m":[[145,50.307],[146,50.437],[147,50.897],[148,51.117],[149,51.237],[150,51.677]]},{"d":52.117,"f":54.125,"m":[[151,52.237],[152,52.477],[153,52.857],[154,53.137],[155,53.497]]},{"d":54.125,"f":55.297,"m":[[156,54.245],[157,54.437],[158,54.637],[159,54.997]]},{"d":55.297,"f":57.137,"m":[[160,55.417],[161,55.597],[162,56.513],[163,56.617]]},{"d":57.137,"f":57.919,"m":[[164,57.257],[165,57.519],[166,57.639]]},{"d":57.919,"f":60.339,"m":[[167,58.039],[168,58.239],[169,58.699],[170,58.919],[171,59.039],[172,59.799],[173,60.039]]},{"d":60.339,"f":62.719,"m":[[174,60.459],[175,60.639],[176,60.819],[177,61.099],[178,61.499],[179,61.759],[180,61.959],[181,62.279]]},{"d":62.719,"f":65.08,"m":[[182,62.839],[183,62.999],[184,63.139],[185,63.439],[186,63.799],[187,64.019]]},{"d":65.08,"f":65.999,"m":[[188,65.2],[189,65.699]]},{"d":65.999,"f":68.227,"m":[[190,66.119],[191,66.539],[192,66.999],[193,67.119],[194,67.239],[195,67.379],[196,67.619]]},{"d":68.227,"f":70.602,"m":[[197,68.347],[198,68.683],[199,68.882],[200,69.143],[201,69.662],[202,69.923],[203,70.083],[204,70.282]]},{"d":70.602,"f":72.542,"m":[[205,70.722],[206,70.963],[207,71.343],[208,71.523],[209,71.722]]},{"d":72.542,"f":73.743,"m":[[210,72.662],[211,73.043],[212,73.363],[213,73.562],[214,73.722]]},{"d":73.743,"f":76.258,"m":[[215,73.863],[216,74.162],[217,74.643],[218,74.743],[219,74.882],[220,75.162]]},{"d":76.258,"f":77.788,"m":[[221,76.378],[222,76.502],[223,76.683],[224,76.743],[225,76.942]]},{"d":77.788,"f":79.624,"m":[[226,77.908],[227,78.026],[228,78.186],[229,78.246],[230,78.386],[231,78.546],[232,78.786]]},{"d":79.624,"f":81.742,"m":[[233,79.744],[234,79.946],[235,80.346],[236,80.566],[237,80.626],[238,80.826]]},{"d":81.742,"f":82.706,"m":[[239,81.862],[240,82.146]]},{"d":82.706,"f":84.589,"m":[[241,82.826],[242,82.926],[243,83.366],[244,83.646],[245,83.746],[246,84.126]]},{"d":84.589,"f":86.426,"m":[[247,84.709],[248,84.886],[249,85.186],[250,85.346],[251,85.646],[252,85.906],[253,86.406]]},{"d":86.426,"f":88.95,"m":[[254,86.546],[255,86.826],[256,87.406],[257,87.746],[258,87.826],[259,87.966]]},{"d":88.95,"f":89.981,"m":[[260,89.07],[261,89.201],[262,89.541]]},{"d":89.981,"f":91.961,"m":[[263,90.101],[264,90.241],[265,91.041]]},{"d":91.961,"f":93.981,"m":[[266,92.081],[267,92.301],[268,92.421],[269,92.701],[270,93.461]]},{"d":93.981,"f":96.298,"m":[[271,94.101],[272,94.761],[273,94.881],[274,95.141],[275,95.421]]},{"d":96.298,"f":97.581,"m":[[276,96.418],[277,96.701],[278,96.861]]},{"d":97.581,"f":101.43,"m":[[280,97.701],[281,98.381],[282,99.041],[283,100.034],[284,100.534],[285,101.034]]},{"d":101.43,"f":103.014,"m":[[286,101.55],[287,101.694],[288,101.974],[289,102.36],[290,102.747]]},{"d":103.014,"f":104.589,"m":[[291,103.134],[292,103.394],[293,103.634],[294,103.734],[295,103.944],[296,104.154]]},{"d":104.589,"f":106.394,"m":[[297,104.709],[298,104.934],[299,105.134],[300,105.954],[301,106.294]]},{"d":106.394,"f":107.874,"m":[[302,106.514],[303,106.914],[304,107.314],[305,107.474]]},{"d":107.874,"f":108.894,"m":[[306,107.994],[307,108.504]]},{"d":108.894,"f":111.234,"m":[[308,109.014],[309,109.294],[310,109.714],[311,109.834],[312,110.234],[313,110.834],[314,111.134]]},{"d":111.234,"f":113.794,"m":[[315,111.354],[316,111.794],[317,112.014],[318,112.294],[319,112.614],[320,112.854]]},{"d":113.794,"f":115.235,"m":[[321,113.914],[322,114.135],[323,114.355],[324,114.875],[325,115.235]]},{"d":115.235,"f":116.962,"m":[[326,115.355],[327,115.695],[328,115.915],[329,116.055],[330,116.435]]},{"d":116.962,"f":118.495,"m":[[331,117.082],[332,117.235],[333,117.675],[334,118.055],[335,118.435]]},{"d":118.495,"f":120.195,"m":[[336,118.615],[337,118.775],[338,119.015],[339,119.115],[340,119.335]]},{"d":120.195,"f":122.175,"m":[[341,120.315],[342,120.395],[343,120.495],[344,120.675],[345,120.895],[346,120.995],[347,121.175],[348,121.605],[349,122.035]]},{"d":122.175,"f":124.385,"m":[[350,122.295],[351,122.395],[352,122.675],[353,123.155],[354,123.315],[355,123.575],[356,123.875]]},{"d":124.385,"f":126.598,"m":[[357,124.505],[358,124.688],[359,124.828],[360,125.308],[361,125.748],[362,126.208],[363,126.428]]},{"d":126.598,"f":128.709,"m":[[364,126.718],[365,127.008],[366,127.428],[367,127.568],[368,127.968]]},{"d":128.709,"f":130.008,"m":[[369,128.829],[370,129.168],[371,129.748]]},{"d":130.008,"f":131.83,"m":[[372,130.128],[373,130.288],[374,130.808],[375,131.008],[376,131.248]]},{"d":131.83,"f":133.814,"m":[[377,131.95],[378,132.208],[379,132.528],[380,132.768],[381,132.868],[382,133.088]]},{"d":133.814,"f":136.003,"m":[[383,133.934],[384,134.054],[385,134.414],[386,134.674],[387,134.774],[388,134.954]]},{"d":136.003,"f":137.214,"m":[[389,136.123],[390,136.254],[391,136.434],[392,136.934],[393,137.174]]},{"d":137.214,"f":138.83,"m":[[394,137.334],[395,137.634],[396,137.694],[397,138.054]]},{"d":138.83,"f":139.32,"m":[[398,138.95]]},{"d":139.32,"f":141.414,"m":[[399,139.44],[400,140.134],[401,140.414],[402,140.934],[403,141.374]]},{"d":141.414,"f":143.163,"m":[[404,141.534],[405,141.734],[406,141.854],[407,142.114],[408,142.254]]},{"d":143.163,"f":144.717,"m":[[409,143.283],[410,143.537],[411,143.697],[412,143.897],[413,144.377]]},{"d":144.717,"f":145.517,"m":[[414,144.837]]},{"d":145.517,"f":147.157,"m":[[415,145.637],[416,145.757],[417,145.937],[418,146.297],[419,146.677]]},{"d":147.157,"f":148.744,"m":[[420,147.277],[421,147.397],[422,147.617]]},{"d":148.744,"f":150.071,"m":[[423,148.864],[424,148.904],[425,148.997],[426,149.237]]},{"d":150.071,"f":151.076,"m":[[427,150.191],[428,150.231],[429,150.497]]},{"d":151.076,"f":152.933,"m":[[430,151.196],[431,151.236],[432,151.513],[433,151.653],[434,151.793],[435,152.033],[436,152.193],[437,152.413]]},{"d":152.933,"f":154.473,"m":[[438,153.053],[439,153.333],[440,153.493],[441,153.553],[442,153.653],[443,153.773],[444,154.213]]},{"d":154.473,"f":155.746,"m":[[445,154.593]]},{"d":158.07,"f":159.693,"m":[[458,158.19],[459,158.733],[460,158.933],[461,159.033],[462,159.203],[463,159.373],[464,159.553]]},{"d":159.693,"f":162.418,"m":[[465,159.813],[466,160.333],[467,160.793],[468,160.953],[469,161.253],[470,161.653]]},{"d":162.418,"f":163.72,"m":[[471,162.538],[472,162.88],[473,163.26],[474,163.48],[475,163.66]]},{"d":163.72,"f":165.215,"m":[[476,163.84],[477,164.06],[478,164.34]]},{"d":165.215,"f":167.04,"m":[[479,165.335],[480,165.375],[481,165.7],[482,166.12],[483,166.22],[484,166.6]]},{"d":167.04,"f":168.716,"m":[[485,167.16],[486,167.28],[487,167.4],[488,167.64],[489,168.1]]},{"d":168.716,"f":170.92,"m":[[490,168.836],[491,169.24],[492,169.34],[493,169.96],[494,170.58],[495,170.88]]},{"d":170.92,"f":174.285,"m":[[496,171.04],[497,171.3],[498,172.2],[499,172.48],[500,172.98],[501,173.48],[502,173.8]]},{"d":174.285,"f":176.441,"m":[[503,174.405],[504,174.525],[505,175.045],[506,175.405],[507,175.705]]},{"d":176.441,"f":178.505,"m":[[508,176.561],[509,176.905],[510,177.025],[511,177.165],[512,177.525],[513,177.725],[514,178.085],[515,178.365]]},{"d":178.505,"f":181.251,"m":[[516,178.625],[517,179.025],[518,179.245],[519,179.565],[520,179.745],[521,180.572]]},{"d":181.251,"f":183.078,"m":[[522,181.371],[523,181.638],[524,181.938],[525,182.278],[526,182.418],[527,182.498],[528,182.998]]},{"d":183.078,"f":185.083,"m":[[529,183.198],[530,183.338],[531,183.518],[532,183.778],[533,184.038],[534,184.258]]},{"d":185.083,"f":187.078,"m":[[535,185.203],[536,185.518],[537,185.938],[538,186.238],[539,186.418],[540,186.758]]},{"d":187.078,"f":188.454,"m":[[541,187.198],[542,187.298],[543,187.538]]},{"d":188.454,"f":190.389,"m":[[544,188.574],[545,189.149],[546,189.549],[547,189.809],[548,189.929],[549,190.189]]},{"d":190.389,"f":192.849,"m":[[550,190.509],[551,190.869],[552,191.249],[553,191.869],[554,192.049],[555,192.189],[556,192.569]]},{"d":192.849,"f":194.75,"m":[[557,192.969],[558,193.709],[559,193.989]]},{"d":194.75,"f":196.309,"m":[[560,194.87],[561,195.009],[562,195.429],[563,195.589],[564,195.969]]},{"d":196.309,"f":198.554,"m":[[565,196.429],[566,196.709],[567,197.049],[568,197.309],[569,197.489],[570,197.789]]},{"d":198.554,"f":201.3,"m":[[571,198.674],[572,198.714],[573,198.754],[574,198.967],[575,199.347],[576,199.587],[577,200.027],[578,200.207]]}],"DUREE":203.5};
+      const D = {"L":[[[0.0,0.02],[0.04,0.06],[0.08,0.1],[0.12,0.14],[0.16,0.337],[0.357,0.617],[0.637,0.697],[0.717,0.957],[0.977,1.317],[1.337,1.67],[1.901,1.921],[1.941,2.237],[2.257,3.177],[3.197,3.697],[3.717,4.539]],[[4.79,4.837],[4.857,4.937],[4.957,5.117],[5.137,5.857],[5.877,6.677],[6.697,6.977],[6.997,7.95],[7.977,8.157],[8.177,9.121]],[[9.308,9.412],[9.432,10.292],[10.312,10.412],[10.432,10.632],[10.652,10.772],[10.792,10.992],[11.012,11.172],[11.192,11.332],[11.352,11.632],[11.652,11.832],[11.852,12.047],[12.21,12.232],[12.252,12.352],[12.372,12.572],[12.592,13.012],[13.032,13.252],[13.272,13.772],[13.792,13.952],[13.972,14.252],[14.272,14.654],[14.926,14.946]],[[14.966,15.132],[15.152,15.452],[15.472,15.792],[15.812,16.286],[16.628,16.772],[16.792,17.092],[17.112,17.212],[17.232,17.552],[17.572,17.992],[18.012,18.172],[18.192,18.732],[18.752,19.092],[19.112,19.63]],[[19.977,20.181],[20.201,20.721],[20.741,21.061],[21.081,21.221],[21.241,21.786]],[[22.002,22.921],[22.941,23.221],[23.241,23.321],[23.341,23.481],[23.501,23.581],[23.601,23.741],[23.761,24.395]],[[24.609,24.921],[24.941,25.334],[25.354,25.747],[25.767,26.161],[26.181,26.421],[26.441,26.581],[26.601,26.701],[26.721,27.391]],[[27.821,28.583],[28.603,28.763],[28.783,29.143],[29.163,29.423],[29.443,29.563],[29.583,29.683],[29.703,29.943],[29.963,30.263],[30.283,30.503],[30.523,30.923],[30.943,31.443],[31.463,31.583],[31.603,31.783],[31.803,32.512],[32.88,33.171]],[[33.689,33.823],[33.843,33.963],[33.983,34.063],[34.083,34.183],[34.203,34.343],[34.363,35.272],[35.528,35.843],[35.863,36.343],[36.363,36.503],[36.523,36.783],[36.803,37.623],[37.643,38.143]],[[38.377,38.477],[38.497,38.697],[38.717,38.897],[38.917,38.997],[39.017,39.177],[39.197,39.852],[40.075,40.095],[40.115,40.217],[40.237,40.537],[40.557,40.597],[40.617,40.797],[40.817,41.617],[41.637,41.757],[41.777,41.877],[41.897,42.117],[42.137,42.397],[42.417,42.937],[42.957,43.197],[43.217,43.397],[43.417,43.457],[43.477,43.677],[43.697,43.817],[43.837,44.037],[44.057,44.419]],[[44.818,44.997],[45.017,45.097],[45.117,45.297],[45.317,45.497],[45.517,45.937],[45.957,46.097],[46.117,46.337],[46.357,46.757],[46.777,47.062],[47.417,47.437],[47.457,48.157],[48.177,48.377],[48.397,48.937],[48.957,49.097],[49.117,49.357],[49.377,50.013],[50.307,50.417],[50.437,50.877],[50.897,51.097],[51.117,51.217],[51.237,51.657],[51.677,52.217],[52.237,52.457],[52.477,52.837],[52.857,53.117],[53.137,53.477],[53.497,53.895]],[[54.245,54.417],[54.437,54.617],[54.637,54.977],[54.997,55.397],[55.417,55.577],[55.597,56.274],[56.513,56.597],[56.617,56.987]],[[57.257,57.499],[57.519,57.619],[57.639,58.019],[58.039,58.219],[58.239,58.679],[58.699,58.899],[58.919,59.019],[59.039,59.779],[59.799,60.019],[60.039,60.439],[60.459,60.619],[60.639,60.799],[60.819,61.079],[61.099,61.479],[61.499,61.739],[61.759,61.939],[61.959,62.259],[62.279,62.701],[62.839,62.87],[62.999,63.119],[63.139,63.419],[63.439,63.779],[63.799,63.999],[64.019,64.814]],[[65.2,65.679],[65.699,66.099],[66.119,66.519],[66.539,66.979],[66.999,67.099],[67.119,67.219],[67.239,67.359],[67.379,67.599],[67.619,68.104]],[[68.347,68.663],[68.683,68.862],[68.882,69.123],[69.143,69.642],[69.662,69.903],[69.923,70.063],[70.083,70.263],[70.282,70.703],[70.722,70.943],[70.963,71.323],[71.343,71.503],[71.523,71.703],[71.722,72.642],[72.662,73.023],[73.043,73.343],[73.363,73.543],[73.562,73.703],[73.722,73.843],[73.863,74.142],[74.162,74.566],[74.643,74.723],[74.743,74.862],[74.882,75.142],[75.162,75.936]],[[76.378,76.483],[76.502,76.663],[76.683,76.723],[76.743,76.922],[76.942,77.59],[77.908,78.006],[78.026,78.166],[78.186,78.226],[78.246,78.366],[78.386,78.526],[78.546,78.766],[78.786,79.38],[79.744,79.926],[79.946,80.326],[80.346,80.546],[80.566,80.606],[80.626,80.806],[80.826,81.295]],[[81.862,82.126],[82.146,82.806],[82.826,82.906],[82.926,83.346],[83.366,83.626],[83.646,83.726],[83.746,84.106],[84.126,84.546],[84.709,84.866],[84.886,85.166],[85.186,85.326],[85.346,85.626],[85.646,85.886],[85.906,86.386],[86.406,86.526],[86.546,86.806],[86.826,87.386],[87.406,87.726],[87.746,87.806],[87.826,87.946],[87.966,88.777]],[[89.07,89.181],[89.201,89.521],[89.541,90.081],[90.101,90.221],[90.241,91.021],[91.041,92.061],[92.081,92.281],[92.301,92.401],[92.421,92.681],[92.701,93.441],[93.461,94.081],[94.101,94.741],[94.761,94.861],[94.881,95.121],[95.141,95.401],[95.421,96.121]],[[96.418,96.681],[96.701,96.841],[96.861,97.261],[97.281,97.681],[97.701,98.361],[98.381,99.021],[99.041,99.944],[100.034,100.514],[100.534,101.014],[101.034,101.191]],[[101.55,101.674],[101.694,101.954],[101.974,102.34],[102.36,102.727],[102.747,103.114],[103.134,103.374],[103.394,103.614],[103.634,103.714],[103.734,103.924],[103.944,104.134],[104.154,104.509],[104.709,104.914],[104.934,105.114],[105.134,105.934],[105.954,106.274],[106.294,106.494],[106.514,106.894],[106.914,107.294],[107.314,107.454],[107.474,107.974],[107.994,108.484],[108.504,108.994],[109.014,109.274],[109.294,109.694],[109.714,109.814],[109.834,110.214],[110.234,110.814],[110.834,111.114],[111.134,111.334],[111.354,111.774],[111.794,111.994],[112.014,112.274],[112.294,112.594],[112.614,112.834],[112.854,113.562]],[[113.914,114.115],[114.135,114.335],[114.355,114.855],[114.875,115.215],[115.235,115.335],[115.355,115.675],[115.695,115.895],[115.915,116.035],[116.055,116.415],[116.435,116.793]],[[117.082,117.215],[117.235,117.655],[117.675,118.035],[118.055,118.415],[118.435,118.595],[118.615,118.755],[118.775,118.995],[119.015,119.095],[119.115,119.315],[119.335,120.09],[120.315,120.375],[120.395,120.475],[120.495,120.655],[120.675,120.875],[120.895,120.975],[120.995,121.155],[121.175,121.585],[121.605,122.015],[122.035,122.275],[122.295,122.375],[122.395,122.655],[122.675,123.135],[123.155,123.295],[123.315,123.555],[123.575,123.855],[123.875,124.317],[124.505,124.668],[124.688,124.808],[124.828,125.288],[125.308,125.728],[125.748,126.188],[126.208,126.408],[126.428,126.698],[126.718,126.988],[127.008,127.408],[127.428,127.548],[127.568,127.948],[127.968,128.447]],[[128.829,129.148],[129.168,129.728],[129.748,130.108],[130.128,130.268],[130.288,130.788],[130.808,130.988],[131.008,131.228],[131.248,131.799],[131.95,132.188],[132.208,132.508],[132.528,132.748],[132.768,132.848],[132.868,133.068],[133.088,133.873],[133.934,134.034],[134.054,134.394],[134.414,134.654],[134.674,134.754],[134.774,134.934],[134.954,135.768]],[[136.123,136.234],[136.254,136.414],[136.434,136.914],[136.934,137.154],[137.174,137.314],[137.334,137.614],[137.634,137.674],[137.694,138.034],[138.054,138.597],[138.95,139.42],[139.44,140.114],[140.134,140.394],[140.414,140.914],[140.934,141.354],[141.374,141.514],[141.534,141.714],[141.734,141.834],[141.854,142.094],[142.114,142.234],[142.254,142.916]],[[143.283,143.517],[143.537,143.677],[143.697,143.877],[143.897,144.357],[144.377,144.817],[144.837,145.263],[145.637,145.737],[145.757,145.917],[145.937,146.277],[146.297,146.657],[146.677,147.257],[147.277,147.377],[147.397,147.597],[147.617,148.379],[148.864,148.884],[148.904,148.977],[148.997,149.217],[149.237,149.944],[150.191,150.211],[150.231,150.477],[150.497,150.915]],[[151.196,151.216],[151.236,151.493],[151.513,151.633],[151.653,151.773],[151.793,152.013],[152.033,152.173],[152.193,152.393],[152.413,153.033],[153.053,153.313],[153.333,153.473],[153.493,153.533],[153.553,153.633],[153.653,153.753],[153.773,154.193],[154.213,154.573],[154.593,154.846],[154.866,155.1],[155.139,155.393],[155.413,155.713],[155.733,155.813],[155.833,155.993],[156.013,156.393],[156.413,156.613],[156.633,156.753],[156.773,156.913],[156.933,157.728],[157.833,158.13],[158.15,158.17]],[[158.19,158.713],[158.733,158.913],[158.933,159.013],[159.033,159.183],[159.203,159.353],[159.373,159.533],[159.553,159.793],[159.813,160.313],[160.333,160.773],[160.793,160.933],[160.953,161.233],[161.253,161.633],[161.653,162.188]],[[162.538,162.86],[162.88,163.24],[163.26,163.46],[163.48,163.64],[163.66,163.82],[163.84,164.04],[164.06,164.32],[164.34,164.986],[165.335,165.355],[165.375,165.68],[165.7,166.1],[166.12,166.2],[166.22,166.58],[166.6,167.14],[167.16,167.26],[167.28,167.38],[167.4,167.62],[167.64,168.08],[168.1,168.492]],[[168.836,169.22],[169.24,169.32],[169.34,169.94],[169.96,170.56],[170.58,170.86],[170.88,171.02],[171.04,171.28],[171.3,172.18],[172.2,172.46],[172.48,172.96],[172.98,173.46],[173.48,173.78],[173.8,174.36],[174.405,174.505],[174.525,175.025],[175.045,175.385],[175.405,175.685],[175.705,176.152]],[[176.561,176.885],[176.905,177.005],[177.025,177.145],[177.165,177.505],[177.525,177.705],[177.725,178.065],[178.085,178.345],[178.365,178.605],[178.625,179.005],[179.025,179.225],[179.245,179.545],[179.565,179.725],[179.745,180.552],[180.572,181.031]],[[181.371,181.618],[181.638,181.918],[181.938,182.258],[182.278,182.398],[182.418,182.478],[182.498,182.978],[182.998,183.178],[183.198,183.318],[183.338,183.498],[183.518,183.758],[183.778,184.018],[184.038,184.238],[184.258,185.048],[185.203,185.498],[185.518,185.918],[185.938,186.218],[186.238,186.398],[186.418,186.738],[186.758,187.178],[187.198,187.278],[187.298,187.518],[187.538,188.249],[188.574,189.129],[189.149,189.529],[189.549,189.789],[189.809,189.909],[189.929,190.169],[190.189,190.489],[190.509,190.849],[190.869,191.229],[191.249,191.698],[191.869,192.029],[192.049,192.169],[192.189,192.549],[192.569,192.949],[192.969,193.689],[193.709,193.969],[193.989,194.579]],[[194.87,194.989],[195.009,195.409],[195.429,195.569],[195.589,195.949],[195.969,196.409],[196.429,196.689],[196.709,197.029],[197.049,197.289],[197.309,197.469],[197.489,197.769],[197.789,198.226],[198.674,198.694],[198.714,198.734],[198.754,198.947],[198.967,199.327],[199.347,199.387],[199.587,200.007],[200.027,200.187],[200.207,201.227]]],"G":{"intro":{"coupe":0.0,"theme":"clair","a":0,"b":0,"debut":0.0,"fin":5.059,"duree":5.059},"niv":{"coupe":4.659,"theme":"clair","a":1,"b":7,"debut":4.259,"fin":33.789,"duree":29.53},"effets":{"coupe":33.389,"theme":"clair","a":8,"b":9,"debut":32.989,"fin":44.939,"duree":11.95},"douleur":{"coupe":44.539,"theme":"sombre","a":10,"b":12,"debut":44.139,"fin":65.334,"duree":21.195},"odd":{"coupe":64.934,"theme":"sombre","a":13,"b":13,"debut":64.534,"fin":68.624,"duree":4.09},"parcours":{"coupe":68.224,"theme":"clair","a":14,"b":15,"debut":67.824,"fin":81.962,"duree":14.138},"preuves":{"coupe":81.562,"theme":"clair","a":16,"b":18,"debut":81.162,"fin":101.711,"duree":20.549},"meta":{"coupe":101.311,"theme":"sombre","a":19,"b":19,"debut":100.911,"fin":114.082,"duree":13.171},"engage":{"coupe":113.682,"theme":"sombre","a":20,"b":22,"debut":113.282,"fin":136.288,"duree":23.006},"outils":{"coupe":135.888,"theme":"clair","a":23,"b":23,"debut":135.488,"fin":143.436,"duree":7.948},"temps":{"coupe":143.036,"theme":"clair","a":24,"b":24,"debut":142.636,"fin":151.435,"duree":8.799},"question":{"coupe":151.035,"theme":"clair","a":25,"b":25,"debut":150.635,"fin":158.69,"duree":8.055},"audit":{"coupe":158.29,"theme":"clair","a":26,"b":28,"debut":157.89,"fin":176.672,"duree":18.782},"cta":{"coupe":176.272,"theme":"clair","a":29,"b":29,"debut":175.872,"fin":181.551,"duree":5.679},"capa":{"coupe":181.151,"theme":"sombre","a":30,"b":30,"debut":180.751,"fin":195.099,"duree":14.348},"fin":{"coupe":194.699,"theme":"sombre","a":31,"b":31,"debut":194.299,"fin":203.5,"duree":9.201}},"S":[{"d":-0.12,"f":1.781,"m":[[0,0.0],[1,0.04],[2,0.08],[3,0.12],[4,0.16],[5,0.357],[6,0.637],[7,0.717],[8,0.977]]},{"d":1.781,"f":3.077,"m":[[10,1.901],[11,1.941],[12,2.257]]},{"d":3.077,"f":4.67,"m":[[13,3.197],[14,3.717]]},{"d":4.67,"f":5.757,"m":[[15,4.79],[16,4.857],[17,4.957],[18,5.137]]},{"d":5.757,"f":6.577,"m":[[19,5.877]]},{"d":6.577,"f":9.188,"m":[[20,6.697],[21,6.997],[22,7.977],[23,8.177]]},{"d":9.188,"f":10.192,"m":[[24,9.308],[25,9.432]]},{"d":10.192,"f":11.072,"m":[[26,10.312],[27,10.432],[28,10.652],[29,10.792],[30,11.012]]},{"d":11.072,"f":12.09,"m":[[31,11.192],[32,11.352],[33,11.652]]},{"d":12.09,"f":13.672,"m":[[35,12.21],[36,12.252],[37,12.372],[38,12.592],[39,13.032],[40,13.272]]},{"d":13.672,"f":14.846,"m":[[41,13.792],[42,13.972],[43,14.272]]},{"d":14.846,"f":16.508,"m":[[45,14.966],[46,15.152],[47,15.472],[48,15.812]]},{"d":16.508,"f":17.892,"m":[[49,16.628],[50,16.792],[51,17.112],[52,17.232],[53,17.572]]},{"d":17.892,"f":19.857,"m":[[54,18.012],[55,18.192],[56,18.752],[57,19.112]]},{"d":19.857,"f":21.882,"m":[[58,19.977],[59,20.201],[60,20.741],[61,21.081],[62,21.241]]},{"d":21.882,"f":23.221,"m":[[63,22.002],[64,22.941],[65,23.241]]},{"d":23.221,"f":24.489,"m":[[66,23.341],[67,23.501],[68,23.601],[69,23.761]]},{"d":24.489,"f":26.061,"m":[[70,24.609],[71,24.941],[72,25.354],[73,25.767]]},{"d":26.061,"f":27.701,"m":[[74,26.181],[75,26.441],[76,26.601],[77,26.721]]},{"d":27.701,"f":29.323,"m":[[78,27.821],[79,28.603],[80,28.783],[81,29.163]]},{"d":29.323,"f":30.823,"m":[[82,29.443],[83,29.583],[84,29.703],[85,29.963],[86,30.283],[87,30.523]]},{"d":30.823,"f":32.76,"m":[[88,30.943],[89,31.463],[90,31.603],[91,31.803]]},{"d":32.76,"f":33.569,"m":[[92,32.88]]},{"d":33.569,"f":35.408,"m":[[93,33.689],[94,33.843],[95,33.983],[96,34.083],[97,34.203],[98,34.363]]},{"d":35.408,"f":36.243,"m":[[99,35.528],[100,35.863]]},{"d":36.243,"f":38.257,"m":[[101,36.363],[102,36.523],[103,36.803],[104,37.643]]},{"d":38.257,"f":39.955,"m":[[105,38.377],[106,38.497],[107,38.717],[108,38.917],[109,39.017],[110,39.197]]},{"d":39.955,"f":41.517,"m":[[111,40.075],[112,40.115],[113,40.237],[114,40.557],[115,40.617],[116,40.817]]},{"d":41.517,"f":42.837,"m":[[117,41.637],[118,41.777],[119,41.897],[120,42.137],[121,42.417]]},{"d":42.837,"f":44.698,"m":[[122,42.957],[123,43.217],[124,43.417],[125,43.477],[126,43.697],[127,43.837],[128,44.057]]},{"d":44.698,"f":45.837,"m":[[129,44.818],[130,45.017],[131,45.117],[132,45.317],[133,45.517]]},{"d":45.837,"f":47.297,"m":[[134,45.957],[135,46.117],[136,46.357]]},{"d":47.297,"f":48.837,"m":[[138,47.417],[139,47.457],[140,48.177],[141,48.397]]},{"d":48.837,"f":50.187,"m":[[142,48.957],[143,49.117],[144,49.377]]},{"d":50.187,"f":52.117,"m":[[145,50.307],[146,50.437],[147,50.897],[148,51.117],[149,51.237],[150,51.677]]},{"d":52.117,"f":54.125,"m":[[151,52.237],[152,52.477],[153,52.857],[154,53.137],[155,53.497]]},{"d":54.125,"f":55.297,"m":[[156,54.245],[157,54.437],[158,54.637],[159,54.997]]},{"d":55.297,"f":57.137,"m":[[160,55.417],[161,55.597],[162,56.513],[163,56.617]]},{"d":57.137,"f":58.799,"m":[[164,57.257],[165,57.519],[166,57.639],[167,58.039],[168,58.239],[169,58.699]]},{"d":58.799,"f":60.339,"m":[[170,58.919],[171,59.039],[172,59.799],[173,60.039]]},{"d":60.339,"f":61.839,"m":[[174,60.459],[175,60.639],[176,60.819],[177,61.099],[178,61.499],[179,61.759]]},{"d":61.839,"f":63.679,"m":[[180,61.959],[181,62.279],[182,62.839],[183,62.999],[184,63.139],[185,63.439]]},{"d":63.679,"f":65.08,"m":[[186,63.799],[187,64.019]]},{"d":65.08,"f":65.999,"m":[[188,65.2],[189,65.699]]},{"d":65.999,"f":67.119,"m":[[190,66.119],[191,66.539],[192,66.999],[193,67.119]]},{"d":67.119,"f":68.227,"m":[[194,67.239],[195,67.379],[196,67.619]]},{"d":68.227,"f":69.803,"m":[[197,68.347],[198,68.683],[199,68.882],[200,69.143],[201,69.662]]},{"d":69.803,"f":70.843,"m":[[202,69.923],[203,70.083],[204,70.282],[205,70.722]]},{"d":70.843,"f":72.542,"m":[[206,70.963],[207,71.343],[208,71.523],[209,71.722]]},{"d":72.542,"f":73.743,"m":[[210,72.662],[211,73.043],[212,73.363],[213,73.562],[214,73.722]]},{"d":73.743,"f":76.258,"m":[[215,73.863],[216,74.162],[217,74.643],[218,74.743],[219,74.882],[220,75.162]]},{"d":76.258,"f":77.788,"m":[[221,76.378],[222,76.502],[223,76.683],[224,76.743],[225,76.942]]},{"d":77.788,"f":79.624,"m":[[226,77.908],[227,78.026],[228,78.186],[229,78.246],[230,78.386],[231,78.546],[232,78.786]]},{"d":79.624,"f":81.742,"m":[[233,79.744],[234,79.946],[235,80.346],[236,80.566],[237,80.626],[238,80.826]]},{"d":81.742,"f":82.706,"m":[[239,81.862],[240,82.146]]},{"d":82.706,"f":83.526,"m":[[241,82.826],[242,82.926],[243,83.366]]},{"d":83.526,"f":84.589,"m":[[244,83.646],[245,83.746],[246,84.126]]},{"d":84.589,"f":85.786,"m":[[247,84.709],[248,84.886],[249,85.186],[250,85.346],[251,85.646]]},{"d":85.786,"f":87.286,"m":[[252,85.906],[253,86.406],[254,86.546],[255,86.826]]},{"d":87.286,"f":88.95,"m":[[256,87.406],[257,87.746],[258,87.826],[259,87.966]]},{"d":88.95,"f":89.981,"m":[[260,89.07],[261,89.201],[262,89.541]]},{"d":89.981,"f":91.961,"m":[[263,90.101],[264,90.241],[265,91.041]]},{"d":91.961,"f":93.341,"m":[[266,92.081],[267,92.301],[268,92.421],[269,92.701]]},{"d":93.341,"f":95.301,"m":[[270,93.461],[271,94.101],[272,94.761],[273,94.881],[274,95.141]]},{"d":95.301,"f":96.298,"m":[[275,95.421]]},{"d":96.298,"f":97.581,"m":[[276,96.418],[277,96.701],[278,96.861]]},{"d":97.581,"f":98.921,"m":[[280,97.701],[281,98.381]]},{"d":98.921,"f":101.43,"m":[[282,99.041],[283,100.034],[284,100.534],[285,101.034]]},{"d":101.43,"f":102.24,"m":[[286,101.55],[287,101.694],[288,101.974]]},{"d":102.24,"f":103.274,"m":[[289,102.36],[290,102.747],[291,103.134]]},{"d":103.274,"f":104.589,"m":[[292,103.394],[293,103.634],[294,103.734],[295,103.944],[296,104.154]]},{"d":104.589,"f":106.394,"m":[[297,104.709],[298,104.934],[299,105.134],[300,105.954],[301,106.294]]},{"d":106.394,"f":107.874,"m":[[302,106.514],[303,106.914],[304,107.314],[305,107.474]]},{"d":107.874,"f":108.894,"m":[[306,107.994],[307,108.504]]},{"d":108.894,"f":110.714,"m":[[308,109.014],[309,109.294],[310,109.714],[311,109.834],[312,110.234]]},{"d":110.714,"f":112.174,"m":[[313,110.834],[314,111.134],[315,111.354],[316,111.794],[317,112.014]]},{"d":112.174,"f":113.794,"m":[[318,112.294],[319,112.614],[320,112.854]]},{"d":113.794,"f":115.235,"m":[[321,113.914],[322,114.135],[323,114.355],[324,114.875],[325,115.235]]},{"d":115.235,"f":116.962,"m":[[326,115.355],[327,115.695],[328,115.915],[329,116.055],[330,116.435]]},{"d":116.962,"f":118.495,"m":[[331,117.082],[332,117.235],[333,117.675],[334,118.055],[335,118.435]]},{"d":118.495,"f":120.195,"m":[[336,118.615],[337,118.775],[338,119.015],[339,119.115],[340,119.335]]},{"d":120.195,"f":121.485,"m":[[341,120.315],[342,120.395],[343,120.495],[344,120.675],[345,120.895],[346,120.995],[347,121.175]]},{"d":121.485,"f":123.035,"m":[[348,121.605],[349,122.035],[350,122.295],[351,122.395],[352,122.675]]},{"d":123.035,"f":124.385,"m":[[353,123.155],[354,123.315],[355,123.575],[356,123.875]]},{"d":124.385,"f":126.088,"m":[[357,124.505],[358,124.688],[359,124.828],[360,125.308],[361,125.748]]},{"d":126.088,"f":127.308,"m":[[362,126.208],[363,126.428],[364,126.718],[365,127.008]]},{"d":127.308,"f":128.709,"m":[[366,127.428],[367,127.568],[368,127.968]]},{"d":128.709,"f":130.008,"m":[[369,128.829],[370,129.168],[371,129.748]]},{"d":130.008,"f":131.83,"m":[[372,130.128],[373,130.288],[374,130.808],[375,131.008],[376,131.248]]},{"d":131.83,"f":133.814,"m":[[377,131.95],[378,132.208],[379,132.528],[380,132.768],[381,132.868],[382,133.088]]},{"d":133.814,"f":136.003,"m":[[383,133.934],[384,134.054],[385,134.414],[386,134.674],[387,134.774],[388,134.954]]},{"d":136.003,"f":137.214,"m":[[389,136.123],[390,136.254],[391,136.434],[392,136.934],[393,137.174]]},{"d":137.214,"f":138.83,"m":[[394,137.334],[395,137.634],[396,137.694],[397,138.054]]},{"d":138.83,"f":141.414,"m":[[398,138.95],[399,139.44],[400,140.134],[401,140.414],[402,140.934],[403,141.374]]},{"d":141.414,"f":143.163,"m":[[404,141.534],[405,141.734],[406,141.854],[407,142.114],[408,142.254]]},{"d":143.163,"f":144.717,"m":[[409,143.283],[410,143.537],[411,143.697],[412,143.897],[413,144.377]]},{"d":144.717,"f":145.517,"m":[[414,144.837]]},{"d":145.517,"f":147.157,"m":[[415,145.637],[416,145.757],[417,145.937],[418,146.297],[419,146.677]]},{"d":147.157,"f":148.744,"m":[[420,147.277],[421,147.397],[422,147.617]]},{"d":148.744,"f":150.071,"m":[[423,148.864],[424,148.904],[425,148.997],[426,149.237]]},{"d":150.071,"f":151.076,"m":[[427,150.191],[428,150.231],[429,150.497]]},{"d":151.076,"f":151.913,"m":[[430,151.196],[431,151.236],[432,151.513],[433,151.653],[434,151.793]]},{"d":151.913,"f":152.933,"m":[[435,152.033],[436,152.193],[437,152.413]]},{"d":152.933,"f":154.473,"m":[[438,153.053],[439,153.333],[440,153.493],[441,153.553],[442,153.653],[443,153.773],[444,154.213]]},{"d":154.473,"f":155.746,"m":[[445,154.593]]},{"d":158.07,"f":159.253,"m":[[458,158.19],[459,158.733],[460,158.933],[461,159.033],[462,159.203]]},{"d":159.253,"f":160.673,"m":[[463,159.373],[464,159.553],[465,159.813],[466,160.333]]},{"d":160.673,"f":162.418,"m":[[467,160.793],[468,160.953],[469,161.253],[470,161.653]]},{"d":162.418,"f":163.72,"m":[[471,162.538],[472,162.88],[473,163.26],[474,163.48],[475,163.66]]},{"d":163.72,"f":165.215,"m":[[476,163.84],[477,164.06],[478,164.34]]},{"d":165.215,"f":167.04,"m":[[479,165.335],[480,165.375],[481,165.7],[482,166.12],[483,166.22],[484,166.6]]},{"d":167.04,"f":167.98,"m":[[485,167.16],[486,167.28],[487,167.4],[488,167.64]]},{"d":167.98,"f":168.716,"m":[[489,168.1]]},{"d":168.716,"f":170.46,"m":[[490,168.836],[491,169.24],[492,169.34],[493,169.96]]},{"d":170.46,"f":172.36,"m":[[494,170.58],[495,170.88],[496,171.04],[497,171.3],[498,172.2]]},{"d":172.36,"f":174.285,"m":[[499,172.48],[500,172.98],[501,173.48],[502,173.8]]},{"d":174.285,"f":176.441,"m":[[503,174.405],[504,174.525],[505,175.045],[506,175.405],[507,175.705]]},{"d":176.441,"f":177.965,"m":[[508,176.561],[509,176.905],[510,177.025],[511,177.165],[512,177.525],[513,177.725]]},{"d":177.965,"f":179.445,"m":[[514,178.085],[515,178.365],[516,178.625],[517,179.025],[518,179.245]]},{"d":179.445,"f":181.251,"m":[[519,179.565],[520,179.745],[521,180.572]]},{"d":181.251,"f":182.298,"m":[[522,181.371],[523,181.638],[524,181.938],[525,182.278]]},{"d":182.298,"f":183.658,"m":[[526,182.418],[527,182.498],[528,182.998],[529,183.198],[530,183.338],[531,183.518]]},{"d":183.658,"f":185.083,"m":[[532,183.778],[533,184.038],[534,184.258]]},{"d":185.083,"f":187.078,"m":[[535,185.203],[536,185.518],[537,185.938],[538,186.238],[539,186.418],[540,186.758]]},{"d":187.078,"f":188.454,"m":[[541,187.198],[542,187.298],[543,187.538]]},{"d":188.454,"f":189.809,"m":[[544,188.574],[545,189.149],[546,189.549],[547,189.809]]},{"d":189.809,"f":191.749,"m":[[548,189.929],[549,190.189],[550,190.509],[551,190.869],[552,191.249]]},{"d":191.749,"f":193.589,"m":[[553,191.869],[554,192.049],[555,192.189],[556,192.569],[557,192.969]]},{"d":193.589,"f":194.75,"m":[[558,193.709],[559,193.989]]},{"d":194.75,"f":195.849,"m":[[560,194.87],[561,195.009],[562,195.429],[563,195.589]]},{"d":195.849,"f":197.189,"m":[[564,195.969],[565,196.429],[566,196.709],[567,197.049]]},{"d":197.189,"f":198.554,"m":[[568,197.309],[569,197.489],[570,197.789]]},{"d":198.554,"f":199.907,"m":[[571,198.674],[572,198.714],[573,198.754],[574,198.967],[575,199.347],[576,199.587]]},{"d":199.907,"f":201.3,"m":[[577,200.027],[578,200.207]]}],"DUREE":203.5};
       const G = D.G;
       const tl = gsap.timeline({ paused: true });
       const T = (l, k = 0) => { const a = D.L[l]; return a[k < 0 ? a.length + k : k][0]; };
@@ -854,34 +964,61 @@
       }
       function vers(cur, t, x, y, d, ease) { tl.to(cur, { x: x, y: y, duration: d || 0.5, ease: ease || "power2.inOut" }, t); }
 
-      // ---------- fondus entre groupes et thème ----------
+      // ---------- transitions : travelling continu (réf. C) et étoile Oddysee ----------
       const noms = Object.keys(G);
+      const ETOILE = { odd: true, fin: true };             // groupes ouverts par l'étoile du logo
+      function etoile(t0) {                                 // les quatre éclats se rejoignent puis on traverse l'étoile
+        const dep = [[-620, -420, -140], [620, -420, 140], [-620, 420, 140], [620, 420, -140]];
+        tl.set("#etoile", { autoAlpha: 1, scale: 1, transformOrigin: "50% 50%" }, t0);
+        dep.forEach((d, i) => tl.fromTo("#ec" + i, { x: d[0], y: d[1], rotation: d[2], opacity: 0, transformOrigin: "189px 253px" },
+          { x: 0, y: 0, rotation: 0, opacity: 1, duration: 0.45, ease: "power3.out" }, t0));
+        tl.to("#etoile", { rotation: 45, duration: 0.6, ease: "power2.inOut" }, t0 + 0.2);
+        tl.to("#etoile", { scale: 11, duration: 0.42, ease: "power3.in" }, t0 + 0.55);
+        tl.fromTo("#etoile-flash", { opacity: 0 }, { opacity: 1, duration: 0.2 }, t0 + 0.75);
+        tl.set("#etoile", { autoAlpha: 0 }, t0 + 0.97);
+        tl.to("#etoile-flash", { opacity: 0, duration: 0.45, ease: "power2.out" }, t0 + 0.97);
+      }
+      gsap.set("#etoile", { autoAlpha: 0 });
+      gsap.set(".eclat", { opacity: 0 });
+      etoile(-0.15);
       noms.forEach((n, i) => {
         const g = "#g-" + n;
-        if (i > 0) tl.fromTo(g, { autoAlpha: 0 }, { autoAlpha: 1, duration: 2 * FONDU, ease: "power1.inOut" }, G[n].coupe - FONDU);
-        if (i < noms.length - 1) tl.to(g, { autoAlpha: 0, duration: 2 * FONDU, ease: "power1.inOut" }, G[noms[i + 1]].coupe - FONDU);
+        if (i > 0) {
+          if (ETOILE[n]) tl.fromTo(g, { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.01 }, G[n].coupe + 0.25);
+          else tl.fromTo(g, { autoAlpha: 0, scale: 0.8, filter: "blur(14px)" }, { autoAlpha: 1, scale: 1, filter: "blur(0px)", duration: 0.75, ease: "power3.out" }, G[n].coupe - 0.3);
+        }
+        if (i < noms.length - 1) {
+          const nx = noms[i + 1];
+          if (ETOILE[nx]) tl.to(g, { autoAlpha: 0, scale: 0.9, duration: 0.5, ease: "power2.in" }, G[nx].coupe - 0.35);
+          else tl.to(g, { autoAlpha: 0, scale: 1.32, filter: "blur(16px)", duration: 0.55, ease: "power2.in" }, G[nx].coupe - 0.42);
+        }
       });
-      noms.forEach((n, i) => {
-        if (i === 0) return;
-        const prec = G[noms[i - 1]].theme, th = G[n].theme;
-        if (prec === th) return;
-        const s = th === "sombre";
-        const t0 = G[n].coupe - 0.5;
-        tl.to("#fond-sombre", { opacity: s ? 1 : 0, duration: 1.0, ease: "power1.inOut" }, t0);
-        tl.to("#logo-n", { opacity: s ? 0 : 1, duration: 0.8 }, t0);
-        tl.to("#logo-b", { opacity: s ? 1 : 0, duration: 0.8 }, t0);
-        tl.to("#sous", { "--txt": s ? "#ffffff" : "#1b1530", "--cle": s ? "#c9a8ff" : "#632bc5", duration: 0.8 }, t0);
-      });
-      // logo discret masqué quand le logo est déjà au centre de l'image
-      tl.to("#logo-b", { opacity: 0, duration: 0.4 }, G.odd.coupe);
-      tl.to("#logo-b", { opacity: 0, duration: 0.4 }, G.fin.coupe);
-      // halos qui dérivent lentement (fini)
+      Object.keys(ETOILE).forEach((n) => etoile(G[n].coupe - 0.7));
+      // cadre du tableau de bord : suit le groupe parcours
+      tl.fromTo("#g-pv, #pv-video", { autoAlpha: 0, scale: 0.8, filter: "blur(14px)" }, { autoAlpha: 1, scale: 1, filter: "blur(0px)", duration: 0.75, ease: "power3.out" }, G.parcours.coupe - 0.3);
+      tl.to("#g-pv, #pv-video", { autoAlpha: 0, scale: 1.32, filter: "blur(16px)", duration: 0.55, ease: "power2.in" }, G.preuves.coupe - 0.42);
+      // logo discret masqué quand le logo est au centre
+      tl.to("#logo-b", { opacity: 0, duration: 0.4 }, G.odd.coupe - 0.6);
+      tl.to("#logo-b", { opacity: 1, duration: 0.4 }, G.parcours.coupe);
+      tl.to("#logo-b", { opacity: 0, duration: 0.4 }, G.fin.coupe - 0.6);
+      // halos qui dérivent et halo central qui respire (fini)
       tl.to("#halo-1", { x: 260, y: 140, duration: 34, ease: "sine.inOut", yoyo: true, repeat: 5 }, 0);
       tl.to("#halo-2", { x: -320, y: -160, duration: 41, ease: "sine.inOut", yoyo: true, repeat: 4 }, 0);
-      tl.to("#halo-3", { x: 340, y: 120, duration: 29, ease: "sine.inOut", yoyo: true, repeat: 6 }, 0);
+      tl.to("#halo-3", { scale: 1.12, duration: 6, ease: "sine.inOut", yoyo: true, repeat: 32 }, 0);
+      tl.to("#fond-oddysee", { scale: 1.06, duration: 50, ease: "sine.inOut", yoyo: true, repeat: 3 }, 0);
+
+      // ---------- objets héros : entrée « autocollant », lévitation, sortie ----------
+      function hero(id, t0, t1, o) {
+        o = o || {};
+        const sel = "#h-" + id, r = o.r === undefined ? (id.length % 2 ? 6 : -6) : o.r;
+        tl.fromTo(sel, { autoAlpha: 0, scale: 0.4, rotation: r * 3, y: 40 }, { autoAlpha: 1, scale: 1, rotation: r, y: 0, duration: 0.55, ease: "back.out(1.8)" }, t0);
+        const n = Math.max(0, Math.floor((t1 - t0 - 0.8) / 2.2) - 1);
+        if (n > 0) tl.to(sel, { y: -18, rotation: -r * 0.6, duration: 1.1, ease: "sine.inOut", yoyo: true, repeat: n }, t0 + 0.6);
+        if (t1 !== null) tl.to(sel, { autoAlpha: 0, scale: 0.7, y: -20, duration: 0.3, ease: "power2.in" }, t1);
+      }
 
       // ---------- S01 · accroche ----------
-      tl.from("#i-mot span", { autoAlpha: 0, y: 50, duration: 0.5, ease: "power3.out", stagger: 0.06 }, 0.05);
+      tl.from("#i-mot span", { autoAlpha: 0, y: 50, duration: 0.5, ease: "power3.out", stagger: 0.06 }, 0.75);
       {
         const p = document.querySelector("#i-courbe"), L = p.getTotalLength(), tete = document.querySelector("#i-tete");
         const ns = [0.18, 0.42, 0.66, 0.9].map((f) => p.getPointAtLength(L * f));
@@ -1018,22 +1155,23 @@
       pop("#o-p3", T(13, 4), { de: 0.6 }); inn("#o-n3", T(13, 4) + 0.15, { y: 10 });
       tl.to("#o-badge", { scale: 1.06, duration: 0.25, yoyo: true, repeat: 1 }, T(13, -1));
 
-      // ---------- S14–S15 · parcours ----------
-      traceTirets("#p-chemin", T(14, 1), 1.2);
-      inn("#p-c1", T(14, 1), { y: 30 }); inn("#p-c2", T(14, 3), { y: 30 }); inn("#p-c3", T(14, 5), { y: 30 });
+      // ---------- S14–S15 · parcours (étapes à gauche, tableau de bord à droite) ----------
+      traceTirets("#p-chemin", T(14, 1), 1.0);
+      inn("#p-c1", T(14, 1), { x: -40, y: 0 }); inn("#p-c2", T(14, 3), { x: -40, y: 0 }); inn("#p-c3", T(14, 5), { x: -40, y: 0 });
+      hero("route", T(14, 3), T(15, 0) - 0.5);
       ["#p-v1", "#p-v2"].forEach((v, i) => {
-        tl.fromTo(v, { autoAlpha: 0, x: 40, y: 400 + i * 40 }, { autoAlpha: 1, x: 120 + i * 30, duration: 0.4 }, T(14, 8) + i * 0.15);
-        tl.to(v, { x: 420 + i * 70, y: 210, duration: 0.5, ease: "power2.inOut" }, T(14, 10) - 0.1 + i * 0.1);
-        tl.to(v, { x: 920 + i * 70, y: 210, duration: 0.5, ease: "power2.inOut" }, T(14, 14) - 0.1 + i * 0.1);
-        tl.to(v, { x: 1420 + i * 70, y: 210, duration: 0.5, ease: "power2.inOut" }, T(14, -1) - 0.1 + i * 0.1);
+        tl.fromTo(v, { autoAlpha: 0, x: 58 + i * 26, y: 60 }, { autoAlpha: 1, y: 100, duration: 0.4 }, T(14, 8) + i * 0.15);
+        tl.to(v, { x: 640 + i * 70, y: 170, duration: 0.5, ease: "power2.inOut" }, T(14, 10) - 0.1 + i * 0.1);
+        tl.to(v, { x: 640 + i * 70, y: 310, duration: 0.5, ease: "power2.inOut" }, T(14, 14) - 0.1 + i * 0.1);
+        tl.to(v, { x: 640 + i * 70, y: 450, duration: 0.5, ease: "power2.inOut" }, T(14, -1) - 0.1 + i * 0.1);
       });
-      tl.to("#p-c1", { boxShadow: "0 0 0 5px #a877ff, 0 24px 60px rgba(45,15,110,0.2)", duration: 0.25 }, T(14, 10));
-      tl.to("#p-c2", { boxShadow: "0 0 0 5px #a877ff, 0 24px 60px rgba(45,15,110,0.2)", duration: 0.25 }, T(14, 14));
-      tl.to("#p-c3", { boxShadow: "0 0 0 5px #632bc5, 0 24px 60px rgba(45,15,110,0.2)", duration: 0.25 }, T(14, -1));
+      tl.to("#p-c1", { boxShadow: "0 0 0 6px #a877ff, 0 24px 60px rgba(16,0,60,0.4)", duration: 0.25 }, T(14, 10));
+      tl.to("#p-c2", { boxShadow: "0 0 0 6px #a877ff, 0 24px 60px rgba(16,0,60,0.4)", duration: 0.25 }, T(14, 14));
+      tl.to("#p-c3", { boxShadow: "0 0 0 6px #a877ff, 0 24px 60px rgba(16,0,60,0.4)", duration: 0.25 }, T(14, -1));
       out("#p-v1, #p-v2", E(14) - 0.1, { d: 0.2 });
-      pop("#p-notif", E(14) - 0.05, { de: 0.6 });
-      out("#p-c1, #p-c2, #p-c3, #p-chemin, #p-notif", T(15, 0) - 0.5, { d: 0.3, y: -16 });
-      [[1, 0], [2, 5], [3, 15]].forEach(([n, k]) => { inn("#p-s" + n, T(15, k) - 0.1, { y: 30 }); pop("#p-n" + n, T(15, k) + 0.4, { de: 0.6 }); });
+      pop("#p-notif", E(14) - 0.05, { de: 0.6 }); hero("avion", E(14) - 0.2, T(15, 0) - 0.5);
+      out("#p-c1, #p-c2, #p-c3, #p-chemin, #p-notif", T(15, 0) - 0.5, { d: 0.3, x: -30 });
+      [[1, 0], [2, 5], [3, 15]].forEach(([n, k]) => { inn("#p-s" + n, T(15, k) - 0.1, { x: -40, y: 0 }); pop("#p-n" + n, T(15, k) + 0.4, { de: 0.6 }); });
 
       // ---------- S16–S18 · preuves ----------
       inn("#r-titre", T(16, 0), { y: 14 });
@@ -1158,12 +1296,42 @@
       pop("#f-bouton", E(31) + 0.3, { de: 0.7 });
       inn("#f-site", E(31) + 0.6, { y: 10 });
 
-      // ---------- sous-titres : mot à mot, glissement latéral ----------
+      // ---------- objets héros par scène ----------
+      hero("i-etoile", T(0, 3), G.niv.coupe - 0.4); hero("i-trophee", T(0, 14), G.niv.coupe - 0.4);
+      hero("n-bulles", T(2, 11), T(3, 0) - 0.2); hero("n-fusee", T(3, 11) - 0.2, T(4, 0) - 0.45);
+      hero("d0-clavier", T(4, 0), T(5, 0) - 0.3); hero("d1-mains", T(5, 0), T(6, 0) - 0.3); hero("d2-coche", T(6, 2), T(7, 0) - 0.3);
+      hero("d3-cible", T(7, 0), null); hero("d3-loupe", T(7, 3), null);
+      hero("e-bulles", T(9, 2), null); hero("e-pouce", T(9, 15), null); hero("e-badge", T(9, 15) + 0.2, null);
+      hero("dl-question", T(10, 22), T(11, 0) - 0.4); hero("dl-sablier", T(11, 4), T(12, 9) - 0.3); hero("dl-loupe", T(12, 15), null);
+      hero("r-insta", T(16, 16), T(17, 0) - 0.45); hero("r-tiktok", T(16, 16) + 0.15, T(17, 0) - 0.45); hero("r-globe", T(16, 18), T(17, 0) - 0.45);
+      hero("r-badge", T(18, 4), null);
+      hero("m-meta", T(19, 3), null, { r: -4 }); hero("m-passeport", T(19, 21), null);
+      hero("g-coeur", T(20, 6), T(21, 0) - 0.3); hero("g-fusee", T(22, 4), null); hero("g-cible", E(22), null);
+      hero("ou-question", T(23, 2), null); hero("ou-bulles", T(23, 9), null);
+      hero("tp-sablier", T(24, 14), null);
+      hero("q-question", T(25, 17), null);
+      hero("a-micro", T(26, 7), T(27, 0) - 0.4); hero("a-noeud", T(26, -1), T(27, 0) - 0.4); hero("a-loupe", T(27, 1), T(28, 0) - 0.3); hero("a-fusee", T(28, 7), null);
+      hero("c-main", T(29, 3) - 0.2, null, { r: 4 });
+      hero("k-cadenas", T(30, 14), null); hero("k-sablier", T(30, -3), null);
+      hero("f-trophee", T(31, 6), T(31, 15) - 0.1);
+
+      // ---------- S10 · orbite des réseaux et compteurs de notifications ----------
+      document.querySelectorAll(".orb").forEach((el, i) => {
+        const t0 = T(10, 12) + i * 0.12, b = el.querySelector("b"), max = +b.dataset.max, pr = { v: 0 };
+        tl.fromTo(el, { autoAlpha: 0, scale: 0.3 }, { autoAlpha: 1, scale: 1, duration: 0.4, ease: "back.out(2.2)" }, t0);
+        tl.to(pr, { v: max, duration: 2.6, ease: "power1.in", onUpdate: () => { b.textContent = Math.round(pr.v); } }, t0 + 0.2);
+        tl.to(el, { y: i % 2 ? -14 : 14, duration: 1.2, ease: "sine.inOut", yoyo: true, repeat: 2 }, t0 + 0.4);
+      });
+      tl.to(".orb", { autoAlpha: 0.25, duration: 0.4 }, T(10, 16));
+      tl.to(".orb", { autoAlpha: 0, scale: 0.6, duration: 0.3, stagger: 0.05 }, T(10, 22) - 0.3);
+
+      // ---------- sous-titres : typographie cinétique (réf. E) ----------
       D.S.forEach((c, n) => {
-        const id = "#st" + n;
-        tl.fromTo(id, { autoAlpha: 0, x: 34 }, { autoAlpha: 1, x: 0, duration: 0.24, ease: "power2.out" }, c.d);
-        c.m.forEach(([i, t]) => tl.fromTo("#w" + i, { opacity: 0, y: 14 }, { opacity: 1, y: 0, duration: 0.2, ease: "power2.out" }, Math.max(c.d, t - 0.04)));
-        tl.to(id, { autoAlpha: 0, x: -34, duration: 0.15, ease: "power2.in" }, c.f - 0.1);
+        const id = "#st" + n, entree = Math.min(0.42, Math.max(0.12, (c.f - c.d) * 0.45)), fin = Math.max(c.f - 0.12, c.d + entree + 0.02);
+        tl.fromTo(id, { autoAlpha: 0, scale: 1.9, filter: "blur(14px)" }, { autoAlpha: 1, scale: 1, filter: "blur(0px)", duration: entree, ease: "expo.out" }, c.d);
+        if (fin - c.d - entree > 0.05) tl.to(id, { scale: 0.93, duration: fin - c.d - entree, ease: "none" }, c.d + entree);
+        c.m.forEach(([i, t]) => tl.fromTo("#w" + i, { opacity: 0 }, { opacity: 1, duration: 0.08 }, Math.max(c.d, t - 0.03)));
+        tl.to(id, { autoAlpha: 0, scale: 0.78, filter: "blur(8px)", duration: 0.14, ease: "power2.in" }, fin);
       });
 
       window.__timelines["oddysee-vsl-youtube"] = tl;

@@ -280,6 +280,36 @@
    "t": 201.327,
    "f": "chime.mp3",
    "g": -14
+  },
+  {
+   "t": 0.0,
+   "f": "whoosh-cinematic.mp3",
+   "g": -8
+  },
+  {
+   "t": 0.6,
+   "f": "impact-bass-2.mp3",
+   "g": -8
+  },
+  {
+   "t": 64.284,
+   "f": "whoosh-cinematic.mp3",
+   "g": -8
+  },
+  {
+   "t": 64.984,
+   "f": "impact-bass-2.mp3",
+   "g": -8
+  },
+  {
+   "t": 194.049,
+   "f": "whoosh-cinematic.mp3",
+   "g": -8
+  },
+  {
+   "t": 194.749,
+   "f": "impact-bass-2.mp3",
+   "g": -8
   }
  ]
 }

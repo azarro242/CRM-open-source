@@ -120,14 +120,14 @@ for l, ligne in enumerate(L):
     # 2) petites propositions regroupées avec la suivante
     reg = []
     for ph in phrases:
-        if reg and (len(reg[-1]) < 3 or longueur(reg[-1]) < 16) and longueur(reg[-1] + ph) <= 50 \
+        if reg and (len(reg[-1]) < 3 or longueur(reg[-1]) < 16) and longueur(reg[-1] + ph) <= 34 \
                 and ph[0][3] - reg[-1][-1][4] < 0.6:
             reg[-1] = reg[-1] + ph
         else:
             reg.append(ph)
     # 3) propositions trop longues coupées en parts équilibrées
     for ph in reg:
-        n = max(1, -(-longueur(ph) // 50))
+        n = max(1, -(-longueur(ph) // 32))
         if n == 1:
             morceaux.append({"l": l, "mots": ph}); continue
         cible = longueur(ph) / n; part = []
@@ -138,6 +138,15 @@ for l, ligne in enumerate(L):
         if part:
             morceaux.append({"l": l, "mots": part})
     gi += len(ligne)
+# phrases trop brèves à l'écran (< 0,8 s) regroupées avec la suivante de la même ligne
+fus = []
+for m in morceaux:
+    if fus and fus[-1]["l"] == m["l"] and m["mots"][0][3] - fus[-1]["mots"][0][3] < 0.8 \
+            and longueur(fus[-1]["mots"] + m["mots"]) <= 42:
+        fus[-1]["mots"] += m["mots"]
+    else:
+        fus.append(m)
+morceaux = fus
 for n, m in enumerate(morceaux):
     m["debut"] = round(m["mots"][0][3] - 0.12, 3)
     fin_naturelle = m["mots"][-1][4] + 0.9
@@ -264,6 +273,8 @@ sfx(T(28, -3), "notification.mp3", -16)
 sfx(T(29, 3) + 0.35, "click.mp3", -10); sfx(T(29, 8) + 0.5, "click.mp3", -10); sfx(T(29, 10) + 0.3, "ping.mp3", -16)
 sfx(T(30, 23) + 0.25, "click.mp3", -10); sfx(T(30, 22) - 0.1, "pop.mp3", -14)
 sfx(E(31) + 0.1, "chime.mp3", -14)
+for t0 in (-0.15, G["odd"]["coupe"] - 0.7, G["fin"]["coupe"] - 0.7):       # étoile Oddysee : éclats puis traversée
+    sfx(max(0.0, t0 + 0.05), "whoosh-cinematic.mp3", -8); sfx(max(0.0, t0 + 0.75), "impact-bass-2.mp3", -8)
 json.dump({"duree": DUREE, "sfx": SFX}, open(f"{ICI}/sfx.json", "w"), indent=1)
 
 # ---------- assemblage ----------
@@ -275,7 +286,8 @@ h = h.replace("%%DUREE%%", str(DUREE)).replace("%%COURBE%%", COURBE).replace("%%
 h = h.replace("%%CURSEUR%%", CURSEUR)
 for k, v in REPET.items(): h = h.replace(f"%%{k}%%", v)
 h = re.sub(r"%%ICO:(\w+)%%", lambda m: ICONES[m.group(1)], h)
-h = re.sub(r"%%G:(\w+):(debut|duree)%%", lambda m: str(G[m.group(1)][m.group(2)]), h)
+for nom in G: G[nom]["video"] = round(G[nom]["coupe"] + 0.15, 3)
+h = re.sub(r"%%G:(\w+):(debut|duree|coupe|video)%%", lambda m: str(G[m.group(1)][m.group(2)]), h)
 assert "%%" not in h, re.findall(r"%%[^%]*%%", h)[:5]
 open(f"{ICI}/index.html", "w", encoding="utf-8").write(h)
 print(f"index.html : {len(noms)} groupes, {len(morceaux)} morceaux de sous-titres, {len(SFX)} bruitages")

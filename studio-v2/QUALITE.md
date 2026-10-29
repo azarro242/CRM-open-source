@@ -340,6 +340,21 @@ d'amélioration V2** fournis par le client. Les deux s'appliquent à chaque proj
   - **impacts graves, montées (riser)** : 10 dB sous la voix ;
   - la voix reste devant : aucun bruitage ne dépasse son niveau moyen ; vérification chiffrée à chaque export.
 
+### [2026-10-29] Fond unique « halo lumineux » et texte animé façon réf. E (vidéos Oddysee)
+- Consigne du client : « l'image représente le style d'arrière-plan sur lequel toutes les scènes de la vidéo
+  doivent se dérouler, au lieu d'avoir un arrière-plan tout sombre, on respecte les couleurs de la société » ;
+  « c'est de cette façon que je veux que le texte soit représenté au lieu d'avoir un sous-titrage classique […]
+  exactement comme dans la vidéo » (réf. E, `references/REF-04-youtube-motion-design/videos/ref-E-typographie.mp4`).
+  Préférence exprimée ensuite : le premier halo (large et lumineux) plutôt que la version resserrée.
+- Règles d'application :
+  - **fond** : un seul fond pour toute la vidéo, violet nuit sur les bords et halo blanc-lilas au centre
+    (`fond-oddysee.jpg`, grain léger), halos qui dérivent et halo central qui respire ; plus d'alternance
+    clair/sombre ; cartes blanches ou verre violet foncé par-dessus ;
+  - **texte** : plus de bande de sous-titres en bas ; phrase courte (≤ 34 caractères) en très gros caractères
+    gras serrés au centre-haut de l'image ; elle arrive agrandie et floue puis recule à sa taille, les mots
+    apparaissent au rythme de la voix, elle continue de rétrécir doucement puis s'efface en reculant ; mots
+    clés en lilas ; scènes décalées sous la bande de texte ; fichier SRT livré à part pour YouTube.
+
 <!-- Format d'ajout :
 ### [date] Titre de l'élément
 - Consigne du client : « … »

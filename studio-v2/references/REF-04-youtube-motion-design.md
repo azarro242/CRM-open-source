@@ -170,3 +170,13 @@ dans un cadre aux couleurs Oddysee, à côté du texte animé. À vérifier par 
 Usage alternatif dans le VSL : écran de suivi Oddysee reconstruit en HTML (couleurs Oddysee, chiffres **illustratifs**
 mentionnés comme tels, jamais présentés comme des résultats réels), placé à côté du texte animé, pour le
 parcours (S14), les effets concrets (S09) ou le diagnostic de l'audit (S27–S28).
+
+## 10. Réf. E — typographie cinétique et fond « halo » (2026-10-29)
+
+`videos/ref-E-typographie.mp4` (11,8 s). Texte « Here's How » : arrive très grand et flou, recule rapidement à
+sa taille de lecture, lettres et mots qui apparaissent dans l'ordre (mise en page finale fixe), puis léger
+rétrécissement continu jusqu'au passage suivant ; police grotesque grasse, interlettrage serré. Ensuite :
+cartes de données qui convergent vers une carte centrale, compteurs « 13/100 → 92/100 » qui défilent en
+profondeur. Fond de référence fourni par le client : main tendue vers un bouton lumineux sur un halo bleu.
+Application Oddysee : voir `QUALITE.md`, consigne « Fond unique et texte animé façon réf. E », et le projet
+`projets/oddysee-vsl-youtube/` (version 2).
