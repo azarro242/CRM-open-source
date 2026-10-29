@@ -1,0 +1,1 @@
+{"detail":{"type":"authentication_error","code":"unauthorized","message":"Provided authorization header was invalid.","status":"invalid_authorization_header","request_id":"a51b5f74bb5fcf3adaa95ebc57e6333d"}}

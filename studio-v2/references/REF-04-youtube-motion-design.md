@@ -53,3 +53,10 @@ Toutes en 736 × 414, 30 i/s : elles servent de **langage visuel**, jamais de so
 Le client fournit le script et la voix off. Les sous-titres sont **intégrés à l'animation**, sur le modèle de
 la réf. B : chaque phrase s'écrit mot à mot, calée sur la voix (horodatage Whisper), placée dans la scène à
 côté de l'objet animé, mots clés en violet, sérif italique d'accent comme « *Maximize* ROI » (réf. A).
+
+## 5. Projet modèle (2026-10-29)
+
+`studio-v2/projets/oddysee-vsl-youtube/` : `build.py` (scènes calées sur les mots), `gabarit.tpl` (scènes S01–S32
+regroupées en 16 sections), `realigner.py` (horodatage des voix longues), `mix.py` (voix, musique en boucle,
+bruitages, −14 LUFS), `AFFECTATION.md` (tableau scène par scène), `FABRICATION.md` (médias, manques, à valider).
+Fond clair = ciel du client flouté ; fond sombre = d'après la page d'accueil d'oddysee.fr.

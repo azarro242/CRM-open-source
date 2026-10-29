@@ -19,6 +19,8 @@ référence ci-dessous, qui restent la source de vérité.
 | `reports/Plan 60 vidéos publicité IA.md` | Plan des 60 sujets, sources |
 | `studio-v2/references/REF-03-medecin-anatomie-darija.md` | Format « médecin + anatomie » en darija |
 | `studio-v2/marque/centre-readaptation-chine/FICHE-MARQUE.md` | Clinique cliente |
+| `studio-v2/references/REF-04-youtube-motion-design.md` | Format VSL YouTube 16:9 « motion design + interfaces » (brief V2) |
+| `studio-v2/projets/oddysee-vsl-youtube/FABRICATION.md` | Projet modèle du VSL : chaîne, médias, manques, points à valider |
 
 ## 2. Règles de travail convenues dans la conversation
 
@@ -104,6 +106,14 @@ référence ci-dessous, qui restent la source de vérité.
 - Jour 5 : proposer quatre sujets du plan non traités, sous l'angle de la douleur, variés. Pistes : 14
   (« Tu accuses le ciblage ? »), 32 (prospect sans réponse), 26 (trois objections), 40 (rapport lisible
   en 30 s), N08 (méfiance au Maroc, chiffres à vérifier), 38 (messages à 23 h).
+
+**VSL YouTube Oddysee « Différence d'expertise »** (3 min 23, 16:9) : projet `studio-v2/projets/oddysee-vsl-youtube/`,
+exports dans `studio-v2/exports/vsl-youtube/` (version sous-titrée, version sans sous-titres, `.srt`).
+- Voix longue : horodater avec `realigner.py` du projet (fenêtres aux pauses), **pas** `outils/aligner.py`
+  seul, qui dérive au-delà de deux minutes.
+- Reste à valider par le client : références et statut Meta (affirmations du script), lien de réservation
+  dans la description YouTube, droits des photos de la bibliothèque « Face Avatar », musique longue à fournir
+  (ElevenLabs refusé, erreur 401 : clé à vérifier dans les réglages de l'environnement).
 
 **Autre production livrée** : Centre de réadaptation de Chine, vidéo « lombalgie » en darija
 (`studio-v2/exports/centre-chine/`). Questions toujours ouvertes avec le client :
