@@ -486,7 +486,7 @@
           <div class="tag-illu h" id="e-illu" style="left: 1660px; top: 540px">Exemple</div>
           <img class="hero h" id="h-e-pouce" src="assets/img/biblio/vintage-05-pouce-leve.webp" alt="" style="left: 90px; top: 640px; width: 220px" />
           <img class="hero h" id="h-e-badge" src="assets/img/biblio/badge-verifie-3d.webp" alt="" style="left: 1700px; top: 560px; width: 170px" />
-          <img class="hero h" id="h-e-bulles" src="assets/img/biblio/bulles-discussion-3d.webp" alt="" style="left: 600px; top: 620px; width: 170px" />
+          <img class="hero h" id="h-e-bulles" src="assets/img/biblio/bulles-orange-violet.png" alt="" style="left: 560px; top: 560px; width: 240px" />
         </div></div>
       </section>
 
