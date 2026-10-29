@@ -60,7 +60,7 @@ référence ci-dessous, qui restent la source de vérité.
 
 ## 3. Fabrication d'une vidéo de la série 60 (recette éprouvée)
 
-1. **Copier le projet** du dernier jour (le plus récent : `J04-24-qualite-preuve/`) vers
+1. **Copier le projet** du dernier jour (le plus récent : `J04-33-devis-22h/`) vers
    `J0x-<ID>-<sujet>/` : `build.py`, `gabarit.tpl`, `vendor/`, `assets/` (polices, musique, sfx, logos), et
    les fichiers de config. Mettre à jour les identifiants dans `meta.json` et `package.json`.
 2. **Mascottes** : copier les sept fichiers du catalogue dans `assets/img/m-s1a-…`, `m-s1b-…`, `m-s2-…` …
@@ -91,18 +91,16 @@ référence ci-dessous, qui restent la source de vérité.
 
 ## 4. État au 29/10/2026
 
-**Sujets déjà traités (ne pas refaire)** : 13, N20, N02, N07, N06, 59, 34, N18, 31, 39, 18, N05, 24, et 33
-(script écrit).
+**Sujets déjà traités (ne pas refaire)** : 13, N20, N02, N07, N06, 59, 34, N18, 31, 39, 18, N05, 24, 33.
 
 | Jour | 9 h | 12 h 30 | 15 h 30 | 18 h 30 |
 |---|---|---|---|---|
 | J1 | 13 ✓ | N20 ✓ | — | N02 ✓ |
 | J2 | N07 ✓ | N06 ✓ | 59 ✓ | 34 ✓ |
 | J3 | N18 ✓ | 31 ✓ | 39 ✓ | — (le sujet 18 est passé au J4) |
-| J4 | 18 ✓ | **33 : script prêt, en attente de `33.mp3`** | N05 ✓ | 24 ✓ |
+| J4 | 18 ✓ | 33 ✓ | N05 ✓ | 24 ✓ |
 
 **Prochaines étapes**
-- Monter la vidéo 33 dès réception de la voix (« genere la video »).
 - Jour 5 : proposer quatre sujets du plan non traités, sous l'angle de la douleur, variés. Pistes : 14
   (« Tu accuses le ciblage ? »), 32 (prospect sans réponse), 26 (trois objections), 40 (rapport lisible
   en 30 s), N08 (méfiance au Maroc, chiffres à vérifier), 38 (messages à 23 h).
