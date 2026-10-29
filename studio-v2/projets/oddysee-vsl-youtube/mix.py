@@ -12,10 +12,32 @@ cfg = json.load(open(f"{ICI}/sfx.json"))
 DUREE = cfg["duree"]
 MUSIQUE = f"{ICI}/assets/musique/musique-client.mp3"
 VOIX = f"{ICI}/voix.mp3"
+ECART_SFX = 12.0       # consigne client : chaque bruitage culmine au moins 12 dB sous le niveau moyen de la voix
 GAIN_MUSIQUE = -18.0   # dB (musique ≈ 16 dB sous la voix, puis effacée quand la voix parle)
 
 def run(cmd):
     subprocess.run(cmd, check=True)
+
+def sonie(path, gain=0.0):
+    """(sonie intégrée, sonie momentanée max) en LUFS, après un gain en dB."""
+    r = subprocess.run(["ffmpeg", "-nostats", "-i", path, "-af", f"volume={gain}dB,apad=pad_dur=0.5,ebur128", "-f", "null", "-"],
+                       capture_output=True, text=True).stderr
+    import re
+    m = [float(x) for x in re.findall(r" M:\s*(-?[\d.]+)", r)]
+    i = float(re.findall(r"I:\s+(-?[\d.]+) LUFS", r)[-1])
+    return i, max(m)
+
+def gains_sfx():
+    """Gain final de chaque bruitage : celui du montage, plafonné pour rester ECART_SFX dB sous la voix."""
+    voix_i = sonie(VOIX)[0]
+    plafond = voix_i - ECART_SFX
+    cache, out = {}, []
+    for s in cfg["sfx"]:
+        if s["f"] not in cache:
+            cache[s["f"]] = sonie(f"{ICI}/assets/sfx/{s['f']}")[1]
+        crete = cache[s["f"]] + s["g"]
+        out.append(round(s["g"] - max(0.0, crete - plafond), 1))
+    return out
 
 def piste_audio(dest):
     with tempfile.TemporaryDirectory() as tmp:
@@ -36,10 +58,11 @@ def piste_audio(dest):
 
         # 2) bruitages placés
         sfx_in, sfx_f, labels = [], "", []
+        gains = gains_sfx()
         for k, s in enumerate(cfg["sfx"]):
             sfx_in += ["-i", f"{ICI}/assets/sfx/{s['f']}"]
             ms = int(round(s["t"] * 1000))
-            sfx_f += f"[{k + 2}:a]aformat=sample_rates=48000:channel_layouts=stereo,volume={s['g']}dB,adelay={ms}|{ms}[s{k}];"
+            sfx_f += f"[{k + 2}:a]aformat=sample_rates=48000:channel_layouts=stereo,volume={gains[k]}dB,adelay={ms}|{ms}[s{k}];"
             labels.append(f"[s{k}]")
         # 3) voix (légère compression), effacement de la musique sous la voix, somme, normalisation
         f = (f"[0:a]aformat=sample_rates=48000:channel_layouts=stereo,apad=whole_dur={DUREE},"

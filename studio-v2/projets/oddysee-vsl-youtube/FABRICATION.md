@@ -20,7 +20,8 @@ Exports : `studio-v2/exports/vsl-youtube/` — version sous-titrée, version san
    (≈ 1 h).
 6. `python3 mix.py renders/brut.mp4 sortie.mp4 [renders/brut-sans.mp4 sortie-sans.mp4]` : voix (légère
    compression), musique du client en boucle (fondus de 2,5 s) ≈ 16 dB sous la voix et effacée quand
-   elle parle, 56 bruitages discrets ; −14 LUFS, crête vraie −1,5 dBTP.
+   elle parle, 56 bruitages plafonnés à 12 dB sous la voix (consigne client du 29/10 : contrôle mesuré,
+   bruitage le plus fort −30,8 LUFS momentané pour une voix à −18,8 LUFS) ; −14 LUFS, crête vraie −1,5 dBTP.
 
 ## Direction artistique
 

@@ -308,6 +308,15 @@ d'amélioration V2** fournis par le client. Les deux s'appliquent à chaque proj
   sans-sérif à côté de l'objet animé). Le texte est posé **dans** la composition, à côté de l'objet de la
   scène, jamais par-dessus ; deux lignes au plus ; mots clés en violet. Le SRT reste livré pour YouTube.
 
+### [2026-10-29] Bruitages : jamais trop forts, réglés par rapport à la voix off
+- Consigne du client : « Fais en sorte que les effets sonores ne soient pas trop forts et que ce soit ajusté
+  par rapport à la voix off […] dans les précédentes vidéos, j'avais l'impression d'avoir des effets beaucoup
+  trop forts. »
+- Règle d'application (toutes les vidéos) : chaque bruitage culmine **au moins 12 dB sous le niveau moyen de
+  la voix** (sonie momentanée max du bruitage ≤ sonie intégrée de la voix − 12 dB), mesuré et plafonné
+  automatiquement au mixage (`ECART_SFX` dans `projets/oddysee-vsl-youtube/mix.py`) ; la voix reste toujours
+  devant ; contrôle chiffré noté dans `FABRICATION.md`.
+
 <!-- Format d'ajout :
 ### [date] Titre de l'élément
 - Consigne du client : « … »
