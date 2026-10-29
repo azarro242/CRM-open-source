@@ -148,3 +148,19 @@ chaque élément se transforme en élément suivant.
    récompensé (confettis, coche, pulsation).
 7. Rupture de rythme toutes les 10 à 15 s : grand mot en contour qui défile + visage expressif.
 8. Écran final qui rime avec l'ouverture : même anneau ou même portrait, bouton, clic.
+
+## 9. Réf. D — tableau de bord animé, pour les résultats et l'écosystème (2026-10-29)
+
+`videos/ref-D-ecosysteme.mp4` (20 s, 1280 × 960, 60 i/s) ; planche `planches/ref-D-ecosysteme.jpg`.
+Consigne du client : à intégrer **à côté des explications**, dans la partie qui exprime les résultats ou le
+processus d'écosystème mis en place par Oddysee.
+
+Ce qu'on voit : une interface d'analyse blanche et violette (barre latérale, indicateurs chiffrés, histogrammes,
+courbe, tableau). Ouverture sur une mosaïque d'écrans qui se resserre sur un seul ; histogrammes qui poussent
+barre par barre ; **zooms successifs** sur une zone (indicateurs, courbe) ; curseur qui survole un point de la
+courbe et ouvre une infobulle ; passage d'un écran à l'autre (analyse → gestion) par glissement ; tableau qui se
+remplit ligne par ligne ; fin en recul sur une mosaïque d'écrans en perspective.
+
+Usage dans le VSL : écran de suivi Oddysee reconstruit en HTML (couleurs Oddysee, chiffres **illustratifs**
+mentionnés comme tels, jamais présentés comme des résultats réels), placé à côté du texte animé, pour le
+parcours (S14), les effets concrets (S09) ou le diagnostic de l'audit (S27–S28).
