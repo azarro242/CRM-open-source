@@ -26,7 +26,7 @@ petite pause).
 | 9 h | 18 | Ta vidéo est belle… mais aucune vente ? | Une offre que personne ne comprend | AUDIT | ✓ ci-dessous |
 | 12 h 30 | 33 | Une demande de devis à 22 h… et toi, tu réponds quand ? | Des devis qui partent chez le concurrent faute de réponse rapide | AUDIT | à venir |
 | 15 h 30 | N05 | Ta pub s'arrête… carte refusée ? | Payer sa pub Meta depuis le Maroc sans faire bloquer son compte | AUDIT | ✓ ci-dessous |
-| 18 h 30 | 24 | Ton concurrent promet la qualité. Toi, prouve-la | Un message qui ressemble à celui de tout le monde | AUDIT | à venir |
+| 18 h 30 | 24 | Tu promets la qualité… ton concurrent aussi ? | Un message qui ressemble à celui de tout le monde, donc une guerre des prix | AUDIT | ✓ ci-dessous |
 
 > Le sujet 18 était proposé pour la vidéo de 18 h 30 du jour 3, qui n'a pas été produite. Il ouvre ce jour 4.
 > Les sujets de 12 h 30, 15 h 30 et 18 h 30 sont des propositions tirées du plan, déjà sous l'angle de la
@@ -187,4 +187,79 @@ offert (ici, les paramètres de paiement et l'état du compte publicitaire).*
 - Calcul : 20 000 ÷ 12 ≈ 1 667 DH par mois.
 - Les entreprises ont leurs propres règles de dotation, d'où le « en perso » du texte. On ne promet pas
   qu'Oddysee paie la pub à la place du client.
+
+---
+
+## 18 h 30 · Vidéo 24 — « Tu promets la qualité… ton concurrent aussi ? »
+
+**Pourquoi ce sujet.** Beaucoup d'entreprises écrivent les mêmes mots que leurs concurrents : « qualité »,
+« sérieux », « rapidité ». Le client ne voit aucune différence, alors il compare le seul chiffre visible : le
+prix. La vidéo part de cette douleur (la guerre des prix), montre la vraie cause (une promesse que personne ne
+prouve) et donne le levier de croissance : remplacer la promesse par une preuve, c'est-à-dire un délai, une
+méthode ou un résultat qu'on peut montrer.
+
+**Texte à faire lire** (`J04-24-qualite-preuve/voix.txt`, 63 mots, fichier `24.mp3`)
+
+```
+Tu promets la qualité… ton concurrent aussi?
+Alors le client compare… le prix.
+Qualité, sérieux, rapidité: tout le monde le dit.
+Personne ne le prouve.
+Remplace la promesse par une preuve: un délai, une méthode, un résultat.
+Pas travail de qualité: cuisine posée en cinq jours, photos à l'appui.
+Commente Audit: on trouve ta preuve.
+Et abonne-toi: moins de promesses, plus de clients.
+```
+
+| Moment | Phrase | À l'écran |
+|---|---|---|
+| 0 s | Tu promets la qualité… ton concurrent aussi ? | Deux pubs côte à côte avec le même slogan, « Travail de qualité » (exemples fictifs) ; mascotte 56 (pochoir en colère) |
+| 3,06 s (batterie) | Alors le client compare… le prix. | Les deux pubs sur une balance ; le client ne regarde plus que les étiquettes de prix, « −10 % » chez le concurrent ; mascotte 54 (pochoir pensif) |
+| ~5 s | Qualité, sérieux, rapidité : tout le monde le dit. | Nuage de mots génériques qui se répètent (« qualité », « sérieux », « rapidité », « pas cher ») ; mascotte 01 (femme sceptique) |
+| ~7,5 s | Personne ne le prouve. | Les mots deviennent gris, une case « Preuve : ? » reste vide |
+| 10,89 s (partie B) | Remplace la promesse par une preuve : un délai, une méthode, un résultat. | « Qualité » barré ; trois tuiles s'allument : DÉLAI (horloge) · MÉTHODE (trois étapes) · RÉSULTAT (avant / après) ; mascotte 35 (barbu qui désigne) |
+| 17,37 s (calme) | Pas « travail de qualité » : « cuisine posée en cinq jours, photos à l'appui ». | La pub « Travail de qualité » se réécrit : « Cuisine posée en 5 jours · photos à l'appui » ; calendrier J1 → J5 et photos avant / après (exemple fictif) ; mascotte 12 (moustache fier) |
+| 23,34 s (batterie) | Commente Audit : on trouve ta preuve. | « AUDIT » tapé, carte « Audit offert · Ta preuve » ; mascotte 32 (barbu rire) |
+| ~27,4 s | Et abonne-toi : moins de promesses, plus de clients. | Profil @oddysee_maroc, « Abonné ✓ », logo + badge ; mascotte 66 (pochoir accueil) |
+
+**Mascottes.**
+- Styles mélangés : pochoirs, femme et moustache en tête photo, barbu (gravure).
+- Aucune mascotte déjà utilisée dans les vidéos de 9 h et de 15 h 30.
+- 56 et 54 n'ont encore jamais servi dans la série.
+
+**Appel à l'action.** AUDIT → message privé : « Merci ! Envoie-nous ta pub ou ta page, et dis-nous ce que tu vends :
+on te propose une preuve à mettre à la place de ta promesse (un délai, une méthode ou un résultat que tu peux
+montrer). » *Prérequis : périmètre de l'audit offert (ici, le remplacement d'une promesse par une preuve).*
+
+**Légendes** (compte Oddysee)
+- Instagram / Facebook :
+  > Tu promets la qualité… ton concurrent aussi ? 👇
+  >
+  > Qualité, sérieux, rapidité : tout le monde le dit. Personne ne le prouve.
+  > Alors le client compare… le prix.
+  >
+  > Remplace la promesse par une preuve :
+  > → un délai (« posée en 5 jours ») ;
+  > → une méthode (tes étapes, montrées) ;
+  > → un résultat (photos avant / après, avis d'un vrai client).
+  >
+  > Exemple fictif : pas « travail de qualité », mais « cuisine posée en 5 jours, photos à l'appui ».
+  >
+  > 💬 Commente AUDIT : on trouve ta preuve.
+  > 🔔 Abonne-toi : moins de promesses, plus de clients.
+  >
+  > #entrepreneur #copywriting #marketingdigital #metaads #artisan
+- TikTok : même texte, réponse à la main aux commentaires AUDIT.
+- LinkedIn (page Oddysee) : « "Qualité", "sérieux", "rapidité" : quand tout le monde écrit les mêmes mots, le
+  client compare le seul chiffre visible, le prix. Ce que nous faisons à la place : remplacer chaque promesse
+  par une preuve, c'est-à-dire un délai, une méthode ou un résultat que l'on peut montrer. Exemple fictif : pas
+  "travail de qualité", mais "cuisine posée en 5 jours, photos à l'appui". Commentez AUDIT : nous trouvons
+  votre preuve. »
+- Titre Shorts : « Tout le monde promet la qualité. Toi, prouve-la »
+
+**Vérifications.**
+- Conseils de méthode, sans chiffre réel : rien à sourcer.
+- Les pubs, le « −10 % » et l'exemple de la cuisine sont fictifs, annoncés comme tels à l'écran.
+- Un délai annoncé dans une vraie pub doit être tenu : le rappeler en message privé si un client veut
+  reprendre la formule.
 

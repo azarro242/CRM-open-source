@@ -24,7 +24,7 @@ de montage. Les scripts du jour, avec leur justification et leurs légendes, son
 | J1 | lun. 2 nov. | 13 | N20 | — | N02 | ✓ | ✓ | ✓ (3/3) |
 | J2 | mar. 3 nov. | N07 | N06 | 59 | 34 | ✓ | ✓ | ✓ (4/4) |
 | J3 | mer. 4 nov. | N18 | 31 | 39 | — (18 reporté au J4) | 3/3 | 3/3 | ✓ (3/3) |
-| J4 | jeu. 5 nov. | 18 | 33 (proposé) | N05 | 24 (proposé) | 2/4 | 2/4 | 2/4 |
+| J4 | jeu. 5 nov. | 18 | 33 (proposé) | N05 | 24 | 3/4 | 2/4 | 2/4 |
 
 ## Mascottes utilisées (pour varier d'une vidéo à l'autre)
 
