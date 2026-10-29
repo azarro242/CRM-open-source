@@ -284,6 +284,21 @@ d'amélioration V2** fournis par le client. Les deux s'appliquent à chaque proj
   - descriptions de publication **en darija** ; message de santé prudent (« كيعاونو يخففو »), mention
     « الطب الصيني مكمّل، وماشي بديل على الطبيب ».
 
+### [2026-10-29] Nouveau type : vidéo YouTube 16:9 « motion design éditorial + interfaces »
+- Consigne du client : brief « Oddysee — Brief de réalisation V2 » et trois vidéos de référence, avec la
+  question : « me dire si tu peux réaliser à l'identique la vidéo […] si je te donne une voix off avec un script ».
+- Règles d'application (détail : `references/REF-04-youtube-motion-design.md`, brief complet dans
+  `references/REF-04-youtube-motion-design/BRIEF-CLIENT-V2.md`) :
+  - 1920 × 1080, 30 i/s, durée = voix off complète ; script conservé mot pour mot, sans ajout ;
+  - motion design sur fond clair à halos violets : cartes de verre, nœuds et courbes (réf. A), interfaces
+    inclinées, zooms et clics (réf. B), personne au centre d'un système (réf. C) ; transitions par
+    continuité (un objet se transforme pour la phrase suivante), jamais une suite de diapositives ;
+  - un seul objet porteur de sens par phrase, mouvement déclenché sur le mot qui fait évoluer le sens ;
+  - aucune preuve, aucun logo, aucun chiffre, aucun compte à rebours ni nombre de places inventé ; tout
+    manque est signalé et remplacé par une composition graphique simple ;
+  - livrables : vidéo sous-titrée, vidéo sans sous-titres, SRT, tableau d'affectation S01–S32 avec minutage
+    réel, liste des manques et des faits à valider.
+
 <!-- Format d'ajout :
 ### [date] Titre de l'élément
 - Consigne du client : « … »

@@ -29,6 +29,7 @@ artistique, la durée et la structure d'écriture (détail dans `QUALITE.md`).
 | **Reel éducatif faceless** | 60–115 s | Expliquer une actualité ou une méthode, gagner des abonnés | `references/REF-02-funl-visibilite-ia.md` |
 | **Reel mascotte Oddysee** | ≈ 25 s | Vidéos de l'agence du client : faire venir des clients à Oddysee | `marque/oddysee/FICHE-MARQUE.md` (REF-02 aux couleurs Oddysee + 5 temps de REF-01) |
 | **Médecin + anatomie (darija)** | 30–60 s | Vidéo d'un praticien (voix d'origine conservée) habillée en darija : sous-titres animés, planche d'anatomie qui pivote et zoome, cartes de la clinique | `references/REF-03-medecin-anatomie-darija.md` (+ fiche de la clinique dans `marque/`) |
+| **YouTube motion design (16:9)** | durée de la voix (≈ 3–4 min) | Vidéo longue Oddysee : cartes, connexions, interfaces et clics pour amener à un audit | `references/REF-04-youtube-motion-design.md` |
 
 ### Bibliothèques de marque
 
