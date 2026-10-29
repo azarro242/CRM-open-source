@@ -161,6 +161,12 @@ barre par barre ; **zooms successifs** sur une zone (indicateurs, courbe) ; curs
 courbe et ouvre une infobulle ; passage d'un écran à l'autre (analyse → gestion) par glissement ; tableau qui se
 remplit ligne par ligne ; fin en recul sur une mosaïque d'écrans en perspective.
 
-Usage dans le VSL : écran de suivi Oddysee reconstruit en HTML (couleurs Oddysee, chiffres **illustratifs**
+**Consigne du client (complément) : utiliser cette vidéo en intégralité, sans la découper**, dans un court
+passage (« pont ») de la vidéo, comme illustration, pour la qualité du rendu. Elle s'insère donc telle quelle
+(20 s, ralentie ou accélérée si besoin pour tenir dans le passage, jamais recadrée au point de perdre l'image),
+dans un cadre aux couleurs Oddysee, à côté du texte animé. À vérifier par le client : les droits de cette vidéo
+(interface d'un autre studio) avant diffusion.
+
+Usage alternatif dans le VSL : écran de suivi Oddysee reconstruit en HTML (couleurs Oddysee, chiffres **illustratifs**
 mentionnés comme tels, jamais présentés comme des résultats réels), placé à côté du texte animé, pour le
 parcours (S14), les effets concrets (S09) ou le diagnostic de l'audit (S27–S28).

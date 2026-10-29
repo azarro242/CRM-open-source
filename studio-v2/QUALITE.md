@@ -329,6 +329,17 @@ d'amélioration V2** fournis par le client. Les deux s'appliquent à chaque proj
   - textures : trame, grain, papier déchiré, contours blancs d'autocollant ; reflets irisés sur le verre ;
   - les images de marques tierces (logos, affiches, textes) servent de **référence de style uniquement**.
 
+### [2026-10-29] Bruitages d'interface plus présents (remplace l'écart de 12 dB pour les clics et glissements)
+- Consigne du client : « en ce qui concerne les effets sonores de clics, de swipe ou de flèche, je souhaiterais
+  que tu augmentes le son parce que la voix off est beaucoup trop élevée et on a l'impression que la vidéo n'a
+  pas d'effet sonore ».
+- Règle d'application (toutes les vidéos), mesurée au mixage (`ECARTS_SFX` dans `projets/oddysee-vsl-youtube/mix.py`) :
+  - **clics, touches, apparitions (pop), glissements (whoosh), curseur** : pic à **5 dB sous** le niveau moyen
+    de la voix — nettement audibles, sans jamais couvrir un mot ;
+  - **notifications, carillons, scintillements** : 8 dB sous la voix ;
+  - **impacts graves, montées (riser)** : 10 dB sous la voix ;
+  - la voix reste devant : aucun bruitage ne dépasse son niveau moyen ; vérification chiffrée à chaque export.
+
 <!-- Format d'ajout :
 ### [date] Titre de l'élément
 - Consigne du client : « … »

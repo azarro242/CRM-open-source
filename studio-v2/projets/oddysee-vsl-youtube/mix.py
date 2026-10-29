@@ -12,7 +12,13 @@ cfg = json.load(open(f"{ICI}/sfx.json"))
 DUREE = cfg["duree"]
 MUSIQUE = f"{ICI}/assets/musique/musique-client.mp3"
 VOIX = f"{ICI}/voix.mp3"
-ECART_SFX = 12.0       # consigne client : chaque bruitage culmine au moins 12 dB sous le niveau moyen de la voix
+# consigne client du 29/10 (2e version) : bruitages d'interface nettement audibles, la voix reste devant
+ECARTS_SFX = {  # dB sous la sonie intégrée de la voix, pour le pic de chaque bruitage
+    "click": 5, "click-soft": 5, "key-press": 5, "typing": 5, "pop": 5, "whoosh": 5, "whoosh-short": 5,
+    "whoosh-cinematic": 6, "notification": 8, "ping": 8, "chime": 8, "sparkle": 8, "error": 8,
+    "impact-bass-1": 10, "impact-bass-2": 10, "riser": 10,
+}
+ECART_DEFAUT = 8
 GAIN_MUSIQUE = -18.0   # dB (musique ≈ 16 dB sous la voix, puis effacée quand la voix parle)
 
 def run(cmd):
@@ -28,15 +34,14 @@ def sonie(path, gain=0.0):
     return i, max(m)
 
 def gains_sfx():
-    """Gain final de chaque bruitage : celui du montage, plafonné pour rester ECART_SFX dB sous la voix."""
+    """Gain de chaque bruitage pour que son pic soit exactement ECARTS_SFX dB sous le niveau moyen de la voix."""
     voix_i = sonie(VOIX)[0]
-    plafond = voix_i - ECART_SFX
     cache, out = {}, []
     for s in cfg["sfx"]:
         if s["f"] not in cache:
             cache[s["f"]] = sonie(f"{ICI}/assets/sfx/{s['f']}")[1]
-        crete = cache[s["f"]] + s["g"]
-        out.append(round(s["g"] - max(0.0, crete - plafond), 1))
+        ecart = ECARTS_SFX.get(s["f"].rsplit(".", 1)[0], ECART_DEFAUT)
+        out.append(round(voix_i - ecart - cache[s["f"]], 1))
     return out
 
 def piste_audio(dest):
