@@ -60,3 +60,32 @@ côté de l'objet animé, mots clés en violet, sérif italique d'accent comme �
 regroupées en 16 sections), `realigner.py` (horodatage des voix longues), `mix.py` (voix, musique en boucle,
 bruitages, −14 LUFS), `AFFECTATION.md` (tableau scène par scène), `FABRICATION.md` (médias, manques, à valider).
 Fond clair = ciel du client flouté ; fond sombre = d'après la page d'accueil d'oddysee.fr.
+
+## 6. Bibliothèque motion du client (2026-10-29) — ce qu'elle enseigne
+
+Retour du client sur le premier VSL : trop de blanc, trop de vide, pas assez d'éléments explicatifs.
+Cinq archives reçues, rangées dans `marque/oddysee/bibliotheque-motion/` (index : `INDEX.md`).
+
+**Famille 1 — autocollants vintage tramés, recolorés violet `#632BC5` / blanc** (17 pièces, rawpixel) :
+œil sur papier déchiré, microscope, main qui pointe, mains sur un ordinateur, pouce levé, loupe, trophée,
+route, passeport, fiole, cadenas, maison, cœur anatomique, soleil, coupure de journal. Style « collage
+éditorial » : trame demi-teinte, contour blanc épais d'autocollant. Usage : objet héros d'une scène
+(main qui pointe vers un bouton, loupe sur l'audit, trophée pour l'expert, cadenas pour la capacité
+limitée, route pour le parcours…), entrée en « autocollant collé » (petite rotation, rebond, ombre).
+
+**Famille 2 — 3D « verre liquide », chrome et irisé** (≈ 215 images Pinterest, dédoublonnées) :
+icônes et lettres en verre transparent, reflets arc-en-ciel, fonds unis noir, blanc ou dégradé bleu.
+Beaucoup sont des logos de marques (OpenAI, Meta, Adidas, Nike, PlayStation, Mercedes…) ou des affiches
+avec texte : **référence de style seulement**. Les objets génériques (sablier, bouclier coché, éclair,
+coche, flamme, œil, bulle, maillons, cube, astérisque, fusée, avion en papier, enveloppe, dossier, étoile,
+curseur, cible, point d'interrogation, globe…) sont détourés et réutilisables.
+
+**Règles de composition tirées de la bibliothèque**
+- Un objet héros par scène, grand (30 à 45 % de la hauteur), légèrement incliné, avec ombre portée douce.
+- Fond jamais nu : dégradé + grain/trame léger, grand mot ou chiffre fantôme en arrière-plan, halos.
+- Profondeur par couches : arrière-plan flou, objet héros net, cartes au premier plan, pastilles.
+- Mélange assumé des deux familles : collage tramé violet pour l'humain et l'émotion (douleur,
+  engagement), verre 3D pour la technique et la solution (parcours, audit, réservation).
+- Mouvement permanent : l'objet héros flotte (lévitation lente), tourne de quelques degrés, reflet qui
+  balaie le verre ; nouveauté visuelle toutes les 2 à 3 s.
+- Droits : les fichiers rawpixel et Pinterest sont à vérifier avant tout usage publicitaire payant.

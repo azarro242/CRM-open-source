@@ -317,6 +317,18 @@ d'amélioration V2** fournis par le client. Les deux s'appliquent à chaque proj
   automatiquement au mixage (`ECART_SFX` dans `projets/oddysee-vsl-youtube/mix.py`) ; la voix reste toujours
   devant ; contrôle chiffré noté dans `FABRICATION.md`.
 
+### [2026-10-29] Motion design : moins de vide, plus d'éléments explicatifs (bibliothèque fournie)
+- Consigne du client : « la vidéo a beaucoup trop de blanc, il y a beaucoup trop de vide, il y a moins
+  d'éléments explicatifs » ; cinq archives fournies comme apprentissage **et** comme ressources à détourer
+  (`marque/oddysee/bibliotheque-motion/`).
+- Règles d'application (détail : `references/REF-04-youtube-motion-design.md`, partie 6) :
+  - chaque scène a un **objet héros illustré** (autocollant vintage tramé violet ou objet 3D en verre) en
+    plus des cartes d'interface ; jamais une carte seule sur un grand fond vide ;
+  - remplir l'espace : composition en couches (fond texturé, grand mot ou chiffre en arrière-plan, objet
+    héros, cartes, pastilles), 60 à 75 % de la surface occupée hors zone des sous-titres ;
+  - textures : trame, grain, papier déchiré, contours blancs d'autocollant ; reflets irisés sur le verre ;
+  - les images de marques tierces (logos, affiches, textes) servent de **référence de style uniquement**.
+
 <!-- Format d'ajout :
 ### [date] Titre de l'élément
 - Consigne du client : « … »
