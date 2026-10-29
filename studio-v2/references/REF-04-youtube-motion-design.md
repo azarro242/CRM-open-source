@@ -109,3 +109,42 @@ Procédés reproduits dans HyperFrames (CSS 3D, flou d'arrière-plan, dégradés
 Objets 3D supplémentaires : Adobe Stock via le connecteur Adobe (compte du client, licence obtenue avant
 usage, contenus « free » de préférence), détourés et teintés aux couleurs Oddysee. Pas de génération d'images
 Firefly dans cet environnement.
+
+## 8. Modèle principal à dupliquer : la réf. C, plan par plan (consigne du 2026-10-29)
+
+Le client a renvoyé la réf. C (`videos/ref-C-personne-systeme.mp4`, 74 s) comme **modèle d'interactions et
+d'animations à dupliquer** avant la nouvelle version. Planches à 2 images/s : `planches/ref-C-detail-*.jpg`.
+
+**Constat clé : une seule coupe franche en 74 s (à 62,5 s).** Tout le reste est une seule caméra continue :
+chaque élément se transforme en élément suivant.
+
+| Temps | Ce qui se passe | Procédé |
+|---|---|---|
+| 0–4 s | Halo bleu flou, ondes concentriques ; portrait rond qui jaillit avec un anneau coloré ; icônes d'applications (carrés blancs arrondis) qui arrivent des bords | Apparition « pop », orbite, zoom lent permanent |
+| 2–8 s | Pastilles rouges de notifications qui **comptent** (1 → 15) ; même personne, autre expression (main au menton) | Compteurs animés = surcharge ; changement d'expression par fondu |
+| 8–10 s | Petites cartes (e-mails, « relance en attente ») envahissent l'espace autour du portrait | Densité croissante = douleur |
+| 10–13 s | L'anneau du logo (quatre arcs de couleur) se referme sur le portrait, le reste s'efface ; les arcs **s'envolent en traînées** puis se réassemblent en logo ; le nom s'écrit lettre à lettre | Logo = outil de transition (ouverture et fermeture) |
+| 13–19 s | Le logo se dénoue en rubans de couleur qui s'emmêlent puis se tendent en une ligne ; la ligne ondule ; des cercles **montent le long de la vague** (tache de couleur → bulle blanche + icône + libellé) | Chemin à étapes ; la caméra suit la ligne |
+| 19–26 s | Faisceaux blancs qui convergent de gauche à droite : icônes des sources au départ, cercle central « vue 360 » à l'arrivée ; les faisceaux se resserrent en un seul rayon, le cercle devient « IA » | Convergence (plusieurs sources → un résultat) |
+| 26–32 s | **Volet de couleur** (dalle rouge puis bleue) qui balaie l'écran et dévoile une grande fenêtre d'application ; le contenu se remplit par blocs | Transition par volet ; remplissage progressif |
+| 32–36 s | Boîte mail : **zoom fort** sur deux lignes surlignées, arrière-plan agrandi et flou ; curseur qui survole et clique | Profondeur de champ + curseur |
+| 36–42 s | Fil d'e-mail, brouillon qui s'écrit ; la carte de réponse grossit au premier plan ; clic sur « Insérer » → **confettis** | Gros plan sur l'action + récompense |
+| 42–52 s | Carrousel de fenêtres (LinkedIn, messagerie, Slack) : chaque fenêtre entre par la droite pendant que la précédente recule floutée à gauche ; badge de marque en coin ; messages qui s'écrivent | Carrousel en profondeur |
+| 52–56 s | **Rupture** : mot géant « WOW » en contour qui défile derrière ; portrait expressif qui grossit jusqu'à remplir l'écran | Rupture de rythme toutes les 10–15 s |
+| 56–62 s | Liste « relances prêtes à envoyer » qui se remplit ; curseur sur les lignes | Zoom avant + survol |
+| 62,5 s | Seule coupe : gros plan sur une carte d'e-mail, puis recul | — |
+| 64–68 s | Deuxième personne au centre, cartes de messages en orbite, puis autres visages autour | Réseau humain |
+| 68–74 s | L'anneau du logo se referme à nouveau sur le portrait (**rime avec l'ouverture**), traînées, logo, nom lettre à lettre, bouton « Try it for free today » + adresse ; curseur, clic, maintien | Écran final avec clic |
+
+**Règles à appliquer au VSL Oddysee**
+1. Caméra continue : pas de fondus enchaînés entre « diapositives » ; chaque scène naît d'un élément de la
+   précédente (anneau, ligne, carte, cercle). Coupe franche seulement pour une rupture voulue.
+2. Le logo Oddysee (étoile à quatre branches) joue le rôle de l'anneau Flike : ses quatre branches se
+   séparent en traînées violettes et se réassemblent ; ouverture, passage « Chez Oddysee » et fin.
+3. Profondeur de champ permanente : arrière-plan agrandi et flou, sujet net, zoom lent continu (3 à 5 %).
+4. Densité : nouvel élément toutes les 0,5 à 1 s ; compteurs qui montent ; cartes qui s'accumulent.
+5. Lignes et faisceaux comme fil conducteur entre les idées (parcours, convergence vers l'audit).
+6. Interfaces : volet coloré pour entrer, remplissage par blocs, zoom fort sur la ligne utile, curseur, clic
+   récompensé (confettis, coche, pulsation).
+7. Rupture de rythme toutes les 10 à 15 s : grand mot en contour qui défile + visage expressif.
+8. Écran final qui rime avec l'ouverture : même anneau ou même portrait, bouton, clic.
