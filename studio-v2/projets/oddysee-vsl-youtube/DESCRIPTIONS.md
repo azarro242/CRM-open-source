@@ -45,3 +45,26 @@ Oddysee — agence de marketing digital, Marrakech · https://www.oddysee.fr
 
 marketing digital, trouver des clients, agence marketing Maroc, publicité Facebook, Meta Business Partner,
 audit marketing gratuit, acquisition clients, chef d'entreprise, retargeting, Marrakech, Oddysee
+
+## Description de la chaîne YouTube (onglet « À propos », moins de 1000 caractères)
+
+Tu es chef d'entreprise et tu veux plus de clients ? Ici, on t'explique comment.
+
+Oddysee est une agence de marketing digital basée à Marrakech. Notre métier : aider les chefs d'entreprise et les entrepreneurs à obtenir plus de clients grâce à la publicité en ligne.
+
+Sur cette chaîne, tu trouveras :
+▸ des stratégies de publicité Facebook et Instagram (Meta) expliquées simplement ;
+▸ comment transformer les visiteurs de ton site en clients ;
+▸ comment construire ton image et ton autorité en ligne ;
+▸ comment ne plus perdre un seul prospect grâce au suivi automatisé ;
+▸ les coulisses de nos accompagnements.
+
+Oddysee en bref :
+✔ Meta Business Partner, première agence à détenir ce statut au Maroc
+✔ +200 entreprises accompagnées dans 8 pays, sur 3 continents
+✔ +1,9 M€ de chiffre d'affaires généré pour nos clients en 3 ans
+
+👉 Réserve ton audit gratuit : https://www.oddysee.fr/contact
+🌐 https://www.oddysee.fr
+
+Abonne-toi pour ne rien rater.
