@@ -36,6 +36,8 @@
       #logo-b { position: absolute; left: 1720px; top: 1000px; width: 132px; height: 50px; opacity: 0.85; }
       .decal { position: absolute; inset: 0; transform: translateY(140px) scale(0.92); transform-origin: 50% 0%; }
       .hero { position: absolute; height: auto; filter: drop-shadow(0 26px 34px rgba(16, 0, 60, 0.45)); }
+      .temoin { position: absolute; height: auto; border-radius: 34px; filter: drop-shadow(0 30px 40px rgba(16, 0, 60, 0.55)); }
+      #tm-sous .ico { transform: rotate(90deg); }
       .orb { position: absolute; width: 104px; height: 104px; }
       .orb img { width: 104px; height: 104px; object-fit: contain; filter: drop-shadow(0 14px 20px rgba(16, 0, 60, 0.5)); }
       .orb b { position: absolute; right: -8px; top: -8px; min-width: 40px; height: 40px; padding: 0 9px; border-radius: 20px; background: #ff3b5c;
@@ -48,6 +50,10 @@
       #pv-cadre { position: absolute; left: 922px; top: 252px; width: 896px; height: 676px; border-radius: 26px;
         background: rgba(255, 255, 255, 0.14); border: 2px solid rgba(255, 255, 255, 0.45);
         box-shadow: 0 40px 90px rgba(10, 0, 40, 0.55), 0 0 60px rgba(168, 119, 255, 0.35); }
+      #mv-cadre { position: absolute; left: 852px; top: 262px; width: 916px; height: 736px; border-radius: 26px; background: rgba(255, 255, 255, 0.14);
+        border: 2px solid rgba(255, 255, 255, 0.45); box-shadow: 0 40px 90px rgba(10, 0, 40, 0.55), 0 0 60px rgba(168, 119, 255, 0.35); }
+      #mv-video { position: absolute; left: 860px; top: 270px; width: 900px; height: 720px; border-radius: 20px; object-fit: cover; }
+      #mv-tag { position: absolute; left: 866px; top: 1006px; font-family: "Instrument Serif", serif; font-style: italic; font-size: 24px; color: rgba(255, 255, 255, 0.75); }
       #pv-video { position: absolute; left: 930px; top: 260px; width: 880px; height: 660px; border-radius: 20px; object-fit: cover; }
       #pv-tag { position: absolute; left: 942px; top: 940px; font-family: "Instrument Serif", serif; font-style: italic; font-size: 24px; color: rgba(255, 255, 255, 0.75); }
       #etoile { position: absolute; left: 780px; top: 360px; width: 360px; height: 360px; overflow: visible; }
@@ -208,6 +214,8 @@
       .sect { width: 470px; height: 200px; padding: 24px; display: flex; gap: 20px; align-items: center; }
       .sect .icoc { width: 68px; height: 68px; }
       .sect h4 { font-weight: 700; font-size: 27px; line-height: 1.15; flex: 1; }
+      .dom { width: 200px; height: 112px; border-radius: 16px; overflow: hidden; flex: none; background: #1b0f3a; }
+      .dom img { width: 100%; height: 100%; object-fit: contain; }
       .sect-v { width: 150px; height: 150px; border-radius: 14px; overflow: hidden; background: #f6f3fb; display: flex; align-items: center; justify-content: center; flex: none; }
       .sect-v img { width: 100%; height: 100%; object-fit: cover; object-position: left top; }
       .sect-v img.logo { width: 130px; height: 80px; object-fit: contain; }
@@ -568,10 +576,15 @@
         </div></div>
       </section>
 
+      <section id="mv" class="clip" data-start="%%G:meta:debut%%" data-duration="%%G:meta:duree%%" data-track-index="21">
+        <div class="g" id="g-mv"><div id="mv-cadre"></div><div id="mv-tag">Exemple de page de destination</div></div>
+      </section>
+      <video id="mv-video" src="assets/video/site-ciblage.mp4" muted playsinline data-start="%%T:20:22:-0.2%%" data-duration="7.95" data-track-index="23" data-volume="0"></video>
+
       <section id="pv" class="clip" data-start="%%G:parcours:debut%%" data-duration="%%G:parcours:duree%%" data-track-index="17">
         <div class="g" id="g-pv"><div id="pv-cadre"></div><div id="pv-tag">Exemple de tableau de suivi</div></div>
       </section>
-      <video id="pv-video" src="assets/video/tableau-de-bord.mp4" muted playsinline data-start="%%G:parcours:video%%" data-duration="13.1" data-track-index="18" data-volume="0"></video>
+      <video id="pv-video" src="assets/video/tableau-de-bord.mp4" muted playsinline data-start="%%G:parcours:video%%" data-duration="12.4" data-track-index="18" data-volume="0"></video>
 
       <!-- ===================== S16–S18 · preuves ===================== -->
       <section id="preuves" class="clip" data-start="%%G:preuves:debut%%" data-duration="%%G:preuves:duree%%" data-track-index="7">
@@ -582,25 +595,39 @@
           <div class="carte tuile h" id="r-t2" style="left: 1190px; top: 210px"><img src="assets/img/proj-caravanserai-mockup.webp" alt="" /><b>Caravan Seraï</b></div>
           <div class="carte tuile h" id="r-t3" style="left: 620px; top: 540px; height: 260px"><img src="assets/img/proj-azergtours-mockup.webp" alt="" style="height: 200px" /><b>Azergtours</b></div>
           <div class="carte tuile h" id="r-t4" style="left: 1000px; top: 540px; height: 260px"><img src="assets/img/proj-ngbm-mockup.webp" alt="" style="height: 200px" /><b>NGBM</b></div>
-          <div class="chipv h" id="r-ag" style="position: absolute; left: 1540px; top: 300px">Grandes agences</div>
-          <div class="chipv h" id="r-inf" style="position: absolute; left: 1540px; top: 380px">Influenceurs</div>
+          <div class="chipv h" id="r-ag" style="position: absolute; left: 1540px; top: 300px">Les plus grandes figures</div>
+          <div class="chipv h" id="r-inf" style="position: absolute; left: 1540px; top: 380px">de l'entrepreneuriat</div>
 
-          <div class="carte sect h" id="r-s0" style="left: 210px; top: 230px"><span class="icoc">%%ICO:formation%%</span><h4>Formation</h4></div>
-          <div class="carte sect h" id="r-s1" style="left: 725px; top: 230px"><span class="icoc">%%ICO:panier%%</span><h4>E-commerce</h4></div>
+          <div class="carte sect h" id="r-s0" style="left: 210px; top: 230px"><span class="icoc">%%ICO:formation%%</span><h4>Formation</h4><div class="dom"><img src="assets/img/domaine-formation.jpg" alt="" /></div></div>
+          <div class="carte sect h" id="r-s1" style="left: 725px; top: 230px"><span class="icoc">%%ICO:panier%%</span><h4>E-commerce</h4><div class="dom"><img src="assets/img/domaine-ecommerce.jpg" alt="" /></div></div>
           <div class="carte sect h" id="r-s2" style="left: 1240px; top: 230px"><span class="icoc">%%ICO:immeuble%%</span><h4>Immobilier</h4><div class="sect-v"><img src="assets/img/proj-hubwell-capture.webp" alt="" /></div></div>
           <div class="carte sect h" id="r-s3" style="left: 210px; top: 470px"><span class="icoc">%%ICO:croix%%</span><h4>Établissements hospitaliers</h4><div class="sect-v"><img class="logo" src="assets/img/ref-clinic-chifa.svg" alt="" /></div></div>
           <div class="carte sect h" id="r-s4" style="left: 725px; top: 470px"><span class="icoc">%%ICO:ecole%%</span><h4>Écoles</h4><div class="sect-v"><img src="assets/img/proj-montessorie-capture.webp" alt="" /></div></div>
           <div class="carte sect h" id="r-s5" style="left: 1240px; top: 470px"><span class="icoc">%%ICO:magasin%%</span><h4>Centres commerciaux</h4><div class="sect-v"><img class="logo" src="assets/img/ref-menaramall.svg" alt="" /></div></div>
 
           <div class="chipb h" id="r-titre2" style="position: absolute; left: 800px; top: 250px">%%ICO:etoile%%Nos références</div>
-          <div class="carte ref h" id="r-l0" style="left: 210px; top: 380px"><img src="assets/img/ref-adidas.svg" alt="Adidas" /></div>
-          <div class="carte ref h" id="r-l1" style="left: 590px; top: 380px"><img src="assets/img/ref-puma.svg" alt="Puma" /></div>
-          <div class="carte ref h" id="r-l2" style="left: 970px; top: 380px"><img src="assets/img/ref-pmis.svg" alt="Planète Montessori" /></div>
-          <div class="carte ref h" id="r-l3" style="left: 1350px; top: 380px"><img src="assets/img/ref-menaramall.svg" alt="Menara Mall" /></div>
-          <img class="hero h" id="h-r-globe" src="assets/img/biblio/verre-globe.webp" alt="" style="left: 1620px; top: 600px; width: 240px" />
-          <img class="hero h" id="h-r-insta" src="assets/img/biblio/instagram-3d.webp" alt="" style="left: 1700px; top: 150px; width: 120px" />
-          <img class="hero h" id="h-r-tiktok" src="assets/img/biblio/tiktok-3d.webp" alt="" style="left: 1790px; top: 250px; width: 110px" />
+          <div class="carte ref h" id="r-l0" style="left: 1350px; top: 380px"><img src="assets/img/ref-adidas.svg" alt="Adidas" /></div>
+          <div class="carte ref h" id="r-l1" style="left: 210px; top: 380px"><img src="assets/img/ref-puma.svg" alt="Puma" /></div>
+          <div class="carte ref h" id="r-l2" style="left: 590px; top: 380px"><img src="assets/img/ref-pmis.svg" alt="Planète Montessori" /></div>
+          <div class="carte ref h" id="r-l3" style="left: 970px; top: 380px"><img src="assets/img/ref-menaramall.svg" alt="Menara Mall" /></div>
+          <div class="hero h" id="h-r-globe" style="left: 1460px; top: 480px; width: 400px; height: 227px; border-radius: 26px; overflow: hidden; border: 4px solid #fff; box-shadow: 0 30px 60px rgba(16,0,60,0.5); filter: none"><img src="assets/img/domaine-influenceur.jpg" alt="" style="width: 100%; height: 100%; object-fit: contain; background: #1b0f3a" /></div>
+          <img class="hero h" id="h-r-insta" src="assets/img/biblio/instagram-3d.webp" alt="" style="left: 1560px; top: 150px; width: 110px" />
+          <img class="hero h" id="h-r-tiktok" src="assets/img/biblio/tiktok-3d.webp" alt="" style="left: 1690px; top: 170px; width: 100px" />
           <img class="hero h" id="h-r-badge" src="assets/img/biblio/badge-verifie-3d.webp" alt="" style="left: 1640px; top: 620px; width: 180px" />
+        </div></div>
+      </section>
+
+      <!-- ===================== témoignages (voix finale) ===================== -->
+      <section id="temoins" class="clip" data-start="%%G:temoins:debut%%" data-duration="%%G:temoins:duree%%" data-track-index="22">
+        <div class="g" id="g-temoins"><div class="decal">
+          <img class="temoin h" id="tm0" src="assets/img/temoin-safir.png" alt="" style="left: 250px; top: 150px; width: 300px" />
+          <img class="temoin h" id="tm1" src="assets/img/temoin-gisele.png" alt="" style="left: 600px; top: 150px; width: 300px" />
+          <img class="temoin h" id="tm2" src="assets/img/temoin-celine.png" alt="" style="left: 950px; top: 150px; width: 300px" />
+          <img class="temoin h" id="tm3" src="assets/img/temoin-guylaine.png" alt="" style="left: 1300px; top: 150px; width: 300px" />
+          <div class="chipv h" id="tm-sous" style="position: absolute; left: 640px; top: 740px; height: 64px; font-size: 26px; border-radius: 32px">%%ICO:fleche%%Section témoignages · juste sous la vidéo</div>
+          <img class="hero h" id="h-tm-oeil" src="assets/img/biblio/vintage-01-oeil-dechire.webp" alt="" style="left: 20px; top: 560px; width: 260px" />
+          <img class="hero h" id="h-tm-badge" src="assets/img/biblio/badge-verifie-3d.webp" alt="" style="left: 1660px; top: 120px; width: 160px" />
+          <img class="hero h" id="h-tm-bulles" src="assets/img/biblio/bulles-orange-violet.png" alt="" style="left: 1640px; top: 600px; width: 230px" />
         </div></div>
       </section>
 
@@ -609,17 +636,17 @@
         <div class="g" id="g-meta"><div class="decal">
           <svg class="trait" viewBox="0 0 1920 1080">
             <path id="m-arc" d="M1250 300 C 1340 220, 1400 240, 1440 300" fill="none" stroke="#a877ff" stroke-width="4" stroke-dasharray="4 10" stroke-linecap="round" />
-            <path id="m-c1" d="M560 640 C 900 640, 1100 640, 1330 640" fill="none" stroke="rgba(255,255,255,0.45)" stroke-width="3" />
+            <path id="m-c1" d="M640 278 C 900 278, 1000 416, 1180 416 M640 418 L 1180 416 M640 558 C 900 558, 1000 416, 1180 416" fill="none" stroke="rgba(255,255,255,0.45)" stroke-width="3" />
             <path id="m-c2" d="M860 640 L 1330 640" fill="none" stroke="rgba(255,255,255,0.0)" stroke-width="3" />
           </svg>
           <div id="m-badge" class="h"><img src="assets/img/meta-partner.png" alt="Meta Business Partner" /><div id="m-brillance"></div></div>
           <div class="chipv h" id="m-ans" style="position: absolute; left: 820px; top: 490px">%%ICO:etoile%%Depuis plus de 5 ans</div>
           <div class="verre h" id="m-dublin" style="left: 1400px; top: 300px; width: 330px; height: 120px; padding: 0 22px; display: flex; align-items: center; gap: 16px">
             <span class="icoc">%%ICO:pin%%</span><div><div class="titre-c">Dublin</div><div class="sous-c">Auprès des équipes Meta</div></div></div>
-          <div class="verre sv h" id="m-s1" style="left: 300px; top: 600px"><span class="icoc">%%ICO:cible%%</span>Attirer</div>
-          <div class="verre sv h" id="m-s2" style="left: 600px; top: 600px"><span class="icoc">%%ICO:chat%%</span>Convaincre</div>
-          <div class="verre sv h" id="m-s3" style="left: 900px; top: 600px"><span class="icoc">%%ICO:check%%</span>Convertir</div>
-          <div class="chipv h" id="m-but" style="position: absolute; left: 1330px; top: 614px">%%ICO:graph%%Développer la clientèle</div>
+          <div class="verre sv h" id="m-s1" style="left: 120px; top: 230px; width: 520px"><span class="icoc">%%ICO:cible%%</span>Zero targeting</div>
+          <div class="verre sv h" id="m-s2" style="left: 120px; top: 370px; width: 520px"><span class="icoc">%%ICO:eclair%%</span>Laser targeting</div>
+          <div class="verre sv h" id="m-s3" style="left: 120px; top: 510px; width: 520px"><span class="icoc">%%ICO:fleche%%</span>Retargeting</div>
+          <div class="chipv h" id="m-but" style="position: absolute; left: 1180px; top: 380px; height: 72px; font-size: 30px; border-radius: 36px">%%ICO:graph%%Développer la clientèle</div>
           <img class="hero h" id="h-m-meta" src="assets/img/biblio/ia-meta.png" alt="Meta" style="left: 70px; top: 150px; width: 300px" />
           <img class="hero h" id="h-m-passeport" src="assets/img/biblio/vintage-10-passeport.webp" alt="" style="left: 1560px; top: 40px; width: 190px" />
         </div></div>
@@ -785,7 +812,7 @@
         </svg>
       </section>
 
-      <audio id="voix" src="voix.mp3" data-start="0" data-duration="201.25" data-track-index="30" data-volume="1"></audio>
+      <audio id="voix" src="voix.mp3" data-start="0" data-duration="213.4" data-track-index="30" data-volume="1"></audio>
 
       <!-- ===================== sous-titres intégrés ===================== -->
       <section id="sous-titres" class="clip" data-start="0" data-duration="%%DUREE%%" data-track-index="20">
@@ -1049,123 +1076,134 @@
       inn("#r-t0, #r-t1, #r-t2, #r-t3, #r-t4", T(16, 1), { y: 40, st: 0.2, s: 0.92 });
       tl.to("#r-t0, #r-t1, #r-t2, #r-t3, #r-t4", { x: -150, duration: 0.6, ease: "power2.inOut" }, T(16, 11) - 0.3);
       tl.to("#r-titre", { x: -150, duration: 0.6, ease: "power2.inOut" }, T(16, 11) - 0.3);
-      pop("#r-ag", T(16, 12)); pop("#r-inf", T(16, 16));
+      pop("#r-ag", T(16, 13)); pop("#r-inf", T(16, 16));
       out("#r-titre, #r-t0, #r-t1, #r-t2, #r-t3, #r-t4, #r-ag, #r-inf", T(17, 0) - 0.45, { d: 0.3, s: 0.94 });
-      [[0, 2], [1, 4], [2, 5], [3, 9], [4, 11], [5, 14]].forEach(([n, k]) => inn("#r-s" + n, T(17, k) - 0.05, { y: 26, s: 0.95 }));
+      [[0, 5], [1, 7], [2, 8], [3, 13], [4, 14], [5, 16]].forEach(([n, k]) => inn("#r-s" + n, T(17, k) - 0.05, { y: 26, s: 0.95 }));
       out("#r-s0, #r-s1, #r-s2, #r-s3, #r-s4, #r-s5", T(18, 0) - 0.3, { d: 0.3, s: 0.95 });
       inn("#r-titre2", T(18, 0), { y: 14 });
-      [4, 5, 6, 8].forEach((k, i) => pop("#r-l" + i, T(18, k) - 0.02, { de: 0.7 }));
+      [[1, 4], [2, 5], [3, 6], [0, 9]].forEach(([i, k]) => pop("#r-l" + i, T(18, k) - 0.02, { de: 0.7 }));
+
+      // ---------- témoignages : cartes en éventail ----------
+      hero("tm-oeil", T(19, 3), T(19, 16) - 0.2);
+      [-7, -2.5, 2.5, 7].forEach((r, i) => tl.fromTo("#tm" + i, { autoAlpha: 0, y: 160, rotation: r * 3, scale: 0.7 },
+        { autoAlpha: 1, y: 0, rotation: r, scale: 1, duration: 0.65, ease: "back.out(1.4)" }, T(19, 16) + i * 0.18));
+      pop("#tm-sous", T(19, 19), { de: 0.6 });
+      tl.to("#tm-sous .ico", { x: 8, duration: 0.25, yoyo: true, repeat: 7, ease: "sine.inOut" }, T(19, 19) + 0.4);
+      [0, 1, 2, 3].forEach((i) => tl.to("#tm" + i, { scale: 1.08, y: -16, duration: 0.25, yoyo: true, repeat: 1, ease: "power2.out" }, T(19, 28) + i * 0.3));
+      hero("tm-badge", T(19, 36), null); hero("tm-bulles", T(19, 40), null);
 
       // ---------- S19 · Meta ----------
-      tl.fromTo("#m-badge", { autoAlpha: 0, scale: 1.25 }, { autoAlpha: 1, scale: 1, duration: 0.8, ease: "power3.out" }, T(19, 3) - 0.3);
-      tl.fromTo("#m-brillance", { x: 0 }, { x: 1060, duration: 0.9, ease: "power2.inOut" }, T(19, 4));
-      pop("#m-ans", T(19, 9), { de: 0.6 });
-      trace("#m-arc", T(19, 19), 0.8); inn("#m-dublin", T(19, 21) - 0.1, { x: 30, y: 0 });
-      tl.to("#m-badge", { scale: 0.86, y: -30, duration: 0.6, ease: "power2.inOut" }, T(19, 22) - 0.3);
-      tl.to("#m-ans", { y: -60, duration: 0.6, ease: "power2.inOut" }, T(19, 22) - 0.3);
-      inn("#m-s1", T(19, 23), { y: 20 }); inn("#m-s2", T(19, 25), { y: 20 }); inn("#m-s3", T(19, 26), { y: 20 });
-      trace("#m-c1", T(19, 28), 1.0);
-      pop("#m-but", T(19, -3), { de: 0.6 });
+      tl.fromTo("#m-badge", { autoAlpha: 0, scale: 1.25 }, { autoAlpha: 1, scale: 1, duration: 0.8, ease: "power3.out" }, T(20, 3) - 0.3);
+      tl.fromTo("#m-brillance", { x: 0 }, { x: 1060, duration: 0.9, ease: "power2.inOut" }, T(20, 4));
+      pop("#m-ans", T(20, 9), { de: 0.6 });
+      trace("#m-arc", T(20, 19), 0.8); inn("#m-dublin", T(20, 21) - 0.1, { x: 30, y: 0 });
+      // ciblage : la page de destination défile à droite, les trois stratégies à gauche
+      out("#m-badge, #m-ans, #m-dublin, #m-arc, #h-m-meta, #h-m-passeport", T(20, 22) - 0.4, { d: 0.35, s: 0.85 });
+      tl.fromTo("#g-mv, #mv-video", { autoAlpha: 0, scale: 0.82, filter: "blur(12px)" }, { autoAlpha: 1, scale: 1, filter: "blur(0px)", duration: 0.6, ease: "power3.out" }, T(20, 22) - 0.2);
+      tl.to("#g-mv, #mv-video", { autoAlpha: 0, scale: 1.25, filter: "blur(14px)", duration: 0.45, ease: "power2.in" }, T(20, 41) - 0.15);
+      inn("#m-s1", T(20, 28), { x: -40, y: 0 }); inn("#m-s2", T(20, 31), { x: -40, y: 0 }); inn("#m-s3", T(20, 35), { x: -40, y: 0 });
+      trace("#m-c1", T(20, 41), 0.9);
+      pop("#m-but", T(20, -3), { de: 0.6 });
 
       // ---------- S20–S22 · engagement ----------
-      pop("#g-alv", T(20, 0), { de: 0.7 });
-      tl.fromTo("#e-mot span", { autoAlpha: 0, y: 40 }, { autoAlpha: 1, y: 0, duration: 0.5, ease: "power3.out", stagger: 0.05 }, T(20, 6) - 0.1);
-      tl.fromTo("#e-mot", { scale: 1 }, { scale: 1.05, duration: 1.8, ease: "power1.out" }, T(20, 6));
-      out("#e-mot, #g-alv", T(21, 0) - 0.3, { y: -30 });
-      inn("#b1", T(21, 3) - 0.1, { y: 30 });
-      inn("#b2", T(21, 17) - 0.1, { y: 30 });
-      tl.to("#b1, #b2", { opacity: 0.45, duration: 0.4 }, T(21, 26));
-      pop("#b-q", T(21, 30));
-      tl.to("#b-q", { scale: 1.15, duration: 0.3, yoyo: true, repeat: 3 }, T(21, 30) + 0.4);
-      out("#b1, #b2, #b-q", T(22, 0) - 0.4, { d: 0.3, y: -20 });
-      inn("#g-prets", T(22, 4), { y: 14 });
-      inn("#g-strat", T(22, 10), { x: -30, y: 0 });
-      inn("#g-pub", T(22, 16), { x: 30, y: 0 });
-      tl.to("#g-strat", { x: 140, y: 70, duration: 0.6, ease: "power3.inOut" }, E(22) - 0.1);
-      tl.to("#g-pub", { x: -140, y: 70, duration: 0.6, ease: "power3.inOut" }, E(22) - 0.1);
-      pop("#g-but", E(22) + 0.35, { de: 0.6 });
+      pop("#g-alv", T(21, 0), { de: 0.7 });
+      tl.fromTo("#e-mot span", { autoAlpha: 0, y: 40 }, { autoAlpha: 1, y: 0, duration: 0.5, ease: "power3.out", stagger: 0.05 }, T(21, 6) - 0.1);
+      tl.fromTo("#e-mot", { scale: 1 }, { scale: 1.05, duration: 1.8, ease: "power1.out" }, T(21, 6));
+      out("#e-mot, #g-alv", T(22, 0) - 0.3, { y: -30 });
+      inn("#b1", T(22, 3) - 0.1, { y: 30 });
+      inn("#b2", T(22, 17) - 0.1, { y: 30 });
+      tl.to("#b1, #b2", { opacity: 0.45, duration: 0.4 }, T(22, 26));
+      pop("#b-q", T(22, 30));
+      tl.to("#b-q", { scale: 1.15, duration: 0.3, yoyo: true, repeat: 3 }, T(22, 30) + 0.4);
+      out("#b1, #b2, #b-q", T(23, 0) - 0.4, { d: 0.3, y: -20 });
+      inn("#g-prets", T(23, 4), { y: 14 });
+      inn("#g-strat", T(23, 10), { x: -30, y: 0 });
+      inn("#g-pub", T(23, 16), { x: 30, y: 0 });
+      tl.to("#g-strat", { x: 140, y: 70, duration: 0.6, ease: "power3.inOut" }, E(23) - 0.1);
+      tl.to("#g-pub", { x: -140, y: 70, duration: 0.6, ease: "power3.inOut" }, E(23) - 0.1);
+      pop("#g-but", E(23) + 0.35, { de: 0.6 });
 
       // ---------- S23 · outils ----------
-      tl.fromTo("#ou-fen", { autoAlpha: 0, rotationX: 22, y: 60, transformPerspective: 1600 }, { autoAlpha: 1, rotationX: 0, y: 0, duration: 0.9, ease: "power3.out" }, T(23, 0) - 0.25);
-      tl.fromTo("#ou-q", { clipPath: "inset(0 100% 0 0)" }, { clipPath: "inset(0 0% 0 0)", duration: T(23, 8) - T(23, 2), ease: "none" }, T(23, 2));
-      pop("#ou-1", T(23, 9)); pop("#ou-2", T(23, 10)); pop("#ou-3", T(23, 12));
-      inn("#ou-rep .sk", T(23, 14), { y: 8, st: 0.15, d: 0.3 });
+      tl.fromTo("#ou-fen", { autoAlpha: 0, rotationX: 22, y: 60, transformPerspective: 1600 }, { autoAlpha: 1, rotationX: 0, y: 0, duration: 0.9, ease: "power3.out" }, T(24, 0) - 0.25);
+      tl.fromTo("#ou-q", { clipPath: "inset(0 100% 0 0)" }, { clipPath: "inset(0 0% 0 0)", duration: T(24, 8) - T(24, 2), ease: "none" }, T(24, 2));
+      pop("#ou-1", T(24, 9)); pop("#ou-2", T(24, 10)); pop("#ou-3", T(24, 12));
+      inn("#ou-rep .sk", T(24, 14), { y: 8, st: 0.15, d: 0.3 });
 
       // ---------- S24 · temps ----------
-      inn("#tp-a1", T(24, 0) - 0.2, { x: -40, y: 0 }); inn("#tp-a2", T(24, 0), { x: 40, y: 0 });
-      tl.to("#tp-a1", { x: 120, duration: 0.7, ease: "power3.inOut" }, T(24, 4));
-      tl.to("#tp-a2", { x: -120, duration: 0.7, ease: "power3.inOut" }, T(24, 4));
-      tl.fromTo("#tp-slot", { autoAlpha: 0, scaleX: 0.2 }, { autoAlpha: 1, scaleX: 1, duration: 0.5, ease: "power3.out" }, T(24, 7));
-      inn("#tp-c1", T(24, 14), { y: 12 }); inn("#tp-c2", T(24, 18), { y: 12 });
+      inn("#tp-a1", T(25, 0) - 0.2, { x: -40, y: 0 }); inn("#tp-a2", T(25, 0), { x: 40, y: 0 });
+      tl.to("#tp-a1", { x: 120, duration: 0.7, ease: "power3.inOut" }, T(25, 4));
+      tl.to("#tp-a2", { x: -120, duration: 0.7, ease: "power3.inOut" }, T(25, 4));
+      tl.fromTo("#tp-slot", { autoAlpha: 0, scaleX: 0.2 }, { autoAlpha: 1, scaleX: 1, duration: 0.5, ease: "power3.out" }, T(25, 7));
+      inn("#tp-c1", T(25, 14), { y: 12 }); inn("#tp-c2", T(25, 18), { y: 12 });
 
       // ---------- S25 · question ----------
-      pop("#q-por", T(25, 0) - 0.1, { de: 0.7 });
-      pop("#q-pts", T(25, 8));
-      tl.to("#q-pts i", { y: -8, duration: 0.22, yoyo: true, repeat: 7, stagger: 0.1 }, T(25, 8) + 0.3);
-      out("#q-pts", T(25, 17) - 0.2, { d: 0.2 });
-      tl.fromTo("#q-bulle", { autoAlpha: 0, scale: 0.6, transformOrigin: "0% 100%" }, { autoAlpha: 1, scale: 1, duration: 0.4, ease: "back.out(1.8)" }, T(25, 17) - 0.15);
-      [18, 19, 20, 21, 22, 23, 24, 25].forEach((k, i) => tl.fromTo("#q" + i, { opacity: 0.12, y: 10 }, { opacity: 1, y: 0, duration: 0.2 }, T(25, k)));
+      pop("#q-por", T(26, 0) - 0.1, { de: 0.7 });
+      pop("#q-pts", T(26, 8));
+      tl.to("#q-pts i", { y: -8, duration: 0.22, yoyo: true, repeat: 7, stagger: 0.1 }, T(26, 8) + 0.3);
+      out("#q-pts", T(26, 17) - 0.2, { d: 0.2 });
+      tl.fromTo("#q-bulle", { autoAlpha: 0, scale: 0.6, transformOrigin: "0% 100%" }, { autoAlpha: 1, scale: 1, duration: 0.4, ease: "back.out(1.8)" }, T(26, 17) - 0.15);
+      [18, 19, 20, 21, 22, 23, 24, 25].forEach((k, i) => tl.fromTo("#q" + i, { opacity: 0.12, y: 10 }, { opacity: 1, y: 0, duration: 0.2 }, T(26, k)));
 
       // ---------- S26–S28 · audit ----------
-      pop("#a-titre", T(26, 7) - 0.2, { de: 0.8 });
-      tl.fromTo("#a-titre .grand i", { opacity: 0, x: -20 }, { opacity: 1, x: 0, duration: 0.35 }, T(26, -1));
+      pop("#a-titre", T(27, 7) - 0.2, { de: 0.8 });
+      tl.fromTo("#a-titre .grand i", { opacity: 0, x: -20 }, { opacity: 1, x: 0, duration: 0.35 }, T(27, -1));
       tl.set("#a-titre .grand i", { opacity: 0 }, 0);
-      tl.to("#a-titre", { y: -200, scale: 0.55, duration: 0.6, ease: "power3.inOut" }, T(27, 0) - 0.4);
-      tl.fromTo("#a-grille", { autoAlpha: 0, rotationX: 16, y: 60, transformPerspective: 1800 }, { autoAlpha: 1, rotationX: 0, y: 0, duration: 0.8, ease: "power3.out" }, T(27, 0) - 0.2);
+      tl.to("#a-titre", { y: -200, scale: 0.55, duration: 0.6, ease: "power3.inOut" }, T(28, 0) - 0.4);
+      tl.fromTo("#a-grille", { autoAlpha: 0, rotationX: 16, y: 60, transformPerspective: 1800 }, { autoAlpha: 1, rotationX: 0, y: 0, duration: 0.8, ease: "power3.out" }, T(28, 0) - 0.2);
       const zone = (i, t, fond) => {
         tl.to("#a-grille .zone", { opacity: 0.45, duration: 0.25 }, t);
         tl.to("#a-z" + i, { opacity: 1, backgroundColor: fond, scale: 1.04, duration: 0.3 }, t);
         if (i > 0) tl.to("#a-z" + (i - 1), { scale: 1, duration: 0.3 }, t);
       };
-      zone(0, T(27, 1), "#ece4fb"); zone(1, T(27, 10), "#fde6ea"); zone(2, T(27, 13), "#fdf3d6");
-      out("#a-grille", T(28, 0) - 0.3, { d: 0.3, y: -20 });
-      inn("#a-x1", T(28, 3), { x: -40, y: 0 }); inn("#a-x2", T(28, 5), { x: -40, y: 0 }); inn("#a-x3", T(28, 7), { x: -40, y: 0 });
-      inn("#a-msg", T(28, 12), { x: 40, y: 0 });
-      tl.to("#a-msg", { y: 120, autoAlpha: 0, duration: 0.35, ease: "power2.in" }, T(28, 15));
-      pop("#a-rdv", T(28, 15) + 0.1, { de: 0.7 });
+      zone(0, T(28, 1), "#ece4fb"); zone(1, T(28, 10), "#fde6ea"); zone(2, T(28, 13), "#fdf3d6");
+      out("#a-grille", T(29, 0) - 0.3, { d: 0.3, y: -20 });
+      inn("#a-x1", T(29, 3), { x: -40, y: 0 }); inn("#a-x2", T(29, 5), { x: -40, y: 0 }); inn("#a-x3", T(29, 7), { x: -40, y: 0 });
+      inn("#a-msg", T(29, 12), { x: 40, y: 0 });
+      tl.to("#a-msg", { y: 120, autoAlpha: 0, duration: 0.35, ease: "power2.in" }, T(29, 15));
+      pop("#a-rdv", T(29, 15) + 0.1, { de: 0.7 });
 
       // ---------- S29 · clic sur le vrai parcours ----------
       tl.fromTo("#c-fen", { autoAlpha: 0, rotationY: -14, rotationX: 6, scale: 0.92, transformPerspective: 2200 },
         { autoAlpha: 1, rotationY: 0, rotationX: 0, scale: 1, duration: 1.0, ease: "power3.out" }, G.cta.coupe);
       gsap.set("#c-cur", { x: 1500, y: 900 });
-      tl.fromTo("#c-cur", { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.3 }, T(29, 0) - 0.2);
-      vers("#c-cur", T(29, 0), 760, 640, 0.6);
-      clic("#c-cur", T(29, 3) + 0.35, "#c-champ");
-      tl.to("#c-champ", { borderColor: "#632bc5", backgroundColor: "#f4effd", duration: 0.2 }, T(29, 3) + 0.35);
-      pop("#c-desc", T(29, 4), { de: 0.7 });
-      tl.fromTo("#c-resa", { autoAlpha: 0, x: 60 }, { autoAlpha: 1, x: 0, duration: 0.5, ease: "power3.out" }, T(29, 8) - 0.1);
-      vers("#c-cur", T(29, 8) + 0.1, 1240, 540, 0.4);
-      clic("#c-cur", T(29, 8) + 0.5);
-      tl.to("#c-jour", { backgroundColor: "#632bc5", color: "#fff", duration: 0.15 }, T(29, 8) + 0.5);
-      vers("#c-cur", T(29, 9) + 0.05, 1440, 446, 0.35);
-      clic("#c-cur", T(29, 10) + 0.3, "#c-slot");
-      tl.to("#c-slot", { backgroundColor: "#632bc5", color: "#fff", borderColor: "#632bc5", duration: 0.15 }, T(29, 10) + 0.3);
-      inn("#c-illu", T(29, 8), { y: 6 });
+      tl.fromTo("#c-cur", { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.3 }, T(30, 0) - 0.2);
+      vers("#c-cur", T(30, 0), 760, 640, 0.6);
+      clic("#c-cur", T(30, 3) + 0.35, "#c-champ");
+      tl.to("#c-champ", { borderColor: "#632bc5", backgroundColor: "#f4effd", duration: 0.2 }, T(30, 3) + 0.35);
+      pop("#c-desc", T(30, 4), { de: 0.7 });
+      tl.fromTo("#c-resa", { autoAlpha: 0, x: 60 }, { autoAlpha: 1, x: 0, duration: 0.5, ease: "power3.out" }, T(30, 8) - 0.1);
+      vers("#c-cur", T(30, 8) + 0.1, 1240, 540, 0.4);
+      clic("#c-cur", T(30, 8) + 0.5);
+      tl.to("#c-jour", { backgroundColor: "#632bc5", color: "#fff", duration: 0.15 }, T(30, 8) + 0.5);
+      vers("#c-cur", T(30, 9) + 0.05, 1440, 446, 0.35);
+      clic("#c-cur", T(30, 10) + 0.3, "#c-slot");
+      tl.to("#c-slot", { backgroundColor: "#632bc5", color: "#fff", borderColor: "#632bc5", duration: 0.15 }, T(30, 10) + 0.3);
+      inn("#c-illu", T(30, 8), { y: 6 });
 
       // ---------- S30–S31 · capacité ----------
-      inn("#k-d0, #k-d1, #k-d2, #k-d3", T(30, 4) - 0.1, { y: 40, st: 0.18 });
-      tl.fromTo("#g-capa .prog i", { scaleX: 0 }, { scaleX: 1, duration: 0.9, ease: "power2.out", stagger: 0.12 }, T(30, 9));
-      tl.fromTo("#k-cadre", { autoAlpha: 0, scale: 1.06 }, { autoAlpha: 1, scale: 1, duration: 0.5, ease: "power3.out" }, T(30, 14));
-      inn("#k-chip", T(30, 14) + 0.25, { y: 12 });
-      tl.to("#k-d0, #k-d1, #k-d2, #k-d3", { y: -60, opacity: 0.35, duration: 0.6, ease: "power3.inOut" }, T(30, 22) - 0.4);
-      tl.to("#k-cadre", { y: -60, opacity: 0.6, duration: 0.6, ease: "power3.inOut" }, T(30, 22) - 0.4);
-      tl.to("#k-chip", { y: -60, duration: 0.6, ease: "power3.inOut" }, T(30, 22) - 0.4);
-      pop("#k-bouton", T(30, 22) - 0.1, { de: 0.6 });
+      inn("#k-d0, #k-d1, #k-d2, #k-d3", T(31, 4) - 0.1, { y: 40, st: 0.18 });
+      tl.fromTo("#g-capa .prog i", { scaleX: 0 }, { scaleX: 1, duration: 0.9, ease: "power2.out", stagger: 0.12 }, T(31, 9));
+      tl.fromTo("#k-cadre", { autoAlpha: 0, scale: 1.06 }, { autoAlpha: 1, scale: 1, duration: 0.5, ease: "power3.out" }, T(31, 14));
+      inn("#k-chip", T(31, 14) + 0.25, { y: 12 });
+      tl.to("#k-d0, #k-d1, #k-d2, #k-d3", { y: -60, opacity: 0.35, duration: 0.6, ease: "power3.inOut" }, T(31, 22) - 0.4);
+      tl.to("#k-cadre", { y: -60, opacity: 0.6, duration: 0.6, ease: "power3.inOut" }, T(31, 22) - 0.4);
+      tl.to("#k-chip", { y: -60, duration: 0.6, ease: "power3.inOut" }, T(31, 22) - 0.4);
+      pop("#k-bouton", T(31, 22) - 0.1, { de: 0.6 });
       gsap.set("#k-cur", { x: 1500, y: 900 });
-      tl.fromTo("#k-cur", { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.3 }, T(30, 22) - 0.3);
-      vers("#k-cur", T(30, 22) - 0.25, 1080, 560, 0.45);
-      clic("#k-cur", T(30, 23) + 0.25, "#k-bouton");
-      tl.to("#k-cadre", { boxShadow: "0 0 50px rgba(168,119,255,0.9)", opacity: 1, duration: 0.4, yoyo: true, repeat: 1 }, T(30, -3));
+      tl.fromTo("#k-cur", { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.3 }, T(31, 22) - 0.3);
+      vers("#k-cur", T(31, 22) - 0.25, 1080, 560, 0.45);
+      clic("#k-cur", T(31, 23) + 0.25, "#k-bouton");
+      tl.to("#k-cadre", { boxShadow: "0 0 50px rgba(168,119,255,0.9)", opacity: 1, duration: 0.4, yoyo: true, repeat: 1 }, T(31, -3));
 
       // ---------- S32 · conclusion ----------
       [0, 1, 2, 3].forEach((i) => inn("#f-c" + i, G.fin.coupe + 0.15 + i * 0.16, { y: 40 }));
-      tl.to("#f-c0, #f-c1, #f-c2", { opacity: 0.3, duration: 0.4 }, T(31, 6));
-      tl.to("#f-c3", { scale: 1.1, boxShadow: "0 0 0 6px #a877ff, 0 30px 70px rgba(0,0,0,0.4)", duration: 0.5, ease: "back.out(2)" }, T(31, 6));
-      out("#f-c0, #f-c1, #f-c2, #f-c3", T(31, 15) - 0.1, { d: 0.35, y: -20 });
-      tl.fromTo("#f-badge", { autoAlpha: 0, scale: 0.6 }, { autoAlpha: 1, scale: 1, duration: 0.7, ease: "back.out(1.7)" }, T(31, 15) + 0.2);
-      inn("#f-mot", E(31) - 0.1, { y: 16 });
-      pop("#f-bouton", E(31) + 0.3, { de: 0.7 });
-      inn("#f-site", E(31) + 0.6, { y: 10 });
+      tl.to("#f-c0, #f-c1, #f-c2", { opacity: 0.3, duration: 0.4 }, T(32, 6));
+      tl.to("#f-c3", { scale: 1.1, boxShadow: "0 0 0 6px #a877ff, 0 30px 70px rgba(0,0,0,0.4)", duration: 0.5, ease: "back.out(2)" }, T(32, 6));
+      out("#f-c0, #f-c1, #f-c2, #f-c3", T(32, 15) - 0.1, { d: 0.35, y: -20 });
+      tl.fromTo("#f-badge", { autoAlpha: 0, scale: 0.6 }, { autoAlpha: 1, scale: 1, duration: 0.7, ease: "back.out(1.7)" }, T(32, 15) + 0.2);
+      inn("#f-mot", E(32) - 0.1, { y: 16 });
+      pop("#f-bouton", E(32) + 0.3, { de: 0.7 });
+      inn("#f-site", E(32) + 0.6, { y: 10 });
 
       // ---------- objets héros par scène ----------
       hero("i-etoile", T(0, 3), G.niv.coupe - 0.4); hero("i-trophee", T(0, 14), G.niv.coupe - 0.4);
@@ -1174,17 +1212,17 @@
       hero("d3-cible", T(7, 0), null); hero("d3-loupe", T(7, 3), null);
       hero("e-bulles", T(9, 2), null); hero("e-pouce", T(9, 15), null); hero("e-badge", T(9, 15) + 0.2, null);
       hero("dl-question", T(10, 22), T(11, 0) - 0.4); hero("dl-sablier", T(11, 4), T(12, 9) - 0.3); hero("dl-loupe", T(12, 15), null);
-      hero("r-insta", T(16, 16), T(17, 0) - 0.45); hero("r-tiktok", T(16, 16) + 0.15, T(17, 0) - 0.45); hero("r-globe", T(16, 18), T(17, 0) - 0.45);
+      hero("r-insta", T(16, 16), T(17, 0) - 0.45); hero("r-tiktok", T(16, 16) + 0.15, T(17, 0) - 0.45); hero("r-globe", T(16, 14), T(17, 0) - 0.45);
       hero("r-badge", T(18, 4), null);
-      hero("m-meta", T(19, 3), null, { r: -4 }); hero("m-passeport", T(19, 21), null);
-      hero("g-coeur", T(20, 6), T(21, 0) - 0.3); hero("g-fusee", T(22, 4), null); hero("g-cible", E(22), null);
-      hero("ou-chatgpt", T(23, 9) - 0.1, null, { r: -5 }); hero("ou-claude", T(23, 10) - 0.1, null, { r: 5 }); hero("ou-gemini", T(23, 12) - 0.1, null, { r: -4 });
-      hero("tp-sablier", T(24, 14), null);
-      hero("q-question", T(25, 17), null);
-      hero("a-micro", T(26, 7), T(27, 0) - 0.4); hero("a-noeud", T(26, -1), T(27, 0) - 0.4); hero("a-loupe", T(27, 1), T(28, 0) - 0.3); hero("a-fusee", T(28, 7), null);
-      hero("c-main", T(29, 3) - 0.2, null, { r: 4 });
-      hero("k-cadenas", T(30, 14), null); hero("k-sablier", T(30, -3), null);
-      hero("f-trophee", T(31, 6), T(31, 15) - 0.1);
+      hero("m-meta", T(20, 3), null, { r: -4 }); hero("m-passeport", T(20, 21), null);
+      hero("g-coeur", T(21, 6), T(22, 0) - 0.3); hero("g-fusee", T(23, 4), null); hero("g-cible", E(23), null);
+      hero("ou-chatgpt", T(24, 9) - 0.1, null, { r: -5 }); hero("ou-claude", T(24, 10) - 0.1, null, { r: 5 }); hero("ou-gemini", T(24, 12) - 0.1, null, { r: -4 });
+      hero("tp-sablier", T(25, 14), null);
+      hero("q-question", T(26, 17), null);
+      hero("a-micro", T(27, 7), T(28, 0) - 0.4); hero("a-noeud", T(27, -1), T(28, 0) - 0.4); hero("a-loupe", T(28, 1), T(29, 0) - 0.3); hero("a-fusee", T(29, 7), null);
+      hero("c-main", T(30, 3) - 0.2, null, { r: 4 });
+      hero("k-cadenas", T(31, 14), null); hero("k-sablier", T(31, -3), null);
+      hero("f-trophee", T(32, 6), T(32, 15) - 0.1);
 
       // ---------- S10 · orbite des réseaux et compteurs de notifications ----------
       document.querySelectorAll(".orb").forEach((el, i) => {

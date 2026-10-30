@@ -12,8 +12,8 @@ import json, math, re, sys, unicodedata
 SANS_SOUS = "--sans-sous" in sys.argv   # variante sans sous-titres incrustés (même montage)
 
 ICI = __file__.rsplit("/", 1)[0] if "/" in __file__ else "."
-DUREE = 203.5          # voix 201,25 s + 2 s de maintien de l'écran final
-FIN_SOUS = 201.3       # plus de sous-titres sur l'écran final
+DUREE = 215.6          # voix finale 213,4 s + 2,2 s de maintien de l'écran final
+FIN_SOUS = 213.5       # plus de sous-titres sur l'écran final
 
 mots = json.load(open(f"{ICI}/voix.transcript.json", encoding="utf-8"))
 lignes = [l.split() for l in open(f"{ICI}/voix.txt", encoding="utf-8").read().strip().split("\n")]
@@ -28,13 +28,13 @@ def T(l, k=0): return L[l][k][0]
 def E(l, k=-1): return L[l][k][1]
 
 # ---------- groupes de scènes (sections) ----------
-GROUPES = [  # nom, première ligne, dernière ligne, thème
+GROUPES = [  # nom, première ligne, dernière ligne, thème (le thème n'est plus utilisé : fond unique)
     ("intro", 0, 0, "clair"), ("niv", 1, 7, "clair"), ("effets", 8, 9, "clair"),
     ("douleur", 10, 12, "sombre"), ("odd", 13, 13, "sombre"), ("parcours", 14, 15, "clair"),
-    ("preuves", 16, 18, "clair"), ("meta", 19, 19, "sombre"), ("engage", 20, 22, "sombre"),
-    ("outils", 23, 23, "clair"), ("temps", 24, 24, "clair"), ("question", 25, 25, "clair"),
-    ("audit", 26, 28, "clair"), ("cta", 29, 29, "clair"), ("capa", 30, 30, "sombre"),
-    ("fin", 31, 31, "sombre"),
+    ("preuves", 16, 18, "clair"), ("temoins", 19, 19, "clair"), ("meta", 20, 20, "sombre"), ("engage", 21, 23, "sombre"),
+    ("outils", 24, 24, "clair"), ("temps", 25, 25, "clair"), ("question", 26, 26, "clair"),
+    ("audit", 27, 29, "clair"), ("cta", 30, 30, "clair"), ("capa", 31, 31, "sombre"),
+    ("fin", 32, 32, "sombre"),
 ]
 COUPES_FIXES = {}   # (instant de coupe imposé, si besoin)
 FONDU = 0.4
@@ -70,24 +70,25 @@ CLES = {  # ligne : [(fragment, classe)]  cle = violet gras ; ital = sérif ital
     13: [("oddysee", "cle"), ("changer", "ital")],
     14: [("découvrir", "cle"), ("comprendre", "cle"), ("contacter", "cle")],
     15: [("dors", "ital")],
-    16: [("terrain", "ital")],
+    16: [("terrain", "ital"), ("figures", "cle"), ("entrepreneuriat", "cle")],
+    19: [("exagère", "ital"), ("témoignages", "cle"), ("confiance", "cle")],
     18: [("adidas", "cle"), ("puma", "cle"), ("montessori", "cle"), ("menara", "cle"), ("mall", "cle")],
-    19: [("meta", "cle"), ("business", "cle"), ("partner", "cle"), ("cinq", "cle"), ("dublin", "ital")],
-    20: [("engagement", "ital")],
-    21: [("trois", "cle"), ("millions", "cle"), ("mille", "cle"), ("euros", "cle")],
-    22: [("stratégie", "cle"), ("publicité", "cle")],
-    23: [("chatgpt", "cle"), ("claude", "cle"), ("google", "cle")],
-    24: [("précieux", "ital"), ("aussi", "ital")],
-    25: [("mon", "cle"), ("entreprise", "cle")],
-    26: [("audit", "ital"), ("gratuit", "ital")],
-    27: [("bloque", "cle"), ("opportunités", "cle")],
-    28: [("prioriser", "cle")],
-    29: [("réserver", "cle"), ("audit", "cle")],
-    30: [("dès", "ital"), ("maintenant", "ital")],
-    31: [("différence", "ital"), ("expertise", "ital")],
+    20: [("meta", "cle"), ("business", "cle"), ("partner", "cle"), ("cinq", "cle"), ("dublin", "ital"), ("zero", "cle"), ("laser", "cle"), ("retargeting", "cle"), ("savoir-faire", "cle")],
+    21: [("engagement", "ital")],
+    22: [("trois", "cle"), ("millions", "cle"), ("mille", "cle"), ("euros", "cle")],
+    23: [("stratégie", "cle"), ("publicité", "cle")],
+    24: [("chatgpt", "cle"), ("claude", "cle"), ("google", "cle")],
+    25: [("précieux", "ital"), ("aussi", "ital")],
+    26: [("mon", "cle"), ("entreprise", "cle")],
+    27: [("audit", "ital"), ("gratuit", "ital")],
+    28: [("bloque", "cle"), ("opportunités", "cle")],
+    29: [("prioriser", "cle")],
+    30: [("réserver", "cle"), ("audit", "cle")],
+    31: [("dès", "ital"), ("maintenant", "ital")],
+    32: [("différence", "ital"), ("expertise", "ital")],
 }
 # fragments affichés ailleurs dans l'image (pas de doublon avec le texte de la scène)
-CACHES = {25: (17, 28)}  # ligne 25 : la question du prospect s'écrit dans la bulle (mots 17 à 27)
+CACHES = {26: (17, 28)}  # ligne 25 : la question du prospect s'écrit dans la bulle (mots 17 à 27)
 
 PONCT_SEULE = {":", "«", "»", "?", "!", ";"}
 def norm(s):
@@ -266,13 +267,16 @@ for k in (4, 5, 7): sfx(T(12, k) + 0.25, "pop.mp3", -16)
 sfx(T(13, 1), "chime.mp3", -16)
 sfx(E(14) - 0.05, "notification.mp3", -16)
 for k in (0, 5, 15): sfx(T(15, k) + 0.4, "ping.mp3", -18)
-for k in (4, 5, 6, 8): sfx(T(18, k), "pop.mp3", -15)
-sfx(T(19, 3), "sparkle.mp3", -18)
-sfx(T(25, 18), "pop.mp3", -15)
-sfx(T(28, -3), "notification.mp3", -16)
-sfx(T(29, 3) + 0.35, "click.mp3", -10); sfx(T(29, 8) + 0.5, "click.mp3", -10); sfx(T(29, 10) + 0.3, "ping.mp3", -16)
-sfx(T(30, 23) + 0.25, "click.mp3", -10); sfx(T(30, 22) - 0.1, "pop.mp3", -14)
-sfx(E(31) + 0.1, "chime.mp3", -14)
+for k in (4, 5, 6, 9): sfx(T(18, k), "pop.mp3", -15)
+sfx(T(20, 3), "sparkle.mp3", -18)
+sfx(T(26, 18), "pop.mp3", -15)
+sfx(T(29, -3), "notification.mp3", -16)
+sfx(T(30, 3) + 0.35, "click.mp3", -10); sfx(T(30, 8) + 0.5, "click.mp3", -10); sfx(T(30, 10) + 0.3, "ping.mp3", -16)
+sfx(T(31, 23) + 0.25, "click.mp3", -10); sfx(T(31, 22) - 0.1, "pop.mp3", -14)
+sfx(E(32) + 0.1, "chime.mp3", -14)
+for i in range(4): sfx(T(19, 16) + i * 0.18, "pop.mp3", -14)            # témoignages
+sfx(T(19, 19), "notification.mp3", -16); sfx(T(20, 22) - 0.2, "whoosh.mp3", -12)
+for k in (28, 31, 35): sfx(T(20, k), "click-soft.mp3", -12)               # zero, laser, retargeting
 for t0 in (-0.15, G["odd"]["coupe"] - 0.7, G["fin"]["coupe"] - 0.7):       # étoile Oddysee : éclats puis traversée
     sfx(max(0.0, t0 + 0.05), "whoosh-cinematic.mp3", -8); sfx(max(0.0, t0 + 0.75), "impact-bass-2.mp3", -8)
 json.dump({"duree": DUREE, "sfx": SFX}, open(f"{ICI}/sfx.json", "w"), indent=1)
@@ -286,6 +290,7 @@ h = h.replace("%%DUREE%%", str(DUREE)).replace("%%COURBE%%", COURBE).replace("%%
 h = h.replace("%%CURSEUR%%", CURSEUR)
 for k, v in REPET.items(): h = h.replace(f"%%{k}%%", v)
 h = re.sub(r"%%ICO:(\w+)%%", lambda m: ICONES[m.group(1)], h)
+h = re.sub(r"%%T:(\d+):(-?\d+):(-?[\d.]+)%%", lambda m: str(round(T(int(m.group(1)), int(m.group(2))) + float(m.group(3)), 3)), h)
 for nom in G: G[nom]["video"] = round(G[nom]["coupe"] + 0.15, 3)
 h = re.sub(r"%%G:(\w+):(debut|duree|coupe|video)%%", lambda m: str(G[m.group(1)][m.group(2)]), h)
 assert "%%" not in h, re.findall(r"%%[^%]*%%", h)[:5]
