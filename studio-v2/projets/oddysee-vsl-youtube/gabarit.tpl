@@ -50,11 +50,17 @@
       #pv-cadre { position: absolute; left: 922px; top: 252px; width: 896px; height: 676px; border-radius: 26px;
         background: rgba(255, 255, 255, 0.14); border: 2px solid rgba(255, 255, 255, 0.45);
         box-shadow: 0 40px 90px rgba(10, 0, 40, 0.55), 0 0 60px rgba(168, 119, 255, 0.35); }
-      #mv-cadre { position: absolute; left: 852px; top: 262px; width: 916px; height: 736px; border-radius: 26px; background: rgba(255, 255, 255, 0.14);
+      #mv-cadre { position: absolute; left: 1014px; top: 262px; width: 592px; height: 736px; border-radius: 26px; background: rgba(255, 255, 255, 0.14);
         border: 2px solid rgba(255, 255, 255, 0.45); box-shadow: 0 40px 90px rgba(10, 0, 40, 0.55), 0 0 60px rgba(168, 119, 255, 0.35); }
-      #mv-video { position: absolute; left: 860px; top: 270px; width: 900px; height: 720px; border-radius: 20px; object-fit: cover; }
-      #mv-tag { position: absolute; left: 866px; top: 1006px; font-family: "Instrument Serif", serif; font-style: italic; font-size: 24px; color: rgba(255, 255, 255, 0.75); }
+      #mv-video { position: absolute; left: 1022px; top: 270px; width: 576px; height: 720px; border-radius: 20px; object-fit: cover; }
+      #mv-tag { position: absolute; left: 1028px; top: 1006px; font-family: "Instrument Serif", serif; font-style: italic; font-size: 24px; color: rgba(255, 255, 255, 0.75); }
       #pv-video { position: absolute; left: 930px; top: 260px; width: 880px; height: 660px; border-radius: 20px; object-fit: cover; }
+      #pv2-cadre { position: absolute; left: 1100px; top: 248px; width: 541px; height: 716px; border-radius: 26px;
+        background: rgba(255, 255, 255, 0.14); border: 2px solid rgba(255, 255, 255, 0.45);
+        box-shadow: 0 40px 90px rgba(10, 0, 40, 0.55), 0 0 60px rgba(255, 140, 90, 0.35); }
+      #pv2-video { position: absolute; left: 1108px; top: 256px; width: 525px; height: 700px; border-radius: 20px; object-fit: cover; }
+      #g-pv2, #pv2-video { opacity: 0; visibility: hidden; }
+      #pv2-tag { position: absolute; left: 1112px; top: 980px; font-family: "Instrument Serif", serif; font-style: italic; font-size: 24px; color: rgba(255, 255, 255, 0.75); }
       #pv-tag { position: absolute; left: 942px; top: 940px; font-family: "Instrument Serif", serif; font-style: italic; font-size: 24px; color: rgba(255, 255, 255, 0.75); }
       #etoile { position: absolute; left: 780px; top: 360px; width: 360px; height: 360px; overflow: visible; }
       #etoile-flash { position: absolute; inset: 0; background: radial-gradient(circle at 50% 55%, #ffffff 0%, #e9ddff 45%, #b99bff 100%); opacity: 0; }
@@ -454,7 +460,7 @@
             <div id="d3-offre" class="h">%%ICO:etoile%%<b>Ton entreprise</b></div>
             <div class="chipv h" id="d3-choix" style="position: absolute; left: 860px; top: 590px">%%ICO:check%%Choisie</div>
           </div>
-          <img class="hero h" id="h-n-bulles" src="assets/img/biblio/bulles-discussion-3d.webp" alt="" style="left: 1640px; top: 560px; width: 230px" />
+          <img class="hero h" id="h-n-bulles" src="assets/img/biblio/bulles-orange-violet.png" alt="" style="left: 1640px; top: 560px; width: 230px" />
           <img class="hero h" id="h-n-fusee" src="assets/img/biblio/verre-fusee.webp" alt="" style="left: 1660px; top: 600px; width: 230px" />
           <img class="hero h" id="h-d0-clavier" src="assets/img/biblio/verre-touche-clavier.webp" alt="" style="left: 1560px; top: 640px; width: 230px" />
           <img class="hero h" id="h-d1-mains" src="assets/img/biblio/vintage-04-mains-ordinateur.webp" alt="" style="left: 20px; top: 560px; width: 300px" />
@@ -467,6 +473,7 @@
       <!-- ===================== S09 · effets concrets ===================== -->
       <section id="effets" class="clip" data-start="%%G:effets:debut%%" data-duration="%%G:effets:duree%%" data-track-index="3">
         <div class="g" id="g-effets"><div class="decal">
+          <img class="hero h" id="h-x-eclair" src="assets/img/biblio/verre-eclair-orange.webp" alt="" style="left: 440px; top: 250px; width: 210px" /><img class="hero h" id="h-x-flamme" src="assets/img/biblio/verre-flamme-bleue.webp" alt="" style="left: 1300px; top: 260px; width: 210px" />
           <div class="onde h" id="e-o1" style="left: 790px; top: 230px; width: 340px; height: 340px"></div>
           <div class="onde h" id="e-o2" style="left: 790px; top: 230px; width: 340px; height: 340px"></div>
           <div class="por h" id="e-por" style="left: 810px; top: 250px; width: 300px; height: 300px"><img src="assets/img/p-dirigeant.webp" alt="" /></div>
@@ -501,6 +508,7 @@
       <!-- ===================== S10–S12 · douleur ===================== -->
       <section id="douleur" class="clip" data-start="%%G:douleur:debut%%" data-duration="%%G:douleur:duree%%" data-track-index="4">
         <div class="g" id="g-douleur"><div class="decal">
+          <img class="hero h" id="h-x-journal" src="assets/img/biblio/verre-dossier.webp" alt="" style="left: 1300px; top: 240px; width: 220px" /><img class="hero h" id="h-x-loupe" src="assets/img/biblio/vintage-13-loupe-main-2.webp" alt="" style="left: 400px; top: 250px; width: 240px" />
           <svg class="trait" viewBox="0 0 1920 1080">
             <path id="dl-l1" d="M840 380 L700 330" stroke="rgba(255,255,255,0.35)" stroke-width="3" stroke-dasharray="3 9" fill="none" />
             <path id="dl-l2" d="M1080 340 L1180 270" stroke="rgba(255,255,255,0.35)" stroke-width="3" stroke-dasharray="3 9" fill="none" />
@@ -577,14 +585,20 @@
       </section>
 
       <section id="mv" class="clip" data-start="%%G:meta:debut%%" data-duration="%%G:meta:duree%%" data-track-index="21">
-        <div class="g" id="g-mv"><div id="mv-cadre"></div><div id="mv-tag">Exemple de page de destination</div></div>
+        <div class="g" id="g-mv"><div id="mv-cadre"></div><div id="mv-tag">Ciblage publicitaire Meta</div></div>
       </section>
-      <video id="mv-video" src="assets/video/site-ciblage.mp4" muted playsinline data-start="%%T:20:22:-0.2%%" data-duration="7.95" data-track-index="23" data-volume="0"></video>
+      <video id="mv-video" src="assets/video/meta-ciblage.mp4" muted playsinline data-start="%%T:20:22:-0.2%%" data-duration="7.95" data-track-index="23" data-volume="0"></video>
 
       <section id="pv" class="clip" data-start="%%G:parcours:debut%%" data-duration="%%G:parcours:duree%%" data-track-index="17">
         <div class="g" id="g-pv"><div id="pv-cadre"></div><div id="pv-tag">Exemple de tableau de suivi</div></div>
       </section>
       <video id="pv-video" src="assets/video/tableau-de-bord.mp4" muted playsinline data-start="%%G:parcours:video%%" data-duration="12.4" data-track-index="18" data-volume="0"></video>
+
+      <!-- à partir de « contacter » : la messagerie remplace le tableau de bord -->
+      <section id="pv2" class="clip" data-start="%%G:parcours:debut%%" data-duration="%%G:parcours:duree%%" data-track-index="24">
+        <div class="g" id="g-pv2"><div id="pv2-cadre"></div><div id="pv2-tag">Les demandes arrivent en message</div></div>
+      </section>
+      <video id="pv2-video" src="assets/video/messagerie.mp4" muted playsinline data-start="%%T:14:-1:-0.2%%" data-duration="5.76" data-track-index="25" data-volume="0"></video>
 
       <!-- ===================== S16–S18 · preuves ===================== -->
       <section id="preuves" class="clip" data-start="%%G:preuves:debut%%" data-duration="%%G:preuves:duree%%" data-track-index="7">
@@ -620,6 +634,7 @@
       <!-- ===================== témoignages (voix finale) ===================== -->
       <section id="temoins" class="clip" data-start="%%G:temoins:debut%%" data-duration="%%G:temoins:duree%%" data-track-index="22">
         <div class="g" id="g-temoins"><div class="decal">
+          <img class="hero h" id="h-x-question" src="assets/img/biblio/verre-point-interrogation.webp" alt="" style="left: 1520px; top: 230px; width: 210px" /><img class="hero h" id="h-x-main" src="assets/img/biblio/vintage-03-main-pointe.webp" alt="" style="left: 820px; top: 300px; width: 260px" />
           <img class="temoin h" id="tm0" src="assets/img/temoin-safir.png" alt="" style="left: 250px; top: 150px; width: 300px" />
           <img class="temoin h" id="tm1" src="assets/img/temoin-gisele.png" alt="" style="left: 600px; top: 150px; width: 300px" />
           <img class="temoin h" id="tm2" src="assets/img/temoin-celine.png" alt="" style="left: 950px; top: 150px; width: 300px" />
@@ -634,6 +649,7 @@
       <!-- ===================== S19 · Meta ===================== -->
       <section id="meta" class="clip" data-start="%%G:meta:debut%%" data-duration="%%G:meta:duree%%" data-track-index="8">
         <div class="g" id="g-meta"><div class="decal">
+          <img class="hero h" id="h-x-trophee" src="assets/img/biblio/vintage-08-trophee.webp" alt="" style="left: 1540px; top: 560px; width: 230px" />
           <svg class="trait" viewBox="0 0 1920 1080">
             <path id="m-arc" d="M1250 300 C 1340 220, 1400 240, 1440 300" fill="none" stroke="#a877ff" stroke-width="4" stroke-dasharray="4 10" stroke-linecap="round" />
             <path id="m-c1" d="M640 278 C 900 278, 1000 416, 1180 416 M640 418 L 1180 416 M640 558 C 900 558, 1000 416, 1180 416" fill="none" stroke="rgba(255,255,255,0.45)" stroke-width="3" />
@@ -655,6 +671,7 @@
       <!-- ===================== S20–S22 · engagement ===================== -->
       <section id="engage" class="clip" data-start="%%G:engage:debut%%" data-duration="%%G:engage:duree%%" data-track-index="9">
         <div class="g" id="g-engage"><div class="decal">
+          <img class="hero h" id="h-x-maillons" src="assets/img/biblio/verre-maillons.webp" alt="" style="left: 1380px; top: 190px; width: 220px" /><img class="hero h" id="h-x-mains" src="assets/img/biblio/vintage-04-mains-ordinateur.webp" alt="" style="left: 1480px; top: 470px; width: 280px" />
           <div class="por h" id="g-alv" style="left: 870px; top: 150px; width: 180px; height: 180px"><img src="assets/img/p-alvarez.webp" alt="" /></div>
           <div id="e-mot"><span>E</span><span>N</span><span>G</span><span>A</span><span>G</span><span>E</span><span>M</span><span>E</span><span>N</span><span>T</span></div>
           <div class="verre bloc h" id="b1" style="left: 300px; top: 260px"><div class="montant">3 000 000 DH</div><div class="lib">%%ICO:immeuble%%Investis dans ton entreprise</div></div>
@@ -701,6 +718,7 @@
       <!-- ===================== S25 · question ===================== -->
       <section id="question" class="clip" data-start="%%G:question:debut%%" data-duration="%%G:question:duree%%" data-track-index="12">
         <div class="g" id="g-question"><div class="decal">
+          <img class="hero h" id="h-x-coche" src="assets/img/biblio/verre-coche-chrome.webp" alt="" style="left: 1300px; top: 250px; width: 200px" /><img class="hero h" id="h-x-etoile" src="assets/img/biblio/verre-etoile-chrome.webp" alt="" style="left: 430px; top: 290px; width: 180px" />
           <div class="por h" id="q-por" style="left: 330px; top: 300px; width: 260px; height: 260px"><img src="assets/img/p-dirigeant.webp" alt="" /></div>
           <div class="points h" id="q-pts" style="left: 560px; top: 250px"><i></i><i></i><i></i></div>
           <div id="q-bulle" class="h"><span id="q0">«&#8239;Qu’est-ce</span> <span id="q1">que</span> <span id="q2">vous</span> <span id="q3">pourriez</span> <span id="q4">faire</span> <span id="q5">pour</span> <span id="q6" class="v">mon</span> <span id="q7" class="v">entreprise&#8239;?&#8239;»</span></div>
@@ -711,6 +729,7 @@
       <!-- ===================== S26–S28 · audit ===================== -->
       <section id="audit" class="clip" data-start="%%G:audit:debut%%" data-duration="%%G:audit:duree%%" data-track-index="13">
         <div class="g" id="g-audit"><div class="decal">
+          <img class="hero h" id="h-x-oeil" src="assets/img/biblio/verre-oeil-bleu.webp" alt="" style="left: 1460px; top: 220px; width: 200px" /><img class="hero h" id="h-x-eclair2" src="assets/img/biblio/verre-eclair-irise.webp" alt="" style="left: 1480px; top: 260px; width: 200px" />
           <div id="a-titre" class="h"><span class="chipv" style="height: 44px; font-size: 20px">%%ICO:loupe%%Regardons ensemble</span><div class="grand"><b>Audit</b><i>gratuit</i></div></div>
           <div class="carte h" id="a-grille">
             <div class="zone" id="a-z0"><h5><span class="icoc">%%ICO:graph%%</span>Situation</h5><div class="sk" style="width: 90%"></div><div class="sk" style="width: 70%"></div><div class="sk" style="width: 80%"></div><div class="sk" style="width: 55%"></div></div>
@@ -893,7 +912,10 @@
       Object.keys(ETOILE).forEach((n) => etoile(G[n].coupe - 0.7));
       // cadre du tableau de bord : suit le groupe parcours
       tl.fromTo("#g-pv, #pv-video", { autoAlpha: 0, scale: 0.8, filter: "blur(14px)" }, { autoAlpha: 1, scale: 1, filter: "blur(0px)", duration: 0.75, ease: "power3.out" }, G.parcours.coupe - 0.3);
-      tl.to("#g-pv, #pv-video", { autoAlpha: 0, scale: 1.32, filter: "blur(16px)", duration: 0.55, ease: "power2.in" }, G.preuves.coupe - 0.42);
+      // sur « contacter » : le tableau de bord s'efface, la messagerie (téléphone) arrive
+      tl.to("#g-pv, #pv-video", { autoAlpha: 0, x: -260, scale: 0.86, filter: "blur(12px)", duration: 0.4, ease: "power3.in" }, T(14, -1) - 0.35);
+      tl.fromTo("#g-pv2, #pv2-video", { autoAlpha: 0, x: 220, scale: 0.86, filter: "blur(12px)" }, { autoAlpha: 1, x: 0, scale: 1, filter: "blur(0px)", duration: 0.55, ease: "back.out(1.3)" }, T(14, -1) - 0.1);
+      tl.to("#g-pv2, #pv2-video", { autoAlpha: 0, scale: 1.32, filter: "blur(16px)", duration: 0.55, ease: "power2.in" }, G.preuves.coupe - 0.42);
       // logo discret masqué quand le logo est au centre
       tl.to("#logo-b", { opacity: 0, duration: 0.4 }, G.odd.coupe - 0.6);
       tl.to("#logo-b", { opacity: 1, duration: 0.4 }, G.parcours.coupe);
@@ -1093,7 +1115,7 @@
       hero("tm-badge", T(19, 36), null); hero("tm-bulles", T(19, 40), null);
 
       // ---------- S19 · Meta ----------
-      tl.fromTo("#m-badge", { autoAlpha: 0, scale: 1.25 }, { autoAlpha: 1, scale: 1, duration: 0.8, ease: "power3.out" }, T(20, 3) - 0.3);
+      tl.fromTo("#m-badge", { autoAlpha: 0, scale: 1.25 }, { autoAlpha: 1, scale: 1, duration: 0.8, ease: "power3.out" }, T(20, 0) + 0.1);
       tl.fromTo("#m-brillance", { x: 0 }, { x: 1060, duration: 0.9, ease: "power2.inOut" }, T(20, 4));
       pop("#m-ans", T(20, 9), { de: 0.6 });
       trace("#m-arc", T(20, 19), 0.8); inn("#m-dublin", T(20, 21) - 0.1, { x: 30, y: 0 });
@@ -1103,7 +1125,7 @@
       tl.to("#g-mv, #mv-video", { autoAlpha: 0, scale: 1.25, filter: "blur(14px)", duration: 0.45, ease: "power2.in" }, T(20, 41) - 0.15);
       inn("#m-s1", T(20, 28), { x: -40, y: 0 }); inn("#m-s2", T(20, 31), { x: -40, y: 0 }); inn("#m-s3", T(20, 35), { x: -40, y: 0 });
       trace("#m-c1", T(20, 41), 0.9);
-      pop("#m-but", T(20, -3), { de: 0.6 });
+      pop("#m-but", T(20, 45), { de: 0.6 });
 
       // ---------- S20–S22 · engagement ----------
       pop("#g-alv", T(21, 0), { de: 0.7 });
@@ -1214,8 +1236,8 @@
       hero("dl-question", T(10, 22), T(11, 0) - 0.4); hero("dl-sablier", T(11, 4), T(12, 9) - 0.3); hero("dl-loupe", T(12, 15), null);
       hero("r-insta", T(16, 16), T(17, 0) - 0.45); hero("r-tiktok", T(16, 16) + 0.15, T(17, 0) - 0.45); hero("r-globe", T(16, 14), T(17, 0) - 0.45);
       hero("r-badge", T(18, 4), null);
-      hero("m-meta", T(20, 3), null, { r: -4 }); hero("m-passeport", T(20, 21), null);
-      hero("g-coeur", T(21, 6), T(22, 0) - 0.3); hero("g-fusee", T(23, 4), null); hero("g-cible", E(23), null);
+      hero("m-meta", T(20, 0) + 0.25, null, { r: -4 }); hero("m-passeport", T(20, 21), null);
+      hero("g-coeur", T(21, 6), T(22, 0) - 0.3); hero("g-fusee", T(23, 2), null); hero("g-cible", E(23), null);
       hero("ou-chatgpt", T(24, 9) - 0.1, null, { r: -5 }); hero("ou-claude", T(24, 10) - 0.1, null, { r: 5 }); hero("ou-gemini", T(24, 12) - 0.1, null, { r: -4 });
       hero("tp-sablier", T(25, 14), null);
       hero("q-question", T(26, 17), null);
@@ -1223,6 +1245,14 @@
       hero("c-main", T(30, 3) - 0.2, null, { r: 4 });
       hero("k-cadenas", T(31, 14), null); hero("k-sablier", T(31, -3), null);
       hero("f-trophee", T(32, 6), T(32, 15) - 0.1);
+      // consigne client du 30/10 : aucun moment vide ni texte seul — illustrations de relance
+      hero("x-eclair", T(8, 1), T(9, 0) - 0.25); hero("x-flamme", T(8, 7), T(9, 0) - 0.25);
+      hero("x-journal", T(10, 0) + 0.15, T(10, 9) - 0.25); hero("x-loupe", T(10, 3), T(10, 9) - 0.25);
+      hero("x-question", T(19, 1), T(19, 16) - 0.2); hero("x-main", T(19, 7), T(19, 16) - 0.2, { r: 0 });
+      hero("x-trophee", T(20, 42), null);
+      hero("x-maillons", T(21, 1), T(22, 0) - 0.3); hero("x-mains", T(23, 0) + 0.1, null);
+      hero("x-etoile", T(26, 0) + 0.2, T(26, 17) - 0.3); hero("x-coche", T(26, 4), T(26, 17) - 0.3);
+      hero("x-oeil", T(27, 1), T(28, 0) - 0.4); hero("x-eclair2", T(29, 0) + 0.1, T(29, 7) - 0.2);
 
       // ---------- S10 · orbite des réseaux et compteurs de notifications ----------
       document.querySelectorAll(".orb").forEach((el, i) => {

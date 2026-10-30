@@ -355,6 +355,23 @@ d'amélioration V2** fournis par le client. Les deux s'appliquent à chaque proj
     apparaissent au rythme de la voix, elle continue de rétrécir doucement puis s'efface en reculant ; mots
     clés en lilas ; scènes décalées sous la bande de texte ; fichier SRT livré à part pour YouTube.
 
+### [2026-10-30] Musique ressentie, accents sonores renforcés, tension continue (vidéos Oddysee)
+- Consigne du client : « le volume du son en arrière-plan est beaucoup trop bas, on a l'impression de pas le
+  ressentir » ; « renforcer un petit peu l'accent sonore sur les effets sonores et les effets de transition […]
+  maintenir la tension du début à la fin, qu'il n'y ait pas de blanc ou du texte tout seul […] que l'animation
+  soit accent paroxysme » ; une vidéo d'illustration doit **correspondre au mot dit** (couper la vidéo dès que
+  le sujet change, ex. « contacter » → messagerie, « ciblage » → vidéo Meta).
+- Règles d'application (remplacent les écarts du 29/10) :
+  - **musique** : environ 7 à 8 dB sous la voix, effacement léger sous la voix (ratio 2,5), jamais inaudible ;
+  - **bruitages** (pic, sous le niveau moyen de la voix) : whoosh et whoosh cinématique 2 dB, clics et pops 3 dB,
+    whoosh courts 4 dB, coups sourds 5 dB (3 dB pour l'étoile), notifications 6 dB, montées 6 dB ;
+  - **chaque transition** : whoosh + coup sourd ; montée (riser) avant les temps forts ; un whoosh court à
+    l'apparition de chaque illustration (sans doubler un bruitage à moins de 0,35 s) ;
+  - **aucun plan vide** : relecture image par image toutes les 2,5 s avant rendu ; tout moment où il n'y a que le
+    texte, ou un seul petit élément, reçoit au moins une illustration animée de la bibliothèque ;
+  - **vidéos d'illustration** : verticales gardées verticales (cadre portrait), jamais étirées ; on change de vidéo
+    au mot exact où le sujet change.
+
 <!-- Format d'ajout :
 ### [date] Titre de l'élément
 - Consigne du client : « … »

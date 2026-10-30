@@ -12,14 +12,14 @@ cfg = json.load(open(f"{ICI}/sfx.json"))
 DUREE = cfg["duree"]
 MUSIQUE = f"{ICI}/assets/musique/musique-client.mp3"
 VOIX = f"{ICI}/voix.mp3"
-# consigne client du 29/10 (2e version) : bruitages d'interface nettement audibles, la voix reste devant
+# consigne client du 30/10 : accents sonores renforcés (effets et transitions), la voix reste devant
 ECARTS_SFX = {  # dB sous la sonie intégrée de la voix, pour le pic de chaque bruitage
-    "click": 5, "click-soft": 5, "key-press": 5, "typing": 5, "pop": 5, "whoosh": 5, "whoosh-short": 5,
-    "whoosh-cinematic": 6, "notification": 8, "ping": 8, "chime": 8, "sparkle": 8, "error": 8,
-    "impact-bass-1": 10, "impact-bass-2": 10, "riser": 10,
+    "click": 3, "click-soft": 3, "key-press": 4, "typing": 4, "pop": 3, "whoosh": 2, "whoosh-short": 4,
+    "whoosh-cinematic": 2, "notification": 6, "ping": 6, "chime": 6, "sparkle": 6, "error": 6,
+    "impact-bass-1": 5, "impact-bass-2": 3, "riser": 6,
 }
 ECART_DEFAUT = 8
-GAIN_MUSIQUE = -18.0   # dB (musique ≈ 16 dB sous la voix, puis effacée quand la voix parle)
+GAIN_MUSIQUE = -9.0    # dB (consigne 30/10 : musique nettement ressentie, légèrement effacée sous la voix)
 
 def run(cmd):
     subprocess.run(cmd, check=True)
@@ -74,7 +74,7 @@ def piste_audio(dest):
              f"acompressor=threshold=-20dB:ratio=2.5:attack=8:release=120:makeup=2[v];"
              f"[v]asplit=2[v1][vsc];"
              f"[1:a]aformat=sample_rates=48000:channel_layouts=stereo[m];"
-             f"[m][vsc]sidechaincompress=threshold=0.03:ratio=6:attack=40:release=600[md];"
+             f"[m][vsc]sidechaincompress=threshold=0.06:ratio=2.5:attack=60:release=700[md];"
              + sfx_f +
              f"[v1][md]{''.join(labels)}amix=inputs={2 + len(labels)}:normalize=0:duration=first,"
              f"atrim=0:{DUREE},loudnorm=I=-14:TP=-1.5:LRA=9[out]")

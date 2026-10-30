@@ -279,6 +279,20 @@ sfx(T(19, 19), "notification.mp3", -16); sfx(T(20, 22) - 0.2, "whoosh.mp3", -12)
 for k in (28, 31, 35): sfx(T(20, k), "click-soft.mp3", -12)               # zero, laser, retargeting
 for t0 in (-0.15, G["odd"]["coupe"] - 0.7, G["fin"]["coupe"] - 0.7):       # étoile Oddysee : éclats puis traversée
     sfx(max(0.0, t0 + 0.05), "whoosh-cinematic.mp3", -8); sfx(max(0.0, t0 + 0.75), "impact-bass-2.mp3", -8)
+# consigne client du 30/10 : accents sonores renforcés sur les effets et transitions, tension continue
+sfx(T(14, -1) - 0.35, "whoosh.mp3"); sfx(T(14, -1) + 0.05, "pop.mp3")         # tableau de bord → messagerie
+for nom in noms[1:]:                                                          # chaque transition : whoosh + coup sourd
+    if nom not in ("odd", "fin"): sfx(G[nom]["coupe"] + 0.05, "impact-bass-1.mp3")
+for nom in ("douleur", "temoins", "meta", "audit", "cta"):                     # montée avant les temps forts
+    sfx(G[nom]["coupe"] - 1.6, "riser.mp3")
+_vus = set()
+for m in re.finditer(r'hero\("([\w-]+)",\s*((?:[^,()]|\([^()]*\))+)', open(f"{ICI}/gabarit.tpl", encoding="utf-8").read()):
+    try: t_h = eval(m.group(2).replace("G.", "GG."), {"T": T, "E": E, "GG": type("GG", (), {k: type("g", (), v) for k, v in G.items()})})
+    except Exception: continue
+    if m.group(1) in _vus or not 0 < t_h < DUREE: continue
+    _vus.add(m.group(1))
+    if all(abs(x["t"] - t_h) > 0.35 for x in SFX): sfx(t_h, "whoosh-short.mp3")  # apparition d'une illustration
+SFX.sort(key=lambda x: x["t"])
 json.dump({"duree": DUREE, "sfx": SFX}, open(f"{ICI}/sfx.json", "w"), indent=1)
 
 # ---------- assemblage ----------

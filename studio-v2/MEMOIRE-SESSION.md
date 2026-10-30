@@ -111,6 +111,10 @@ référence ci-dessous, qui restent la source de vérité.
 exports dans `studio-v2/exports/vsl-youtube/` (version sous-titrée, version sans sous-titres, `.srt`).
 - Voix longue : horodater avec `realigner.py` du projet (fenêtres aux pauses), **pas** `outils/aligner.py`
   seul, qui dérive au-delà de deux minutes.
+- Version finale (voix du 30/10, 3 min 35) livrée, puis **v6** (30/10) : musique remontée, accents sonores
+  renforcés, messagerie (`assets/video/messagerie.mp4`) à partir de « contacter », vidéo Meta
+  (`assets/video/meta-ciblage.mp4`) sur le ciblage, bulles orange et violet à 13 s, illustrations de relance
+  sur les moments vides (héros `x-*`). Description YouTube : `DESCRIPTIONS.md`, à reprendre plus tard.
 - Reste à valider par le client : références et statut Meta (affirmations du script), lien de réservation
   dans la description YouTube, droits des photos de la bibliothèque « Face Avatar », musique longue à fournir
   (ElevenLabs refusé, erreur 401 : clé à vérifier dans les réglages de l'environnement).
