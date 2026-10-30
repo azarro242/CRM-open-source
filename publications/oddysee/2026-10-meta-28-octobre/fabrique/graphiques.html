@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" href="commun.css" />
+<style>
+  body { background: #333; }
+  .g { position: relative; overflow: hidden; margin: 0 0 40px; }
+  .g16 { width: 1600px; height: 900px; }
+  .logo-coin { position: absolute; right: 56px; bottom: 44px; height: 46px; }
+  .titre { font-weight: 900; text-transform: uppercase; letter-spacing: 1px; }
+  .masc { position: absolute; }
+
+  /* --- couverture / partage (1200 × 630) --- */
+  #g-og { width: 1200px; height: 630px; }
+  #g-og .gauche { position: absolute; left: 64px; top: 70px; width: 640px; }
+  #g-og h1 { margin-top: 28px; font-weight: 900; font-size: 74px; line-height: 1.02; text-transform: uppercase; }
+  #g-og h1 em { font-style: normal; color: var(--violet); }
+  #g-og p { margin-top: 24px; font-weight: 700; font-size: 28px; color: var(--gris); }
+  #g-og .tel { position: absolute; right: 70px; top: 40px; width: 330px; height: 586px; border-radius: 46px;
+    border: 12px solid var(--encre); overflow: hidden; transform: rotate(4deg); box-shadow: 0 30px 60px rgba(40, 10, 90, 0.35); }
+  #g-og .tel img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 30%; }
+  #g-og .logo { position: absolute; left: 64px; bottom: 50px; height: 50px; }
+
+  /* --- calendrier --- */
+  #g-calendrier .entete { position: absolute; left: 80px; top: 70px; }
+  #g-calendrier h2 { margin-top: 22px; font-size: 64px; }
+  #g-calendrier .ligne { position: absolute; left: 140px; right: 140px; top: 470px; height: 10px; border-radius: 5px;
+    background: linear-gradient(90deg, var(--violet), var(--violet-pale), var(--or)); }
+  #g-calendrier .date { position: absolute; top: 300px; width: 420px; height: 400px; padding: 0 0 30px; }
+  #g-calendrier .date .tete { height: 92px; border-radius: 28px 28px 0 0; display: flex; align-items: center;
+    justify-content: center; color: #fff; font-weight: 800; font-size: 34px; letter-spacing: 3px; }
+  #g-calendrier .date .jour { text-align: center; font-weight: 900; font-size: 150px; line-height: 1.05; letter-spacing: -4px; }
+  #g-calendrier .date p { padding: 0 34px; text-align: center; font-weight: 700; font-size: 27px; line-height: 1.3; }
+  #g-calendrier .date small { display: block; margin-top: 10px; text-align: center; font-weight: 600; font-size: 22px; color: var(--gris); }
+  #g-calendrier .src { position: absolute; left: 80px; bottom: 40px; font-size: 22px; }
+
+  /* --- chemin de désactivation --- */
+  #g-chemin .entete { position: absolute; left: 80px; top: 70px; }
+  #g-chemin h2 { margin-top: 22px; font-size: 60px; }
+  #g-chemin .etapes { position: absolute; left: 80px; top: 300px; display: flex; gap: 18px; align-items: center; }
+  #g-chemin .etape { width: 220px; height: 210px; padding: 24px; display: flex; flex-direction: column; justify-content: space-between; }
+  #g-chemin .etape b { display: block; width: 52px; height: 52px; border-radius: 50%; background: var(--violet); color: #fff;
+    font-weight: 900; font-size: 28px; line-height: 52px; text-align: center; }
+  #g-chemin .etape span { font-weight: 800; font-size: 25px; line-height: 1.18; }
+  #g-chemin .fleche { font-weight: 900; font-size: 44px; color: var(--violet-pale); }
+  #g-chemin .inter { display: inline-block; position: relative; width: 120px; height: 64px; border-radius: 32px; background: #cfc8de; }
+  #g-chemin .inter i { position: absolute; left: 8px; top: 8px; width: 48px; height: 48px; border-radius: 50%; background: #fff; }
+  #g-chemin .note { position: absolute; left: 80px; top: 580px; width: 960px; padding: 26px 34px; font-weight: 700; font-size: 29px; line-height: 1.35; }
+  #g-chemin .note b { color: var(--or); }
+
+  /* --- test A/B --- */
+  #g-ab .entete { position: absolute; left: 80px; top: 70px; }
+  #g-ab h2 { margin-top: 22px; font-size: 60px; }
+  #g-ab .pub { position: absolute; top: 300px; width: 400px; height: 360px; padding: 36px; color: #fff; border-radius: 34px; }
+  #g-ab .pub b { display: block; font-weight: 900; font-size: 60px; }
+  #g-ab .pub span { display: block; margin-top: 14px; font-weight: 700; font-size: 28px; line-height: 1.3; }
+  #g-ab .vs { position: absolute; z-index: 3; left: 465px; top: 425px; width: 110px; height: 110px; border-radius: 50%; background: var(--or);
+    font-weight: 900; font-size: 42px; line-height: 110px; text-align: center; }
+  #g-ab .regle { position: absolute; left: 1010px; top: 300px; width: 380px; padding: 34px; }
+  #g-ab .regle li { margin: 0 0 18px 26px; font-weight: 700; font-size: 26px; line-height: 1.3; }
+  #g-ab .regle h3 { font-weight: 900; font-size: 30px; margin-bottom: 18px; text-transform: uppercase; color: var(--violet); }
+
+  /* --- robots.txt --- */
+  #g-robots .entete { position: absolute; left: 80px; top: 64px; }
+  #g-robots h2 { margin-top: 22px; font-size: 58px; }
+  #g-robots pre { position: absolute; left: 80px; top: 280px; width: 640px; padding: 34px 38px; font-family: "DejaVu Sans Mono", monospace;
+    font-size: 22px; line-height: 1.6; white-space: pre; }
+  #g-robots pre .c { color: #9a93ab; }
+  #g-robots pre .k { color: var(--violet-pale); }
+  #g-robots table { position: absolute; left: 760px; top: 280px; width: 760px; border-collapse: collapse; background: #fff;
+    border-radius: 28px; overflow: hidden; box-shadow: 0 20px 44px rgba(40, 10, 90, 0.16); }
+  #g-robots th, #g-robots td { padding: 16px 20px; text-align: left; font-size: 23px; border-bottom: 2px solid #eee8f6; }
+  #g-robots th { background: var(--violet); color: #fff; font-weight: 800; }
+  #g-robots td b { font-weight: 800; }
+  #g-robots .src { position: absolute; left: 80px; bottom: 40px; font-size: 22px; }
+
+  /* --- checklist --- */
+  #g-checklist .entete { position: absolute; left: 80px; top: 66px; }
+  #g-checklist h2 { margin-top: 22px; font-size: 60px; }
+  #g-checklist ul { position: absolute; left: 80px; top: 270px; width: 1040px; padding: 30px 40px; list-style: none; }
+  #g-checklist li { display: flex; align-items: center; gap: 22px; padding: 14px 0; font-weight: 700; font-size: 29px;
+    border-bottom: 2px dashed #e7e1f1; }
+  #g-checklist li:last-child { border-bottom: none; }
+  #g-checklist li i { flex: none; width: 46px; height: 46px; border-radius: 12px; border: 4px solid var(--violet);
+    position: relative; }
+  #g-checklist li i::after { content: ""; position: absolute; left: 11px; top: 3px; width: 14px; height: 24px;
+    border-right: 6px solid var(--violet); border-bottom: 6px solid var(--violet); transform: rotate(40deg); }
+</style>
+</head>
+<body>
+
+<!-- 1. image de partage / couverture (1200 × 630) -->
+<section class="g fond" id="g-og">
+  <div class="gauche">
+    <span class="pastille" style="font-size: 22px">Meta Ads · mise à jour</span>
+    <h1>Ce qui change le <em>28&nbsp;octobre</em></h1>
+    <p>Navigation produit · nouvelles règles IA · la checklist pour garder la main</p>
+  </div>
+  <img class="logo" src="img/logo-oddysee-noir.svg" alt="" />
+  <div class="tel"><img src="img/video-telephone.png" alt="" /></div>
+</section>
+
+<!-- 2. calendrier -->
+<section class="g g16 fond" id="g-calendrier">
+  <div class="entete">
+    <span class="pastille" style="font-size: 24px">Le calendrier Meta Ads</span>
+    <h2 class="titre">3 dates à retenir avant Black Friday</h2>
+  </div>
+  <div class="ligne"></div>
+  <div class="date carte" style="left: 120px">
+    <div class="tete" style="background: var(--violet)">MERCREDI</div>
+    <div class="jour violet">28/10</div>
+    <p>La navigation produit s'active par défaut sur tes pubs en cours</p>
+  </div>
+  <div class="date carte" style="left: 590px">
+    <div class="tete" style="background: var(--encre)">VENDREDI</div>
+    <div class="jour">20/11</div>
+    <p>Nouvelles conditions&nbsp;: l'IA de Meta et ses robots</p>
+    <small>Initialement prévues le 30/10</small>
+  </div>
+  <div class="date carte" style="left: 1060px">
+    <div class="tete" style="background: var(--or-fonce)">VENDREDI</div>
+    <div class="jour">27/11</div>
+    <p>Black Friday&nbsp;: tes réglages doivent être prêts</p>
+  </div>
+  <span class="source src"><b>SOURCES</b>Notification Meta via PPC Land, 15/10 · Reuters, 23/10 · Meta Business Help Center</span>
+  <img class="logo-coin" src="img/logo-oddysee-noir.svg" alt="" />
+</section>
+
+<!-- 3. chemin de désactivation -->
+<section class="g g16 fond" id="g-chemin">
+  <div class="entete">
+    <span class="pastille" style="font-size: 24px">Garder les clics sur ton site</span>
+    <h2 class="titre">Couper la navigation produit en 5&nbsp;étapes</h2>
+  </div>
+  <div class="etapes">
+    <div class="etape carte"><b>1</b><span>Ouvre Ads Manager</span></div><span class="fleche">›</span>
+    <div class="etape carte"><b>2</b><span>Coche ta pub puis «&nbsp;Modifier&nbsp;»</span></div><span class="fleche">›</span>
+    <div class="etape carte"><b>3</b><span>Advantage+ Creative et Destination</span></div><span class="fleche">›</span>
+    <div class="etape carte"><b>4</b><span>Navigation produit</span></div><span class="fleche">›</span>
+    <div class="etape carte"><b>5</b><span class="inter"><i></i></span><span>Désactivée</span></div>
+  </div>
+  <div class="note carte-encre"><b>Avant le 28&nbsp;:</b> le bouton «&nbsp;Opt out&nbsp;» de la notification Meta. <b>Après&nbsp;:</b> ce réglage, pub par pub, à tout moment.</div>
+  <img class="masc" src="img/02-femme-sourire.webp" alt="" style="left: 1250px; top: 450px; width: 290px" />
+</section>
+
+<!-- 4. test A/B -->
+<section class="g g16 fond" id="g-ab">
+  <div class="entete">
+    <span class="pastille" style="font-size: 24px">Ne décide pas à l'aveugle</span>
+    <h2 class="titre">Le test A/B en 7&nbsp;jours</h2>
+  </div>
+  <div class="pub" style="left: 80px; background: var(--violet)"><b>PUB A</b><span>Navigation produit activée</span><span style="margin-top: 40px; font-size: 24px; color: var(--lilas)">Même visuel · même budget · même audience</span></div>
+  <div class="vs">VS</div>
+  <div class="pub" style="left: 560px; background: var(--encre)"><b>PUB B</b><span>Navigation produit coupée</span><span style="margin-top: 40px; font-size: 24px; color: #bdb6cc">Même visuel · même budget · même audience</span></div>
+  <div class="regle carte">
+    <h3>Compare</h3>
+    <ul>
+      <li>le coût par résultat</li>
+      <li>les ventes réelles, côté site et CRM</li>
+      <li>le panier moyen</li>
+    </ul>
+    <p style="font-weight: 600; font-size: 23px; color: var(--gris)">Meta annonce +3&nbsp;% de conversions avec l'option&nbsp;: c'est son propre test.</p>
+  </div>
+  <img class="logo-coin" src="img/logo-oddysee-noir.svg" alt="" />
+</section>
+
+<!-- 5. robots.txt -->
+<section class="g g16 fond" id="g-robots">
+  <div class="entete">
+    <span class="pastille" style="font-size: 24px">Ton site et les robots de Meta</span>
+    <h2 class="titre">Choisir ce que Meta peut lire</h2>
+  </div>
+  <pre class="carte-encre"><span class="c"># robots.txt — exemple</span>
+<span class="k">User-agent:</span> meta-externalagent
+<span class="k">Disallow:</span> /espace-client/
+
+<span class="k">User-agent:</span> meta-externalads
+<span class="k">Disallow:</span> /espace-client/
+
+<span class="c"># À ne pas bloquer :</span>
+<span class="c"># facebookexternalhit (aperçus de liens)</span></pre>
+  <table>
+    <tr><th>Robot</th><th>À quoi il sert</th><th>robots.txt</th></tr>
+    <tr><td><b>facebookexternalhit</b></td><td>Aperçus des liens partagés</td><td>Oui, sauf contrôles</td></tr>
+    <tr><td><b>meta-externalads</b></td><td>Publicité et produits business</td><td>Oui</td></tr>
+    <tr><td><b>meta-externalagent</b></td><td>Modèles d'IA, indexation</td><td>Oui</td></tr>
+    <tr><td><b>meta-webindexer</b></td><td>Recherche Meta AI, citations</td><td>Oui</td></tr>
+    <tr><td><b>meta-externalfetcher</b></td><td>Liens demandés par un utilisateur</td><td>Pas toujours</td></tr>
+  </table>
+  <span class="source src"><b>SOURCE</b>Meta for Developers · « Meta Web Crawlers », mis à jour le 21/05/2026</span>
+  <img class="logo-coin" src="img/logo-oddysee-noir.svg" alt="" />
+</section>
+
+<!-- 6. checklist -->
+<section class="g g16 fond" id="g-checklist">
+  <div class="entete">
+    <span class="pastille" style="font-size: 24px">À faire avant mercredi</span>
+    <h2 class="titre">La checklist Meta Ads</h2>
+  </div>
+  <ul class="carte">
+    <li><i></i>Choisir&nbsp;: navigation produit coupée, gardée ou testée</li>
+    <li><i></i>Lancer un test A/B sur une pub qui vend déjà</li>
+    <li><i></i>Relire les améliorations Advantage+ de chaque pub</li>
+    <li><i></i>Vérifier les variantes créées par l'IA de Meta</li>
+    <li><i></i>Mettre à jour le robots.txt de ton site</li>
+    <li><i></i>Contrôler le Pixel et l'API de conversions</li>
+    <li><i></i>Noter dans l'agenda&nbsp;: 20 novembre, nouvelles conditions</li>
+  </ul>
+  <img class="masc" src="img/03-femme-victoire.webp" alt="" style="left: 1200px; top: 300px; width: 340px" />
+</section>
+
+</body>
+</html>

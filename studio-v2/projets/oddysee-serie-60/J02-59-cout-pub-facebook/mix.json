@@ -1,0 +1,608 @@
+{
+ "duree": 31.64,
+ "musique": {
+  "fichier": "assets/musique/musique-client.mp3",
+  "debut": 0.0,
+  "enveloppe": [
+   {
+    "t": 0.0,
+    "db": -11.0
+   },
+   {
+    "t": 0.0,
+    "db": -11.0
+   },
+   {
+    "t": 0.02,
+    "db": -11.0
+   },
+   {
+    "t": 1.998,
+    "db": -11.0
+   },
+   {
+    "t": 2.198,
+    "db": -4.5
+   },
+   {
+    "t": 2.815,
+    "db": -4.5
+   },
+   {
+    "t": 2.935,
+    "db": -11.0
+   },
+   {
+    "t": 14.638,
+    "db": -11.0
+   },
+   {
+    "t": 14.838,
+    "db": -4.5
+   },
+   {
+    "t": 17.119,
+    "db": -4.5
+   },
+   {
+    "t": 17.239,
+    "db": -11.0
+   },
+   {
+    "t": 22.653,
+    "db": -11.0
+   },
+   {
+    "t": 22.853,
+    "db": -4.5
+   },
+   {
+    "t": 23.086,
+    "db": -4.5
+   },
+   {
+    "t": 23.206,
+    "db": -11.0
+   },
+   {
+    "t": 30.093,
+    "db": -11.0
+   },
+   {
+    "t": 30.293,
+    "db": -4.5
+   }
+  ]
+ },
+ "voix": {
+  "fichier": "voix.mp3",
+  "segments": [
+   {
+    "ligne": 0,
+    "morceau": 0,
+    "mots": [
+     0,
+     1,
+     2,
+     3,
+     4
+    ],
+    "src0": 0.0,
+    "src1": 1.848,
+    "debut": 0.1,
+    "fin": 1.948,
+    "temps": 0.1
+   },
+   {
+    "ligne": 1,
+    "morceau": 0,
+    "mots": [
+     5,
+     6
+    ],
+    "src0": 2.112,
+    "src1": 3.261,
+    "debut": 3.015,
+    "fin": 4.164,
+    "temps": 3.065
+   },
+   {
+    "ligne": 2,
+    "morceau": 0,
+    "mots": [
+     7,
+     8
+    ],
+    "src0": 3.554,
+    "src1": 4.171,
+    "debut": 4.385,
+    "fin": 5.002,
+    "temps": 4.435
+   },
+   {
+    "ligne": 2,
+    "morceau": 1,
+    "mots": [
+     9,
+     10,
+     11,
+     12,
+     13
+    ],
+    "src0": 4.6,
+    "src1": 6.018,
+    "debut": 5.242,
+    "fin": 6.66,
+    "temps": 4.435
+   },
+   {
+    "ligne": 3,
+    "morceau": 0,
+    "mots": [
+     14,
+     15
+    ],
+    "src0": 6.47,
+    "src1": 7.586,
+    "debut": 6.846,
+    "fin": 7.962,
+    "temps": 6.896
+   },
+   {
+    "ligne": 3,
+    "morceau": 1,
+    "mots": [
+     16,
+     17,
+     18,
+     19,
+     20
+    ],
+    "src0": 7.887,
+    "src1": 10.053,
+    "debut": 8.202,
+    "fin": 10.368,
+    "temps": 6.896
+   },
+   {
+    "ligne": 4,
+    "morceau": 0,
+    "mots": [
+     21,
+     22,
+     23
+    ],
+    "src0": 10.356,
+    "src1": 11.744,
+    "debut": 10.84,
+    "fin": 12.228,
+    "temps": 10.89
+   },
+   {
+    "ligne": 4,
+    "morceau": 1,
+    "mots": [
+     24,
+     25,
+     26,
+     27,
+     28,
+     29
+    ],
+    "src0": 12.05,
+    "src1": 14.17,
+    "debut": 12.468,
+    "fin": 14.588,
+    "temps": 10.89
+   },
+   {
+    "ligne": 5,
+    "morceau": 0,
+    "mots": [
+     30,
+     31,
+     32,
+     33,
+     34,
+     35,
+     36,
+     37,
+     38,
+     39,
+     40,
+     41,
+     42,
+     43,
+     44
+    ],
+    "src0": 14.53,
+    "src1": 19.814,
+    "debut": 17.319,
+    "fin": 22.603,
+    "temps": 17.369
+   },
+   {
+    "ligne": 6,
+    "morceau": 0,
+    "mots": [
+     45,
+     46
+    ],
+    "src0": 20.225,
+    "src1": 21.232,
+    "debut": 23.286,
+    "fin": 24.293,
+    "temps": 23.336
+   },
+   {
+    "ligne": 6,
+    "morceau": 1,
+    "mots": [
+     47,
+     48,
+     49,
+     50,
+     51,
+     52
+    ],
+    "src0": 21.569,
+    "src1": 23.501,
+    "debut": 24.533,
+    "fin": 26.465,
+    "temps": 23.336
+   },
+   {
+    "ligne": 7,
+    "morceau": 0,
+    "mots": [
+     53,
+     54,
+     55,
+     56,
+     57,
+     58,
+     59,
+     60,
+     61
+    ],
+    "src0": 23.811,
+    "src1": 27.039,
+    "debut": 26.815,
+    "fin": 30.043,
+    "temps": 26.865
+   }
+  ]
+ },
+ "sfx": [
+  {
+   "t": 0.05,
+   "fichier": "assets/sfx/typing.mp3",
+   "decalage": 0.0,
+   "duree": 1.519,
+   "gain_db": 2.3,
+   "categorie": "frappe"
+  },
+  {
+   "t": 1.669,
+   "fichier": "assets/sfx/click-soft.mp3",
+   "decalage": 0.0,
+   "duree": 0.366,
+   "gain_db": 0.8,
+   "categorie": "ui"
+  },
+  {
+   "t": 3.045,
+   "fichier": "assets/sfx/impact-bass-1.mp3",
+   "decalage": 0.0,
+   "duree": 2.116,
+   "gain_db": -18.0,
+   "categorie": "impact"
+  },
+  {
+   "t": 3.095,
+   "fichier": "assets/sfx/glitch-2.mp3",
+   "decalage": 0.0,
+   "duree": 0.45,
+   "gain_db": -20.6,
+   "categorie": "accent"
+  },
+  {
+   "t": 3.545,
+   "fichier": "assets/sfx/error.mp3",
+   "decalage": 0.0,
+   "duree": 0.9,
+   "gain_db": 3.5,
+   "categorie": "accent"
+  },
+  {
+   "t": 4.215,
+   "fichier": "assets/sfx/whoosh.mp3",
+   "decalage": 0.0,
+   "duree": 0.575,
+   "gain_db": -9.8,
+   "categorie": "transition"
+  },
+  {
+   "t": 4.645,
+   "fichier": "assets/sfx/pop.mp3",
+   "decalage": 0.0,
+   "duree": 0.72,
+   "gain_db": -3.8,
+   "categorie": "ui"
+  },
+  {
+   "t": 6.128,
+   "fichier": "assets/sfx/ping.mp3",
+   "decalage": 0.0,
+   "duree": 1.32,
+   "gain_db": -0.4,
+   "categorie": "accent"
+  },
+  {
+   "t": 7.286,
+   "fichier": "assets/sfx/pop.mp3",
+   "decalage": 0.0,
+   "duree": 0.72,
+   "gain_db": -3.8,
+   "categorie": "ui"
+  },
+  {
+   "t": 8.222,
+   "fichier": "assets/sfx/click.mp3",
+   "decalage": 0.0,
+   "duree": 0.366,
+   "gain_db": 0.8,
+   "categorie": "ui"
+  },
+  {
+   "t": 9.331,
+   "fichier": "assets/sfx/click.mp3",
+   "decalage": 0.0,
+   "duree": 0.366,
+   "gain_db": 0.8,
+   "categorie": "ui"
+  },
+  {
+   "t": 10.59,
+   "fichier": "assets/sfx/whoosh-cinematic.mp3",
+   "decalage": 0.0,
+   "duree": 1.2,
+   "gain_db": -15.5,
+   "categorie": "transition"
+  },
+  {
+   "t": 10.87,
+   "fichier": "assets/sfx/impact-bass-2.mp3",
+   "decalage": 0.0,
+   "duree": 1.6,
+   "gain_db": -20.3,
+   "categorie": "impact"
+  },
+  {
+   "t": 10.89,
+   "fichier": "assets/sfx/key-press.mp3",
+   "decalage": 0.0,
+   "duree": 0.432,
+   "gain_db": 3.0,
+   "categorie": "tic"
+  },
+  {
+   "t": 11.138,
+   "fichier": "assets/sfx/key-press.mp3",
+   "decalage": 0.0,
+   "duree": 0.432,
+   "gain_db": 3.0,
+   "categorie": "tic"
+  },
+  {
+   "t": 11.401,
+   "fichier": "assets/sfx/key-press.mp3",
+   "decalage": 0.0,
+   "duree": 0.432,
+   "gain_db": 3.0,
+   "categorie": "tic"
+  },
+  {
+   "t": 11.649,
+   "fichier": "assets/sfx/key-press.mp3",
+   "decalage": 0.0,
+   "duree": 0.432,
+   "gain_db": 3.0,
+   "categorie": "tic"
+  },
+  {
+   "t": 11.912,
+   "fichier": "assets/sfx/key-press.mp3",
+   "decalage": 0.0,
+   "duree": 0.432,
+   "gain_db": 3.0,
+   "categorie": "tic"
+  },
+  {
+   "t": 12.488,
+   "fichier": "assets/sfx/pop.mp3",
+   "decalage": 0.0,
+   "duree": 0.72,
+   "gain_db": -3.8,
+   "categorie": "ui"
+  },
+  {
+   "t": 13.708,
+   "fichier": "assets/sfx/ping.mp3",
+   "decalage": 0.0,
+   "duree": 1.32,
+   "gain_db": -0.4,
+   "categorie": "accent"
+  },
+  {
+   "t": 17.069,
+   "fichier": "assets/sfx/whoosh-cinematic.mp3",
+   "decalage": 0.0,
+   "duree": 1.2,
+   "gain_db": -15.5,
+   "categorie": "transition"
+  },
+  {
+   "t": 17.339,
+   "fichier": "assets/sfx/pop.mp3",
+   "decalage": 0.0,
+   "duree": 0.72,
+   "gain_db": -3.8,
+   "categorie": "ui"
+  },
+  {
+   "t": 19.128,
+   "fichier": "assets/sfx/click.mp3",
+   "decalage": 0.0,
+   "duree": 0.366,
+   "gain_db": 0.8,
+   "categorie": "ui"
+  },
+  {
+   "t": 20.357,
+   "fichier": "assets/sfx/click.mp3",
+   "decalage": 0.0,
+   "duree": 0.366,
+   "gain_db": 0.8,
+   "categorie": "ui"
+  },
+  {
+   "t": 21.736,
+   "fichier": "assets/sfx/riser.mp3",
+   "decalage": 8.43,
+   "duree": 1.6,
+   "gain_db": -22.8,
+   "categorie": "montee"
+  },
+  {
+   "t": 23.316,
+   "fichier": "assets/sfx/impact-bass-2.mp3",
+   "decalage": 0.0,
+   "duree": 1.8,
+   "gain_db": -20.3,
+   "categorie": "impact"
+  },
+  {
+   "t": 23.336,
+   "fichier": "assets/sfx/key-press.mp3",
+   "decalage": 0.0,
+   "duree": 0.432,
+   "gain_db": 6.0,
+   "categorie": "frappe"
+  },
+  {
+   "t": 23.584,
+   "fichier": "assets/sfx/key-press.mp3",
+   "decalage": 0.0,
+   "duree": 0.432,
+   "gain_db": 6.0,
+   "categorie": "frappe"
+  },
+  {
+   "t": 23.847,
+   "fichier": "assets/sfx/key-press.mp3",
+   "decalage": 0.0,
+   "duree": 0.432,
+   "gain_db": 6.0,
+   "categorie": "frappe"
+  },
+  {
+   "t": 24.095,
+   "fichier": "assets/sfx/key-press.mp3",
+   "decalage": 0.0,
+   "duree": 0.432,
+   "gain_db": 6.0,
+   "categorie": "frappe"
+  },
+  {
+   "t": 24.358,
+   "fichier": "assets/sfx/key-press.mp3",
+   "decalage": 0.0,
+   "duree": 0.432,
+   "gain_db": 6.0,
+   "categorie": "frappe"
+  },
+  {
+   "t": 24.869,
+   "fichier": "assets/sfx/click-soft.mp3",
+   "decalage": 0.0,
+   "duree": 0.366,
+   "gain_db": 0.8,
+   "categorie": "ui"
+  },
+  {
+   "t": 24.989,
+   "fichier": "assets/sfx/pop.mp3",
+   "decalage": 0.0,
+   "duree": 0.72,
+   "gain_db": -3.8,
+   "categorie": "ui"
+  },
+  {
+   "t": 25.169,
+   "fichier": "assets/sfx/notification.mp3",
+   "decalage": 0.0,
+   "duree": 1.3,
+   "gain_db": -8.4,
+   "categorie": "accent"
+  },
+  {
+   "t": 26.645,
+   "fichier": "assets/sfx/whoosh.mp3",
+   "decalage": 0.0,
+   "duree": 0.575,
+   "gain_db": -9.8,
+   "categorie": "transition"
+  },
+  {
+   "t": 27.095,
+   "fichier": "assets/sfx/click.mp3",
+   "decalage": 0.0,
+   "duree": 0.366,
+   "gain_db": 0.8,
+   "categorie": "ui"
+  },
+  {
+   "t": 27.195,
+   "fichier": "assets/sfx/ping.mp3",
+   "decalage": 0.0,
+   "duree": 1.32,
+   "gain_db": -0.4,
+   "categorie": "accent"
+  },
+  {
+   "t": 30.093,
+   "fichier": "assets/sfx/chime.mp3",
+   "decalage": 0.0,
+   "duree": 1.547,
+   "gain_db": 0.9,
+   "categorie": "signature"
+  },
+  {
+   "t": 30.393,
+   "fichier": "assets/sfx/sparkle.mp3",
+   "decalage": 0.0,
+   "duree": 1.2,
+   "gain_db": -17.7,
+   "categorie": "accent"
+  }
+ ],
+ "parole": [
+  [
+   0.020000000000000004,
+   1.998
+  ],
+  [
+   2.935,
+   14.638
+  ],
+  [
+   17.239,
+   22.653000000000002
+  ],
+  [
+   23.206000000000003,
+   30.093
+  ]
+ ]
+}

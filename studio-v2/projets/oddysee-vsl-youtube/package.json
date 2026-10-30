@@ -1,0 +1,9 @@
+{
+  "name": "oddysee-vsl-youtube",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "check": "npx --yes hyperframes@0.8.193 check",
+    "render": "npx --yes hyperframes@0.8.193 render"
+  }
+}

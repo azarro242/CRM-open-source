@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" href="commun.css" />
+<style>
+  body { font-size: 11pt; line-height: 1.55; }
+  h2 { font-weight: 900; font-size: 19pt; line-height: 1.15; margin: 0 0 3mm; padding-top: 2mm; color: var(--encre);
+    break-after: avoid; }
+  h2 + p, h2 + ul, h2 + ol { break-before: avoid; }
+  h3 { font-weight: 800; font-size: 12.5pt; margin: 5mm 0 1mm; color: var(--violet); break-after: avoid; }
+  p { margin: 0 0 2.6mm; }
+  ul, ol { margin: 0 0 3mm 6mm; }
+  li { margin-bottom: 1.2mm; }
+  a { color: var(--violet); font-weight: 600; text-decoration: none; }
+  strong { font-weight: 800; }
+  img { display: block; width: 100%; height: auto; max-height: 92mm; object-fit: contain; border-radius: 4mm; margin: 3mm 0 1.5mm;
+    break-inside: avoid; }
+  .credit { font-size: 8.5pt; color: var(--gris); margin-top: 0; }
+  .essentiel { background: var(--brume); border-left: 2mm solid var(--violet); border-radius: 3mm; padding: 3mm 6mm 1mm;
+    margin-bottom: 4mm; break-inside: avoid; }
+  blockquote { background: var(--encre); color: #fff; border-radius: 3mm; padding: 3mm 6mm; margin: 3mm 0; font-weight: 700;
+    break-inside: avoid; }
+  blockquote p { margin: 0; }
+  pre { background: var(--encre); color: #e9e4f3; border-radius: 3mm; padding: 4mm 6mm; font-size: 9.5pt; break-inside: avoid; }
+  .checklist { list-style: none; margin-left: 0; }
+  .checklist li { position: relative; padding: 3.2mm 0 3.2mm 10mm; font-size: 12.5pt; font-weight: 700; border-bottom: 0.3mm dashed var(--lilas); }
+  .checklist li::before { content: ""; position: absolute; left: 0; top: 2.4mm; width: 4.2mm; height: 4.2mm;
+    border: 0.7mm solid var(--violet); border-radius: 1mm; }
+  .cta { background: var(--violet); color: #fff; border-radius: 4mm; padding: 2mm 8mm 5mm; margin: 4mm 0; text-align: center;
+    break-inside: avoid; }
+  .cta h2 { color: #fff; }
+  .cta a.bouton { display: inline-block; margin-top: 2mm; padding: 3mm 8mm; border-radius: 3mm; background: var(--or);
+    color: var(--encre); font-weight: 900; }
+  /* nouvelles pages aux grands chapitres */
+  .saut { break-before: page; }
+  ol li a { word-break: break-all; }
+</style>
+</head>
+<body>
+{{CONTENU}}
+<script>
+  // chaque grand chapitre ouvre une page ; les sources tiennent en petit
+  const h2 = [...document.querySelectorAll("h2")];
+  h2.forEach((h) => {
+    if (/^(1\.|3\.|La checklist|Questions|Sources)/.test(h.textContent.trim())) h.classList.add("saut");
+  });
+  const src = h2.find((h) => h.textContent.trim() === "Sources");
+  if (src) { let n = src.nextElementSibling; while (n) { n.style.fontSize = "9pt"; n = n.nextElementSibling; } }
+</script>
+</body>
+</html>

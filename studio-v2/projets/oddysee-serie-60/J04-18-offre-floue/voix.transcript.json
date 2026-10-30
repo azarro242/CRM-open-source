@@ -1,0 +1,317 @@
+[
+ {
+  "text": "Ta",
+  "start": 0.0,
+  "end": 0.3
+ },
+ {
+  "text": "vidéo",
+  "start": 0.3,
+  "end": 0.54
+ },
+ {
+  "text": "est",
+  "start": 0.54,
+  "end": 0.88
+ },
+ {
+  "text": "belle…",
+  "start": 0.88,
+  "end": 1.247
+ },
+ {
+  "text": "mais",
+  "start": 1.563,
+  "end": 2.083
+ },
+ {
+  "text": "aucune",
+  "start": 2.083,
+  "end": 2.343
+ },
+ {
+  "text": "vente?",
+  "start": 2.343,
+  "end": 2.835
+ },
+ {
+  "text": "Ce",
+  "start": 3.3,
+  "end": 3.4
+ },
+ {
+  "text": "n'est",
+  "start": 3.4,
+  "end": 3.55
+ },
+ {
+  "text": "pas",
+  "start": 3.546,
+  "end": 3.646
+ },
+ {
+  "text": "l'image.",
+  "start": 3.646,
+  "end": 4.21
+ },
+ {
+  "text": "C'est",
+  "start": 4.506,
+  "end": 4.726
+ },
+ {
+  "text": "ton",
+  "start": 4.726,
+  "end": 5.066
+ },
+ {
+  "text": "offre:",
+  "start": 5.066,
+  "end": 5.292
+ },
+ {
+  "text": "personne",
+  "start": 5.652,
+  "end": 5.972
+ },
+ {
+  "text": "ne",
+  "start": 5.972,
+  "end": 6.072
+ },
+ {
+  "text": "la",
+  "start": 6.072,
+  "end": 6.332
+ },
+ {
+  "text": "comprend.",
+  "start": 6.332,
+  "end": 6.801
+ },
+ {
+  "text": "On",
+  "start": 7.265,
+  "end": 7.52
+ },
+ {
+  "text": "n'achète",
+  "start": 7.52,
+  "end": 7.776
+ },
+ {
+  "text": "pas",
+  "start": 7.776,
+  "end": 7.894
+ },
+ {
+  "text": "ce",
+  "start": 7.894,
+  "end": 7.974
+ },
+ {
+  "text": "qu'on",
+  "start": 7.973,
+  "end": 8.111
+ },
+ {
+  "text": "ne",
+  "start": 8.111,
+  "end": 8.327
+ },
+ {
+  "text": "comprend",
+  "start": 8.327,
+  "end": 8.642
+ },
+ {
+  "text": "pas.",
+  "start": 8.642,
+  "end": 8.792
+ },
+ {
+  "text": "Dis-la",
+  "start": 9.276,
+  "end": 9.596
+ },
+ {
+  "text": "en",
+  "start": 9.596,
+  "end": 9.836
+ },
+ {
+  "text": "une",
+  "start": 9.836,
+  "end": 10.256
+ },
+ {
+  "text": "phrase:",
+  "start": 10.256,
+  "end": 10.515
+ },
+ {
+  "text": "pour",
+  "start": 10.945,
+  "end": 11.245
+ },
+ {
+  "text": "qui,",
+  "start": 11.245,
+  "end": 11.435
+ },
+ {
+  "text": "quel",
+  "start": 11.823,
+  "end": 12.143
+ },
+ {
+  "text": "résultat,",
+  "start": 12.143,
+  "end": 12.611
+ },
+ {
+  "text": "quel",
+  "start": 12.948,
+  "end": 13.228
+ },
+ {
+  "text": "délai,",
+  "start": 13.228,
+  "end": 13.531
+ },
+ {
+  "text": "quel",
+  "start": 13.842,
+  "end": 14.142
+ },
+ {
+  "text": "prix.",
+  "start": 14.142,
+  "end": 14.343
+ },
+ {
+  "text": "Teste-la:",
+  "start": 14.912,
+  "end": 15.439
+ },
+ {
+  "text": "si",
+  "start": 15.719,
+  "end": 15.819
+ },
+ {
+  "text": "un",
+  "start": 15.819,
+  "end": 16.019
+ },
+ {
+  "text": "proche",
+  "start": 16.019,
+  "end": 16.259
+ },
+ {
+  "text": "ne",
+  "start": 16.259,
+  "end": 16.399
+ },
+ {
+  "text": "sait",
+  "start": 16.399,
+  "end": 16.579
+ },
+ {
+  "text": "pas",
+  "start": 16.579,
+  "end": 16.699
+ },
+ {
+  "text": "la",
+  "start": 16.699,
+  "end": 16.859
+ },
+ {
+  "text": "répéter,",
+  "start": 16.859,
+  "end": 17.506
+ },
+ {
+  "text": "simplifie.",
+  "start": 17.737,
+  "end": 18.408
+ },
+ {
+  "text": "Commente",
+  "start": 18.99,
+  "end": 19.52
+ },
+ {
+  "text": "Audit:",
+  "start": 19.55,
+  "end": 19.93
+ },
+ {
+  "text": "on",
+  "start": 20.291,
+  "end": 20.591
+ },
+ {
+  "text": "clarifie",
+  "start": 20.591,
+  "end": 21.051
+ },
+ {
+  "text": "ton",
+  "start": 21.051,
+  "end": 21.351
+ },
+ {
+  "text": "offre.",
+  "start": 21.351,
+  "end": 21.506
+ },
+ {
+  "text": "Et",
+  "start": 21.903,
+  "end": 22.023
+ },
+ {
+  "text": "abonne-toi:",
+  "start": 22.023,
+  "end": 22.551
+ },
+ {
+  "text": "une",
+  "start": 22.939,
+  "end": 23.119
+ },
+ {
+  "text": "offre",
+  "start": 23.119,
+  "end": 23.439
+ },
+ {
+  "text": "claire,",
+  "start": 23.439,
+  "end": 23.834
+ },
+ {
+  "text": "des",
+  "start": 24.012,
+  "end": 24.352
+ },
+ {
+  "text": "clients",
+  "start": 24.352,
+  "end": 24.612
+ },
+ {
+  "text": "qui",
+  "start": 24.612,
+  "end": 24.852
+ },
+ {
+  "text": "achètent.",
+  "start": 24.852,
+  "end": 25.242
+ }
+]

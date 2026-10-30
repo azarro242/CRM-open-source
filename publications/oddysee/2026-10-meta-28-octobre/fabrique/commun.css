@@ -1,0 +1,26 @@
+/* Charte Oddysee — partagée par les visuels de l'article et le guide PDF */
+@font-face { font-family: "Outfit"; font-weight: 400; src: url("polices/Outfit-400-latin.woff2") format("woff2"); }
+@font-face { font-family: "Outfit"; font-weight: 500; src: url("polices/Outfit-500-latin.woff2") format("woff2"); }
+@font-face { font-family: "Outfit"; font-weight: 600; src: url("polices/Outfit-600-latin.woff2") format("woff2"); }
+@font-face { font-family: "Outfit"; font-weight: 700; src: url("polices/Outfit-700-latin.woff2") format("woff2"); }
+@font-face { font-family: "Outfit"; font-weight: 800; src: url("polices/Outfit-800-latin.woff2") format("woff2"); }
+@font-face { font-family: "Outfit"; font-weight: 900; src: url("polices/Outfit-900-latin.woff2") format("woff2"); }
+:root {
+  --violet: #632bc5; --violet-vif: #6a3be8; --violet-pale: #a877ff; --lilas: #e2d7f7;
+  --brume: #f7f3ff; --or: #f0c860; --or-fonce: #d4a847; --encre: #1d1d1d; --gris: #6f6a7a;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: "Outfit", sans-serif; color: var(--encre); -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+.fond {
+  background-color: var(--brume);
+  background-image: radial-gradient(circle, rgba(99, 43, 197, 0.14) 2px, transparent 2.6px);
+  background-size: 34px 34px;
+}
+.pastille { display: inline-block; padding: 8px 18px; border-radius: 30px; border: 3px solid var(--violet);
+  background: #fff; color: var(--violet); font-weight: 800; letter-spacing: 2px; text-transform: uppercase; }
+.carte { background: #fff; border-radius: 28px; box-shadow: 0 20px 44px rgba(40, 10, 90, 0.16); }
+.carte-encre { background: var(--encre); color: #fff; border-radius: 28px; }
+.source { display: inline-block; padding: 8px 18px; border-radius: 24px; background: rgba(29, 29, 29, 0.86);
+  color: #fff; font-weight: 600; }
+.source b { color: var(--or); margin-right: 8px; }
+.violet { color: var(--violet); }

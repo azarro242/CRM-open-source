@@ -1,0 +1,316 @@
+<title>Kit post Meta 28 octobre</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&display=swap">
+<style>
+  /* Bandeau de marque à trame de points, onglets collants par réseau, puis une colonne de blocs à copier dans l'ordre de publication */
+  :root {
+    --fond: #fbf9ff; --surface: #ffffff; --champ: #f6f2fd; --encre: #1d1b22; --gris: #6b6578;
+    --violet: #632bc5; --sur-violet: #ffffff; --or: #f0c860; --sur-or: #1d1b22;
+    --lilas: #ece5fa; --ligne: #e3dbf2; --point: rgba(99, 43, 197, 0.13);
+    --ok: #1b7a50; --ok-fond: #e2f3ea; --alerte: #a14d12; --alerte-fond: #fbeadc;
+    --police: "Outfit", "Segoe UI", system-ui, -apple-system, sans-serif;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --fond: #131118; --surface: #1c1824; --champ: #17141f; --encre: #f0ecf7; --gris: #a59db5;
+      --violet: #b08cff; --sur-violet: #160f22; --or: #f0c860; --sur-or: #1d1b22;
+      --lilas: #2a2238; --ligne: #302940; --point: rgba(176, 140, 255, 0.12);
+      --ok: #5ccf95; --ok-fond: #173326; --alerte: #f0a35e; --alerte-fond: #3a2616;
+      color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --fond: #131118; --surface: #1c1824; --champ: #17141f; --encre: #f0ecf7; --gris: #a59db5;
+    --violet: #b08cff; --sur-violet: #160f22; --or: #f0c860; --sur-or: #1d1b22;
+    --lilas: #2a2238; --ligne: #302940; --point: rgba(176, 140, 255, 0.12);
+    --ok: #5ccf95; --ok-fond: #173326; --alerte: #f0a35e; --alerte-fond: #3a2616;
+    color-scheme: dark;
+  }
+
+  * { box-sizing: border-box; }
+  body { background: var(--fond); color: var(--encre); font-family: var(--police); font-size: 16px; line-height: 1.5; }
+  body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 10;
+    background: var(--fond); }
+  .large { max-width: 780px; margin: 0 auto; }
+  .gouttiere { padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+
+  /* ---- bandeau */
+  .bandeau { background-color: var(--lilas);
+    background-image: radial-gradient(circle, var(--point) 1.7px, transparent 2.2px); background-size: 22px 22px;
+    border-bottom: 1px solid var(--ligne); }
+  .bandeau .gouttiere { padding-block: 28px 26px; }
+  .tete { display: grid; grid-template-columns: minmax(0, 1fr) 300px; gap: 24px; align-items: start; }
+  .marque { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; margin-bottom: 14px; }
+  .mot { font-weight: 900; font-size: 15px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--violet); }
+  .pastille { display: inline-flex; align-items: center; gap: 6px; padding: 4px 12px; border-radius: 99px;
+    background: var(--surface); border: 2px solid var(--violet); color: var(--violet);
+    font-weight: 800; font-size: 12px; letter-spacing: 0.06em; text-transform: uppercase; }
+  h1 { margin: 0 0 10px; font-weight: 900; font-size: clamp(30px, 6vw, 44px); line-height: 1.02; letter-spacing: -0.01em;
+    text-wrap: balance; }
+  h1 em { font-style: normal; color: var(--violet); }
+  .intro { margin: 0; max-width: 46ch; color: var(--gris); font-weight: 500; }
+
+  .avant { background: var(--surface); border: 1px solid var(--ligne); border-radius: 18px; padding: 14px; display: grid;
+    grid-template-columns: 74px minmax(0, 1fr); gap: 12px; }
+  .avant img { width: 74px; aspect-ratio: 9 / 16; object-fit: cover; border-radius: 10px; max-width: 100%; }
+  .avant h2 { margin: 0 0 6px; font-size: 13px; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; color: var(--gris); }
+  .avant ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 7px; }
+  .avant label { display: grid; grid-template-columns: 18px minmax(0, 1fr); gap: 7px; font-size: 13.5px; line-height: 1.3;
+    font-weight: 600; cursor: pointer; }
+  .avant input { width: 16px; height: 16px; margin: 1px 0 0; accent-color: var(--violet); }
+  .avant input:checked + span { color: var(--gris); text-decoration: line-through; }
+  .avant a { color: var(--violet); }
+
+  /* ---- onglets */
+  .onglets { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; background: var(--fond);
+    border-bottom: 1px solid var(--ligne); }
+  .onglets .gouttiere { padding-block: 10px; }
+  .liste-onglets { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 6px; }
+  .onglet { font: inherit; cursor: pointer; border: 1px solid var(--ligne); background: var(--surface); color: var(--encre);
+    border-radius: 12px; padding: 8px 6px; display: grid; gap: 1px; text-align: center; }
+  .onglet b { font-weight: 800; font-size: 15px; }
+  .onglet small { font-size: 11.5px; color: var(--gris); font-weight: 500; }
+  .onglet[aria-selected="true"] { background: var(--violet); border-color: var(--violet); color: var(--sur-violet); }
+  .onglet[aria-selected="true"] small { color: var(--sur-violet); opacity: 0.85; }
+  .onglet:focus-visible, button:focus-visible, textarea:focus-visible, input:focus-visible {
+    outline: 3px solid var(--or); outline-offset: 2px; }
+
+  /* ---- blocs */
+  main .gouttiere { padding-block: 22px 40px; }
+  .resume { margin: 0 0 16px; color: var(--gris); font-weight: 500; }
+  .resume b { color: var(--encre); }
+  .blocs { display: grid; gap: 14px; }
+  .bloc { background: var(--surface); border: 1px solid var(--ligne); border-radius: 18px; padding: 16px; display: grid; gap: 12px;
+    min-width: 0; }
+  .bloc-tete { display: grid; grid-template-columns: 34px minmax(0, 1fr) auto; gap: 12px; align-items: center; }
+  .num { width: 34px; height: 34px; border-radius: 50%; display: grid; place-items: center; font-weight: 900;
+    background: var(--lilas); color: var(--violet); font-variant-numeric: tabular-nums; }
+  .bloc.fait .num { background: var(--ok-fond); color: var(--ok); }
+  .bloc h3 { margin: 0; font-size: 18px; font-weight: 800; line-height: 1.2; }
+  .ou { margin: 2px 0 0; font-size: 13.5px; color: var(--gris); }
+  .etat { font-size: 12px; font-weight: 800; letter-spacing: 0.06em; text-transform: uppercase; color: var(--ok);
+    background: var(--ok-fond); padding: 3px 9px; border-radius: 99px; }
+
+  textarea { width: 100%; display: block; resize: vertical; min-height: 56px; overflow: hidden;
+    font: 500 15.5px/1.55 var(--police); color: var(--encre); background: var(--champ);
+    border: 1px solid var(--ligne); border-radius: 12px; padding: 12px 14px; white-space: pre-wrap; overflow-wrap: anywhere; }
+  .bloc-pied { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px; }
+  .compteurs { display: flex; flex-wrap: wrap; gap: 6px; min-width: 0; }
+  .puce { font-size: 12.5px; font-weight: 600; padding: 3px 9px; border-radius: 99px; background: var(--lilas); color: var(--encre);
+    font-variant-numeric: tabular-nums; white-space: nowrap; }
+  .puce.bon { background: var(--ok-fond); color: var(--ok); }
+  .puce.trop { background: var(--alerte-fond); color: var(--alerte); }
+  .actions { display: flex; gap: 8px; align-items: center; margin-left: auto; }
+  .copier { font: inherit; font-weight: 800; font-size: 15px; cursor: pointer; border: 0; border-radius: 12px;
+    padding: 11px 20px; min-height: 46px; background: var(--violet); color: var(--sur-violet); }
+  .copier.ok { background: var(--or); color: var(--sur-or); }
+  .retablir { font: inherit; font-size: 13.5px; font-weight: 600; cursor: pointer; border: 0; background: none;
+    color: var(--violet); text-decoration: underline; padding: 6px 4px; }
+  .note { margin: 0; font-size: 13.5px; color: var(--gris); border-top: 1px dashed var(--ligne); padding-top: 10px; }
+
+  .sous { margin: 0 0 6px; font-size: 12.5px; font-weight: 800; letter-spacing: 0.06em; text-transform: uppercase; color: var(--gris); }
+  .variantes { display: grid; gap: 8px; }
+  .variante { display: flex; align-items: center; gap: 10px; background: var(--champ); border: 1px solid var(--ligne);
+    border-radius: 12px; padding: 6px 6px 6px 14px; }
+  .variante span { flex: 1; min-width: 0; font-weight: 500; overflow-wrap: anywhere; }
+  .variante .copier { min-height: 40px; padding: 8px 14px; font-size: 14px; }
+
+  footer .gouttiere { padding-block: 0 36px; }
+  footer p { margin: 0; font-size: 13px; color: var(--gris); }
+  code { font-family: ui-monospace, "SF Mono", Menlo, monospace; font-size: 0.92em; overflow-wrap: anywhere; }
+
+  @media (max-width: 680px) {
+    .tete { grid-template-columns: minmax(0, 1fr); }
+    .bandeau .gouttiere { padding-block: 22px 20px; }
+  }
+  @media (max-width: 430px) {
+    .onglet small { display: none; }
+    .onglet b { font-size: 14px; }
+    .actions { width: 100%; }
+    .actions .copier { flex: 1; }
+  }
+  @media (prefers-reduced-motion: no-preference) {
+    .copier { transition: background-color 0.15s ease, color 0.15s ease; }
+  }
+</style>
+
+<header class="bandeau">
+  <div class="gouttiere"><div class="large tete">
+    <div>
+      <div class="marque"><span class="mot">Oddysee</span><span class="pastille">Lundi 26 octobre · vers 12&nbsp;h</span></div>
+      <h1>Publier le reel <em>Meta 28&nbsp;octobre</em></h1>
+      <p class="intro">Choisissez le réseau, puis copiez chaque bloc dans l'ordre. Vous pouvez retoucher un texte avant de le copier&nbsp;: les compteurs suivent.</p>
+    </div>
+    <aside class="avant" aria-label="Avant de publier">
+      <img src="data:image/jpeg;base64,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" alt="Couverture du reel : le tampon Faux sur la carte 30/10">
+      <div>
+        <h2>Avant de publier</h2>
+        <ul id="avant"></ul>
+      </div>
+    </aside>
+  </div></div>
+</header>
+
+<nav class="onglets" aria-label="Réseaux">
+  <div class="gouttiere"><div class="large liste-onglets" role="tablist" id="onglets"></div></div>
+</nav>
+
+<main>
+  <div class="gouttiere"><div class="large" id="panneaux"></div></div>
+</main>
+
+<footer>
+  <div class="gouttiere"><div class="large">
+    <p>Textes sources dans le dépôt&nbsp;: <code>publications/oddysee/2026-10-meta-28-octobre/</code> · vidéo&nbsp;: <code>studio-v2/exports/oddysee-meta-28-octobre-v2.mp4</code></p>
+  </div></div>
+</footer>
+
+<script type="application/json" id="donnees">{"reseaux": [{"id": "instagram", "nom": "Instagram", "mode": "Réponse automatique", "blocs": [{"titre": "Légende", "ou": "Nouveau reel › Légende", "texte": "Le 30 octobre ? Repoussé. Mais mercredi 28, tes pubs Meta changent quand même 👇\n\nCe qui se passe :\n→ Mercredi 28/10 : la « navigation produit » s'active par défaut sur tes pubs Facebook et Instagram déjà en ligne. Un clic sur ta pub peut ouvrir une page dans Instagram… au lieu de ton site.\n→ 20/11 : les nouvelles conditions de Meta entrent en vigueur (prévues au départ le 30/10). Ce que l'IA de Meta modifie dans tes pubs, c'est toi qui en réponds.\n\nCe que tu fais avant mercredi, dans Ads Manager :\n1. Tu choisis : couper, garder ou tester la navigation produit.\n2. Tu testes : une pub avec, une pub sans, 7 jours, et tu compares tes vraies ventes.\n3. Tu relis ce que l'IA de Meta a changé dans tes pubs (Advantage+).\n\nMeta annonce +3 % de conversions avec l'option. C'est son propre test : vérifie avec tes chiffres.\n\n💬 Commente META : on t'envoie le guide des bonnes pratiques Meta Ads, gratuit et sourcé.\n🔔 Abonne-toi : on surveille Meta pour toi.\n\nSources : notification Meta rapportée par PPC Land (15/10) · Reuters (23/10) · Meta Business Help Center.\n\n#metaads #publicitefacebook #instagramads #marketingdigital #entrepreneur", "limite": 2200, "hashtags_max": 5, "premiere_ligne": 125}, {"titre": "Premier commentaire, à épingler", "ou": "Sous le reel publié › Commenter, puis appui long › Épingler", "texte": "📌 Le pas-à-pas complet, la méthode de test et la checklist : commente META et on t'envoie le guide en message privé."}, {"titre": "Réponses publiques au mot META", "ou": "ManyChat › réponse au commentaire (les 3 en rotation)", "variantes": ["C'est envoyé en message privé 📩", "Guide envoyé, regarde tes messages 👀", "Envoyé ! Dis-nous si tu as une question"]}, {"titre": "Message privé envoyé", "ou": "ManyChat › message privé (ou à la main)", "texte": "Salut 👋 Voici ton guide des bonnes pratiques Meta Ads (spécial 28 octobre) :\nhttps://www.oddysee.fr/blog/meta-ads-28-octobre-navigation-produit?utm_source=instagram&utm_medium=dm&utm_campaign=meta-28-octobre\n\nDedans : le pas-à-pas pour couper la navigation produit, la méthode de test en 7 jours, les nouvelles règles IA du 20 novembre et la checklist.\n\nUne question sur tes pubs ? Réponds à ce message, on te répond.", "note": "Le lien ouvre l'article sur oddysee.fr. Il doit être en ligne avant la publication du reel."}, {"titre": "Texte alternatif", "ou": "Paramètres avancés › Accessibilité › Texte alternatif", "texte": "Mascotte Oddysee qui tamponne « Faux » sur le 30 octobre : tes pubs Meta changent dès le mercredi 28.", "conseil": 125, "note": "Instagram ne propose pas toujours ce champ sur les reels. S'il n'apparaît pas, rien à faire : les sous-titres de la vidéo la rendent déjà accessible."}, {"titre": "Story de relais, avec sondage", "ou": "Story › partager le reel › autocollant Sondage", "texte": "Mercredi, tes pubs Meta changent. C'est réglé chez toi ?", "variantes": ["Oui, c'est fait", "Pas encore 😬"], "variantes_titre": "Réponses du sondage"}]}, {"id": "facebook", "nom": "Facebook", "mode": "Réponse automatique", "blocs": [{"titre": "Description du reel", "ou": "Page Facebook › Créer un reel › Description", "texte": "Le 30 octobre ? Repoussé. Mais mercredi 28, tes pubs Facebook et Instagram changent quand même 👇\n\nMercredi 28/10, Meta active la « navigation produit » par défaut sur les pubs déjà en ligne. Un clic sur ta pub peut ouvrir une page dans l'application… au lieu de ton site.\n\nLes nouvelles conditions publicitaires arrivent le 20/11 (au lieu du 30/10). Ce que l'IA de Meta modifie dans tes pubs, c'est toi qui en réponds.\n\nAvant mercredi, dans le Gestionnaire de publicités :\n1. Choisis : couper, garder ou tester la navigation produit.\n2. Teste 7 jours : une pub avec, une pub sans, et compare tes vraies ventes.\n3. Relis ce que l'IA de Meta a changé dans tes pubs (Advantage+).\n\nMeta annonce +3 % de conversions avec l'option. C'est son propre test : vérifie avec tes chiffres.\n\n💬 Commente META : on t'envoie le guide complet en message privé, gratuit et sourcé.\n👍 Suis la page : on surveille Meta pour toi.\n\n#MetaAds #PubliciteFacebook #MarketingDigital", "hashtags_max": 3, "note": "Publication croisée depuis Instagram ? La légende Instagram passe aussi. Celle-ci parle le langage de Facebook (« Gestionnaire de publicités », « Suis la page », 3 hashtags)."}, {"titre": "Premier commentaire, à épingler", "ou": "Sous le reel publié › ⋯ › Épingler", "texte": "📌 Le pas-à-pas complet, la méthode de test et la checklist : commente META et on t'envoie le guide en message privé."}, {"titre": "Réponses publiques au mot META", "ou": "ManyChat › réponse au commentaire (les 3 en rotation)", "variantes": ["C'est envoyé en message privé 📩", "Guide envoyé, regarde tes messages 👀", "Envoyé ! Dis-nous si tu as une question"]}, {"titre": "Message privé Messenger", "ou": "ManyChat › message Messenger (ou à la main)", "texte": "Salut 👋 Voici ton guide des bonnes pratiques Meta Ads (spécial 28 octobre) :\nhttps://www.oddysee.fr/blog/meta-ads-28-octobre-navigation-produit?utm_source=facebook&utm_medium=dm&utm_campaign=meta-28-octobre\n\nDedans : le pas-à-pas pour couper la navigation produit, la méthode de test en 7 jours, les nouvelles règles IA du 20 novembre et la checklist.\n\nUne question sur tes pubs ? Réponds à ce message, on te répond.", "note": "Même message qu'Instagram, avec un lien suivi « facebook » pour compter les visites venues d'ici."}]}, {"id": "tiktok", "nom": "TikTok", "mode": "Réponse à la main", "blocs": [{"titre": "Légende", "ou": "Publier › Description", "texte": "Meta a repoussé ses nouvelles conditions au 20 novembre. Mais mercredi 28 octobre, tes pubs Facebook et Instagram changent quand même 👇\n\nLa « navigation produit » s'active par défaut : un clic sur ta pub peut ouvrir une page dans Instagram au lieu de ton site.\n\nAvant mercredi, dans Ads Manager :\n1. Choisis : couper, garder ou tester.\n2. Teste 7 jours : une pub avec, une pub sans.\n3. Relis ce que l'IA de Meta a modifié dans tes pubs.\n\n💬 Commente META : on te répond avec le guide gratuit (lien dans notre bio).\n\n#metaads #publicitefacebook #instagramads #marketingdigital #entrepreneur", "limite": 4000, "hashtags_max": 5}, {"titre": "Lien à mettre dans la bio", "ou": "Profil › Modifier le profil › Site web", "texte": "https://www.oddysee.fr/blog/meta-ads-28-octobre-navigation-produit?utm_source=tiktok&utm_medium=bio&utm_campaign=meta-28-octobre", "note": "Sur TikTok, les liens des légendes et des commentaires ne sont pas cliquables : le guide passe par la bio le temps de la campagne."}, {"titre": "Réponses aux commentaires META", "ou": "Sous chaque commentaire META › Répondre", "variantes": ["Le guide est en lien dans notre bio 🔗", "C'est dans la bio : le guide complet, gratuit 👆", "Lien dans la bio ! Dis-nous si tu bloques sur une étape"], "note": "ManyChat ne propose pas la réponse automatique commentaire → message privé sur TikTok : on répond à la main. Astuce : répondez en vidéo à l'un des premiers commentaires, TikTok la pousse comme un nouveau contenu."}]}, {"id": "linkedin", "nom": "LinkedIn", "mode": "Lien en commentaire", "blocs": [{"titre": "Texte du post", "ou": "Commencer un post › ajouter la vidéo › texte", "texte": "Meta a repoussé ses nouvelles conditions publicitaires au 20 novembre.\nBeaucoup d'annonceurs en concluent qu'ils ont le temps.\n\nIls ont tort : mercredi 28 octobre, un autre changement s'applique.\n\nLa « navigation produit » s'active par défaut sur les publicités Facebook et Instagram déjà en ligne. Un clic sur l'annonce peut ouvrir une page produit dans l'application, au lieu du site de l'annonceur.\n\nMeta annonce +3 % de conversions avec cette option. C'est le résultat de son propre test.\n\nCe que nous recommandons à nos clients avant mercredi :\n→ décider publicité par publicité : couper, garder ou tester ;\n→ tester 7 jours, une version avec et une sans, et comparer les ventes réelles ;\n→ relire ce que l'IA de Meta modifie dans les créations (Advantage+). Avec les nouvelles conditions, l'annonceur en reste seul responsable.\n\nNous avons réuni le pas-à-pas, la méthode de test et la checklist dans un guide sourcé (Meta, Reuters, Adweek). Le lien est en premier commentaire.\n\n#MetaAds #MarketingDigital #Publicité", "limite": 3000, "hashtags_max": 3, "note": "Publié sur la page LinkedIn Oddysee, à la voix de l'agence. Le lien reste hors du post : il va en premier commentaire."}, {"titre": "Premier commentaire, avec le lien", "ou": "Sous le post publié › Commenter", "texte": "Le guide complet : pas-à-pas pour couper la navigation produit, test A/B en 7 jours, checklist et 12 sources 👉 https://www.oddysee.fr/blog/meta-ads-28-octobre-navigation-produit?utm_source=linkedin&utm_medium=social&utm_campaign=meta-28-octobre"}, {"titre": "Réponses aux commentaires", "ou": "Sous chaque commentaire › Répondre", "variantes": ["Merci ! Le guide est en premier commentaire 👆", "Bonne question. Le pas-à-pas est dans le guide, en premier commentaire."]}]}], "avant": [{"id": "article", "texte": "Article en ligne, testé sur téléphone", "lien": "https://www.oddysee.fr/blog/meta-ads-28-octobre-navigation-produit"}, {"id": "pdf", "texte": "Guide PDF en ligne sur le site"}, {"id": "auto", "texte": "Réponse automatique META testée (Instagram, Facebook)"}, {"id": "couv", "texte": "Couverture « Faux » choisie"}]}</script>
+<script>
+(() => {
+  const D = JSON.parse(document.getElementById("donnees").textContent);
+  const nf = new Intl.NumberFormat("fr-FR");
+  const el = (tag, attrs = {}, ...enfants) => {
+    const n = document.createElement(tag);
+    for (const [k, v] of Object.entries(attrs)) {
+      if (k === "class") n.className = v; else if (k === "text") n.textContent = v; else n.setAttribute(k, v);
+    }
+    for (const e of enfants) if (e) n.append(e);
+    return n;
+  };
+  const longueur = (t) => [...t].length;
+  const nbHashtags = (t) => (t.match(/#[\p{L}\p{N}_]+/gu) || []).length;
+  const lire = (cle) => { try { return localStorage.getItem(cle); } catch (e) { return null; } };
+  const ecrire = (cle, v) => { try { localStorage.setItem(cle, v); } catch (e) { /* stockage indisponible */ } };
+
+  // ---- avant de publier
+  const ulAvant = document.getElementById("avant");
+  D.avant.forEach((a) => {
+    const cle = "kit-meta28-avant-" + a.id;
+    const box = el("input", { type: "checkbox", id: "avant-" + a.id });
+    box.checked = lire(cle) === "1";
+    box.addEventListener("change", () => ecrire(cle, box.checked ? "1" : "0"));
+    const texte = el("span", { text: a.texte + " " });
+    if (a.lien) texte.append(el("a", { href: a.lien, target: "_blank", rel: "noopener", text: "Ouvrir" }));
+    ulAvant.append(el("li", {}, el("label", { for: "avant-" + a.id }, box, texte)));
+  });
+
+  // ---- copie dans le presse-papiers, avec repli sur la sélection
+  function signaler(bouton, carte, reussi) {
+    const avant = bouton.dataset.libelle;
+    bouton.textContent = reussi ? "Copié ✓" : "Texte sélectionné";
+    bouton.classList.toggle("ok", reussi);
+    if (reussi && carte) { carte.classList.add("fait"); carte.querySelector(".etat").hidden = false; }
+    clearTimeout(bouton._t);
+    bouton._t = setTimeout(() => { bouton.textContent = avant; bouton.classList.remove("ok"); }, 1800);
+  }
+  function selectionner(noeud) {
+    if (noeud.select) { noeud.focus(); noeud.select(); }
+    else { const r = document.createRange(); r.selectNodeContents(noeud); const s = getSelection(); s.removeAllRanges(); s.addRange(r); }
+    try { return document.execCommand("copy"); } catch (e) { return false; }
+  }
+  function copier(texte, noeud, bouton, carte) {
+    const repli = () => signaler(bouton, carte, selectionner(noeud));
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(texte).then(() => signaler(bouton, carte, true), repli);
+    } else repli();
+  }
+  const boutonCopier = (libelle) => { const b = el("button", { type: "button", class: "copier", text: libelle }); b.dataset.libelle = libelle; return b; };
+
+  // ---- compteurs d'un texte
+  function compteurs(zone, b) {
+    const t = zone.value, n = longueur(t), puces = [];
+    const puce = (txt, etat) => el("span", { class: "puce" + (etat ? " " + etat : ""), text: txt });
+    if (b.limite) puces.push(puce(`${nf.format(n)} / ${nf.format(b.limite)} car.`, n > b.limite ? "trop" : ""));
+    else if (b.conseil) puces.push(puce(`${nf.format(n)} car. · conseillé ≤ ${b.conseil}`, n > b.conseil ? "trop" : "bon"));
+    else puces.push(puce(`${nf.format(n)} car.`));
+    if (b.hashtags_max) {
+      const h = nbHashtags(t);
+      puces.push(puce(`${h} / ${b.hashtags_max} hashtags`, h > b.hashtags_max ? "trop" : "bon"));
+    }
+    if (b.premiere_ligne) {
+      const l = longueur(t.split("\n")[0]);
+      puces.push(puce(`1re ligne : ${l} car.`, l > b.premiere_ligne ? "trop" : "bon"));
+    }
+    return puces;
+  }
+  const ajuster = (zone) => { zone.style.height = "auto"; zone.style.height = zone.scrollHeight + 2 + "px"; };
+
+  // ---- onglets et panneaux
+  const onglets = document.getElementById("onglets"), panneaux = document.getElementById("panneaux");
+  const resumes = {
+    instagram: "Réponse automatique avec ManyChat : chaque commentaire <b>META</b> reçoit le lien de l'article en message privé.",
+    facebook: "Même mécanique qu'Instagram, en Messenger. Le lien est suivi « facebook » pour compter les visites.",
+    tiktok: "Pas de message privé automatique sur TikTok : le lien passe par la bio et vous répondez aux commentaires <b>META</b>.",
+    linkedin: "Post sur la page LinkedIn Oddysee, à la voix de l'agence ; lien du guide en premier commentaire.",
+  };
+  D.reseaux.forEach((r) => {
+    onglets.append(el("button", { type: "button", role: "tab", class: "onglet", id: "onglet-" + r.id, "aria-controls": "panneau-" + r.id,
+      "aria-selected": "false", "data-id": r.id }, el("b", { text: r.nom }), el("small", { text: r.mode })));
+
+    const panneau = el("section", { role: "tabpanel", id: "panneau-" + r.id, "aria-labelledby": "onglet-" + r.id });
+    panneau.hidden = true;
+    const resume = el("p", { class: "resume" }); resume.innerHTML = resumes[r.id] || "";
+    const liste = el("div", { class: "blocs" });
+    r.blocs.forEach((b, i) => {
+      const etat = el("span", { class: "etat", text: "Copié" }); etat.hidden = true;
+      const carte = el("article", { class: "bloc" },
+        el("div", { class: "bloc-tete" }, el("span", { class: "num", text: String(i + 1) }),
+          el("div", {}, el("h3", { text: b.titre }), el("p", { class: "ou", text: "Où : " + b.ou })), etat));
+      if (b.texte !== undefined) {
+        const zone = el("textarea", { id: `${r.id}-${i + 1}`, spellcheck: "false", "aria-label": b.titre });
+        zone.value = b.texte;
+        const puces = el("div", { class: "compteurs" });
+        const retablir = el("button", { type: "button", class: "retablir", text: "Rétablir" }); retablir.hidden = true;
+        const bouton = boutonCopier("Copier");
+        const maj = () => { puces.replaceChildren(...compteurs(zone, b)); retablir.hidden = zone.value === b.texte; ajuster(zone); };
+        zone.addEventListener("input", maj);
+        retablir.addEventListener("click", () => { zone.value = b.texte; maj(); });
+        bouton.addEventListener("click", () => copier(zone.value, zone, bouton, carte));
+        carte.append(zone, el("div", { class: "bloc-pied" }, puces, el("div", { class: "actions" }, retablir, bouton)));
+        puces.replaceChildren(...compteurs(zone, b));
+        carte._ajuster = () => ajuster(zone);
+      }
+      if (b.variantes) {
+        const groupe = el("div", { class: "variantes" });
+        if (b.variantes_titre) groupe.append(el("p", { class: "sous", text: b.variantes_titre }));
+        b.variantes.forEach((v) => {
+          const span = el("span", { text: v }), bouton = boutonCopier("Copier");
+          bouton.addEventListener("click", () => copier(v, span, bouton, carte));
+          groupe.append(el("div", { class: "variante" }, span, bouton));
+        });
+        carte.append(groupe);
+      }
+      if (b.note) carte.append(el("p", { class: "note", text: b.note }));
+      liste.append(carte);
+    });
+    panneau.append(resume, liste);
+    panneaux.append(panneau);
+  });
+
+  function ouvrir(id, memoriser) {
+    if (!D.reseaux.some((r) => r.id === id)) id = D.reseaux[0].id;
+    onglets.querySelectorAll(".onglet").forEach((o) => o.setAttribute("aria-selected", String(o.dataset.id === id)));
+    panneaux.querySelectorAll("[role=tabpanel]").forEach((p) => {
+      p.hidden = p.id !== "panneau-" + id;
+      if (!p.hidden) p.querySelectorAll(".bloc").forEach((c) => c._ajuster && c._ajuster());
+    });
+    if (memoriser) { try { history.replaceState(null, "", "#" + id); } catch (e) { /* cadre restreint */ } ecrire("kit-meta28-onglet", id); }
+  }
+  onglets.addEventListener("click", (e) => { const o = e.target.closest(".onglet"); if (o) ouvrir(o.dataset.id, true); });
+  onglets.addEventListener("keydown", (e) => {
+    if (e.key !== "ArrowRight" && e.key !== "ArrowLeft") return;
+    const tous = [...onglets.querySelectorAll(".onglet")], i = tous.indexOf(document.activeElement);
+    if (i < 0) return;
+    const suivant = tous[(i + (e.key === "ArrowRight" ? 1 : tous.length - 1)) % tous.length];
+    suivant.focus(); ouvrir(suivant.dataset.id, true);
+  });
+  window.addEventListener("hashchange", () => ouvrir(location.hash.slice(1), false));
+  window.addEventListener("resize", () => panneaux.querySelectorAll("[role=tabpanel]:not([hidden]) .bloc").forEach((c) => c._ajuster && c._ajuster()));
+  ouvrir(location.hash.slice(1) || lire("kit-meta28-onglet") || "instagram", false);
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(() => ouvrir(
+    (onglets.querySelector('[aria-selected="true"]') || {}).dataset?.id, false));
+})();
+</script>

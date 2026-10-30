@@ -1,0 +1,302 @@
+[
+ {
+  "text": "Une",
+  "start": 0.0,
+  "end": 0.32
+ },
+ {
+  "text": "demande",
+  "start": 0.32,
+  "end": 0.56
+ },
+ {
+  "text": "de",
+  "start": 0.56,
+  "end": 0.8
+ },
+ {
+  "text": "devis",
+  "start": 0.8,
+  "end": 0.98
+ },
+ {
+  "text": "à",
+  "start": 0.98,
+  "end": 1.16
+ },
+ {
+  "text": "vingt-deux",
+  "start": 1.16,
+  "end": 1.76
+ },
+ {
+  "text": "heures…",
+  "start": 1.76,
+  "end": 2.149
+ },
+ {
+  "text": "Tu",
+  "start": 2.605,
+  "end": 2.825
+ },
+ {
+  "text": "réponds",
+  "start": 2.825,
+  "end": 3.045
+ },
+ {
+  "text": "le",
+  "start": 3.045,
+  "end": 3.205
+ },
+ {
+  "text": "lendemain",
+  "start": 3.205,
+  "end": 3.545
+ },
+ {
+  "text": "midi?",
+  "start": 3.545,
+  "end": 3.821
+ },
+ {
+  "text": "Trop",
+  "start": 4.35,
+  "end": 4.71
+ },
+ {
+  "text": "tard.",
+  "start": 4.71,
+  "end": 4.919
+ },
+ {
+  "text": "Ton",
+  "start": 5.36,
+  "end": 5.78
+ },
+ {
+  "text": "concurrent",
+  "start": 5.78,
+  "end": 6.08
+ },
+ {
+  "text": "a",
+  "start": 6.08,
+  "end": 6.2
+ },
+ {
+  "text": "répondu",
+  "start": 6.2,
+  "end": 6.64
+ },
+ {
+  "text": "avant",
+  "start": 6.64,
+  "end": 6.94
+ },
+ {
+  "text": "toi.",
+  "start": 6.94,
+  "end": 7.112
+ },
+ {
+  "text": "Le",
+  "start": 7.789,
+  "end": 8.029
+ },
+ {
+  "text": "soir,",
+  "start": 8.029,
+  "end": 8.384
+ },
+ {
+  "text": "un",
+  "start": 8.553,
+  "end": 8.813
+ },
+ {
+  "text": "message",
+  "start": 8.813,
+  "end": 9.133
+ },
+ {
+  "text": "automatique:",
+  "start": 9.133,
+  "end": 9.67
+ },
+ {
+  "text": "bien",
+  "start": 10.117,
+  "end": 10.277
+ },
+ {
+  "text": "reçu,",
+  "start": 10.277,
+  "end": 10.842
+ },
+ {
+  "text": "trois",
+  "start": 11.025,
+  "end": 11.485
+ },
+ {
+  "text": "questions,",
+  "start": 11.485,
+  "end": 11.885
+ },
+ {
+  "text": "réponse",
+  "start": 11.885,
+  "end": 12.345
+ },
+ {
+  "text": "demain",
+  "start": 12.345,
+  "end": 12.705
+ },
+ {
+  "text": "matin.",
+  "start": 12.705,
+  "end": 12.998
+ },
+ {
+  "text": "Pendant",
+  "start": 13.647,
+  "end": 13.907
+ },
+ {
+  "text": "la",
+  "start": 13.907,
+  "end": 14.147
+ },
+ {
+  "text": "nuit,",
+  "start": 14.147,
+  "end": 14.607
+ },
+ {
+  "text": "l'IA",
+  "start": 14.607,
+  "end": 14.927
+ },
+ {
+  "text": "prépare",
+  "start": 14.927,
+  "end": 15.367
+ },
+ {
+  "text": "ton",
+  "start": 15.367,
+  "end": 15.607
+ },
+ {
+  "text": "devis.",
+  "start": 15.607,
+  "end": 15.877
+ },
+ {
+  "text": "Toi,",
+  "start": 16.322,
+  "end": 16.61
+ },
+ {
+  "text": "tu",
+  "start": 16.802,
+  "end": 16.942
+ },
+ {
+  "text": "le",
+  "start": 16.942,
+  "end": 17.142
+ },
+ {
+  "text": "valides",
+  "start": 17.142,
+  "end": 17.362
+ },
+ {
+  "text": "au",
+  "start": 17.362,
+  "end": 17.482
+ },
+ {
+  "text": "réveil.",
+  "start": 17.482,
+  "end": 17.931
+ },
+ {
+  "text": "Commente",
+  "start": 18.59,
+  "end": 19.0
+ },
+ {
+  "text": "Audit:",
+  "start": 19.02,
+  "end": 19.42
+ },
+ {
+  "text": "on",
+  "start": 19.758,
+  "end": 20.058
+ },
+ {
+  "text": "accélère",
+  "start": 20.058,
+  "end": 20.578
+ },
+ {
+  "text": "tes",
+  "start": 20.578,
+  "end": 20.818
+ },
+ {
+  "text": "devis.",
+  "start": 20.818,
+  "end": 21.103
+ },
+ {
+  "text": "Et",
+  "start": 21.47,
+  "end": 21.62
+ },
+ {
+  "text": "abonne-toi:",
+  "start": 21.68,
+  "end": 22.31
+ },
+ {
+  "text": "tes",
+  "start": 22.662,
+  "end": 22.962
+ },
+ {
+  "text": "devis",
+  "start": 22.962,
+  "end": 23.302
+ },
+ {
+  "text": "partent",
+  "start": 23.302,
+  "end": 23.742
+ },
+ {
+  "text": "avant",
+  "start": 23.742,
+  "end": 24.022
+ },
+ {
+  "text": "ceux",
+  "start": 24.022,
+  "end": 24.202
+ },
+ {
+  "text": "des",
+  "start": 24.202,
+  "end": 24.522
+ },
+ {
+  "text": "autres.",
+  "start": 24.522,
+  "end": 24.734
+ }
+]

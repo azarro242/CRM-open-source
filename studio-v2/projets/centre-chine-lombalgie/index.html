@@ -1,0 +1,441 @@
+<!doctype html>
+<html lang="ar">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <title>Centre de réadaptation de Chine — Mal au dos à force d'être assis (darija)</title>
+    <link href="assets/fonts/fonts.css" rel="stylesheet" />
+    <script src="vendor/gsap.min.js"></script>
+    <style>
+      :root {
+        --vert: #40ab75;
+        --turquoise: #02a5a9;
+        --nuit: #21415a;
+        --rouge: #e5484d;
+        --or: #f2b134;
+        --bleu: #3b82f6;
+        --degrade: linear-gradient(135deg, #40ab75 0%, #02a5a9 100%);
+      }
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { width: 1080px; height: 1920px; overflow: hidden; background: #e7f4f1; }
+      body { font-family: "Cairo", sans-serif; color: var(--nuit); }
+      #root { position: relative; width: 1080px; height: 1920px; overflow: hidden; }
+      .clip { position: absolute; inset: 0; }
+
+      /* ---------- fond (visible quand le médecin passe en vignette) ---------- */
+      #fond-base { position: absolute; inset: 0;
+        background: radial-gradient(circle at 50% 30%, #ffffff 0%, #e7f4f1 55%, #cfe8e2 100%); }
+      #fond-points { position: absolute; inset: 0;
+        background-image: radial-gradient(circle, rgba(2, 165, 169, 0.16) 2.4px, transparent 3px); background-size: 42px 42px; }
+
+      /* ---------- vidéo du médecin et image figée de fin ---------- */
+      #medecin, #fige { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; object-fit: cover; }
+      #medecin { box-shadow: 0 40px 90px rgba(10, 40, 50, 0.35); }
+
+      /* ---------- éléments communs ---------- */
+      .verre { background: rgba(22, 34, 42, 0.58); backdrop-filter: blur(18px) saturate(140%);
+        border: 2px solid rgba(255, 255, 255, 0.2); border-radius: 40px; box-shadow: 0 24px 60px rgba(0, 0, 0, 0.25); }
+      .rond { display: flex; align-items: center; justify-content: center; border-radius: 50%; background: var(--degrade); flex: none; }
+
+      #barre { position: absolute; left: 0; right: 0; top: 0; height: 12px; background: rgba(255, 255, 255, 0.35); }
+      #barre-rempli { display: block; width: 100%; height: 12px; background: linear-gradient(270deg, #40ab75, #02a5a9);
+        transform-origin: 100% 50%; }
+
+      #logo { position: absolute; left: 36px; top: 150px; width: 176px; height: 210px; padding: 10px; border-radius: 30px;
+        background: #fff; box-shadow: 0 16px 36px rgba(0, 0, 0, 0.22); }
+      #logo img { display: block; width: 156px; height: 190px; }
+
+      /* ---------- accroche (stop-scroll) ---------- */
+      #accroche { position: absolute; left: 50px; right: 50px; top: 920px; padding: 28px 30px; display: flex; align-items: center; gap: 26px; }
+      #accroche-ic { width: 124px; height: 124px; background: linear-gradient(135deg, #ff6b6b 0%, #e5484d 100%);
+        box-shadow: 0 0 0 10px rgba(229, 72, 77, 0.25); }
+      #accroche-ic b { font-weight: 900; font-size: 84px; line-height: 1; color: #fff; }
+      #accroche-txt { flex: 1; font-weight: 900; font-size: 64px; line-height: 1.25; color: #fff; }
+
+      /* ---------- sous-titres = textes animés ---------- */
+      .sous { position: absolute; left: 50px; right: 50px; top: 1250px; padding: 24px 30px 30px; display: flex; align-items: center;
+        gap: 26px; background: rgba(22, 34, 42, 0.58); backdrop-filter: blur(18px) saturate(140%);
+        border: 2px solid rgba(255, 255, 255, 0.2); border-radius: 40px; box-shadow: 0 24px 60px rgba(0, 0, 0, 0.25); }
+      .sous-ic { display: flex; align-items: center; justify-content: center; width: 116px; height: 116px; border-radius: 50%;
+        background: var(--degrade); flex: none; box-shadow: 0 0 0 8px rgba(64, 171, 117, 0.22); }
+      .sous-txt { flex: 1; }
+      .sous-titre { font-weight: 800; font-size: 54px; line-height: 1.32; color: #fff; }
+      .mot { display: inline-block; }
+      .sous-trait { display: block; width: 260px; height: 8px; margin-top: 12px; border-radius: 4px;
+        background: linear-gradient(270deg, #02a5a9, #40ab75); transform-origin: 100% 50%; }
+
+      /* ---------- pastilles et bulles autour du médecin ---------- */
+      .puce { position: absolute; height: 84px; padding: 0 12px 0 32px; display: flex; align-items: center; gap: 16px;
+        border-radius: 42px; background: #fff; box-shadow: 0 14px 32px rgba(0, 0, 0, 0.2); font-weight: 800; font-size: 40px;
+        color: var(--nuit); white-space: nowrap; }
+      .puce-ic { display: flex; align-items: center; justify-content: center; width: 62px; height: 62px; border-radius: 50%;
+        background: var(--degrade); flex: none; }
+      .bulle { position: absolute; display: flex; align-items: center; justify-content: center; border-radius: 50%;
+        background: var(--degrade); box-shadow: 0 16px 36px rgba(2, 165, 169, 0.38), 0 0 0 8px rgba(255, 255, 255, 0.35); }
+
+      /* ---------- médecin en vignette ---------- */
+      #pip-anneau { position: absolute; left: 709px; top: 193px; width: 338px; height: 590px; border-radius: 40px;
+        border: 7px solid var(--turquoise); box-shadow: 0 0 0 5px rgba(255, 255, 255, 0.85), 0 24px 50px rgba(0, 40, 50, 0.3); }
+
+      /* ---------- planche d'anatomie ---------- */
+      #ana { position: absolute; left: 36px; top: 330px; width: 660px; height: 900px; border-radius: 40px; overflow: hidden;
+        background: rgba(255, 255, 255, 0.95); box-shadow: 0 30px 70px rgba(10, 40, 50, 0.28); }
+      .ana-tete { position: absolute; right: 24px; top: 22px; height: 64px; padding: 0 28px; border-radius: 32px; background: linear-gradient(135deg, #1e7f55, #027f82);
+        color: #fff; font-weight: 800; font-size: 36px; line-height: 64px; white-space: nowrap; }
+      #ana-vue { position: absolute; left: 20px; top: 100px; width: 620px; height: 780px; overflow: hidden; border-radius: 28px;
+        background: radial-gradient(circle at 50% 40%, #ffffff 0%, #f1f7f6 70%, #e3efed 100%); }
+      #ana-zoom, #ana-plateau, .vue { position: absolute; left: 0; top: 0; width: 620px; height: 780px; }
+      .planche { display: block; width: 620px; height: 780px; }
+      .zone-douleur { fill: rgba(229, 72, 77, 0.42); stroke: #e5484d; stroke-width: 3; opacity: 0; }
+      .meridien { fill: none; stroke-width: 5; stroke-linecap: round; stroke-linejoin: round; }
+      .point { opacity: 0; }
+      .point-halo { fill: rgba(242, 177, 52, 0.4); }
+      .point-coeur { fill: #fff; stroke: #f2b134; stroke-width: 4; }
+
+      #leg { position: absolute; left: 708px; top: 812px; width: 340px; height: 420px; }
+      .leg { position: absolute; right: 0; height: 72px; padding: 0 18px 0 24px; display: flex; align-items: center; gap: 14px;
+        border-radius: 36px; background: #fff; box-shadow: 0 12px 28px rgba(0, 0, 0, 0.16); font-weight: 800; font-size: 32px;
+        color: var(--nuit); white-space: nowrap; }
+      .leg i { display: block; width: 40px; height: 10px; border-radius: 5px; flex: none; }
+      .leg i.rondelle { width: 26px; height: 26px; border-radius: 50%; border: 5px solid #f2b134; background: #fff; }
+
+      /* ---------- fin : rendez-vous et coordonnées ---------- */
+      #fin-carte { position: absolute; left: 50px; right: 50px; top: 1110px; padding: 24px 30px 30px; display: flex; align-items: center; gap: 26px; }
+      #fin-ic { width: 116px; height: 116px; box-shadow: 0 0 0 8px rgba(64, 171, 117, 0.22); }
+      #fin-titre { font-weight: 900; font-size: 58px; line-height: 1.25; color: #fff; }
+      #fin-sous { margin-top: 4px; font-weight: 700; font-size: 36px; color: rgba(255, 255, 255, 0.88); }
+      #fin-trait { display: block; width: 260px; height: 8px; margin-top: 14px; border-radius: 4px;
+        background: linear-gradient(270deg, #02a5a9, #40ab75); transform-origin: 100% 50%; }
+      #fin-adresse { position: absolute; left: 50px; right: 50px; top: 1336px; padding: 22px 28px; border-radius: 36px; background: #fff;
+        box-shadow: 0 20px 48px rgba(0, 0, 0, 0.22); }
+      .ligne-a { display: flex; align-items: center; gap: 18px; }
+      .ligne-a .rond { width: 64px; height: 64px; }
+      .adresse { font-weight: 700; font-size: 32px; line-height: 1.38; color: var(--nuit); }
+      .tel { font-weight: 900; font-size: 42px; color: var(--nuit); letter-spacing: 1px; }
+      #fin-sep { display: block; height: 2px; margin: 14px 0; background: #e5eef0; }
+      #fin-mention { margin-top: 12px; font-weight: 700; font-size: 28px; color: #5d7282; }
+
+      #flash { position: absolute; inset: 0; background: #fff; opacity: 0; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="centre-chine-lombalgie" data-start="0" data-width="1080" data-height="1920" data-duration="45.0">
+
+      <section id="fond" class="clip" data-start="0" data-duration="45.0" data-track-index="0">
+        <div id="fond-base"></div>
+        <div id="fond-points"></div>
+      </section>
+
+      <video id="medecin" class="clip" src="assets/video/medecin.mp4" data-start="0" data-duration="41.966" data-track-index="1"
+        data-has-audio="true" data-volume="1" playsinline></video>
+      <img id="fige" class="clip" src="assets/img/derniere-image.jpg" alt="" data-start="41.9" data-duration="3.1" data-track-index="2" />
+
+      <section id="ui" class="clip" data-start="0" data-duration="45.0" data-track-index="10">
+        <svg width="0" height="0" style="position: absolute" aria-hidden="true"><defs>
+          <filter id="lueur" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="3" result="b" /><feMerge><feMergeNode in="b" /><feMergeNode in="SourceGraphic" /></feMerge></filter>
+        </defs></svg>
+
+        <div id="barre"><i id="barre-rempli"></i></div>
+        <div id="logo"><img src="assets/img/logo-centre-chine.png" alt="Centre de réadaptation de Chine — Marrakech" /></div>
+
+        <div id="accroche" class="verre" dir="rtl" data-layout-allow-overlap>
+          <i id="accroche-ic" class="rond"><b>!</b></i>
+          <div id="accroche-txt">واش كيضرك ظهرك من القعدة؟</div>
+        </div>
+
+        <div id="pip-anneau"></div>
+
+        <div id="ana" data-layout-allow-overlap>
+          <div class="ana-tete" id="at-1" dir="rtl">أسفل الظهر</div>
+          <div class="ana-tete" id="at-2" dir="rtl">خطوط الطاقة</div>
+          <div class="ana-tete" id="at-3" dir="rtl">سلسلة الظهر</div>
+          <div class="ana-tete" id="at-4" dir="rtl">نقط ف الرجل</div>
+          <div id="ana-vue">
+            <div id="ana-zoom" data-layout-allow-overflow><div id="ana-plateau">
+              <div class="vue" id="v-face"><svg class="planche" viewBox="133 4 366 883" preserveAspectRatio="xMidYMid meet"><clipPath id="cp-face"><rect x="134" y="12" width="364" height="867"/></clipPath><g clip-path="url(#cp-face)"><image href="assets/img/anatomie.png" preserveAspectRatio="none" x="126.49" y="-19.48" width="939.11" height="939.74"/></g><path id="m-rein-g" class="meridien" d="M288,815 L284,720 L289,640 L298,560 L305,480 L306,400 L304,300 L292,215" stroke="#3b82f6" pathLength="1" stroke-dasharray="1 1" stroke-dashoffset="1"/><path id="m-rein-d" class="meridien" d="M340,815 L344,720 L339,640 L330,560 L323,480 L322,400 L324,300 L336,215" stroke="#3b82f6" pathLength="1" stroke-dasharray="1 1" stroke-dashoffset="1"/></svg></div>
+              <div class="vue" id="v-profil"><svg class="planche" viewBox="133 4 366 883" preserveAspectRatio="xMidYMid meet"><clipPath id="cp-profil"><rect x="234" y="12" width="164" height="867"/></clipPath><g clip-path="url(#cp-profil)"><image href="assets/img/anatomie.png" preserveAspectRatio="none" x="-165.95" y="-18.73" width="939.29" height="939.74"/></g><path id="z-lombes" class="zone-douleur" d="M310.6,300L309.1,306L311.7,312L311.3,318L309.3,324L307.9,330L307.4,336L308.1,342L306.3,348L307,354L306.7,360L308.6,366L309.4,372L312.8,378L315.1,384L317.4,390L317.7,392L377,392L376.3,390L373.3,384L370.3,378L366.5,372L364.3,366L361.3,360L361.3,354L359.1,348L362.1,342L361.3,336L363.6,330L365,324L369.5,318L369.5,312L367.3,306L369.5,300Z"/></svg></div>
+              <div class="vue" id="v-dos"><svg class="planche" viewBox="133 4 366 883" preserveAspectRatio="xMidYMid meet"><clipPath id="cp-dos"><rect x="148" y="12" width="336" height="867"/></clipPath><g clip-path="url(#cp-dos)"><image href="assets/img/anatomie.png" preserveAspectRatio="none" x="-437.48" y="-19.61" width="942.50" height="943.72"/></g><path id="z-lombaires" class="zone-douleur" d="M243.6,300L245.8,307L245.8,314L244.3,321L242.8,328L242.1,335L242.1,342L243.6,349L245.1,356L242.8,363L239.8,370L238.3,377L236.8,384L236,391L235.3,398L233.8,405L232.3,412L399.7,412L398.2,405L396.7,398L396,391L395.2,384L394.5,377L392.2,370L389.9,363L386.9,356L387.7,349L389.2,342L389.2,335L387.7,328L386.9,321L385.4,314L385.4,307L386.9,300Z"/><path id="m-vessie-g" class="meridien" d="M300,165 L298,300 L296,420 L285,470 L271,520 L267,600 L266,628 L266,700 L262,760 L252,808" stroke="#00b5a3" pathLength="1" stroke-dasharray="1 1" stroke-dashoffset="1"/><path id="m-vessie-d" class="meridien" d="M332,165 L334,300 L336,420 L347,470 L361,520 L368,600 L375,628 L380,700 L385,760 L395,808" stroke="#00b5a3" pathLength="1" stroke-dasharray="1 1" stroke-dashoffset="1"/><path id="m-dumai" class="meridien" d="M316,482 L316,330 L316,180 L316,110 L316,22" stroke="#f2b134" pathLength="1" stroke-dasharray="1 1" stroke-dashoffset="1"/><g class="point pt-dm" id="pt-dm-0"><circle class="point-halo" cx="316" cy="440" r="15"/><circle class="point-coeur" cx="316" cy="440" r="6.5"/></g><g class="point pt-dm" id="pt-dm-1"><circle class="point-halo" cx="316" cy="385" r="15"/><circle class="point-coeur" cx="316" cy="385" r="6.5"/></g><g class="point pt-dm" id="pt-dm-2"><circle class="point-halo" cx="316" cy="330" r="15"/><circle class="point-coeur" cx="316" cy="330" r="6.5"/></g><g class="point pt-dm" id="pt-dm-3"><circle class="point-halo" cx="316" cy="270" r="15"/><circle class="point-coeur" cx="316" cy="270" r="6.5"/></g><g class="point pt-dm" id="pt-dm-4"><circle class="point-halo" cx="316" cy="210" r="15"/><circle class="point-coeur" cx="316" cy="210" r="6.5"/></g><g class="point pt-chengshan" id="pt-chengshan-0"><circle class="point-halo" cx="266" cy="738" r="15"/><circle class="point-coeur" cx="266" cy="738" r="6.5"/></g><g class="point pt-chengshan" id="pt-chengshan-1"><circle class="point-halo" cx="381" cy="738" r="15"/><circle class="point-coeur" cx="381" cy="738" r="6.5"/></g><g class="point pt-chengjin" id="pt-chengjin-0"><circle class="point-halo" cx="266" cy="690" r="15"/><circle class="point-coeur" cx="266" cy="690" r="6.5"/></g><g class="point pt-chengjin" id="pt-chengjin-1"><circle class="point-halo" cx="379" cy="690" r="15"/><circle class="point-coeur" cx="379" cy="690" r="6.5"/></g><g class="point pt-weizhong" id="pt-weizhong-0"><circle class="point-halo" cx="266" cy="628" r="15"/><circle class="point-coeur" cx="266" cy="628" r="6.5"/></g><g class="point pt-weizhong" id="pt-weizhong-1"><circle class="point-halo" cx="375" cy="628" r="15"/><circle class="point-coeur" cx="375" cy="628" r="6.5"/></g></svg></div>
+            </div></div>
+          </div>
+        </div>
+
+        <div id="leg" data-layout-allow-overlap>
+          <div class="leg" id="lg-douleur" dir="rtl" style="top: 0px"><i style="background: #e5484d"></i>مكان الوجع</div>
+          <div class="leg" id="lg-vessie" dir="rtl" style="top: 0px"><i style="background: #00b5a3"></i>خط المثانة</div>
+          <div class="leg" id="lg-rein" dir="rtl" style="top: 86px"><i style="background: #3b82f6"></i>خط الكلاوي</div>
+          <div class="leg" id="lg-dumai" dir="rtl" style="top: 172px"><i style="background: #f2b134"></i>خط السلسلة</div>
+          <div class="leg" id="lg-chengshan" dir="rtl" style="top: 0px"><i class="rondelle"></i>تشنغشان</div>
+          <div class="leg" id="lg-chengjin" dir="rtl" style="top: 86px"><i class="rondelle"></i>تشنغجين</div>
+          <div class="leg" id="lg-weizhong" dir="rtl" style="top: 172px"><i class="rondelle"></i>وي تشونغ</div>
+        </div>
+
+        <div class="puce" id="p-bureau" dir="rtl" style="left: 40px; top: 520px"><i class="puce-ic"><svg viewBox="0 0 24 24" width="38" height="38" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></i><span>ساعات ف البيرو</span></div>
+        <div class="puce" id="p-assis" dir="rtl" style="left: 640px; top: 900px"><i class="puce-ic"><svg viewBox="0 0 24 24" width="38" height="38" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 9V6a2 2 0 0 0-2-2H7a2 2 0 0 0-2 2v3"/><path d="M3 16a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-5a2 2 0 0 0-4 0v1.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V11a2 2 0 0 0-4 0z"/><path d="M5 18v2M19 18v2"/></svg></i><span>القعدة الطويلة</span></div>
+        <div class="puce" id="p-aiguille" dir="rtl" style="left: 640px; top: 900px"><i class="puce-ic"><svg viewBox="0 0 24 24" width="38" height="38" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20 15.5 8.5"/><circle cx="18" cy="6" r="3"/><path d="M3 21l1.5-1.5"/></svg></i><span>الإبر الصينية</span></div>
+        <div class="puce" id="p-soulage" dir="rtl" style="left: 40px; top: 560px"><i class="puce-ic"><svg viewBox="0 0 24 24" width="38" height="38" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg></i><span>راحة من الوجع</span></div>
+        <div class="puce" id="p-massage" dir="rtl" style="left: 40px; top: 540px"><i class="puce-ic"><svg viewBox="0 0 24 24" width="38" height="38" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 11V6a2 2 0 0 0-4 0v1"/><path d="M14 10V4a2 2 0 0 0-4 0v2"/><path d="M10 10.5V6a2 2 0 0 0-4 0v8"/><path d="M18 8a2 2 0 1 1 4 0v6a8 8 0 0 1-8 8h-2c-2.8 0-4.5-.86-5.99-2.34l-3.6-3.6a2 2 0 0 1 2.83-2.82L7 15"/></svg></i><span>الماساج</span></div>
+        <div class="puce" id="p-ventouse" dir="rtl" style="left: 700px; top: 760px"><i class="puce-ic"><svg viewBox="0 0 24 24" width="38" height="38" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 4h8"/><path d="M9 4v3C6.6 8.1 5.5 10.2 5.5 13v2h13v-2c0-2.8-1.1-4.9-3.5-6V4"/><path d="M9 15c1-1.6 5-1.6 6 0"/><path d="M3 19.5c3-1.6 6-1.6 9 0s6 1.6 9 0"/></svg></i><span>الحجامة</span></div>
+        <div class="puce" id="p-repos" dir="rtl" style="left: 40px; top: 760px"><i class="puce-ic"><svg viewBox="0 0 24 24" width="38" height="38" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg></i><span>جسم مرتاح</span></div>
+        <div class="puce" id="p-suivi" dir="rtl" style="left: 760px; top: 190px"><i class="puce-ic"><svg viewBox="0 0 24 24" width="38" height="38" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/><path d="m9 16 2 2 4-4"/></svg></i><span>متابعة</span></div>
+        <div class="puce" id="p-soin" dir="rtl" style="left: 600px; top: 290px"><i class="puce-ic"><svg viewBox="0 0 24 24" width="38" height="38" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/><path d="m9 11 2 2 4-4"/></svg></i><span>رعاية</span></div>
+        <div class="bulle" id="b-aiguille" style="left: 70px; top: 760px; width: 128px; height: 128px"><svg viewBox="0 0 24 24" width="61" height="61" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20 15.5 8.5"/><circle cx="18" cy="6" r="3"/><path d="M3 21l1.5-1.5"/></svg></div>
+        <div class="bulle" id="b-ventouse" style="left: 880px; top: 560px; width: 116px; height: 116px"><svg viewBox="0 0 24 24" width="55" height="55" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 4h8"/><path d="M9 4v3C6.6 8.1 5.5 10.2 5.5 13v2h13v-2c0-2.8-1.1-4.9-3.5-6V4"/><path d="M9 15c1-1.6 5-1.6 6 0"/><path d="M3 19.5c3-1.6 6-1.6 9 0s6 1.6 9 0"/></svg></div>
+        <div class="bulle" id="b-lune" style="left: 80px; top: 900px; width: 132px; height: 132px"><svg viewBox="0 0 24 24" width="63" height="63" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg></div>
+        <div class="bulle" id="b-coeur" style="left: 930px; top: 640px; width: 96px; height: 96px"><svg viewBox="0 0 24 24" width="46" height="46" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/><path d="m9 11 2 2 4-4"/></svg></div>
+
+        <div id="sous-zone">
+        <div class="sous" id="k1" dir="rtl"><i class="sous-ic"><svg viewBox="0 0 24 24" width="62" height="62" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><path d="M9 9h.01M15 9h.01"/></svg></i><div class="sous-txt"><div class="sous-titre"><span class="mot">السلام</span> <span class="mot">عليكم</span></div><i class="sous-trait"></i></div></div>
+        <div class="sous" id="k2" dir="rtl"><i class="sous-ic"><svg viewBox="0 0 24 24" width="62" height="62" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></i><div class="sous-txt"><div class="sous-titre"><span class="mot">اللي</span> <span class="mot">كيقعد</span> <span class="mot">ساعات</span> <span class="mot">طويلة</span> <span class="mot">ف</span> <span class="mot">البيرو…</span></div><i class="sous-trait"></i></div></div>
+        <div class="sous" id="k3" dir="rtl"><i class="sous-ic"><svg viewBox="0 0 24 24" width="62" height="62" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="2" width="6" height="4" rx="1.5"/><rect x="9" y="8.5" width="6" height="4" rx="1.5"/><rect x="9" y="15" width="6" height="4" rx="1.5"/><path d="M12 20.5V22M6 4.5h2M16 4.5h2M6 17h2M16 17h2"/></svg></i><div class="sous-txt"><div class="sous-titre"><span class="mot">القعدة</span> <span class="mot">الطويلة</span> <span class="mot">كتجيب</span> <span class="mot">الوجع</span> <span class="mot">ف</span> <span class="mot">أسفل</span> <span class="mot">الظهر</span></div><i class="sous-trait"></i></div></div>
+        <div class="sous" id="k4" dir="rtl"><i class="sous-ic"><svg viewBox="0 0 24 24" width="62" height="62" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20 15.5 8.5"/><circle cx="18" cy="6" r="3"/><path d="M3 21l1.5-1.5"/></svg></i><div class="sous-txt"><div class="sous-titre"><span class="mot">أجي</span> <span class="mot">عندنا،</span> <span class="mot">نديرو</span> <span class="mot">ليك</span> <span class="mot">الإبر</span> <span class="mot">الصينية</span></div><i class="sous-trait"></i></div></div>
+        <div class="sous" id="k5" dir="rtl"><i class="sous-ic"><svg viewBox="0 0 24 24" width="62" height="62" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3c-2 4 2 6 0 9s2 6 0 9"/><path d="M16 3c-2 4 2 6 0 9s2 6 0 9"/></svg></i><div class="sous-txt"><div class="sous-titre"><span class="mot">على</span> <span class="mot">خط</span> <span class="mot">المثانة…</span> <span class="mot">وخط</span> <span class="mot">الكلاوي</span></div><i class="sous-trait"></i></div></div>
+        <div class="sous" id="k6" dir="rtl"><i class="sous-ic"><svg viewBox="0 0 24 24" width="62" height="62" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="2" width="6" height="4" rx="1.5"/><rect x="9" y="8.5" width="6" height="4" rx="1.5"/><rect x="9" y="15" width="6" height="4" rx="1.5"/><path d="M12 20.5V22M6 4.5h2M16 4.5h2M6 17h2M16 17h2"/></svg></i><div class="sous-txt"><div class="sous-titre"><span class="mot">ونقط</span> <span class="mot">على</span> <span class="mot">سلسلة</span> <span class="mot">الظهر</span> <span class="mot">كتخفف</span> <span class="mot">الوجع</span></div><i class="sous-trait"></i></div></div>
+        <div class="sous" id="k7" dir="rtl"><i class="sous-ic"><svg viewBox="0 0 24 24" width="62" height="62" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.5"/></svg></i><div class="sous-txt"><div class="sous-titre"><span class="mot">ونقط</span> <span class="mot">بعيدة</span> <span class="mot">على</span> <span class="mot">الوجع</span></div><i class="sous-trait"></i></div></div>
+        <div class="sous" id="k8" dir="rtl"><i class="sous-ic"><svg viewBox="0 0 24 24" width="62" height="62" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.5"/></svg></i><div class="sous-txt"><div class="sous-titre"><span class="mot">تشنغشان</span> <span class="mot">وتشنغجين</span> <span class="mot">ف</span> <span class="mot">رمانة</span> <span class="mot">الرجل</span></div><i class="sous-trait"></i></div></div>
+        <div class="sous" id="k9" dir="rtl"><i class="sous-ic"><svg viewBox="0 0 24 24" width="62" height="62" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.5"/></svg></i><div class="sous-txt"><div class="sous-titre"><span class="mot">وي</span> <span class="mot">تشونغ:</span> <span class="mot">ورا</span> <span class="mot">الركبة</span></div><i class="sous-trait"></i></div></div>
+        <div class="sous" id="k10" dir="rtl"><i class="sous-ic"><svg viewBox="0 0 24 24" width="62" height="62" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg></i><div class="sous-txt"><div class="sous-titre"><span class="mot">كيعاونو</span> <span class="mot">يخففو</span> <span class="mot">هاد</span> <span class="mot">الوجع</span></div><i class="sous-trait"></i></div></div>
+        <div class="sous" id="k11" dir="rtl"><i class="sous-ic"><svg viewBox="0 0 24 24" width="62" height="62" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 11V6a2 2 0 0 0-4 0v1"/><path d="M14 10V4a2 2 0 0 0-4 0v2"/><path d="M10 10.5V6a2 2 0 0 0-4 0v8"/><path d="M18 8a2 2 0 1 1 4 0v6a8 8 0 0 1-8 8h-2c-2.8 0-4.5-.86-5.99-2.34l-3.6-3.6a2 2 0 0 1 2.83-2.82L7 15"/></svg></i><div class="sous-txt"><div class="sous-titre"><span class="mot">وكاين</span> <span class="mot">حتى</span> <span class="mot">الماساج</span> <span class="mot">والحجامة</span></div><i class="sous-trait"></i></div></div>
+        <div class="sous" id="k12" dir="rtl"><i class="sous-ic"><svg viewBox="0 0 24 24" width="62" height="62" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg></i><div class="sous-txt"><div class="sous-titre"><span class="mot">باش</span> <span class="mot">يرتاح</span> <span class="mot">جسمك</span> <span class="mot">من</span> <span class="mot">العيا</span></div><i class="sous-trait"></i></div></div>
+        <div class="sous" id="k13" dir="rtl"><i class="sous-ic"><svg viewBox="0 0 24 24" width="62" height="62" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/><path d="m9 11 2 2 4-4"/></svg></i><div class="sous-txt"><div class="sous-titre"><span class="mot">شكراً</span> <span class="mot">بزاف!</span></div><i class="sous-trait"></i></div></div>
+        </div>
+
+        <div id="fin-carte" class="verre" dir="rtl" data-layout-allow-overlap>
+          <i id="fin-ic" class="rond"><svg viewBox="0 0 24 24" width="64" height="64" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/><path d="m9 11 2 2 4-4"/></svg></i>
+          <div><div id="fin-titre">خود موعدك دابا</div><div id="fin-sous">الإبر الصينية · الماساج · الحجامة</div><i id="fin-trait"></i></div>
+        </div>
+        <div id="fin-adresse" dir="rtl" data-layout-allow-overlap>
+          <div class="ligne-a"><i class="rond"><svg viewBox="0 0 24 24" width="34" height="34" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg></i><div class="adresse">شارع مولاي عبد الله، عرصة باطا، إقامة ميمون، محل 28 بجانب حمام السلامة · جليز - مراكش</div></div>
+          <i id="fin-sep"></i>
+          <div class="ligne-a"><i class="rond"><svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></i><div class="tel" dir="ltr">0688858490 · 0786112907</div></div>
+          <div id="fin-mention">الطب الصيني مكمّل، وماشي بديل على الطبيب.</div>
+        </div>
+
+        <div id="flash"></div>
+      </section>
+
+      <audio id="sfx-0" src="assets/sfx/impact-bass-1.mp3" data-start="0.000" data-duration="2.116" data-track-index="30" data-volume="0.063"></audio>
+      <audio id="sfx-1" src="assets/sfx/whoosh-short.mp3" data-start="0.050" data-duration="0.575" data-track-index="31" data-volume="0.145"></audio>
+      <audio id="sfx-2" src="assets/sfx/pop.mp3" data-start="0.850" data-duration="0.72" data-track-index="32" data-volume="0.229"></audio>
+      <audio id="sfx-3" src="assets/sfx/pop.mp3" data-start="2.450" data-duration="0.72" data-track-index="33" data-volume="0.229"></audio>
+      <audio id="sfx-4" src="assets/sfx/pop.mp3" data-start="4.300" data-duration="0.72" data-track-index="34" data-volume="0.229"></audio>
+      <audio id="sfx-5" src="assets/sfx/whoosh.mp3" data-start="9.450" data-duration="0.575" data-track-index="35" data-volume="0.145"></audio>
+      <audio id="sfx-6" src="assets/sfx/glitch-1.mp3" data-start="9.700" data-duration="0.4" data-track-index="30" data-volume="0.054"></audio>
+      <audio id="sfx-7" src="assets/sfx/whoosh-short.mp3" data-start="10.250" data-duration="0.575" data-track-index="31" data-volume="0.115"></audio>
+      <audio id="sfx-8" src="assets/sfx/whoosh.mp3" data-start="11.750" data-duration="0.575" data-track-index="32" data-volume="0.145"></audio>
+      <audio id="sfx-9" src="assets/sfx/pop.mp3" data-start="13.000" data-duration="0.72" data-track-index="33" data-volume="0.229"></audio>
+      <audio id="sfx-10" src="assets/sfx/sparkle.mp3" data-start="13.300" data-duration="1.0" data-track-index="34" data-volume="0.033"></audio>
+      <audio id="sfx-11" src="assets/sfx/whoosh.mp3" data-start="15.700" data-duration="0.575" data-track-index="35" data-volume="0.145"></audio>
+      <audio id="sfx-12" src="assets/sfx/ping.mp3" data-start="17.900" data-duration="1.32" data-track-index="30" data-volume="0.269"></audio>
+      <audio id="sfx-13" src="assets/sfx/whoosh-short.mp3" data-start="18.200" data-duration="0.575" data-track-index="31" data-volume="0.102"></audio>
+      <audio id="sfx-14" src="assets/sfx/whoosh-short.mp3" data-start="18.550" data-duration="0.575" data-track-index="32" data-volume="0.102"></audio>
+      <audio id="sfx-15" src="assets/sfx/ping.mp3" data-start="19.700" data-duration="1.32" data-track-index="33" data-volume="0.269"></audio>
+      <audio id="sfx-16" src="assets/sfx/whoosh-short.mp3" data-start="20.550" data-duration="0.575" data-track-index="34" data-volume="0.102"></audio>
+      <audio id="sfx-17" src="assets/sfx/whoosh-short.mp3" data-start="20.850" data-duration="0.575" data-track-index="35" data-volume="0.102"></audio>
+      <audio id="sfx-18" src="assets/sfx/key-press.mp3" data-start="22.350" data-duration="0.432" data-track-index="30" data-volume="0.631"></audio>
+      <audio id="sfx-19" src="assets/sfx/key-press.mp3" data-start="22.550" data-duration="0.432" data-track-index="31" data-volume="0.631"></audio>
+      <audio id="sfx-20" src="assets/sfx/key-press.mp3" data-start="22.750" data-duration="0.432" data-track-index="32" data-volume="0.631"></audio>
+      <audio id="sfx-21" src="assets/sfx/key-press.mp3" data-start="22.950" data-duration="0.432" data-track-index="33" data-volume="0.631"></audio>
+      <audio id="sfx-22" src="assets/sfx/key-press.mp3" data-start="23.150" data-duration="0.432" data-track-index="34" data-volume="0.631"></audio>
+      <audio id="sfx-23" src="assets/sfx/whoosh-cinematic.mp3" data-start="24.600" data-duration="1.2" data-track-index="35" data-volume="0.06"></audio>
+      <audio id="sfx-24" src="assets/sfx/pop.mp3" data-start="26.600" data-duration="0.72" data-track-index="30" data-volume="0.257"></audio>
+      <audio id="sfx-25" src="assets/sfx/pop.mp3" data-start="28.100" data-duration="0.72" data-track-index="31" data-volume="0.257"></audio>
+      <audio id="sfx-26" src="assets/sfx/whoosh-short.mp3" data-start="29.400" data-duration="0.575" data-track-index="32" data-volume="0.115"></audio>
+      <audio id="sfx-27" src="assets/sfx/ping.mp3" data-start="29.600" data-duration="1.32" data-track-index="33" data-volume="0.302"></audio>
+      <audio id="sfx-28" src="assets/sfx/whoosh.mp3" data-start="31.100" data-duration="0.575" data-track-index="34" data-volume="0.145"></audio>
+      <audio id="sfx-29" src="assets/sfx/pop.mp3" data-start="31.500" data-duration="0.72" data-track-index="35" data-volume="0.229"></audio>
+      <audio id="sfx-30" src="assets/sfx/pop.mp3" data-start="33.850" data-duration="0.72" data-track-index="30" data-volume="0.229"></audio>
+      <audio id="sfx-31" src="assets/sfx/pop.mp3" data-start="34.950" data-duration="0.72" data-track-index="31" data-volume="0.229"></audio>
+      <audio id="sfx-32" src="assets/sfx/sparkle.mp3" data-start="36.450" data-duration="1.2" data-track-index="32" data-volume="0.037"></audio>
+      <audio id="sfx-33" src="assets/sfx/chime.mp3" data-start="38.450" data-duration="2.544" data-track-index="33" data-volume="0.394"></audio>
+      <audio id="sfx-34" src="assets/sfx/notification.mp3" data-start="40.000" data-duration="1.3" data-track-index="34" data-volume="0.191"></audio>
+      <audio id="sfx-35" src="assets/sfx/pop.mp3" data-start="40.400" data-duration="0.72" data-track-index="35" data-volume="0.229"></audio>
+      <audio id="sfx-36" src="assets/sfx/pop.mp3" data-start="40.700" data-duration="0.72" data-track-index="30" data-volume="0.229"></audio>
+    </div>
+
+    <script>
+      window.__timelines = window.__timelines || {};
+      const D = {"duree": 45.0, "finVideo": 41.966, "sous": [["k1", 0.85, 2.05, 0.9, 1.5], ["k2", 2.1, 6.55, 2.15, 6.05], ["k3", 7.45, 11.7, 7.6, 10.6], ["k4", 11.8, 15.65, 11.95, 15.15], ["k5", 15.75, 20.4, 15.9, 19.25], ["k6", 20.5, 23.95, 20.7, 23.45], ["k7", 24.0, 26.2, 24.1, 25.55], ["k8", 26.25, 29.3, 26.3, 28.75], ["k9", 29.35, 31.1, 29.45, 30.3], ["k10", 31.15, 33.35, 31.3, 32.95], ["k11", 33.4, 36.0, 33.5, 35.75], ["k12", 36.05, 38.35, 36.15, 37.8], ["k13", 38.45, 39.95, 38.6, 39.6]], "puces": [["p-bureau", 2.45, 7.3], ["p-assis", 4.3, 7.3], ["p-aiguille", 13.0, 15.55], ["p-soulage", 31.5, 33.3], ["p-massage", 33.85, 37.95], ["p-ventouse", 34.95, 37.95], ["p-repos", 36.4, 38.3], ["p-suivi", 40.1, 45.0], ["p-soin", 40.4, 45.0]], "bulles": [["b-aiguille", 13.3, 15.55], ["b-ventouse", 35.2, 37.95], ["b-lune", 36.5, 38.3], ["b-coeur", 40.7, 45.0]]};
+      const tl = gsap.timeline({ paused: true });
+
+      // ---------- outils ----------
+      function pop(sel, t, o) {
+        o = o || {};
+        tl.fromTo(sel, { scale: o.de || 0.4, autoAlpha: 0, rotation: o.rot || 0 },
+          { scale: 1, autoAlpha: 1, rotation: 0, duration: o.d || 0.36, ease: o.ease || "back.out(2.2)", immediateRender: o.ir !== false }, t);
+      }
+      function sort(sel, t, d) { tl.to(sel, { scale: 0.6, autoAlpha: 0, duration: d || 0.25, ease: "power2.in" }, t); }
+      function flash(t, force) {
+        tl.to("#flash", { opacity: force || 0.6, duration: 0.06, ease: "power2.out" }, t);
+        tl.to("#flash", { opacity: 0, duration: 0.3, ease: "power2.in" }, t + 0.06);
+      }
+      function flotte(sel, a, z, amp) {
+        const n = Math.max(0, Math.floor((z - a) / 1.2) - 1);
+        if (n > 0) tl.to(sel, { y: -(amp || 10), duration: 1.2, ease: "sine.inOut", yoyo: true, repeat: n }, a);
+      }
+      function secousse(sel, t, a) {
+        [[a, -0.6 * a], [-0.8 * a, 0.5 * a], [0.5 * a, 0.4 * a], [-0.3 * a, -0.3 * a], [0, 0]]
+          .forEach((v, i) => tl.to(sel, { x: v[0], y: v[1], duration: 0.05, ease: "none" }, t + i * 0.05));
+      }
+      // coup de zoom sur le médecin (plein cadre seulement)
+      function choc(t, s) { tl.fromTo("#medecin", { scale: s || 1.07 }, { scale: 1, duration: 0.45, ease: "power3.out", immediateRender: false }, t); }
+
+      // ---------- médecin en vignette / plein cadre ----------
+      function vignette(t) {
+        tl.set("#medecin", { transformOrigin: "100% 0%" }, t);
+        tl.to("#medecin", { scale: 0.3, x: -40, y: 200, borderRadius: 110, duration: 0.55, ease: "power3.inOut" }, t);
+        tl.fromTo("#pip-anneau", { autoAlpha: 0, scale: 1.12 }, { autoAlpha: 1, scale: 1, duration: 0.3, ease: "back.out(2)", immediateRender: false }, t + 0.45);
+        flash(t + 0.05, 0.35);
+      }
+      function plein(t) {
+        tl.to("#pip-anneau", { autoAlpha: 0, duration: 0.15 }, t);
+        tl.to("#medecin", { scale: 1, x: 0, y: 0, borderRadius: 0, duration: 0.55, ease: "power3.inOut" }, t);
+        tl.set("#medecin", { transformOrigin: "50% 38%" }, t + 0.56);
+        flash(t + 0.45, 0.3);
+      }
+
+      // ---------- planche d'anatomie ----------
+      // repère de la page (viewBox 133 4 366 883) → pixels de la fenêtre 620 × 780
+      const ECH = Math.min(620 / 366, 780 / 883), X0 = (620 - 366 * ECH) / 2;
+      function zoom(cx, cy, z, t, d) {
+        const px = X0 + (cx - 133) * ECH, py = (cy - 4) * ECH;
+        tl.to("#ana-zoom", { scale: z, x: (310 - px) * z, y: (390 - py) * z, duration: d || 0.6, ease: "power3.inOut" }, t);
+      }
+      // rotation : la planche tourne sur elle-même, la vue change quand elle est de profil (90°)
+      function bascule(de, vers, t, d) {
+        tl.to("#ana-plateau", { rotationY: 90, duration: d, ease: "power2.in" }, t);
+        tl.set("#v-" + de, { autoAlpha: 0 }, t + d);
+        tl.set("#v-" + vers, { autoAlpha: 1 }, t + d);
+        tl.fromTo("#ana-plateau", { rotationY: -90 }, { rotationY: 0, duration: d, ease: "power2.out", immediateRender: false }, t + d);
+      }
+      function anaEntre(t) {
+        tl.fromTo("#ana", { autoAlpha: 0, x: -90, scale: 0.92, rotationY: -28 },
+          { autoAlpha: 1, x: 0, scale: 1, rotationY: 0, duration: 0.55, ease: "power3.out", immediateRender: false }, t);
+      }
+      function anaSort(t) { tl.to("#ana", { autoAlpha: 0, x: -90, scale: 0.92, rotationY: -28, duration: 0.35, ease: "power2.in" }, t); }
+      function trace(sel, t, d) { tl.fromTo(sel, { attr: { "stroke-dashoffset": 1 } }, { attr: { "stroke-dashoffset": 0 }, duration: d, ease: "power1.inOut" }, t); }
+      function points(cls, t, pas) {
+        document.querySelectorAll("." + cls).forEach((p, i) => {
+          tl.fromTo(p, { opacity: 0, scale: 0.2, transformOrigin: "50% 50%" }, { opacity: 1, scale: 1, duration: 0.3, ease: "back.out(3)" }, t + i * (pas || 0));
+        });
+      }
+      function pulse(sel, t, z) {
+        const n = Math.max(0, Math.floor((z - t) / 0.5) - 1);
+        if (n > 0) tl.to(sel, { scale: 1.35, transformOrigin: "50% 50%", duration: 0.25, ease: "sine.inOut", yoyo: true, repeat: n }, t);
+      }
+
+      // ---------- état initial ----------
+      tl.set("#medecin", { transformOrigin: "50% 38%" }, 0);
+      tl.set("#ana-plateau", { transformPerspective: 1400 }, 0);
+      gsap.set("#ana", { transformPerspective: 1600, autoAlpha: 0 });
+      gsap.set(["#v-face", "#v-dos", "#pip-anneau", ".ana-tete", ".leg", "#fin-carte", "#fin-adresse"], { autoAlpha: 0 });
+      tl.set("#v-profil", { autoAlpha: 1 }, 0);
+      tl.fromTo("#barre-rempli", { scaleX: 0 }, { scaleX: 1, duration: D.duree, ease: "none" }, 0);
+
+      // ---------- 0 s · accroche stop-scroll ----------
+      tl.fromTo("#medecin", { scale: 1.22 }, { scale: 1, duration: 0.8, ease: "power3.out" }, 0);
+      flash(0.0, 0.7);
+      pop("#accroche", 0.08, { de: 0.7, ease: "back.out(1.8)" });
+      tl.fromTo("#accroche-ic", { scale: 1 }, { scale: 1.16, duration: 0.22, ease: "sine.inOut", yoyo: true, repeat: 5 }, 0.45);
+      secousse("#accroche", 0.5, 10);
+      tl.to("#accroche", { y: -60, autoAlpha: 0, duration: 0.3, ease: "power2.in" }, 1.95);
+      pop("#logo", 0.25, { de: 0.6 });
+
+      // ---------- sous-titres : cartes en verre, mots révélés pendant la parole ----------
+      D.sous.forEach(([id, a, z, s0, s1]) => {
+        const el = document.getElementById(id);
+        tl.fromTo(el, { autoAlpha: 0, y: 46, scale: 0.96 }, { autoAlpha: 1, y: 0, scale: 1, duration: 0.3, ease: "back.out(1.6)" }, a);
+        tl.fromTo(el.querySelector(".sous-ic"), { scale: 0.3, rotation: -40 }, { scale: 1, rotation: 0, duration: 0.4, ease: "back.out(2.4)" }, a + 0.05);
+        tl.fromTo(el.querySelector(".sous-trait"), { scaleX: 0 }, { scaleX: 1, duration: 0.4, ease: "power3.out" }, a + 0.15);
+        const mots = el.querySelectorAll(".mot");
+        const duree = Math.max(0.5, (s1 - s0) * 0.85);
+        mots.forEach((m, i) => tl.fromTo(m, { autoAlpha: 0, y: 16 }, { autoAlpha: 1, y: 0, duration: 0.2, ease: "power2.out" },
+          Math.max(a + 0.08, s0 + i * duree / mots.length)));
+        tl.to(el, { autoAlpha: 0, y: -26, duration: 0.2, ease: "power2.in" }, z - 0.2);
+      });
+
+      // ---------- pastilles et bulles ----------
+      D.puces.forEach(([id, a, z]) => {
+        pop("#" + id, a, { de: 0.4, rot: 6 });
+        flotte("#" + id, a + 0.4, z, 8);
+        if (z < D.duree) sort("#" + id, z - 0.25);
+      });
+      D.bulles.forEach(([id, a, z]) => {
+        pop("#" + id, a, { de: 0.2, rot: -30, ease: "back.out(2.8)" });
+        flotte("#" + id, a + 0.4, z, 14);
+        if (z < D.duree) sort("#" + id, z - 0.25);
+      });
+
+      // ---------- coups de zoom sur les mots forts ----------
+      choc(7.6, 1.06);
+      choc(13.1, 1.07);
+      choc(34.95, 1.07);
+
+      // ---------- 9,45 s · le mal de dos : planche de profil puis de dos ----------
+      vignette(9.45);
+      anaEntre(9.6);
+      pop("#at-1", 9.8, { de: 0.6 });
+      tl.to("#z-lombes", { opacity: 1, duration: 0.25 }, 9.85);
+      pop("#lg-douleur", 9.95, { de: 0.6 });
+      bascule("profil", "dos", 10.2, 0.18);
+      tl.to("#z-lombaires", { opacity: 1, duration: 0.2 }, 10.4);
+      zoom(316, 356, 1.9, 10.5, 0.5);
+      tl.to("#z-lombaires", { opacity: 0.35, duration: 0.25, ease: "sine.inOut", yoyo: true, repeat: 3 }, 10.6);
+      anaSort(11.75);
+      sort("#lg-douleur", 11.75, 0.2);
+      plein(11.75);
+      tl.set(["#at-1", "#z-lombaires"], { autoAlpha: 0 }, 12.2);
+      tl.set("#ana-zoom", { scale: 1, x: 0, y: 0 }, 12.2);
+
+      // ---------- 15,7 s · méridiens : vessie (dos), reins (face), vaisseau gouverneur (dos) ----------
+      vignette(15.7);
+      anaEntre(15.85);
+      pop("#at-2", 15.95, { de: 0.6 });
+      trace("#m-vessie-g", 16.2, 1.7);
+      trace("#m-vessie-d", 16.25, 1.7);
+      pop("#lg-vessie", 16.5, { de: 0.6 });
+      bascule("dos", "profil", 18.2, 0.17);
+      bascule("profil", "face", 18.54, 0.17);
+      trace("#m-rein-g", 18.95, 0.8);
+      trace("#m-rein-d", 19.0, 0.8);
+      pop("#lg-rein", 18.95, { de: 0.6 });
+      bascule("face", "profil", 20.55, 0.15);
+      bascule("profil", "dos", 20.85, 0.15);
+      tl.to("#at-2", { autoAlpha: 0, duration: 0.15 }, 20.9);
+      pop("#at-3", 21.0, { de: 0.6 });
+      trace("#m-dumai", 21.15, 1.15);
+      pop("#lg-dumai", 21.2, { de: 0.6 });
+      points("pt-dm", 22.35, 0.2);
+      pulse(".pt-dm .point-halo", 23.4, 24.4);
+
+      // ---------- 24 s · points à distance : la jambe ----------
+      ["#lg-vessie", "#lg-rein", "#lg-dumai"].forEach((l, i) => sort(l, 24.3 + i * 0.05, 0.2));
+      tl.to("#at-3", { autoAlpha: 0, duration: 0.15 }, 24.45);
+      pop("#at-4", 24.55, { de: 0.6 });
+      zoom(322, 700, 1.95, 24.55, 0.8);
+      points("pt-chengshan", 26.6, 0.08);
+      pop("#lg-chengshan", 26.6, { de: 0.6 });
+      pulse(".pt-chengshan .point-halo", 27.0, 31.0);
+      points("pt-chengjin", 28.1, 0.08);
+      pop("#lg-chengjin", 28.1, { de: 0.6 });
+      pulse(".pt-chengjin .point-halo", 28.5, 31.0);
+      zoom(320, 640, 2.5, 29.4, 0.5);
+      points("pt-weizhong", 29.55, 0.08);
+      pop("#lg-weizhong", 29.55, { de: 0.6 });
+      pulse(".pt-weizhong .point-halo", 29.95, 31.0);
+      anaSort(31.1);
+      ["#lg-chengshan", "#lg-chengjin", "#lg-weizhong"].forEach((l, i) => sort(l, 31.1 + i * 0.04, 0.2));
+      plein(31.1);
+
+      // ---------- 40 s · rendez-vous et coordonnées (image figée à partir de 41,9 s) ----------
+      tl.fromTo("#fin-carte", { autoAlpha: 0, y: 70, scale: 0.95 }, { autoAlpha: 1, y: 0, scale: 1, duration: 0.4, ease: "back.out(1.6)" }, 40.0);
+      tl.fromTo("#fin-ic", { scale: 0.3, rotation: -40 }, { scale: 1, rotation: 0, duration: 0.45, ease: "back.out(2.4)" }, 40.05);
+      tl.fromTo("#fin-trait", { scaleX: 0 }, { scaleX: 1, duration: 0.4, ease: "power3.out" }, 40.2);
+      tl.fromTo("#fin-adresse", { autoAlpha: 0, y: 70 }, { autoAlpha: 1, y: 0, duration: 0.4, ease: "back.out(1.6)" }, 40.4);
+      tl.fromTo("#fin-ic", { scale: 1 }, { scale: 1.1, duration: 0.4, ease: "sine.inOut", yoyo: true, repeat: 5, immediateRender: false }, 40.8);
+      tl.fromTo("#logo", { scale: 1 }, { scale: 1.08, duration: 0.18, ease: "power2.out", yoyo: true, repeat: 1, immediateRender: false }, 40.0);
+      tl.fromTo("#fige", { scale: 1 }, { scale: 1.04, duration: D.duree - 41.9, ease: "none" }, 41.9);
+
+      window.__timelines["centre-chine-lombalgie"] = tl;
+    </script>
+  </body>
+</html>

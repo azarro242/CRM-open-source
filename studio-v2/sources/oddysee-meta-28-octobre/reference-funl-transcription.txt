@@ -1,0 +1,32 @@
+Le 28 octobre, Meta va modifier tes pubs, sans te demander, et le 30, ces règles changent.
+Si tu continues de diffuser, tu les acceptes.
+Reste jusqu'au bout, les trois réglages à faire avant.
+Premier changement.
+Meta l'a annoncé par simple notification aux annonceurs.
+A partir du 28, tes pubs déjà en ligne peuvent ouvrir une page produite dans Instagram.
+Concrètement, quand quelqu'un touchera ta pub, il ne tombera plus forcément sur ton site.
+Il arrivera sur une fiche de ton produit dans Instagram, et Meta y ajoutera des suggestions
+qu'il choisit lui-même.
+Meta annonce 3% de conversion en plus sur son propre test.
+Mais si ton client découvre ton produit sans passer par ton site, quel sera l'impact sur ton site ?
+Et comment tes offres seront-elles perçues ?
+Deuxième changement.
+Le 30 octobre, ces conditions publicitaires, écrits noirs sur blanc.
+Ces outils d'IA peuvent faire des erreurs, et c'est toi qui en assume seul tous les risques.
+Rie pas ceux qui oublinent de décocher advantage plus créative.
+Et tu autorises ces robots à parcourir les pages de ton site, pour développer ces produits publicitaires.
+Les trois réglages.
+1. Si tu veux garder les clics sur ton site, refuse la navigation produit avant le 28.
+Ou coupe-la dans les réglages, advantage plus créative, et destination de ta pub.
+2. Relis les variantes que l'IA de Meta crée dans tes pubs.
+Elles sont diffusées sous ton nom.
+3. Si tu ne veux pas que Meta lise certaines pages de ton site, bloque-les dans ton fichier robots.txt.
+C'est Meta qui l'indique.
+Mais il y a aussi du positif.
+En plus des 3% de conversions annoncées par Meta, si ton site est lent sur mobile,
+ton client reste dans Instagram au lieu d'attendre que ta page charge.
+Le bon réflexe.
+Ne décide pas à l'aveugle.
+Laisse l'option sur une pub, coupe-la sur une autre, et compare tes ventes.
+Envoie ça à la personne qui gère tes pubs.
+Abonne-toi, une vidéo par jour, de vrais conseils.

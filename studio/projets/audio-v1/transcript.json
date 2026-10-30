@@ -1,0 +1,867 @@
+[
+  {
+    "text": "Je",
+    "start": 0,
+    "end": 0.19
+  },
+  {
+    "text": "ne",
+    "start": 0.19,
+    "end": 0.38
+  },
+  {
+    "text": "le",
+    "start": 0.38,
+    "end": 0.57
+  },
+  {
+    "text": "sais",
+    "start": 0.57,
+    "end": 0.95
+  },
+  {
+    "text": "peut-être",
+    "start": 0.95,
+    "end": 1.79
+  },
+  {
+    "text": "pas",
+    "start": 1.79,
+    "end": 2.04
+  },
+  {
+    "text": "mais",
+    "start": 2.25,
+    "end": 2.45
+  },
+  {
+    "text": "Anthropic",
+    "start": 2.45,
+    "end": 3.29
+  },
+  {
+    "text": "offre",
+    "start": 3.29,
+    "end": 3.75
+  },
+  {
+    "text": "littéralement",
+    "start": 3.75,
+    "end": 5.04
+  },
+  {
+    "text": "6",
+    "start": 5.04,
+    "end": 5.27
+  },
+  {
+    "text": "mois",
+    "start": 5.29,
+    "end": 5.59
+  },
+  {
+    "text": "gratuit",
+    "start": 5.59,
+    "end": 6.16
+  },
+  {
+    "text": "à",
+    "start": 6.16,
+    "end": 6.17
+  },
+  {
+    "text": "Cloudmax",
+    "start": 6.27,
+    "end": 7.02
+  },
+  {
+    "text": "et",
+    "start": 7.3,
+    "end": 7.4
+  },
+  {
+    "text": "voici",
+    "start": 7.4,
+    "end": 7.64
+  },
+  {
+    "text": "comment",
+    "start": 7.64,
+    "end": 7.98
+  },
+  {
+    "text": "l'obtenir",
+    "start": 7.98,
+    "end": 8.39
+  },
+  {
+    "text": "en",
+    "start": 8.39,
+    "end": 8.49
+  },
+  {
+    "text": "moins",
+    "start": 8.49,
+    "end": 8.74
+  },
+  {
+    "text": "de",
+    "start": 8.74,
+    "end": 8.84
+  },
+  {
+    "text": "60",
+    "start": 8.84,
+    "end": 9.13
+  },
+  {
+    "text": "secondes",
+    "start": 9.13,
+    "end": 9.6
+  },
+  {
+    "text": "c'est",
+    "start": 9.6,
+    "end": 9.97
+  },
+  {
+    "text": "parti.",
+    "start": 9.97,
+    "end": 10.6
+  },
+  {
+    "text": "Premièrement",
+    "start": 10.6,
+    "end": 11.38
+  },
+  {
+    "text": "tu",
+    "start": 11.39,
+    "end": 11.52
+  },
+  {
+    "text": "te",
+    "start": 11.52,
+    "end": 11.65
+  },
+  {
+    "text": "rends",
+    "start": 11.65,
+    "end": 11.97
+  },
+  {
+    "text": "d'abord",
+    "start": 11.97,
+    "end": 12.42
+  },
+  {
+    "text": "sur",
+    "start": 12.42,
+    "end": 12.6
+  },
+  {
+    "text": "le",
+    "start": 12.63,
+    "end": 12.73
+  },
+  {
+    "text": "site",
+    "start": 12.85,
+    "end": 13
+  },
+  {
+    "text": "de",
+    "start": 13,
+    "end": 13.11
+  },
+  {
+    "text": "cloud.com",
+    "start": 13.14,
+    "end": 13.92
+  },
+  {
+    "text": "puis",
+    "start": 13.92,
+    "end": 14.18
+  },
+  {
+    "text": "tu",
+    "start": 14.18,
+    "end": 14.27
+  },
+  {
+    "text": "te",
+    "start": 14.32,
+    "end": 14.43
+  },
+  {
+    "text": "rends",
+    "start": 14.44,
+    "end": 14.76
+  },
+  {
+    "text": "sur",
+    "start": 14.76,
+    "end": 14.97
+  },
+  {
+    "text": "cette",
+    "start": 14.99,
+    "end": 15.4
+  },
+  {
+    "text": "page,",
+    "start": 15.4,
+    "end": 15.79
+  },
+  {
+    "text": "tu",
+    "start": 15.79,
+    "end": 15.92
+  },
+  {
+    "text": "remplis",
+    "start": 15.92,
+    "end": 16.37
+  },
+  {
+    "text": "le",
+    "start": 16.37,
+    "end": 16.5
+  },
+  {
+    "text": "formulaire",
+    "start": 16.5,
+    "end": 17.14
+  },
+  {
+    "text": "qui",
+    "start": 17.14,
+    "end": 17.33
+  },
+  {
+    "text": "s'affiche",
+    "start": 17.33,
+    "end": 17.9
+  },
+  {
+    "text": "qui",
+    "start": 17.9,
+    "end": 18.09
+  },
+  {
+    "text": "te",
+    "start": 18.09,
+    "end": 18.22
+  },
+  {
+    "text": "permet",
+    "start": 18.22,
+    "end": 18.61
+  },
+  {
+    "text": "de",
+    "start": 18.61,
+    "end": 18.74
+  },
+  {
+    "text": "postuler",
+    "start": 18.74,
+    "end": 19.23
+  },
+  {
+    "text": "et",
+    "start": 19.3,
+    "end": 19.39
+  },
+  {
+    "text": "une",
+    "start": 19.39,
+    "end": 19.58
+  },
+  {
+    "text": "fois",
+    "start": 19.58,
+    "end": 19.84
+  },
+  {
+    "text": "que",
+    "start": 19.84,
+    "end": 20.1
+  },
+  {
+    "text": "c'est",
+    "start": 20.1,
+    "end": 20.36
+  },
+  {
+    "text": "fait",
+    "start": 20.36,
+    "end": 20.58
+  },
+  {
+    "text": "tu",
+    "start": 20.58,
+    "end": 20.69
+  },
+  {
+    "text": "envoies",
+    "start": 20.69,
+    "end": 21.06
+  },
+  {
+    "text": "ta",
+    "start": 21.06,
+    "end": 21.17
+  },
+  {
+    "text": "demande,",
+    "start": 21.17,
+    "end": 21.67
+  },
+  {
+    "text": "ils",
+    "start": 21.67,
+    "end": 21.83
+  },
+  {
+    "text": "t'enverront",
+    "start": 21.83,
+    "end": 22.42
+  },
+  {
+    "text": "un",
+    "start": 22.42,
+    "end": 22.53
+  },
+  {
+    "text": "mail",
+    "start": 22.53,
+    "end": 22.7
+  },
+  {
+    "text": "pour",
+    "start": 22.75,
+    "end": 22.96
+  },
+  {
+    "text": "obtenir",
+    "start": 23,
+    "end": 23.36
+  },
+  {
+    "text": "le",
+    "start": 23.36,
+    "end": 23.47
+  },
+  {
+    "text": "plan",
+    "start": 23.47,
+    "end": 23.69
+  },
+  {
+    "text": "gratuit",
+    "start": 23.69,
+    "end": 24.08
+  },
+  {
+    "text": "pendant",
+    "start": 24.08,
+    "end": 24.6
+  },
+  {
+    "text": "6",
+    "start": 24.6,
+    "end": 24.83
+  },
+  {
+    "text": "mois",
+    "start": 24.83,
+    "end": 25.14
+  },
+  {
+    "text": "en",
+    "start": 25.14,
+    "end": 25.29
+  },
+  {
+    "text": "utilisant",
+    "start": 25.29,
+    "end": 25.99
+  },
+  {
+    "text": "Cloudmax.",
+    "start": 25.99,
+    "end": 26.88
+  },
+  {
+    "text": "Si",
+    "start": 26.88,
+    "end": 27.01
+  },
+  {
+    "text": "tu",
+    "start": 27.02,
+    "end": 27.16
+  },
+  {
+    "text": "veux",
+    "start": 27.16,
+    "end": 27.44
+  },
+  {
+    "text": "obtenir",
+    "start": 27.44,
+    "end": 27.93
+  },
+  {
+    "text": "le",
+    "start": 27.93,
+    "end": 28.07
+  },
+  {
+    "text": "guide",
+    "start": 28.07,
+    "end": 28.42
+  },
+  {
+    "text": "complet",
+    "start": 28.42,
+    "end": 28.9
+  },
+  {
+    "text": "pour",
+    "start": 29.13,
+    "end": 29.19
+  },
+  {
+    "text": "accéder",
+    "start": 29.19,
+    "end": 29.68
+  },
+  {
+    "text": "à",
+    "start": 29.68,
+    "end": 29.74
+  },
+  {
+    "text": "Cloudmax",
+    "start": 29.79,
+    "end": 30.31
+  },
+  {
+    "text": "étape",
+    "start": 30.31,
+    "end": 30.66
+  },
+  {
+    "text": "par",
+    "start": 30.66,
+    "end": 30.87
+  },
+  {
+    "text": "étape",
+    "start": 30.87,
+    "end": 31.13
+  },
+  {
+    "text": "de",
+    "start": 31.23,
+    "end": 31.38
+  },
+  {
+    "text": "façon",
+    "start": 31.38,
+    "end": 31.88
+  },
+  {
+    "text": "gratuite,",
+    "start": 31.88,
+    "end": 32.5
+  },
+  {
+    "text": "j'ai",
+    "start": 32.5,
+    "end": 32.74
+  },
+  {
+    "text": "créé",
+    "start": 32.74,
+    "end": 32.98
+  },
+  {
+    "text": "une",
+    "start": 32.98,
+    "end": 33.16
+  },
+  {
+    "text": "communauté",
+    "start": 33.16,
+    "end": 33.78
+  },
+  {
+    "text": "autour",
+    "start": 34.11,
+    "end": 34.15
+  },
+  {
+    "text": "de",
+    "start": 34.15,
+    "end": 34.27
+  },
+  {
+    "text": "l'IA",
+    "start": 34.27,
+    "end": 34.48
+  },
+  {
+    "text": "elle",
+    "start": 34.53,
+    "end": 34.74
+  },
+  {
+    "text": "est",
+    "start": 34.78,
+    "end": 34.86
+  },
+  {
+    "text": "100%",
+    "start": 34.95,
+    "end": 35.55
+  },
+  {
+    "text": "francophone",
+    "start": 35.6,
+    "end": 36.24
+  },
+  {
+    "text": "et",
+    "start": 36.24,
+    "end": 36.43
+  },
+  {
+    "text": "gratuite,",
+    "start": 36.5,
+    "end": 37.55
+  },
+  {
+    "text": "commente",
+    "start": 37.56,
+    "end": 37.99
+  },
+  {
+    "text": "ce",
+    "start": 37.99,
+    "end": 38.09
+  },
+  {
+    "text": "que",
+    "start": 38.09,
+    "end": 38.25
+  },
+  {
+    "text": "tu",
+    "start": 38.25,
+    "end": 38.34
+  },
+  {
+    "text": "veux",
+    "start": 38.35,
+    "end": 38.55
+  },
+  {
+    "text": "en",
+    "start": 38.56,
+    "end": 38.66
+  },
+  {
+    "text": "dessous",
+    "start": 38.66,
+    "end": 39.03
+  },
+  {
+    "text": "de",
+    "start": 39.03,
+    "end": 39.13
+  },
+  {
+    "text": "cette",
+    "start": 39.13,
+    "end": 39.4
+  },
+  {
+    "text": "vidéo,",
+    "start": 39.4,
+    "end": 39.77
+  },
+  {
+    "text": "du",
+    "start": 39.81,
+    "end": 39.87
+  },
+  {
+    "text": "moment",
+    "start": 39.87,
+    "end": 40.16
+  },
+  {
+    "text": "où",
+    "start": 40.21,
+    "end": 40.29
+  },
+  {
+    "text": "tu",
+    "start": 40.29,
+    "end": 40.39
+  },
+  {
+    "text": "es",
+    "start": 40.39,
+    "end": 40.49
+  },
+  {
+    "text": "abonné",
+    "start": 40.49,
+    "end": 40.79
+  },
+  {
+    "text": "à",
+    "start": 40.79,
+    "end": 40.84
+  },
+  {
+    "text": "mon",
+    "start": 40.84,
+    "end": 41.16
+  },
+  {
+    "text": "compte,",
+    "start": 41.16,
+    "end": 41.58
+  },
+  {
+    "text": "je",
+    "start": 41.58,
+    "end": 41.68
+  },
+  {
+    "text": "t'envoie",
+    "start": 41.68,
+    "end": 42.08
+  },
+  {
+    "text": "l'accès",
+    "start": 42.08,
+    "end": 42.44
+  },
+  {
+    "text": "à",
+    "start": 42.44,
+    "end": 42.49
+  },
+  {
+    "text": "la",
+    "start": 42.49,
+    "end": 42.59
+  },
+  {
+    "text": "communauté,",
+    "start": 42.59,
+    "end": 43.21
+  },
+  {
+    "text": "tu",
+    "start": 43.21,
+    "end": 43.41
+  },
+  {
+    "text": "crées",
+    "start": 43.41,
+    "end": 43.58
+  },
+  {
+    "text": "ton",
+    "start": 43.58,
+    "end": 43.74
+  },
+  {
+    "text": "compte",
+    "start": 43.74,
+    "end": 44.02
+  },
+  {
+    "text": "et",
+    "start": 44.06,
+    "end": 44.14
+  },
+  {
+    "text": "tu",
+    "start": 44.23,
+    "end": 44.26
+  },
+  {
+    "text": "vas",
+    "start": 44.26,
+    "end": 44.42
+  },
+  {
+    "text": "pouvoir",
+    "start": 44.42,
+    "end": 44.79
+  },
+  {
+    "text": "accéder",
+    "start": 44.79,
+    "end": 45.32
+  },
+  {
+    "text": "à",
+    "start": 45.32,
+    "end": 45.39
+  },
+  {
+    "text": "Cloudmax",
+    "start": 45.39,
+    "end": 45.96
+  },
+  {
+    "text": "et",
+    "start": 45.96,
+    "end": 46.1
+  },
+  {
+    "text": "l'utiliser",
+    "start": 46.1,
+    "end": 46.79
+  },
+  {
+    "text": "pendant",
+    "start": 46.8,
+    "end": 47.3
+  },
+  {
+    "text": "6",
+    "start": 47.3,
+    "end": 47.57
+  },
+  {
+    "text": "mois",
+    "start": 47.57,
+    "end": 47.79
+  },
+  {
+    "text": "en",
+    "start": 47.79,
+    "end": 47.92
+  },
+  {
+    "text": "illimité",
+    "start": 47.97,
+    "end": 48.56
+  },
+  {
+    "text": "et",
+    "start": 48.56,
+    "end": 48.66
+  },
+  {
+    "text": "abonne",
+    "start": 48.66,
+    "end": 48.96
+  },
+  {
+    "text": "toi",
+    "start": 48.96,
+    "end": 49.11
+  },
+  {
+    "text": "parce",
+    "start": 49.11,
+    "end": 49.35
+  },
+  {
+    "text": "que",
+    "start": 49.36,
+    "end": 49.51
+  },
+  {
+    "text": "je",
+    "start": 49.51,
+    "end": 49.57
+  },
+  {
+    "text": "suis",
+    "start": 49.57,
+    "end": 49.64
+  },
+  {
+    "text": "sûr",
+    "start": 49.64,
+    "end": 49.79
+  },
+  {
+    "text": "que",
+    "start": 49.79,
+    "end": 49.94
+  },
+  {
+    "text": "ce",
+    "start": 49.94,
+    "end": 50.04
+  },
+  {
+    "text": "n'est",
+    "start": 50.04,
+    "end": 50.29
+  },
+  {
+    "text": "pas",
+    "start": 50.29,
+    "end": 50.44
+  },
+  {
+    "text": "la",
+    "start": 50.44,
+    "end": 50.54
+  },
+  {
+    "text": "seule",
+    "start": 50.54,
+    "end": 50.79
+  },
+  {
+    "text": "vidéo",
+    "start": 50.79,
+    "end": 51.04
+  },
+  {
+    "text": "de",
+    "start": 51.04,
+    "end": 51.14
+  },
+  {
+    "text": "ce",
+    "start": 51.14,
+    "end": 51.24
+  },
+  {
+    "text": "compte",
+    "start": 51.24,
+    "end": 51.54
+  },
+  {
+    "text": "que",
+    "start": 51.54,
+    "end": 51.68
+  },
+  {
+    "text": "tu",
+    "start": 51.68,
+    "end": 51.89
+  },
+  {
+    "text": "regarderas.",
+    "start": 51.89,
+    "end": 52.36
+  }
+]

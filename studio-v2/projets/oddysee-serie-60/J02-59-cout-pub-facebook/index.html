@@ -1,0 +1,617 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <title>Oddysee — Série 60 · 59 · Combien coûte une pub Facebook ? Mauvaise question</title>
+    <link href="assets/fonts/fonts.css" rel="stylesheet" />
+    <script src="vendor/gsap.min.js"></script>
+    <style>
+      :root {
+        --violet: #632bc5;
+        --violet-vif: #6a3be8;
+        --violet-pale: #a877ff;
+        --lilas: #e2d7f7;
+        --brume: #f7f3ff;
+        --or: #f0c860;
+        --or-fonce: #d4a847;
+        --encre: #1d1d1d;
+        --gris: #6f6a7a;
+        --bleu-meta: #1877f2;
+        --whatsapp: #1fa855;
+      }
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { width: 1080px; height: 1920px; overflow: hidden; background: var(--brume); }
+      body { font-family: "Outfit", sans-serif; color: var(--encre); }
+      #root { position: relative; width: 1080px; height: 1920px; overflow: hidden; }
+      .clip { position: absolute; inset: 0; }
+      .plein { position: absolute; inset: 0; }
+
+      /* ---------- fond ---------- */
+      #fond-base { position: absolute; inset: 0; background: var(--brume); }
+      #fond-points { position: absolute; left: -80px; top: -80px; width: 1240px; height: 2160px;
+        background-image: radial-gradient(circle, rgba(99, 43, 197, 0.17) 2.4px, transparent 3px);
+        background-size: 40px 40px; }
+      #fond-vignette { position: absolute; inset: 0;
+        background: radial-gradient(ellipse 78% 62% at 50% 44%, rgba(247, 243, 255, 0) 52%, rgba(74, 26, 150, 0.24) 100%); }
+
+      /* ---------- entête permanente ---------- */
+      #entete-logo-n, #entete-logo-b { position: absolute; left: 60px; top: 196px; height: 50px; width: auto; }
+      #entete-pastille { position: absolute; right: 60px; top: 192px; height: 58px; padding: 0 26px 0 22px;
+        display: flex; align-items: center; gap: 14px; background: #fff; border: 3px solid var(--violet);
+        border-radius: 40px; font-weight: 800; font-size: 28px; letter-spacing: 2px; color: var(--violet); }
+      #entete-point { display: block; width: 16px; height: 16px; border-radius: 50%; background: var(--violet-vif); }
+
+      /* ---------- éléments communs ---------- */
+      .cam, .sec, .kb { position: absolute; inset: 0; }
+      .sur { position: absolute; left: 60px; right: 60px; top: 292px; text-align: center; font-weight: 900;
+        font-size: 50px; letter-spacing: 2px; text-transform: uppercase; color: var(--encre); }
+      .sur-trait { display: block; width: 180px; height: 10px; margin: 14px auto 0; border-radius: 6px;
+        background: var(--violet); }
+      .masc { position: absolute; width: 373px; height: 560px; }
+      .masc img { display: block; width: 373px; height: 560px; }
+
+      /* ---------- S1 · combien coûte une pub Facebook ? mauvaise question ---------- */
+      .recherche { position: absolute; left: 90px; top: 420px; width: 900px; height: 124px; padding: 0 40px 0 110px;
+        display: flex; align-items: center; border-radius: 62px; background: #fff; border: 4px solid var(--lilas);
+        box-shadow: 0 26px 54px rgba(40, 10, 90, 0.2); }
+      .loupe { position: absolute; left: 36px; top: 34px; width: 52px; height: 52px; }
+      .recherche-texte { display: block; font-weight: 700; font-size: 40px; color: var(--encre); white-space: nowrap; }
+      #s1-texte { clip-path: inset(0% 100% 0% 0%); }
+      #s1-curseur { display: block; width: 4px; height: 50px; margin-left: 6px; background: var(--violet); }
+      #s1-mauvaise { position: absolute; left: 170px; top: 610px; width: 740px; height: 270px; display: flex;
+        flex-direction: column; align-items: center; justify-content: center; border-radius: 30px; border: 10px solid #fff;
+        background: var(--violet-vif); color: #fff; font-weight: 900; font-size: 96px; line-height: 1; letter-spacing: 3px;
+        text-align: center; box-shadow: 0 24px 50px rgba(40, 10, 90, 0.45); }
+      #s1-prix { position: absolute; left: 90px; top: 960px; width: 520px; height: 220px; padding: 28px 40px;
+        border-radius: 36px; background: #fff; box-shadow: 0 30px 60px rgba(40, 10, 90, 0.2); }
+      #s1-prix span { display: block; font-weight: 800; font-size: 30px; letter-spacing: 3px; color: var(--gris); }
+      #s1-prix b { display: inline-block; margin-top: 6px; font-weight: 900; font-size: 110px; line-height: 1; color: var(--violet); }
+      #s1-barre { position: absolute; left: 30px; right: 30px; top: 118px; height: 14px; border-radius: 7px; background: #d1452a;
+        transform-origin: 0 50%; }
+      #s1-m, #s1-m2 { right: 4px; top: 905px; }
+
+      /* ---------- S2 · la bonne question ; exemple fictif ---------- */
+      #s2-recherche { border-color: var(--violet); }
+      #s2-recherche .recherche-texte span { display: inline-block; padding: 0 12px; border-radius: 12px; }
+      #s2-fictif { position: absolute; left: 90px; top: 600px; height: 62px; padding: 0 26px; display: flex; align-items: center;
+        border-radius: 31px; background: var(--or); color: var(--encre); font-weight: 900; font-size: 30px; letter-spacing: 3px; }
+      .bloc { position: absolute; top: 700px; height: 190px; padding: 26px 32px; border-radius: 34px; background: #fff;
+        box-shadow: 0 26px 54px rgba(40, 10, 90, 0.2); }
+      .bloc span { display: block; font-weight: 800; font-size: 28px; letter-spacing: 2px; color: var(--gris); }
+      .bloc b { display: block; margin-top: 8px; font-weight: 900; font-size: 62px; line-height: 1; color: var(--violet); white-space: nowrap; }
+      #s2-b1 { left: 90px; width: 330px; }
+      #s2-b2 { left: 540px; width: 460px; }
+      #s2-fl { position: absolute; left: 432px; top: 770px; width: 96px; height: 50px; }
+      #s2-m { right: -10px; top: 905px; }
+
+      /* ---------- S3 · cinq clients, cent dirhams par client ---------- */
+      #s3-nuit { position: absolute; inset: 0; transform-origin: 50% 100%;
+        background: radial-gradient(circle at 50% 30%, #8a5cff 0%, #632bc5 45%, #2a1060 100%); }
+      #s3-sur { color: #fff; }
+      #s3-sur .sur-trait { background: var(--or); }
+      #s3-grille { position: absolute; left: 420px; top: 420px; width: 600px; display: grid; grid-template-columns: repeat(5, 1fr);
+        gap: 22px 24px; }
+      .msg { position: relative; display: block; height: 78px; border-radius: 22px 22px 22px 6px; background: rgba(255, 255, 255, 0.28); }
+      .msg.client { background: rgba(255, 255, 255, 0.28); }
+      .msg i { position: absolute; inset: 0; border-radius: 22px 22px 22px 6px; background: var(--or); opacity: 0; }
+      #s3-legende { position: absolute; left: 420px; top: 830px; width: 600px; font-weight: 800; font-size: 34px; color: #fff;
+        text-align: center; }
+      #s3-calcul { position: absolute; left: 400px; top: 900px; width: 620px; height: 250px; padding: 28px 36px;
+        border-radius: 36px; background: #fff; box-shadow: 0 30px 60px rgba(0, 0, 0, 0.35); }
+      #s3-calcul span { display: block; font-weight: 800; font-size: 40px; color: var(--encre); }
+      #s3-resultat { display: flex; align-items: center; gap: 20px; margin-top: 18px; }
+      #s3-resultat b { display: block; height: 104px; padding: 0 30px; border-radius: 52px; background: var(--or); color: var(--encre);
+        font-weight: 900; font-size: 72px; line-height: 104px; }
+      #s3-resultat small { display: block; font-weight: 800; font-size: 36px; color: var(--violet); }
+      #s3-m { left: 0px; top: 905px; }
+      /* corps violet sur fond violet : un liseré blanc garde la mascotte lisible */
+      #s3-m img { filter: drop-shadow(0 0 3px rgba(255, 255, 255, 0.95)) drop-shadow(0 0 10px rgba(255, 255, 255, 0.55)); }
+
+      /* ---------- S4 · la règle : augmenter ou changer ---------- */
+      #s4-balance { position: absolute; left: 60px; top: 420px; width: 660px; height: 190px; display: flex; border-radius: 34px;
+        background: #fff; box-shadow: 0 24px 50px rgba(40, 10, 90, 0.18); overflow: hidden; }
+      #s4-balance div { flex: 1; padding: 28px 30px; }
+      #s4-balance div + div { border-left: 4px solid #f1edf8; }
+      #s4-balance span { display: block; font-weight: 800; font-size: 28px; letter-spacing: 2px; color: var(--gris); }
+      #s4-balance b { display: block; margin-top: 10px; font-weight: 900; font-size: 64px; line-height: 1; color: var(--encre); }
+      #s4-balance #s4-rapporte { color: var(--violet); }
+      .piece { position: absolute; left: 60px; width: 660px; height: 170px; padding: 28px 30px 0 140px; border-radius: 34px;
+        background: #fff; box-shadow: 0 24px 50px rgba(40, 10, 90, 0.18); }
+      .piece em { position: absolute; left: 30px; top: 40px; width: 90px; height: 90px; border-radius: 50%; background: var(--violet);
+        color: #fff; font-style: normal; font-weight: 900; font-size: 52px; line-height: 90px; text-align: center; }
+      .piece b { display: block; font-weight: 900; font-size: 44px; line-height: 1.05; color: var(--encre); }
+      .piece small { display: block; margin-top: 8px; font-weight: 600; font-size: 28px; color: var(--gris); }
+      #s4-oui { top: 650px; }
+      #s4-oui em { background: var(--whatsapp); }
+      #s4-non { top: 850px; }
+      #s4-non em { background: #d1452a; }
+      #s4-m { right: -10px; top: 905px; }
+
+      /* ---------- S5 · commente « AUDIT » ---------- */
+      #s5-com { position: absolute; left: 60px; top: 392px; width: 960px; height: 500px; padding: 30px 40px;
+        border-radius: 40px; background: #fff; box-shadow: 0 30px 60px rgba(40, 10, 90, 0.22); }
+      #s5-com-tete { font-weight: 900; font-size: 36px; color: var(--encre); }
+      #s5-com-tete span { font-weight: 700; font-size: 28px; color: var(--gris); margin-left: 10px; }
+      .com { display: flex; align-items: center; gap: 18px; margin-top: 22px; height: 60px; }
+      .com i { display: block; width: 56px; height: 56px; border-radius: 50%; background: var(--lilas); flex: none; }
+      .com .barres { flex: 1; }
+      .com .barres div { height: 16px; border-radius: 8px; background: #ece8f3; }
+      .com .barres div + div { margin-top: 10px; width: 60%; }
+      #s5-nouveau { position: absolute; left: 40px; right: 40px; top: 250px; height: 92px; padding: 0 22px;
+        display: flex; align-items: center; gap: 18px; border-radius: 24px; background: var(--brume);
+        border: 3px solid var(--violet); }
+      #s5-nouveau i { display: block; width: 60px; height: 60px; border-radius: 50%; background: var(--violet); flex: none; }
+      #s5-nouveau b { font-weight: 800; font-size: 30px; color: var(--gris); }
+      #s5-nouveau strong { font-weight: 900; font-size: 40px; color: var(--violet); letter-spacing: 2px; }
+      #s5-coeur { margin-left: auto; font-weight: 900; font-size: 40px; color: var(--violet-vif); }
+      #s5-saisie { position: absolute; left: 40px; right: 40px; bottom: 30px; height: 96px; padding: 0 16px 0 28px;
+        display: flex; align-items: center; border-radius: 48px; background: #f1edf8; }
+      #s5-place { position: absolute; left: 30px; font-weight: 600; font-size: 30px; color: #9a94a6; }
+      #s5-texte { display: flex; font-weight: 900; font-size: 44px; letter-spacing: 3px; color: var(--encre); }
+      #s5-texte span { display: block; }
+      #s5-publier { position: absolute; right: 18px; top: 14px; height: 68px; padding: 0 28px; line-height: 68px;
+        border-radius: 34px; background: var(--violet); color: #fff; font-weight: 800; font-size: 30px; }
+      #s5-carte { position: absolute; left: 600px; top: 930px; width: 400px; height: 480px; padding: 30px;
+        border-radius: 30px; color: #fff; box-shadow: 0 30px 60px rgba(40, 10, 90, 0.4);
+        background: linear-gradient(160deg, #6a3be8 0%, #4a1f99 60%, #2a1060 100%); }
+      #s5-carte-tag { display: inline-block; height: 46px; padding: 0 18px; line-height: 46px; border-radius: 23px;
+        background: var(--or); color: var(--encre); font-weight: 900; font-size: 28px; letter-spacing: 2px; }
+      #s5-carte-titre { margin-top: 26px; font-weight: 900; font-size: 64px; line-height: 1.02; text-transform: uppercase; }
+      #s5-carte-sous { margin-top: 14px; font-weight: 700; font-size: 28px; color: var(--lilas); }
+      #s5-carte-logo { position: absolute; left: 30px; bottom: 30px; width: 200px; height: auto; }
+      #s5-m { left: 0px; top: 900px; }
+
+      /* ---------- S6 · abonne-toi + signature ---------- */
+      #s6-profil { position: absolute; left: 60px; top: 392px; width: 960px; height: 420px; padding: 36px 40px;
+        border-radius: 40px; background: #fff; box-shadow: 0 30px 60px rgba(40, 10, 90, 0.22); }
+      #s6-avatar { position: absolute; left: 40px; top: 36px; width: 150px; height: 150px; border-radius: 50%;
+        border: 6px solid var(--violet); background: var(--brume); overflow: hidden; }
+      #s6-avatar img { position: absolute; left: -23px; top: -36px; width: 560px; height: auto; }
+      #s6-id { position: absolute; left: 220px; top: 52px; }
+      #s6-id b { display: block; font-weight: 900; font-size: 44px; color: var(--encre); }
+      #s6-id span { display: block; margin-top: 6px; font-weight: 700; font-size: 28px; color: var(--gris); }
+      #s6-bouton { position: absolute; left: 40px; right: 40px; bottom: 40px; height: 110px; border-radius: 28px;
+        background: var(--violet); }
+      #s6-bouton b, #s6-bouton strong { position: absolute; left: 0; right: 0; top: 0; line-height: 110px;
+        text-align: center; font-weight: 900; font-size: 46px; letter-spacing: 1px; }
+      #s6-bouton b { color: #fff; }
+      #s6-bouton strong { color: var(--violet); }
+      #s6-curseur { position: absolute; left: 0; top: 0; width: 64px; height: 64px; }
+      #s6-logo { position: absolute; left: 420px; top: 900px; width: 560px; height: auto; }
+      #s6-badge { position: absolute; left: 470px; top: 1128px; height: 70px; padding: 0 28px; display: flex;
+        align-items: center; border-radius: 35px; background: var(--or); color: var(--encre); font-weight: 900;
+        font-size: 28px; letter-spacing: 2px; }
+      #s6-rappel { position: absolute; left: 400px; top: 1222px; width: 640px; text-align: center; font-weight: 800;
+        font-size: 32px; color: var(--violet); }
+      #s6-m { left: 10px; top: 900px; }
+      #calme { position: absolute; inset: 0; opacity: 0;
+        background: radial-gradient(ellipse 70% 56% at 50% 44%, rgba(29, 16, 60, 0) 50%, rgba(29, 16, 60, 0.30) 100%); }
+
+      /* ---------- sous-titres karaoké ---------- */
+      #st-zone { position: absolute; left: 50px; right: 50px; top: 1462px; height: 180px; }
+      .st { position: absolute; left: 0; right: 0; top: 0; display: flex; flex-wrap: wrap; justify-content: center;
+        gap: 6px 18px; opacity: 0; visibility: hidden; }
+      .m { display: inline-block; padding: 4px 16px 6px; border-radius: 16px; font-weight: 900; font-size: 74px;
+        line-height: 1.08; text-transform: uppercase; color: var(--encre); white-space: nowrap;
+        background-color: rgba(99, 43, 197, 0); }
+
+      /* ---------- transitions ---------- */
+      #flash { position: absolute; inset: 0; opacity: 0;
+        background: radial-gradient(circle at 50% 46%, rgba(168, 119, 255, 0.95) 0%, rgba(99, 43, 197, 0.85) 45%, rgba(99, 43, 197, 0) 100%); }
+      #eclair { position: absolute; inset: 0; opacity: 0; background: #fff; }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="oddysee-serie-60-59" data-start="0" data-width="1080" data-height="1920" data-duration="31.64">
+
+      <section id="fond" class="clip" data-start="0" data-duration="31.64" data-track-index="0">
+        <div id="fond-base"></div>
+        <div id="fond-pulse" class="plein"><div id="fond-points"></div></div>
+        <div id="fond-vignette"></div>
+      </section>
+
+      <!-- S1 · combien coûte une pub Facebook ? / mauvaise question -->
+      <section id="s1" class="clip" data-start="0.0" data-duration="4.585" data-track-index="1">
+        <div class="cam" id="s1-cam"><div class="sec" id="s1-sec"><div class="kb" id="s1-kb">
+          <div data-layout-allow-overlap class="sur" id="s1-sur">Ta question<i class="sur-trait" id="s1-trait"></i></div>
+          <div class="recherche" id="s1-recherche" data-layout-allow-overlap>
+            <svg class="loupe" viewBox="0 0 52 52"><circle cx="21" cy="21" r="15" fill="none" stroke="#632bc5" stroke-width="6"/><path d="M32 32 L47 47" stroke="#632bc5" stroke-width="7" stroke-linecap="round"/></svg>
+            <span class="recherche-texte" id="s1-texte">combien coûte une pub facebook</span><i id="s1-curseur"></i>
+          </div>
+          <div id="s1-prix" data-layout-allow-overlap><span>PRIX D'UNE PUB</span><b>? DH</b><i id="s1-barre"></i></div>
+          <div class="masc" id="s1-m"><img id="s1-m-img" src="assets/img/m-s1a-moustache-pensif.webp" alt="" /></div>
+          <div class="masc" id="s1-m2"><img id="s1-m2-img" src="assets/img/m-s1b-pochoir-barbu-colere.webp" alt="" /></div>
+          <div id="s1-mauvaise" data-layout-allow-overlap><span>MAUVAISE</span><span>QUESTION</span></div>
+        </div></div></div>
+      </section>
+
+      <!-- S2 · la bonne : combien te coûte un client ? / exemple fictif -->
+      <section id="s2" class="clip" data-start="4.135" data-duration="6.905" data-track-index="2">
+        <div class="cam" id="s2-cam"><div class="sec" id="s2-sec"><div class="kb" id="s2-kb">
+          <div data-layout-allow-overlap class="sur" id="s2-sur">La bonne question<i class="sur-trait" id="s2-trait"></i></div>
+          <div class="recherche" id="s2-recherche" data-layout-allow-overlap>
+            <svg class="loupe" viewBox="0 0 52 52"><circle cx="21" cy="21" r="15" fill="none" stroke="#632bc5" stroke-width="6"/><path d="M32 32 L47 47" stroke="#632bc5" stroke-width="7" stroke-linecap="round"/></svg>
+            <span class="recherche-texte">combien me coûte un <span id="s2-client">client</span> ?</span>
+          </div>
+          <div id="s2-fictif" data-layout-allow-overlap>EXEMPLE FICTIF</div>
+          <div class="bloc" id="s2-b1" data-layout-allow-overlap><span>EN PUB</span><b>500 DH</b></div>
+          <svg id="s2-fl" viewBox="0 0 96 50"><path d="M4 25 L74 25" stroke="#632bc5" stroke-width="9" stroke-linecap="round"/><path d="M62 8 L90 25 L62 42 Z" fill="#632bc5"/></svg>
+          <div class="bloc" id="s2-b2" data-layout-allow-overlap><span>DEMANDES</span><b>20 messages</b></div>
+          <div class="masc" id="s2-m"><img id="s2-m-img" src="assets/img/m-s2-barbu-pensif.webp" alt="" /></div>
+        </div></div></div>
+      </section>
+
+      <!-- S3 · cinq deviennent clients : cent dirhams par client (partie B) -->
+      <section id="s3" class="clip" data-start="10.59" data-duration="6.929" data-track-index="3">
+        <div id="s3-nuit"></div>
+        <div class="cam" id="s3-cam"><div class="sec" id="s3-sec"><div class="kb" id="s3-kb">
+          <div data-layout-allow-overlap class="sur" id="s3-sur">Le vrai calcul<i class="sur-trait" id="s3-trait"></i></div>
+          <div id="s3-grille">
+            <i class="msg"></i><i class="msg"></i><i class="msg client"><i id="s3-c0"></i></i><i class="msg"></i><i class="msg"></i>
+            <i class="msg client"><i id="s3-c1"></i></i><i class="msg"></i><i class="msg"></i><i class="msg"></i><i class="msg client"><i id="s3-c2"></i></i>
+            <i class="msg"></i><i class="msg"></i><i class="msg client"><i id="s3-c3"></i></i><i class="msg"></i><i class="msg"></i>
+            <i class="msg"></i><i class="msg client"><i id="s3-c4"></i></i><i class="msg"></i><i class="msg"></i><i class="msg"></i>
+          </div>
+          <div id="s3-legende" data-layout-allow-overlap>20 messages → 5 clients</div>
+          <div id="s3-calcul" data-layout-allow-overlap>
+            <span>500 DH ÷ 5 clients</span>
+            <div id="s3-resultat"><b>100 DH</b><small>par client</small></div>
+          </div>
+          <div class="masc" id="s3-m"><img id="s3-m-img" src="assets/img/m-s3-pochoir-homme-presente.webp" alt="" /></div>
+        </div></div></div>
+      </section>
+
+      <!-- S4 · la règle : augmenter ce qui rapporte, changer le reste (passage calme) -->
+      <section id="s4" class="clip" data-start="17.069" data-duration="6.417" data-track-index="4">
+        <div class="cam" id="s4-cam"><div class="sec" id="s4-sec"><div class="kb" id="s4-kb">
+          <div data-layout-allow-overlap class="sur" id="s4-sur">La règle<i class="sur-trait" id="s4-trait"></i></div>
+          <div id="s4-balance" data-layout-allow-overlap><div><span>IL TE COÛTE</span><b>100 DH</b></div><div><span>IL TE RAPPORTE</span><b id="s4-rapporte">? DH</b></div></div>
+          <div class="piece" id="s4-oui" data-layout-allow-overlap><em>✓</em><b>Il rapporte plus</b><small>Augmente le budget</small></div>
+          <div class="piece" id="s4-non" data-layout-allow-overlap><em>✕</em><b>Il rapporte moins</b><small>Change la pub ou l'offre</small></div>
+          <div class="masc" id="s4-m"><img id="s4-m-img" src="assets/img/m-s4-femme-grand-sourire.webp" alt="" /></div>
+        </div></div></div>
+      </section>
+
+      <!-- S5 · commente « AUDIT » → on calcule ton coût par client -->
+      <section id="s5" class="clip" data-start="23.036" data-duration="3.979" data-track-index="5">
+        <div class="cam" id="s5-cam"><div class="sec" id="s5-sec"><div class="kb" id="s5-kb">
+          <div data-layout-allow-overlap class="sur" id="s5-sur">Ton audit offert<i class="sur-trait" id="s5-trait"></i></div>
+          <div id="s5-com" data-layout-allow-overlap>
+            <div id="s5-com-tete">Commentaires<span>· sous cette vidéo</span></div>
+            <div class="com"><i></i><div class="barres"><div></div><div></div></div></div>
+            <div class="com"><i></i><div class="barres"><div></div><div></div></div></div>
+            <div id="s5-nouveau"><i></i><b>toi</b><strong>AUDIT</strong><span id="s5-coeur">♥</span></div>
+            <div id="s5-saisie">
+              <span id="s5-place">Ajouter un commentaire…</span>
+              <div id="s5-texte"><span id="s5-l1">A</span><span id="s5-l2">U</span><span id="s5-l3">D</span><span id="s5-l4">I</span><span id="s5-l5">T</span></div>
+              <div id="s5-publier">Publier</div>
+            </div>
+          </div>
+          <div id="s5-carte">
+            <span id="s5-carte-tag">AUDIT OFFERT</span>
+            <div id="s5-carte-titre">Ton coût par client</div>
+            <div id="s5-carte-sous">Calculé avec toi</div>
+            <img id="s5-carte-logo" src="assets/img/logo-oddysee-blanc-guide.svg" alt="" />
+          </div>
+          <div class="masc" id="s5-m"><img id="s5-m-img" src="assets/img/m-s5-pochoir-cheveux-longs-designe.webp" alt="" /></div>
+        </div></div></div>
+      </section>
+
+      <!-- S6 · abonne-toi + signature -->
+      <section id="s6" class="clip" data-start="26.565" data-duration="5.075" data-track-index="6">
+        <div class="cam" id="s6-cam"><div class="sec" id="s6-sec"><div class="kb" id="s6-kb">
+          <div data-layout-allow-overlap class="sur" id="s6-sur">Abonne-toi<i class="sur-trait" id="s6-trait"></i></div>
+          <div id="s6-profil" data-layout-allow-overlap>
+            <div id="s6-avatar"><img src="assets/img/logo-oddysee-noir-profil.svg" alt="" /></div>
+            <div id="s6-id"><b>@oddysee_maroc</b><span>Agence · Meta Business Partner</span></div>
+            <div id="s6-bouton" data-layout-allow-overlap><b id="s6-suivre">S'abonner</b><strong id="s6-abonne">Abonné ✓</strong></div>
+          </div>
+          <svg id="s6-curseur" viewBox="0 0 64 64"><path d="M8 4 L8 52 L21 40 L30 60 L39 56 L30 36 L48 36 Z" fill="#1d1d1d" stroke="#fff" stroke-width="4" stroke-linejoin="round"/></svg>
+          <img id="s6-logo" src="assets/img/logo-oddysee-noir-fin.svg" alt="Oddysee" />
+          <div id="s6-badge">META BUSINESS PARTNER</div>
+          <div id="s6-rappel">Commente « AUDIT » · audit offert</div>
+          <div class="masc" id="s6-m"><img id="s6-m-img" src="assets/img/m-s6-pochoir-homme-accueil.webp" alt="" /></div>
+        </div></div></div>
+      </section>
+
+      <!-- entête et sous-titres, au-dessus des scènes -->
+      <section id="entete" class="clip" data-start="0" data-duration="31.64" data-track-index="10">
+        <img id="entete-logo-n" src="assets/img/logo-oddysee-noir.svg" alt="Oddysee" />
+        <img id="entete-logo-b" src="assets/img/logo-oddysee-blanc.svg" alt="" />
+        <div id="entete-pastille"><i id="entete-point"></i>PLUS DE CLIENTS</div>
+      </section>
+
+      <section id="sous-titres" class="clip" data-start="0" data-duration="31.64" data-track-index="11">
+        <div id="st-zone">          <div class="st" id="st-0"><span class="m" id="m-0">Combien</span><span class="m" id="m-1">coûte</span><span class="m" id="m-2">une</span></div>
+          <div class="st" id="st-1"><span class="m" id="m-3">pub</span><span class="m" id="m-4">Facebook ?</span></div>
+          <div class="st" id="st-2"><span class="m" id="m-5">Mauvaise</span><span class="m" id="m-6">question.</span></div>
+          <div class="st" id="st-3"><span class="m" id="m-7">La</span><span class="m" id="m-8">bonne :</span></div>
+          <div class="st" id="st-4"><span class="m" id="m-9">combien</span><span class="m" id="m-10">te</span><span class="m" id="m-11">coûte</span></div>
+          <div class="st" id="st-5"><span class="m" id="m-12">un</span><span class="m" id="m-13">client ?</span></div>
+          <div class="st" id="st-6"><span class="m" id="m-14">Exemple</span><span class="m" id="m-15">fictif :</span></div>
+          <div class="st" id="st-7"><span class="m" id="m-16">cinq</span><span class="m" id="m-17">cents</span><span class="m" id="m-18">dirhams,</span></div>
+          <div class="st" id="st-8"><span class="m" id="m-19">vingt</span><span class="m" id="m-20">messages.</span></div>
+          <div class="st" id="st-9"><span class="m" id="m-21">Cinq</span><span class="m" id="m-22">deviennent</span></div>
+          <div class="st" id="st-10"><span class="m" id="m-23">clients :</span></div>
+          <div class="st" id="st-11"><span class="m" id="m-24">chaque</span><span class="m" id="m-25">client</span><span class="m" id="m-26">t&#x27;a</span></div>
+          <div class="st" id="st-12"><span class="m" id="m-27">coûté</span><span class="m" id="m-28">cent</span><span class="m" id="m-29">dirhams.</span></div>
+          <div class="st" id="st-13"><span class="m" id="m-30">Si</span><span class="m" id="m-31">un</span><span class="m" id="m-32">client</span></div>
+          <div class="st" id="st-14"><span class="m" id="m-33">te</span><span class="m" id="m-34">rapporte</span><span class="m" id="m-35">plus,</span></div>
+          <div class="st" id="st-15"><span class="m" id="m-36">augmente</span><span class="m" id="m-37">le</span><span class="m" id="m-38">budget.</span></div>
+          <div class="st" id="st-16"><span class="m" id="m-39">Sinon,</span><span class="m" id="m-40">change</span><span class="m" id="m-41">la</span></div>
+          <div class="st" id="st-17"><span class="m" id="m-42">pub</span><span class="m" id="m-43">ou</span><span class="m" id="m-44">l&#x27;offre.</span></div>
+          <div class="st" id="st-18"><span class="m" id="m-45">Commente</span><span class="m" id="m-46">« AUDIT » :</span></div>
+          <div class="st" id="st-19"><span class="m" id="m-47">on</span><span class="m" id="m-48">calcule</span><span class="m" id="m-49">ton</span></div>
+          <div class="st" id="st-20"><span class="m" id="m-50">coût</span><span class="m" id="m-51">par</span><span class="m" id="m-52">client.</span></div>
+          <div class="st" id="st-21"><span class="m" id="m-53">Et</span><span class="m" id="m-54">abonne-toi :</span></div>
+          <div class="st" id="st-22"><span class="m" id="m-55">chaque</span><span class="m" id="m-56">dirham</span><span class="m" id="m-57">doit</span></div>
+          <div class="st" id="st-23"><span class="m" id="m-58">te</span><span class="m" id="m-59">ramener</span><span class="m" id="m-60">des</span></div>
+          <div class="st" id="st-24"><span class="m" id="m-61">clients.</span></div></div>
+      </section>
+
+      <section id="transitions" class="clip" data-start="0" data-duration="31.64" data-track-index="12">
+        <div id="calme"></div>
+        <div id="flash"></div>
+        <div id="eclair"></div>
+      </section>
+
+      <audio id="musique" src="assets/musique/musique-client.mp3" data-start="0.0" data-duration="30.06" data-track-index="21" data-volume="1"></audio>
+      <audio id="voix-0" src="voix.mp3" data-start="0.1" data-media-start="0.0" data-duration="1.848" data-track-index="20" data-volume="1"></audio>
+      <audio id="voix-1" src="voix.mp3" data-start="3.015" data-media-start="2.112" data-duration="1.149" data-track-index="19" data-volume="1"></audio>
+      <audio id="voix-2" src="voix.mp3" data-start="4.385" data-media-start="3.554" data-duration="0.617" data-track-index="20" data-volume="1"></audio>
+      <audio id="voix-3" src="voix.mp3" data-start="5.242" data-media-start="4.6" data-duration="1.418" data-track-index="19" data-volume="1"></audio>
+      <audio id="voix-4" src="voix.mp3" data-start="6.846" data-media-start="6.47" data-duration="1.116" data-track-index="20" data-volume="1"></audio>
+      <audio id="voix-5" src="voix.mp3" data-start="8.202" data-media-start="7.887" data-duration="2.166" data-track-index="19" data-volume="1"></audio>
+      <audio id="voix-6" src="voix.mp3" data-start="10.84" data-media-start="10.356" data-duration="1.388" data-track-index="20" data-volume="1"></audio>
+      <audio id="voix-7" src="voix.mp3" data-start="12.468" data-media-start="12.05" data-duration="2.12" data-track-index="19" data-volume="1"></audio>
+      <audio id="voix-8" src="voix.mp3" data-start="17.319" data-media-start="14.53" data-duration="5.284" data-track-index="20" data-volume="1"></audio>
+      <audio id="voix-9" src="voix.mp3" data-start="23.286" data-media-start="20.225" data-duration="1.007" data-track-index="19" data-volume="1"></audio>
+      <audio id="voix-10" src="voix.mp3" data-start="24.533" data-media-start="21.569" data-duration="1.932" data-track-index="20" data-volume="1"></audio>
+      <audio id="voix-11" src="voix.mp3" data-start="26.815" data-media-start="23.811" data-duration="3.228" data-track-index="19" data-volume="1"></audio>
+      <audio id="sfx-0" src="assets/sfx/typing.mp3" data-start="0.050" data-duration="1.519" data-track-index="30" data-volume="1.0"></audio>
+      <audio id="sfx-1" src="assets/sfx/click-soft.mp3" data-start="1.669" data-duration="0.366" data-track-index="30" data-volume="1.0"></audio>
+      <audio id="sfx-2" src="assets/sfx/impact-bass-1.mp3" data-start="3.045" data-duration="2.116" data-track-index="30" data-volume="0.126"></audio>
+      <audio id="sfx-3" src="assets/sfx/glitch-2.mp3" data-start="3.095" data-duration="0.45" data-track-index="31" data-volume="0.093"></audio>
+      <audio id="sfx-4" src="assets/sfx/error.mp3" data-start="3.545" data-duration="0.9" data-track-index="32" data-volume="1.0"></audio>
+      <audio id="sfx-5" src="assets/sfx/whoosh.mp3" data-start="4.215" data-duration="0.575" data-track-index="31" data-volume="0.324"></audio>
+      <audio id="sfx-6" src="assets/sfx/pop.mp3" data-start="4.645" data-duration="0.72" data-track-index="32" data-volume="0.646"></audio>
+      <audio id="sfx-7" src="assets/sfx/ping.mp3" data-start="6.128" data-duration="1.32" data-track-index="30" data-volume="0.955"></audio>
+      <audio id="sfx-8" src="assets/sfx/pop.mp3" data-start="7.286" data-duration="0.72" data-track-index="31" data-volume="0.646"></audio>
+      <audio id="sfx-9" src="assets/sfx/click.mp3" data-start="8.222" data-duration="0.366" data-track-index="30" data-volume="1.0"></audio>
+      <audio id="sfx-10" src="assets/sfx/click.mp3" data-start="9.331" data-duration="0.366" data-track-index="30" data-volume="1.0"></audio>
+      <audio id="sfx-11" src="assets/sfx/whoosh-cinematic.mp3" data-start="10.590" data-duration="1.2" data-track-index="30" data-volume="0.168"></audio>
+      <audio id="sfx-12" src="assets/sfx/impact-bass-2.mp3" data-start="10.870" data-duration="1.6" data-track-index="31" data-volume="0.097"></audio>
+      <audio id="sfx-13" src="assets/sfx/key-press.mp3" data-start="10.890" data-duration="0.432" data-track-index="32" data-volume="1.0"></audio>
+      <audio id="sfx-14" src="assets/sfx/key-press.mp3" data-start="11.138" data-duration="0.432" data-track-index="33" data-volume="1.0"></audio>
+      <audio id="sfx-15" src="assets/sfx/key-press.mp3" data-start="11.401" data-duration="0.432" data-track-index="32" data-volume="1.0"></audio>
+      <audio id="sfx-16" src="assets/sfx/key-press.mp3" data-start="11.649" data-duration="0.432" data-track-index="33" data-volume="1.0"></audio>
+      <audio id="sfx-17" src="assets/sfx/key-press.mp3" data-start="11.912" data-duration="0.432" data-track-index="30" data-volume="1.0"></audio>
+      <audio id="sfx-18" src="assets/sfx/pop.mp3" data-start="12.488" data-duration="0.72" data-track-index="30" data-volume="0.646"></audio>
+      <audio id="sfx-19" src="assets/sfx/ping.mp3" data-start="13.708" data-duration="1.32" data-track-index="30" data-volume="0.955"></audio>
+      <audio id="sfx-20" src="assets/sfx/whoosh-cinematic.mp3" data-start="17.069" data-duration="1.2" data-track-index="30" data-volume="0.168"></audio>
+      <audio id="sfx-21" src="assets/sfx/pop.mp3" data-start="17.339" data-duration="0.72" data-track-index="31" data-volume="0.646"></audio>
+      <audio id="sfx-22" src="assets/sfx/click.mp3" data-start="19.128" data-duration="0.366" data-track-index="30" data-volume="1.0"></audio>
+      <audio id="sfx-23" src="assets/sfx/click.mp3" data-start="20.357" data-duration="0.366" data-track-index="30" data-volume="1.0"></audio>
+      <audio id="sfx-24" src="assets/sfx/riser.mp3" data-start="21.736" data-duration="1.6" data-media-start="8.43" data-track-index="30" data-volume="0.072"></audio>
+      <audio id="sfx-25" src="assets/sfx/impact-bass-2.mp3" data-start="23.316" data-duration="1.8" data-track-index="31" data-volume="0.097"></audio>
+      <audio id="sfx-26" src="assets/sfx/key-press.mp3" data-start="23.336" data-duration="0.432" data-track-index="32" data-volume="1.0"></audio>
+      <audio id="sfx-27" src="assets/sfx/key-press.mp3" data-start="23.584" data-duration="0.432" data-track-index="30" data-volume="1.0"></audio>
+      <audio id="sfx-28" src="assets/sfx/key-press.mp3" data-start="23.847" data-duration="0.432" data-track-index="32" data-volume="1.0"></audio>
+      <audio id="sfx-29" src="assets/sfx/key-press.mp3" data-start="24.095" data-duration="0.432" data-track-index="30" data-volume="1.0"></audio>
+      <audio id="sfx-30" src="assets/sfx/key-press.mp3" data-start="24.358" data-duration="0.432" data-track-index="32" data-volume="1.0"></audio>
+      <audio id="sfx-31" src="assets/sfx/click-soft.mp3" data-start="24.869" data-duration="0.366" data-track-index="30" data-volume="1.0"></audio>
+      <audio id="sfx-32" src="assets/sfx/pop.mp3" data-start="24.989" data-duration="0.72" data-track-index="32" data-volume="0.646"></audio>
+      <audio id="sfx-33" src="assets/sfx/notification.mp3" data-start="25.169" data-duration="1.3" data-track-index="31" data-volume="0.38"></audio>
+      <audio id="sfx-34" src="assets/sfx/whoosh.mp3" data-start="26.645" data-duration="0.575" data-track-index="30" data-volume="0.324"></audio>
+      <audio id="sfx-35" src="assets/sfx/click.mp3" data-start="27.095" data-duration="0.366" data-track-index="31" data-volume="1.0"></audio>
+      <audio id="sfx-36" src="assets/sfx/ping.mp3" data-start="27.195" data-duration="1.32" data-track-index="32" data-volume="0.955"></audio>
+      <audio id="sfx-37" src="assets/sfx/chime.mp3" data-start="30.093" data-duration="1.547" data-track-index="30" data-volume="1.0"></audio>
+      <audio id="sfx-38" src="assets/sfx/sparkle.mp3" data-start="30.393" data-duration="1.2" data-track-index="31" data-volume="0.13"></audio>
+    </div>
+
+    <script>
+      window.__timelines = window.__timelines || {};
+      const D = {"duree": 31.64, "c": {"combien": 0.1, "coute": 0.459, "pub": 0.919, "facebook": 1.319, "mauvaise": 3.065, "question": 3.565, "la": 4.435, "bonne": 4.675, "combien2": 5.292, "client2": 6.158, "exemple": 6.896, "fictif": 7.316, "cinq": 8.252, "dirhams": 8.672, "vingt": 9.361, "messages": 9.741, "cinq4": 10.89, "deviennent": 11.251, "clients4": 11.751, "chaque": 12.518, "coute4": 13.418, "cent": 13.738, "dirhams4": 14.018, "si": 17.369, "rapporte": 17.987, "augmente": 19.148, "budget": 19.648, "sinon": 20.377, "change": 21.105, "offre": 22.005, "commente": 23.336, "audit": 23.776, "calcule": 24.903, "client6": 26.163, "abonne": 27.045, "dirham7": 28.198, "clients7": 29.618, "fin": 30.043}, "scenes": [{"debut": 0.0, "fin": 4.585, "temps": 0.1}, {"debut": 4.135, "fin": 11.04, "temps": 4.435}, {"debut": 10.59, "fin": 17.519, "temps": 10.89}, {"debut": 17.069, "fin": 23.486, "temps": 17.369}, {"debut": 23.036, "fin": 27.015, "temps": 23.336}, {"debut": 26.565, "fin": 31.64, "temps": 26.865}], "tics": [10.89, 11.138, 11.401, 11.649, 11.912], "frappe": [23.336, 23.584, 23.847, 24.095, 24.358], "publier": 24.869, "carte": 25.169, "pulse": [0.07, 0.604, 1.138, 1.625, 2.09, 2.601, 3.065, 3.529, 4.017, 4.435, 4.899, 5.41, 5.921, 6.409, 6.896, 7.407, 7.918, 8.406, 8.916, 9.404, 9.915, 10.403, 10.89, 11.401, 11.912, 12.399, 12.91, 13.398, 13.909, 14.396, 14.907, 15.418, 15.882, 16.37, 16.858, 23.336, 23.847, 24.358, 24.869, 25.356, 25.867, 26.355, 26.865, 27.362, 27.858, 28.354, 28.85, 29.347], "calmes": [[17.3, 23.3]], "sous": [{"debut": 0.06, "fin": 0.879, "mots": [{"i": 0, "debut": 0.1, "fin": 0.459, "base": "#1d1d1d", "fort": false}, {"i": 1, "debut": 0.459, "fin": 0.719, "base": "#1d1d1d", "fort": false}, {"i": 2, "debut": 0.719, "fin": 0.879, "base": "#1d1d1d", "fort": false}]}, {"debut": 0.879, "fin": 2.128, "mots": [{"i": 3, "debut": 0.919, "fin": 1.319, "base": "#1d1d1d", "fort": false}, {"i": 4, "debut": 1.319, "fin": 2.128, "base": "#1d1d1d", "fort": true}]}, {"debut": 3.025, "fin": 4.395, "mots": [{"i": 5, "debut": 3.065, "fin": 3.565, "base": "#1d1d1d", "fort": true}, {"i": 6, "debut": 3.565, "fin": 4.395, "base": "#1d1d1d", "fort": true}]}, {"debut": 4.395, "fin": 5.252, "mots": [{"i": 7, "debut": 4.435, "fin": 4.675, "base": "#1d1d1d", "fort": false}, {"i": 8, "debut": 4.675, "fin": 5.252, "base": "#1d1d1d", "fort": true}]}, {"debut": 5.252, "fin": 5.878, "mots": [{"i": 9, "debut": 5.292, "fin": 5.518, "base": "#1d1d1d", "fort": false}, {"i": 10, "debut": 5.518, "fin": 5.738, "base": "#1d1d1d", "fort": false}, {"i": 11, "debut": 5.738, "fin": 5.878, "base": "#1d1d1d", "fort": false}]}, {"debut": 5.878, "fin": 6.856, "mots": [{"i": 12, "debut": 5.918, "fin": 6.158, "base": "#1d1d1d", "fort": false}, {"i": 13, "debut": 6.158, "fin": 6.856, "base": "#1d1d1d", "fort": true}]}, {"debut": 6.856, "fin": 8.212, "mots": [{"i": 14, "debut": 6.896, "fin": 7.316, "base": "#1d1d1d", "fort": false}, {"i": 15, "debut": 7.316, "fin": 8.212, "base": "#1d1d1d", "fort": true}]}, {"debut": 8.212, "fin": 9.321, "mots": [{"i": 16, "debut": 8.252, "fin": 8.452, "base": "#1d1d1d", "fort": true}, {"i": 17, "debut": 8.452, "fin": 8.672, "base": "#1d1d1d", "fort": false}, {"i": 18, "debut": 8.672, "fin": 9.321, "base": "#1d1d1d", "fort": true}]}, {"debut": 9.321, "fin": 10.85, "mots": [{"i": 19, "debut": 9.361, "fin": 9.741, "base": "#1d1d1d", "fort": false}, {"i": 20, "debut": 9.741, "fin": 10.85, "base": "#1d1d1d", "fort": true}]}, {"debut": 10.85, "fin": 11.711, "mots": [{"i": 21, "debut": 10.89, "fin": 11.251, "base": "#ffffff", "fort": true}, {"i": 22, "debut": 11.251, "fin": 11.711, "base": "#ffffff", "fort": false}]}, {"debut": 11.711, "fin": 12.478, "mots": [{"i": 23, "debut": 11.751, "fin": 12.478, "base": "#ffffff", "fort": true}]}, {"debut": 12.478, "fin": 13.378, "mots": [{"i": 24, "debut": 12.518, "fin": 12.858, "base": "#ffffff", "fort": false}, {"i": 25, "debut": 12.858, "fin": 13.278, "base": "#ffffff", "fort": true}, {"i": 26, "debut": 13.278, "fin": 13.378, "base": "#ffffff", "fort": false}]}, {"debut": 13.378, "fin": 14.768, "mots": [{"i": 27, "debut": 13.418, "fin": 13.738, "base": "#ffffff", "fort": false}, {"i": 28, "debut": 13.738, "fin": 14.018, "base": "#ffffff", "fort": true}, {"i": 29, "debut": 14.018, "fin": 14.768, "base": "#ffffff", "fort": true}]}, {"debut": 17.329, "fin": 17.767, "mots": [{"i": 30, "debut": 17.369, "fin": 17.489, "base": "#1d1d1d", "fort": false}, {"i": 31, "debut": 17.489, "fin": 17.627, "base": "#1d1d1d", "fort": false}, {"i": 32, "debut": 17.627, "fin": 17.767, "base": "#1d1d1d", "fort": true}]}, {"debut": 17.767, "fin": 19.108, "mots": [{"i": 33, "debut": 17.807, "fin": 17.987, "base": "#1d1d1d", "fort": false}, {"i": 34, "debut": 17.987, "fin": 18.467, "base": "#1d1d1d", "fort": true}, {"i": 35, "debut": 18.467, "fin": 19.108, "base": "#1d1d1d", "fort": true}]}, {"debut": 19.108, "fin": 20.337, "mots": [{"i": 36, "debut": 19.148, "fin": 19.408, "base": "#1d1d1d", "fort": true}, {"i": 37, "debut": 19.408, "fin": 19.648, "base": "#1d1d1d", "fort": false}, {"i": 38, "debut": 19.648, "fin": 20.337, "base": "#1d1d1d", "fort": true}]}, {"debut": 20.337, "fin": 21.505, "mots": [{"i": 39, "debut": 20.377, "fin": 21.105, "base": "#1d1d1d", "fort": true}, {"i": 40, "debut": 21.105, "fin": 21.305, "base": "#1d1d1d", "fort": true}, {"i": 41, "debut": 21.305, "fin": 21.505, "base": "#1d1d1d", "fort": false}]}, {"debut": 21.505, "fin": 22.783, "mots": [{"i": 42, "debut": 21.545, "fin": 21.885, "base": "#1d1d1d", "fort": false}, {"i": 43, "debut": 21.885, "fin": 22.005, "base": "#1d1d1d", "fort": false}, {"i": 44, "debut": 22.005, "fin": 22.783, "base": "#1d1d1d", "fort": true}]}, {"debut": 23.296, "fin": 24.543, "mots": [{"i": 45, "debut": 23.336, "fin": 23.776, "base": "#1d1d1d", "fort": true}, {"i": 46, "debut": 23.776, "fin": 24.543, "base": "#1d1d1d", "fort": true}]}, {"debut": 24.543, "fin": 25.463, "mots": [{"i": 47, "debut": 24.583, "fin": 24.903, "base": "#1d1d1d", "fort": false}, {"i": 48, "debut": 24.903, "fin": 25.243, "base": "#1d1d1d", "fort": true}, {"i": 49, "debut": 25.243, "fin": 25.463, "base": "#1d1d1d", "fort": false}]}, {"debut": 25.463, "fin": 26.825, "mots": [{"i": 50, "debut": 25.503, "fin": 25.783, "base": "#1d1d1d", "fort": false}, {"i": 51, "debut": 25.783, "fin": 26.163, "base": "#1d1d1d", "fort": false}, {"i": 52, "debut": 26.163, "fin": 26.825, "base": "#1d1d1d", "fort": true}]}, {"debut": 26.825, "fin": 27.858, "mots": [{"i": 53, "debut": 26.865, "fin": 27.045, "base": "#1d1d1d", "fort": false}, {"i": 54, "debut": 27.045, "fin": 27.858, "base": "#1d1d1d", "fort": true}]}, {"debut": 27.858, "fin": 28.798, "mots": [{"i": 55, "debut": 27.898, "fin": 28.198, "base": "#1d1d1d", "fort": false}, {"i": 56, "debut": 28.198, "fin": 28.578, "base": "#1d1d1d", "fort": true}, {"i": 57, "debut": 28.578, "fin": 28.798, "base": "#1d1d1d", "fort": false}]}, {"debut": 28.798, "fin": 29.578, "mots": [{"i": 58, "debut": 28.838, "fin": 29.018, "base": "#1d1d1d", "fort": false}, {"i": 59, "debut": 29.018, "fin": 29.318, "base": "#1d1d1d", "fort": false}, {"i": 60, "debut": 29.318, "fin": 29.578, "base": "#1d1d1d", "fort": false}]}, {"debut": 29.578, "fin": 30.223, "mots": [{"i": 61, "debut": 29.618, "fin": 30.223, "base": "#1d1d1d", "fort": true}]}], "musique": [{"t": 0.0, "v": 0.282}, {"t": 0.0, "v": 0.282}, {"t": 0.02, "v": 0.282}, {"t": 1.998, "v": 0.282}, {"t": 2.198, "v": 0.596}, {"t": 2.815, "v": 0.596}, {"t": 2.935, "v": 0.282}, {"t": 14.638, "v": 0.282}, {"t": 14.838, "v": 0.596}, {"t": 17.119, "v": 0.596}, {"t": 17.239, "v": 0.282}, {"t": 22.653, "v": 0.282}, {"t": 22.853, "v": 0.596}, {"t": 23.086, "v": 0.596}, {"t": 23.206, "v": 0.282}, {"t": 30.093, "v": 0.282}, {"t": 30.293, "v": 0.596}]};
+      const C = D.c, S = D.scenes;
+      const VIOLET = "#632bc5";
+      const tl = gsap.timeline({ paused: true });
+
+      // ---------- outils ----------
+      function pop(sel, t, o) {
+        o = o || {};
+        tl.fromTo(sel, { scale: o.de || 0.3, autoAlpha: 0, rotation: o.rot || 0 },
+          { scale: 1, autoAlpha: 1, rotation: o.rotFin || 0, duration: o.d || 0.34, ease: o.ease || "back.out(2.4)" }, t);
+      }
+      function secousse(sel, t, a) {
+        const p = [[a, -0.6 * a], [-0.8 * a, 0.5 * a], [0.5 * a, 0.4 * a], [-0.3 * a, -0.3 * a], [0.12 * a, 0.1 * a], [0, 0]];
+        p.forEach((v, i) => tl.to(sel, { x: v[0], y: v[1], duration: 0.045, ease: "none" }, t + i * 0.045));
+      }
+      function flash(t, force) {
+        tl.to("#flash", { opacity: force || 0.9, duration: 0.1, ease: "power2.out" }, t - 0.1);
+        tl.to("#flash", { opacity: 0, duration: 0.32, ease: "power2.in" }, t);
+      }
+      // la mascotte danse sur chaque temps de la musique ; balancement lent dans les passages calmes
+      function danse(sel, t0, t1) {
+        const temps = D.pulse.filter((b) => b >= t0 && b < t1 - 0.2);
+        temps.forEach((b) => {
+          tl.to(sel, { y: -16, duration: 0.12, ease: "power2.out" }, b);
+          tl.to(sel, { y: 0, duration: 0.3, ease: "power2.in" }, b + 0.12);
+        });
+        D.calmes.forEach((z) => {
+          const a = Math.max(t0, z[0]), f = Math.min(t1, z[1]);
+          if (f - a > 1.2) {
+            const n = Math.max(0, Math.floor((f - a) / 1.0) - 1);
+            tl.to(sel, { y: -8, rotation: 1.5, duration: 0.5, ease: "sine.inOut", yoyo: true, repeat: n }, a);
+          }
+        });
+      }
+      function kenburns(sel, k) { tl.fromTo(sel, { scale: 1 }, { scale: 1.035, duration: S[k].fin - S[k].debut, ease: "none" }, S[k].debut); }
+      function surTitre(k) {
+        tl.fromTo("#s" + (k + 1) + "-trait", { scaleX: 0 }, { scaleX: 1, duration: 0.4, ease: "power3.out" }, S[k].debut + 0.15);
+      }
+
+      // ---------- au tempo : point de l'entête, trame du fond ----------
+      tl.fromTo("#fond-points", { x: 0, y: 0 }, { x: -40, y: -120, duration: D.duree, ease: "none" }, 0);
+      D.pulse.forEach((b) => {
+        tl.to("#entete-point", { scale: 1.8, duration: 0.06, ease: "power2.out" }, b);
+        tl.to("#entete-point", { scale: 1, duration: 0.3, ease: "power2.in" }, b + 0.06);
+        tl.to("#fond-pulse", { scale: 1.014, duration: 0.06, ease: "power2.out" }, b);
+        tl.to("#fond-pulse", { scale: 1, duration: 0.34, ease: "power2.in" }, b + 0.06);
+      });
+      D.calmes.forEach((z) => {
+        tl.to("#calme", { opacity: 1, duration: 0.5, ease: "sine.inOut" }, z[0]);
+        tl.to("#calme", { opacity: 0, duration: 0.15, ease: "power2.out" }, z[1] - 0.05);
+      });
+      tl.set("#entete-logo-b", { autoAlpha: 0 }, 0);
+      // musique : baisse sous la voix (aperçu ; le mixage final est fait par outils/mixage.py)
+      tl.set("#musique", { volume: D.musique[0].v }, 0);
+      for (let i = 1; i < D.musique.length; i++) {
+        const a = D.musique[i - 1], b = D.musique[i];
+        if (a.v !== b.v) tl.to("#musique", { volume: b.v, duration: Math.max(0.05, b.t - a.t) }, a.t);
+      }
+
+      // ---------- S1 · la recherche se tape ; « MAUVAISE QUESTION » sur la batterie ----------
+      kenburns("#s1-kb", 0);
+      tl.fromTo("#s1-recherche", { scale: 1.05, rotation: -3 }, { scale: 1, rotation: -1.5, duration: 0.55, ease: "power4.out" }, 0);
+      tl.fromTo("#s1-prix", { y: 80, autoAlpha: 0 }, { y: 0, autoAlpha: 1, duration: 0.4, ease: "back.out(2)" }, 0.15);
+      tl.fromTo("#s1-m", { y: 60 }, { y: 0, duration: 0.45, ease: "back.out(2)" }, 0);
+      danse("#s1-m-img", 0.5, C.mauvaise);
+      tl.fromTo("#s1-trait", { scaleX: 0.2 }, { scaleX: 1, duration: 0.45, ease: "power3.out" }, 0.05);
+      tl.set(["#s1-m2", "#s1-barre"], { autoAlpha: 0 }, 0);
+      // la question se tape lettre par lettre pendant que la voix la pose
+      tl.fromTo("#s1-texte", { clipPath: "inset(0% 100% 0% 0%)" }, { clipPath: "inset(0% 0% 0% 0%)", ease: "steps(30)",
+        duration: Math.max(0.6, C.facebook + 0.3 - C.combien) }, C.combien - 0.05);
+      tl.set("#s1-curseur", { autoAlpha: 0 }, 0);
+      tl.set("#s1-curseur", { autoAlpha: 1 }, C.facebook + 0.3);
+      tl.to("#s1-curseur", { autoAlpha: 0, duration: 0.01, yoyo: true, repeat: 5, repeatDelay: 0.25 }, C.facebook + 0.55);
+      tl.fromTo("#s1-prix b", { scale: 1 }, { scale: 1.15, duration: 0.14, ease: "power2.out", yoyo: true, repeat: 1 }, C.facebook);
+      // « Mauvaise question » sur l'entrée de la batterie
+      tl.set("#s1-m", { autoAlpha: 0 }, C.mauvaise - 0.02);
+      tl.set("#s1-m2", { autoAlpha: 1 }, C.mauvaise - 0.02);
+      tl.fromTo("#s1-m2", { scale: 0.9 }, { scale: 1, duration: 0.3, ease: "back.out(2)" }, C.mauvaise - 0.02);
+      danse("#s1-m2-img", C.mauvaise + 0.3, S[1].debut);
+      tl.fromTo("#s1-mauvaise", { scale: 2.6, autoAlpha: 0, rotation: 8 },
+        { scale: 1, autoAlpha: 1, rotation: -6, duration: 0.16, ease: "power4.in" }, C.mauvaise - 0.14);
+      tl.to("#eclair", { opacity: 0.6, duration: 0.05 }, C.mauvaise + 0.02);
+      tl.to("#eclair", { opacity: 0, duration: 0.3, ease: "power2.out" }, C.mauvaise + 0.07);
+      secousse("#s1-sec", C.mauvaise + 0.02, 26);
+      tl.to("#s1-recherche", { borderColor: "#d1452a", duration: 0.1 }, C.mauvaise);
+      tl.to("#s1-prix b", { color: "#9a94a6", duration: 0.15 }, C.question);
+      tl.set("#s1-barre", { autoAlpha: 1 }, C.question);
+      tl.fromTo("#s1-barre", { scaleX: 0 }, { scaleX: 1, duration: 0.2, ease: "power3.out" }, C.question);
+      tl.to("#s1-cam", { x: -1150, duration: 0.3, ease: "power3.in" }, S[1].debut);
+
+      // ---------- S2 · la bonne question ; l'exemple fictif ----------
+      tl.fromTo("#s2-cam", { x: 1150 }, { x: 0, duration: 0.3, ease: "power3.out" }, S[1].debut);
+      flash(S[1].temps, 0.7);
+      kenburns("#s2-kb", 1);
+      surTitre(1);
+      pop("#s2-m", S[1].temps + 0.1, { de: 0.4 });
+      danse("#s2-m-img", S[1].temps + 0.5, S[1].fin);
+      pop("#s2-recherche", C.bonne - 0.1, { de: 0.7 });
+      tl.fromTo("#s2-client", { backgroundColor: "rgba(99, 43, 197, 0)", color: "#1d1d1d" },
+        { backgroundColor: "#632bc5", color: "#ffffff", duration: 0.12 }, C.client2 - 0.03);
+      tl.fromTo("#s2-client", { scale: 1 }, { scale: 1.12, duration: 0.12, ease: "power2.out", yoyo: true, repeat: 1 }, C.client2);
+      pop("#s2-fictif", C.exemple - 0.05, { de: 0.5, rot: -4, rotFin: -2 });
+      pop("#s2-b1", C.cinq - 0.1, { de: 0.6 });
+      tl.fromTo("#s2-fl", { scaleX: 0, transformOrigin: "0% 50%" }, { scaleX: 1, duration: 0.3, ease: "power2.out" }, C.vingt - 0.3);
+      pop("#s2-b2", C.vingt - 0.05, { de: 0.6 });
+
+      // ---------- S3 · partie B : cinq clients, cent dirhams chacun ----------
+      tl.fromTo("#s3-nuit", { scaleY: 0 }, { scaleY: 1, duration: 0.28, ease: "power4.out" }, S[2].debut);
+      tl.set("#entete-logo-n", { autoAlpha: 0 }, S[2].debut + 0.15);
+      tl.set("#entete-logo-b", { autoAlpha: 1 }, S[2].debut + 0.15);
+      tl.to("#s2-cam", { y: -300, scale: 0.9, duration: 0.28, ease: "power3.in" }, S[2].debut);
+      flash(S[2].temps, 0.5);
+      surTitre(2);
+      kenburns("#s3-kb", 2);
+      tl.fromTo(".msg", { scale: 0.4, autoAlpha: 0 }, { scale: 1, autoAlpha: 1, duration: 0.2, ease: "back.out(2)", stagger: 0.025 }, S[2].temps - 0.1);
+      [0, 1, 2, 3, 4].forEach((k) => {
+        tl.to("#s3-c" + k, { opacity: 1, duration: 0.08 }, D.tics[k]);
+        tl.fromTo("#s3-c" + k, { scale: 1.5 }, { scale: 1, duration: 0.22, ease: "back.out(3)" }, D.tics[k]);
+      });
+      pop("#s3-legende", D.tics[4] + 0.1, { de: 0.7 });
+      pop("#s3-calcul", C.chaque - 0.15, { de: 0.6 });
+      tl.fromTo("#s3-resultat", { autoAlpha: 0, x: -30 }, { autoAlpha: 1, x: 0, duration: 0.25, ease: "back.out(2)" }, C.cent - 0.1);
+      tl.fromTo("#s3-resultat b", { scale: 1.6 }, { scale: 1, duration: 0.3, ease: "back.out(3)" }, C.cent - 0.1);
+      pop("#s3-m", S[2].temps + 0.1, { de: 0.4 });
+      danse("#s3-m-img", S[2].temps + 0.5, S[2].fin);
+      tl.set("#s3-nuit", { transformOrigin: "50% 0%" }, S[3].debut);
+      tl.to("#s3-nuit", { scaleY: 0, duration: 0.3, ease: "power4.in" }, S[3].debut);
+      tl.to("#s3-cam", { y: -200, autoAlpha: 0, duration: 0.28, ease: "power3.in" }, S[3].debut);
+      tl.set("#entete-logo-b", { autoAlpha: 0 }, S[3].debut + 0.2);
+      tl.set("#entete-logo-n", { autoAlpha: 1 }, S[3].debut + 0.2);
+
+      // ---------- S4 · la règle (passage calme) ----------
+      tl.fromTo("#s4-cam", { y: 1920 }, { y: 0, duration: 0.4, ease: "power3.out" }, S[3].debut + 0.1);
+      kenburns("#s4-kb", 3);
+      surTitre(3);
+      pop("#s4-balance", C.si - 0.15, { de: 0.6 });
+      tl.fromTo("#s4-rapporte", { scale: 1 }, { scale: 1.15, duration: 0.14, ease: "power2.out", yoyo: true, repeat: 1 }, C.rapporte);
+      pop("#s4-oui", C.augmente - 0.25, { de: 0.6 });
+      pop("#s4-non", C.sinon - 0.2, { de: 0.6 });
+      pop("#s4-m", S[3].temps + 0.2, { de: 0.4 });
+      danse("#s4-m-img", S[3].temps + 0.6, S[3].fin);
+      tl.to("#s4-cam", { scale: 1.4, autoAlpha: 0, duration: 0.3, ease: "power3.in" }, S[4].debut);
+
+      // ---------- S5 · retour de la musique : commente « AUDIT » ----------
+      tl.fromTo("#s5-cam", { scale: 0.75, autoAlpha: 0 }, { scale: 1, autoAlpha: 1, duration: 0.25, ease: "power3.out" }, S[4].temps - 0.25);
+      flash(S[4].temps, 0.75);
+      tl.to("#eclair", { opacity: 0.25, duration: 0.05 }, S[4].temps);
+      tl.to("#eclair", { opacity: 0, duration: 0.3, ease: "power2.out" }, S[4].temps + 0.05);
+      kenburns("#s5-kb", 4);
+      surTitre(4);
+      pop("#s5-m", S[4].temps + 0.05, { de: 0.4 });
+      danse("#s5-m-img", S[4].temps + 0.4, S[4].fin);
+      const lettres = ["#s5-l1", "#s5-l2", "#s5-l3", "#s5-l4", "#s5-l5"];
+      lettres.forEach((s, i) => tl.fromTo(s, { autoAlpha: 0, y: 14, scale: 1.4 },
+        { autoAlpha: 1, y: 0, scale: 1, duration: 0.12, ease: "back.out(3)" }, D.frappe[i]));
+      tl.set("#s5-place", { autoAlpha: 0 }, D.frappe[0]);
+      tl.to("#s5-publier", { scale: 0.9, duration: 0.07, yoyo: true, repeat: 1 }, D.publier);
+      tl.set(lettres, { autoAlpha: 0 }, D.publier + 0.1);
+      tl.set("#s5-place", { autoAlpha: 1 }, D.publier + 0.1);
+      pop("#s5-nouveau", D.publier + 0.1, { de: 0.6 });
+      pop("#s5-coeur", D.publier + 0.45, { de: 2, ease: "back.out(3)" });
+      tl.fromTo("#s5-carte", { x: 520, rotation: 14, autoAlpha: 0 }, { x: 0, rotation: 4, autoAlpha: 1, duration: 0.45, ease: "back.out(1.6)" }, D.carte);
+      tl.to("#s5-cam", { x: -1150, duration: 0.3, ease: "power3.in" }, S[5].debut);
+
+      // ---------- S6 · abonne-toi + signature ----------
+      tl.fromTo("#s6-cam", { x: 1150 }, { x: 0, duration: 0.3, ease: "power3.out" }, S[5].debut);
+      flash(S[5].temps, 0.6);
+      kenburns("#s6-kb", 5);
+      surTitre(5);
+      tl.set("#s6-abonne", { autoAlpha: 0 }, S[5].debut);
+      pop("#s6-m", S[5].temps, { de: 0.4 });
+      danse("#s6-m-img", S[5].temps + 0.4, D.duree);
+      tl.fromTo("#s6-curseur", { x: 980, y: 1300, autoAlpha: 0 }, { x: 600, y: 760, autoAlpha: 1, duration: 0.4, ease: "power3.out" }, C.abonne - 0.45);
+      tl.to("#s6-curseur", { scale: 0.85, duration: 0.07, yoyo: true, repeat: 1 }, C.abonne + 0.05);
+      tl.to("#s6-bouton", { backgroundColor: "#e2d7f7", duration: 0.15 }, C.abonne + 0.08);
+      tl.to("#s6-bouton", { scale: 0.96, duration: 0.08, yoyo: true, repeat: 1 }, C.abonne + 0.05);
+      tl.set("#s6-suivre", { autoAlpha: 0 }, C.abonne + 0.1);
+      pop("#s6-abonne", C.abonne + 0.1, { de: 0.7 });
+      tl.to("#s6-curseur", { autoAlpha: 0, duration: 0.2 }, C.abonne + 0.7);
+      pop("#s6-logo", C.abonne + 0.5, { de: 0.5 });
+      pop("#s6-badge", C.dirham7 - 0.1, { de: 0.4 });
+      pop("#s6-rappel", C.clients7 - 0.2, { de: 0.7 });
+      tl.to("#s6-logo", { scale: 1.06, duration: 0.16, ease: "power2.out", yoyo: true, repeat: 1 }, C.fin + 0.05);
+
+      // ---------- sous-titres karaoké ----------
+      D.sous.forEach((c, n) => {
+        const id = "#st-" + n;
+        tl.set(id, { autoAlpha: 1 }, c.debut);
+        tl.fromTo(id, { scale: 0.82, y: 16 }, { scale: 1, y: 0, duration: 0.16, ease: "back.out(2.5)" }, c.debut);
+        tl.set(id, { autoAlpha: 0 }, c.fin);
+        c.mots.forEach((m) => {
+          const w = "#m-" + m.i;
+          tl.set(w, { color: m.base }, c.debut);
+          tl.set(w, { backgroundColor: VIOLET, color: "#ffffff" }, m.debut);
+          tl.set(w, { backgroundColor: "rgba(99, 43, 197, 0)", color: m.base }, m.fin);
+          if (m.fort) tl.fromTo(w, { scale: 1 }, { scale: 1.08, duration: 0.1, ease: "power2.out", yoyo: true, repeat: 1 }, m.debut);
+        });
+      });
+
+      window.__timelines["oddysee-serie-60-59"] = tl;
+    </script>
+  </body>
+</html>

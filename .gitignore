@@ -1,0 +1,14 @@
+node_modules/
+studio/projets/**/renders/
+studio/projets/**/.media/
+*.log
+.DS_Store
+__pycache__/
+*.pyc
+
+# Studio V2 : fichiers de travail HyperFrames
+studio-v2/projets/**/.hyperframes/
+studio-v2/projets/**/renders/
+studio-v2/projets/**/.media/
+studio-v2/projets/**/snapshots/
+studio-v2/projets/*/assets/musique/fond.*
